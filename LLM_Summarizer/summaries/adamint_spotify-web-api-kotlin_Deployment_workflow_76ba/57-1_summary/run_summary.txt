@@ -1,0 +1,13 @@
+Run 'adamint_spotify-web-api-kotlin_Deployment_workflow_76ba\57-1' summary (6 jobs):
+- Job 1_release_android_jvm_linux_js (1): failed
+- Job 1_release_android_jvm_linux_js: succeeded
+- Job 1_release_docs: succeeded
+- Job 2_release_docs: succeeded
+- Job 3_release_mac: succeeded
+- Job 4_release_windows: succeeded
+
+Description:
+The overall workflow mostly succeeded with five jobs completing without issues. However, the first job named "1_release_android_jvm_linux_js (1)" failed due to a unit test failure in 'testEditPlaylists' during the ':testDebugUnitTest' task, leading to a build failure. No other jobs showed problems, and all other release and deployment steps completed successfully.
+
+Recommendation:
+Investigate the unit test failure in job "1_release_android_jvm_linux_js (1)" to identify why 'testEditPlaylists' is failing and fix the underlying issue. Once resolved, rerun this job to ensure the build passes and the full pipeline can succeed.

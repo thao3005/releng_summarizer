@@ -1,0 +1,12 @@
+Run 'adamint_spotify-web-api-kotlin_Deployment_workflow_76ba\56-2' summary (5 jobs):
+- Job 1_release_android_jvm_linux_js (1): failed
+- Job 1_release_android_jvm_linux_js: succeeded
+- Job 2_release_docs: succeeded
+- Job 3_release_mac: succeeded
+- Job 4_release_windows: succeeded
+
+Description:
+This run had mostly successful jobs, with four out of five completing without any issues. However, the job "1_release_android_jvm_linux_js (1)" failed due to a test failure caused by a `kotlinx.coroutines.channels.ClosedReceiveChannelException` in the `testSearchMultiple` test within `SearchApiTest[jvm]`. All other jobs related to Android, documentation, Mac, and Windows releases succeeded without errors.
+
+Recommendation:
+Investigate the cause of the `ClosedReceiveChannelException` in the failing test of the "1_release_android_jvm_linux_js (1)" job. Focus on the `testSearchMultiple` test in the `SearchApiTest[jvm]` to resolve the test failure before re-running the pipeline.

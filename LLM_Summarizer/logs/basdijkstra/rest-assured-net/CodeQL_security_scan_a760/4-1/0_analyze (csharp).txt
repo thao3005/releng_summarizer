@@ -1,0 +1,1432 @@
+2023-11-11T07:55:48.7785237Z Requested labels: ubuntu-latest
+2023-11-11T07:55:48.7785622Z Job defined at: basdijkstra/rest-assured-net/.github/workflows/codeql-analysis.yml@refs/heads/main
+2023-11-11T07:55:48.7785772Z Waiting for a runner to pick up this job...
+2023-11-11T07:55:49.6905454Z Job is waiting for a hosted runner to come online.
+2023-11-11T07:55:52.7585957Z Job is about to start running on the hosted runner: GitHub Actions 2 (hosted)
+2023-11-11T07:55:54.7083795Z Current runner version: '2.311.0'
+2023-11-11T07:55:54.7107217Z ##[group]Operating System
+2023-11-11T07:55:54.7107937Z Ubuntu
+2023-11-11T07:55:54.7108277Z 22.04.3
+2023-11-11T07:55:54.7108615Z LTS
+2023-11-11T07:55:54.7108991Z ##[endgroup]
+2023-11-11T07:55:54.7109394Z ##[group]Runner Image
+2023-11-11T07:55:54.7109835Z Image: ubuntu-22.04
+2023-11-11T07:55:54.7110328Z Version: 20231030.2.0
+2023-11-11T07:55:54.7111303Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20231030.2/images/linux/Ubuntu2204-Readme.md
+2023-11-11T07:55:54.7112749Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20231030.2
+2023-11-11T07:55:54.7113641Z ##[endgroup]
+2023-11-11T07:55:54.7114054Z ##[group]Runner Image Provisioner
+2023-11-11T07:55:54.7114530Z 2.0.312.1
+2023-11-11T07:55:54.7114892Z ##[endgroup]
+2023-11-11T07:55:54.7117031Z ##[group]GITHUB_TOKEN Permissions
+2023-11-11T07:55:54.7118872Z Actions: write
+2023-11-11T07:55:54.7119308Z Checks: write
+2023-11-11T07:55:54.7119910Z Contents: write
+2023-11-11T07:55:54.7120378Z Deployments: write
+2023-11-11T07:55:54.7120779Z Discussions: write
+2023-11-11T07:55:54.7121195Z Issues: write
+2023-11-11T07:55:54.7121576Z Metadata: read
+2023-11-11T07:55:54.7121963Z Packages: write
+2023-11-11T07:55:54.7122374Z Pages: write
+2023-11-11T07:55:54.7122764Z PullRequests: write
+2023-11-11T07:55:54.7123178Z RepositoryProjects: write
+2023-11-11T07:55:54.7123670Z SecurityEvents: write
+2023-11-11T07:55:54.7124110Z Statuses: write
+2023-11-11T07:55:54.7124486Z ##[endgroup]
+2023-11-11T07:55:54.7127458Z Secret source: Actions
+2023-11-11T07:55:54.7128044Z Prepare workflow directory
+2023-11-11T07:55:54.7759767Z Prepare all required actions
+2023-11-11T07:55:54.7915811Z Getting action download info
+2023-11-11T07:55:55.0097963Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2023-11-11T07:55:55.1275751Z Download action repository 'github/codeql-action@v1' (SHA:231aa2c8a89117b126725a0e11897209b7118144)
+2023-11-11T07:55:58.8053979Z Complete job name: analyze (csharp)
+2023-11-11T07:55:58.9230255Z ##[group]Run actions/checkout@v3
+2023-11-11T07:55:58.9230652Z with:
+2023-11-11T07:55:58.9230874Z   fetch-depth: 2
+2023-11-11T07:55:58.9231164Z   repository: basdijkstra/rest-assured-net
+2023-11-11T07:55:58.9231683Z   token: ***
+2023-11-11T07:55:58.9231930Z   ssh-strict: true
+2023-11-11T07:55:58.9232189Z   persist-credentials: true
+2023-11-11T07:55:58.9232463Z   clean: true
+2023-11-11T07:55:58.9232710Z   sparse-checkout-cone-mode: true
+2023-11-11T07:55:58.9233013Z   fetch-tags: false
+2023-11-11T07:55:58.9233236Z   lfs: false
+2023-11-11T07:55:58.9233454Z   submodules: false
+2023-11-11T07:55:58.9233708Z   set-safe-directory: true
+2023-11-11T07:55:58.9233996Z ##[endgroup]
+2023-11-11T07:55:59.0954949Z Syncing repository: basdijkstra/rest-assured-net
+2023-11-11T07:55:59.0957402Z ##[group]Getting Git version info
+2023-11-11T07:55:59.0958498Z Working directory is '/home/runner/work/rest-assured-net/rest-assured-net'
+2023-11-11T07:55:59.0959831Z [command]/usr/bin/git version
+2023-11-11T07:55:59.0960479Z git version 2.42.0
+2023-11-11T07:55:59.0967924Z ##[endgroup]
+2023-11-11T07:55:59.0986988Z Temporarily overriding HOME='/home/runner/work/_temp/04ad6857-a528-4a95-bd64-d4e237c086b0' before making global git config changes
+2023-11-11T07:55:59.0988749Z Adding repository directory to the temporary git global config as a safe directory
+2023-11-11T07:55:59.0992391Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rest-assured-net/rest-assured-net
+2023-11-11T07:55:59.1037748Z Deleting the contents of '/home/runner/work/rest-assured-net/rest-assured-net'
+2023-11-11T07:55:59.1041276Z ##[group]Initializing the repository
+2023-11-11T07:55:59.1045312Z [command]/usr/bin/git init /home/runner/work/rest-assured-net/rest-assured-net
+2023-11-11T07:55:59.1132584Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-11-11T07:55:59.1133774Z hint: is subject to change. To configure the initial branch name to use in all
+2023-11-11T07:55:59.1135260Z hint: of your new repositories, which will suppress this warning, call:
+2023-11-11T07:55:59.1135975Z hint: 
+2023-11-11T07:55:59.1136360Z hint: 	git config --global init.defaultBranch <name>
+2023-11-11T07:55:59.1136753Z hint: 
+2023-11-11T07:55:59.1137188Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-11-11T07:55:59.1137919Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-11-11T07:55:59.1138413Z hint: 
+2023-11-11T07:55:59.1138661Z hint: 	git branch -m <name>
+2023-11-11T07:55:59.1141493Z Initialized empty Git repository in /home/runner/work/rest-assured-net/rest-assured-net/.git/
+2023-11-11T07:55:59.1150734Z [command]/usr/bin/git remote add origin https://github.com/basdijkstra/rest-assured-net
+2023-11-11T07:55:59.1191157Z ##[endgroup]
+2023-11-11T07:55:59.1191970Z ##[group]Disabling automatic garbage collection
+2023-11-11T07:55:59.1195426Z [command]/usr/bin/git config --local gc.auto 0
+2023-11-11T07:55:59.1231586Z ##[endgroup]
+2023-11-11T07:55:59.1232119Z ##[group]Setting up auth
+2023-11-11T07:55:59.1237453Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-11-11T07:55:59.1274857Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-11-11T07:55:59.1620203Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-11-11T07:55:59.1657089Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-11-11T07:55:59.1900632Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-11-11T07:55:59.1942189Z ##[endgroup]
+2023-11-11T07:55:59.1943034Z ##[group]Fetching the repository
+2023-11-11T07:55:59.1953179Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=2 origin +ccc543523c488412d39ee9c96ee2ad5962839e69:refs/remotes/origin/main
+2023-11-11T07:55:59.4503893Z remote: Enumerating objects: 106, done.        
+2023-11-11T07:55:59.4504959Z remote: Counting objects:   0% (1/106)        
+2023-11-11T07:55:59.4506195Z remote: Counting objects:   1% (2/106)        
+2023-11-11T07:55:59.4507052Z remote: Counting objects:   2% (3/106)        
+2023-11-11T07:55:59.4507880Z remote: Counting objects:   3% (4/106)        
+2023-11-11T07:55:59.4508751Z remote: Counting objects:   4% (5/106)        
+2023-11-11T07:55:59.4509602Z remote: Counting objects:   5% (6/106)        
+2023-11-11T07:55:59.4510442Z remote: Counting objects:   6% (7/106)        
+2023-11-11T07:55:59.4511268Z remote: Counting objects:   7% (8/106)        
+2023-11-11T07:55:59.4511910Z remote: Counting objects:   8% (9/106)        
+2023-11-11T07:55:59.4512561Z remote: Counting objects:   9% (10/106)        
+2023-11-11T07:55:59.4513238Z remote: Counting objects:  10% (11/106)        
+2023-11-11T07:55:59.4513866Z remote: Counting objects:  11% (12/106)        
+2023-11-11T07:55:59.4514503Z remote: Counting objects:  12% (13/106)        
+2023-11-11T07:55:59.4515183Z remote: Counting objects:  13% (14/106)        
+2023-11-11T07:55:59.4515969Z remote: Counting objects:  14% (15/106)        
+2023-11-11T07:55:59.4516615Z remote: Counting objects:  15% (16/106)        
+2023-11-11T07:55:59.4517252Z remote: Counting objects:  16% (17/106)        
+2023-11-11T07:55:59.4517877Z remote: Counting objects:  17% (19/106)        
+2023-11-11T07:55:59.4518492Z remote: Counting objects:  18% (20/106)        
+2023-11-11T07:55:59.4519124Z remote: Counting objects:  19% (21/106)        
+2023-11-11T07:55:59.4519757Z remote: Counting objects:  20% (22/106)        
+2023-11-11T07:55:59.4520378Z remote: Counting objects:  21% (23/106)        
+2023-11-11T07:55:59.4520995Z remote: Counting objects:  22% (24/106)        
+2023-11-11T07:55:59.4521982Z remote: Counting objects:  23% (25/106)        
+2023-11-11T07:55:59.4522608Z remote: Counting objects:  24% (26/106)        
+2023-11-11T07:55:59.4523031Z remote: Counting objects:  25% (27/106)        
+2023-11-11T07:55:59.4523405Z remote: Counting objects:  26% (28/106)        
+2023-11-11T07:55:59.4523777Z remote: Counting objects:  27% (29/106)        
+2023-11-11T07:55:59.4524164Z remote: Counting objects:  28% (30/106)        
+2023-11-11T07:55:59.4524542Z remote: Counting objects:  29% (31/106)        
+2023-11-11T07:55:59.4524908Z remote: Counting objects:  30% (32/106)        
+2023-11-11T07:55:59.4525261Z remote: Counting objects:  31% (33/106)        
+2023-11-11T07:55:59.4525627Z remote: Counting objects:  32% (34/106)        
+2023-11-11T07:55:59.4525995Z remote: Counting objects:  33% (35/106)        
+2023-11-11T07:55:59.4526346Z remote: Counting objects:  34% (37/106)        
+2023-11-11T07:55:59.4526706Z remote: Counting objects:  35% (38/106)        
+2023-11-11T07:55:59.4527072Z remote: Counting objects:  36% (39/106)        
+2023-11-11T07:55:59.4527425Z remote: Counting objects:  37% (40/106)        
+2023-11-11T07:55:59.4527807Z remote: Counting objects:  38% (41/106)        
+2023-11-11T07:55:59.4528170Z remote: Counting objects:  39% (42/106)        
+2023-11-11T07:55:59.4528527Z remote: Counting objects:  40% (43/106)        
+2023-11-11T07:55:59.4528910Z remote: Counting objects:  41% (44/106)        
+2023-11-11T07:55:59.4529270Z remote: Counting objects:  42% (45/106)        
+2023-11-11T07:55:59.4529635Z remote: Counting objects:  43% (46/106)        
+2023-11-11T07:55:59.4530004Z remote: Counting objects:  44% (47/106)        
+2023-11-11T07:55:59.4530366Z remote: Counting objects:  45% (48/106)        
+2023-11-11T07:55:59.4530728Z remote: Counting objects:  46% (49/106)        
+2023-11-11T07:55:59.4531088Z remote: Counting objects:  47% (50/106)        
+2023-11-11T07:55:59.4531451Z remote: Counting objects:  48% (51/106)        
+2023-11-11T07:55:59.4531812Z remote: Counting objects:  49% (52/106)        
+2023-11-11T07:55:59.4532345Z remote: Counting objects:  50% (53/106)        
+2023-11-11T07:55:59.4532715Z remote: Counting objects:  51% (55/106)        
+2023-11-11T07:55:59.4533079Z remote: Counting objects:  52% (56/106)        
+2023-11-11T07:55:59.4533433Z remote: Counting objects:  53% (57/106)        
+2023-11-11T07:55:59.4533791Z remote: Counting objects:  54% (58/106)        
+2023-11-11T07:55:59.4534149Z remote: Counting objects:  55% (59/106)        
+2023-11-11T07:55:59.4534502Z remote: Counting objects:  56% (60/106)        
+2023-11-11T07:55:59.4534862Z remote: Counting objects:  57% (61/106)        
+2023-11-11T07:55:59.4535223Z remote: Counting objects:  58% (62/106)        
+2023-11-11T07:55:59.4535579Z remote: Counting objects:  59% (63/106)        
+2023-11-11T07:55:59.4535943Z remote: Counting objects:  60% (64/106)        
+2023-11-11T07:55:59.4536315Z remote: Counting objects:  61% (65/106)        
+2023-11-11T07:55:59.4536670Z remote: Counting objects:  62% (66/106)        
+2023-11-11T07:55:59.4537037Z remote: Counting objects:  63% (67/106)        
+2023-11-11T07:55:59.4537494Z remote: Counting objects:  64% (68/106)        
+2023-11-11T07:55:59.4537858Z remote: Counting objects:  65% (69/106)        
+2023-11-11T07:55:59.4538208Z remote: Counting objects:  66% (70/106)        
+2023-11-11T07:55:59.4538569Z remote: Counting objects:  67% (72/106)        
+2023-11-11T07:55:59.4538944Z remote: Counting objects:  68% (73/106)        
+2023-11-11T07:55:59.4539314Z remote: Counting objects:  69% (74/106)        
+2023-11-11T07:55:59.4539688Z remote: Counting objects:  70% (75/106)        
+2023-11-11T07:55:59.4540056Z remote: Counting objects:  71% (76/106)        
+2023-11-11T07:55:59.4540423Z remote: Counting objects:  72% (77/106)        
+2023-11-11T07:55:59.4540783Z remote: Counting objects:  73% (78/106)        
+2023-11-11T07:55:59.4541156Z remote: Counting objects:  74% (79/106)        
+2023-11-11T07:55:59.4541524Z remote: Counting objects:  75% (80/106)        
+2023-11-11T07:55:59.4542017Z remote: Counting objects:  76% (81/106)        
+2023-11-11T07:55:59.4542388Z remote: Counting objects:  77% (82/106)        
+2023-11-11T07:55:59.4542762Z remote: Counting objects:  78% (83/106)        
+2023-11-11T07:55:59.4543124Z remote: Counting objects:  79% (84/106)        
+2023-11-11T07:55:59.4543494Z remote: Counting objects:  80% (85/106)        
+2023-11-11T07:55:59.4543857Z remote: Counting objects:  81% (86/106)        
+2023-11-11T07:55:59.4544215Z remote: Counting objects:  82% (87/106)        
+2023-11-11T07:55:59.4544577Z remote: Counting objects:  83% (88/106)        
+2023-11-11T07:55:59.4544940Z remote: Counting objects:  84% (90/106)        
+2023-11-11T07:55:59.4545504Z remote: Counting objects:  85% (91/106)        
+2023-11-11T07:55:59.4545880Z remote: Counting objects:  86% (92/106)        
+2023-11-11T07:55:59.4546248Z remote: Counting objects:  87% (93/106)        
+2023-11-11T07:55:59.4546609Z remote: Counting objects:  88% (94/106)        
+2023-11-11T07:55:59.4546978Z remote: Counting objects:  89% (95/106)        
+2023-11-11T07:55:59.4547354Z remote: Counting objects:  90% (96/106)        
+2023-11-11T07:55:59.4547713Z remote: Counting objects:  91% (97/106)        
+2023-11-11T07:55:59.4548079Z remote: Counting objects:  92% (98/106)        
+2023-11-11T07:55:59.4548448Z remote: Counting objects:  93% (99/106)        
+2023-11-11T07:55:59.4548816Z remote: Counting objects:  94% (100/106)        
+2023-11-11T07:55:59.4549205Z remote: Counting objects:  95% (101/106)        
+2023-11-11T07:55:59.4549604Z remote: Counting objects:  96% (102/106)        
+2023-11-11T07:55:59.4549992Z remote: Counting objects:  97% (103/106)        
+2023-11-11T07:55:59.4550361Z remote: Counting objects:  98% (104/106)        
+2023-11-11T07:55:59.4550745Z remote: Counting objects:  99% (105/106)        
+2023-11-11T07:55:59.4551125Z remote: Counting objects: 100% (106/106)        
+2023-11-11T07:55:59.4551532Z remote: Counting objects: 100% (106/106), done.        
+2023-11-11T07:55:59.4551963Z remote: Compressing objects:   1% (1/96)        
+2023-11-11T07:55:59.4552518Z remote: Compressing objects:   2% (2/96)        
+2023-11-11T07:55:59.4552916Z remote: Compressing objects:   3% (3/96)        
+2023-11-11T07:55:59.4553309Z remote: Compressing objects:   4% (4/96)        
+2023-11-11T07:55:59.4553701Z remote: Compressing objects:   5% (5/96)        
+2023-11-11T07:55:59.4554080Z remote: Compressing objects:   6% (6/96)        
+2023-11-11T07:55:59.4554472Z remote: Compressing objects:   7% (7/96)        
+2023-11-11T07:55:59.4554858Z remote: Compressing objects:   8% (8/96)        
+2023-11-11T07:55:59.4555233Z remote: Compressing objects:   9% (9/96)        
+2023-11-11T07:55:59.4555633Z remote: Compressing objects:  10% (10/96)        
+2023-11-11T07:55:59.4558624Z remote: Compressing objects:  11% (11/96)        
+2023-11-11T07:55:59.4559320Z remote: Compressing objects:  12% (12/96)        
+2023-11-11T07:55:59.4559995Z remote: Compressing objects:  13% (13/96)        
+2023-11-11T07:55:59.4560658Z remote: Compressing objects:  14% (14/96)        
+2023-11-11T07:55:59.4561342Z remote: Compressing objects:  15% (15/96)        
+2023-11-11T07:55:59.4561991Z remote: Compressing objects:  16% (16/96)        
+2023-11-11T07:55:59.4562646Z remote: Compressing objects:  17% (17/96)        
+2023-11-11T07:55:59.4563323Z remote: Compressing objects:  18% (18/96)        
+2023-11-11T07:55:59.4563978Z remote: Compressing objects:  19% (19/96)        
+2023-11-11T07:55:59.4564633Z remote: Compressing objects:  20% (20/96)        
+2023-11-11T07:55:59.4565290Z remote: Compressing objects:  21% (21/96)        
+2023-11-11T07:55:59.4565930Z remote: Compressing objects:  22% (22/96)        
+2023-11-11T07:55:59.4566573Z remote: Compressing objects:  23% (23/96)        
+2023-11-11T07:55:59.4567222Z remote: Compressing objects:  25% (24/96)        
+2023-11-11T07:55:59.4567807Z remote: Compressing objects:  26% (25/96)        
+2023-11-11T07:55:59.4568198Z remote: Compressing objects:  27% (26/96)        
+2023-11-11T07:55:59.4568579Z remote: Compressing objects:  28% (27/96)        
+2023-11-11T07:55:59.4582721Z remote: Compressing objects:  29% (28/96)        
+2023-11-11T07:55:59.4589807Z remote: Compressing objects:  30% (29/96)        
+2023-11-11T07:55:59.4590515Z remote: Compressing objects:  31% (30/96)        
+2023-11-11T07:55:59.4590932Z remote: Compressing objects:  32% (31/96)        
+2023-11-11T07:55:59.4591315Z remote: Compressing objects:  33% (32/96)        
+2023-11-11T07:55:59.4591710Z remote: Compressing objects:  34% (33/96)        
+2023-11-11T07:55:59.4692495Z remote: Compressing objects:  35% (34/96)        
+2023-11-11T07:55:59.4693201Z remote: Compressing objects:  36% (35/96)        
+2023-11-11T07:55:59.4693879Z remote: Compressing objects:  37% (36/96)        
+2023-11-11T07:55:59.4694541Z remote: Compressing objects:  38% (37/96)        
+2023-11-11T07:55:59.4695180Z remote: Compressing objects:  39% (38/96)        
+2023-11-11T07:55:59.4695814Z remote: Compressing objects:  40% (39/96)        
+2023-11-11T07:55:59.4696469Z remote: Compressing objects:  41% (40/96)        
+2023-11-11T07:55:59.4697143Z remote: Compressing objects:  42% (41/96)        
+2023-11-11T07:55:59.4697802Z remote: Compressing objects:  43% (42/96)        
+2023-11-11T07:55:59.4698463Z remote: Compressing objects:  44% (43/96)        
+2023-11-11T07:55:59.4699105Z remote: Compressing objects:  45% (44/96)        
+2023-11-11T07:55:59.4699736Z remote: Compressing objects:  46% (45/96)        
+2023-11-11T07:55:59.4700390Z remote: Compressing objects:  47% (46/96)        
+2023-11-11T07:55:59.4701055Z remote: Compressing objects:  48% (47/96)        
+2023-11-11T07:55:59.4701710Z remote: Compressing objects:  50% (48/96)        
+2023-11-11T07:55:59.4702390Z remote: Compressing objects:  51% (49/96)        
+2023-11-11T07:55:59.4703017Z remote: Compressing objects:  52% (50/96)        
+2023-11-11T07:55:59.4703644Z remote: Compressing objects:  53% (51/96)        
+2023-11-11T07:55:59.4704275Z remote: Compressing objects:  54% (52/96)        
+2023-11-11T07:55:59.4704920Z remote: Compressing objects:  55% (53/96)        
+2023-11-11T07:55:59.4706096Z remote: Compressing objects:  56% (54/96)        
+2023-11-11T07:55:59.4706742Z remote: Compressing objects:  57% (55/96)        
+2023-11-11T07:55:59.4707376Z remote: Compressing objects:  58% (56/96)        
+2023-11-11T07:55:59.4708027Z remote: Compressing objects:  59% (57/96)        
+2023-11-11T07:55:59.4708681Z remote: Compressing objects:  60% (58/96)        
+2023-11-11T07:55:59.4709301Z remote: Compressing objects:  61% (59/96)        
+2023-11-11T07:55:59.4709915Z remote: Compressing objects:  62% (60/96)        
+2023-11-11T07:55:59.4710519Z remote: Compressing objects:  63% (61/96)        
+2023-11-11T07:55:59.4711142Z remote: Compressing objects:  64% (62/96)        
+2023-11-11T07:55:59.4711850Z remote: Compressing objects:  65% (63/96)        
+2023-11-11T07:55:59.4712520Z remote: Compressing objects:  66% (64/96)        
+2023-11-11T07:55:59.4713168Z remote: Compressing objects:  67% (65/96)        
+2023-11-11T07:55:59.4713844Z remote: Compressing objects:  68% (66/96)        
+2023-11-11T07:55:59.4714535Z remote: Compressing objects:  69% (67/96)        
+2023-11-11T07:55:59.4715203Z remote: Compressing objects:  70% (68/96)        
+2023-11-11T07:55:59.4715847Z remote: Compressing objects:  71% (69/96)        
+2023-11-11T07:55:59.4716490Z remote: Compressing objects:  72% (70/96)        
+2023-11-11T07:55:59.4717157Z remote: Compressing objects:  73% (71/96)        
+2023-11-11T07:55:59.4717810Z remote: Compressing objects:  75% (72/96)        
+2023-11-11T07:55:59.4718471Z remote: Compressing objects:  76% (73/96)        
+2023-11-11T07:55:59.4719142Z remote: Compressing objects:  77% (74/96)        
+2023-11-11T07:55:59.4719789Z remote: Compressing objects:  78% (75/96)        
+2023-11-11T07:55:59.4720447Z remote: Compressing objects:  79% (76/96)        
+2023-11-11T07:55:59.4721094Z remote: Compressing objects:  80% (77/96)        
+2023-11-11T07:55:59.4721497Z remote: Compressing objects:  81% (78/96)        
+2023-11-11T07:55:59.4721872Z remote: Compressing objects:  82% (79/96)        
+2023-11-11T07:55:59.4722494Z remote: Compressing objects:  83% (80/96)        
+2023-11-11T07:55:59.4722888Z remote: Compressing objects:  84% (81/96)        
+2023-11-11T07:55:59.4723266Z remote: Compressing objects:  85% (82/96)        
+2023-11-11T07:55:59.4723655Z remote: Compressing objects:  86% (83/96)        
+2023-11-11T07:55:59.4724041Z remote: Compressing objects:  87% (84/96)        
+2023-11-11T07:55:59.4724416Z remote: Compressing objects:  88% (85/96)        
+2023-11-11T07:55:59.4724798Z remote: Compressing objects:  89% (86/96)        
+2023-11-11T07:55:59.4725176Z remote: Compressing objects:  90% (87/96)        
+2023-11-11T07:55:59.4725549Z remote: Compressing objects:  91% (88/96)        
+2023-11-11T07:55:59.4725936Z remote: Compressing objects:  92% (89/96)        
+2023-11-11T07:55:59.4726317Z remote: Compressing objects:  93% (90/96)        
+2023-11-11T07:55:59.4726714Z remote: Compressing objects:  94% (91/96)        
+2023-11-11T07:55:59.4727091Z remote: Compressing objects:  95% (92/96)        
+2023-11-11T07:55:59.4727473Z remote: Compressing objects:  96% (93/96)        
+2023-11-11T07:55:59.4727853Z remote: Compressing objects:  97% (94/96)        
+2023-11-11T07:55:59.4728229Z remote: Compressing objects:  98% (95/96)        
+2023-11-11T07:55:59.4728600Z remote: Compressing objects: 100% (96/96)        
+2023-11-11T07:55:59.4729018Z remote: Compressing objects: 100% (96/96), done.        
+2023-11-11T07:55:59.4771492Z Receiving objects:   0% (1/106)
+2023-11-11T07:55:59.4772959Z Receiving objects:   1% (2/106)
+2023-11-11T07:55:59.4773468Z Receiving objects:   2% (3/106)
+2023-11-11T07:55:59.4773952Z Receiving objects:   3% (4/106)
+2023-11-11T07:55:59.4774846Z Receiving objects:   4% (5/106)
+2023-11-11T07:55:59.4775351Z Receiving objects:   5% (6/106)
+2023-11-11T07:55:59.4775843Z Receiving objects:   6% (7/106)
+2023-11-11T07:55:59.4776838Z Receiving objects:   7% (8/106)
+2023-11-11T07:55:59.4777336Z Receiving objects:   8% (9/106)
+2023-11-11T07:55:59.4777827Z Receiving objects:   9% (10/106)
+2023-11-11T07:55:59.4780466Z Receiving objects:  10% (11/106)
+2023-11-11T07:55:59.4781286Z Receiving objects:  11% (12/106)
+2023-11-11T07:55:59.4782185Z Receiving objects:  12% (13/106)
+2023-11-11T07:55:59.4782674Z Receiving objects:  13% (14/106)
+2023-11-11T07:55:59.4783158Z Receiving objects:  14% (15/106)
+2023-11-11T07:55:59.4783630Z Receiving objects:  15% (16/106)
+2023-11-11T07:55:59.4784110Z Receiving objects:  16% (17/106)
+2023-11-11T07:55:59.4877794Z Receiving objects:  17% (19/106)
+2023-11-11T07:55:59.4878370Z Receiving objects:  18% (20/106)
+2023-11-11T07:55:59.4878892Z Receiving objects:  19% (21/106)
+2023-11-11T07:55:59.4879410Z Receiving objects:  20% (22/106)
+2023-11-11T07:55:59.4882011Z Receiving objects:  21% (23/106)
+2023-11-11T07:55:59.4882913Z Receiving objects:  22% (24/106)
+2023-11-11T07:55:59.4883472Z Receiving objects:  23% (25/106)
+2023-11-11T07:55:59.4883977Z Receiving objects:  24% (26/106)
+2023-11-11T07:55:59.4885207Z Receiving objects:  25% (27/106)
+2023-11-11T07:55:59.4885833Z Receiving objects:  26% (28/106)
+2023-11-11T07:55:59.4886345Z Receiving objects:  27% (29/106)
+2023-11-11T07:55:59.4886852Z Receiving objects:  28% (30/106)
+2023-11-11T07:55:59.4887362Z Receiving objects:  29% (31/106)
+2023-11-11T07:55:59.4887763Z Receiving objects:  30% (32/106)
+2023-11-11T07:55:59.4888192Z Receiving objects:  31% (33/106)
+2023-11-11T07:55:59.4888753Z Receiving objects:  32% (34/106)
+2023-11-11T07:55:59.4889329Z Receiving objects:  33% (35/106)
+2023-11-11T07:55:59.4889851Z Receiving objects:  34% (37/106)
+2023-11-11T07:55:59.4890344Z Receiving objects:  35% (38/106)
+2023-11-11T07:55:59.4890760Z Receiving objects:  36% (39/106)
+2023-11-11T07:55:59.4891114Z Receiving objects:  37% (40/106)
+2023-11-11T07:55:59.4892734Z Receiving objects:  38% (41/106)
+2023-11-11T07:55:59.4893292Z Receiving objects:  39% (42/106)
+2023-11-11T07:55:59.4893876Z Receiving objects:  40% (43/106)
+2023-11-11T07:55:59.4894505Z Receiving objects:  41% (44/106)
+2023-11-11T07:55:59.4895635Z Receiving objects:  42% (45/106)
+2023-11-11T07:55:59.4896407Z Receiving objects:  43% (46/106)
+2023-11-11T07:55:59.4896936Z Receiving objects:  44% (47/106)
+2023-11-11T07:55:59.4897430Z Receiving objects:  45% (48/106)
+2023-11-11T07:55:59.4897928Z Receiving objects:  46% (49/106)
+2023-11-11T07:55:59.4898271Z Receiving objects:  47% (50/106)
+2023-11-11T07:55:59.4898559Z Receiving objects:  48% (51/106)
+2023-11-11T07:55:59.4898858Z Receiving objects:  49% (52/106)
+2023-11-11T07:55:59.4899145Z Receiving objects:  50% (53/106)
+2023-11-11T07:55:59.4924172Z Receiving objects:  51% (55/106)
+2023-11-11T07:55:59.4924874Z Receiving objects:  52% (56/106)
+2023-11-11T07:55:59.4925515Z Receiving objects:  53% (57/106)
+2023-11-11T07:55:59.4926170Z Receiving objects:  54% (58/106)
+2023-11-11T07:55:59.4926846Z Receiving objects:  55% (59/106)
+2023-11-11T07:55:59.4927532Z Receiving objects:  56% (60/106)
+2023-11-11T07:55:59.4928205Z Receiving objects:  57% (61/106)
+2023-11-11T07:55:59.4928846Z Receiving objects:  58% (62/106)
+2023-11-11T07:55:59.4929555Z Receiving objects:  59% (63/106)
+2023-11-11T07:55:59.4930219Z Receiving objects:  60% (64/106)
+2023-11-11T07:55:59.4931264Z Receiving objects:  61% (65/106)
+2023-11-11T07:55:59.4932591Z Receiving objects:  62% (66/106)
+2023-11-11T07:55:59.4933128Z Receiving objects:  63% (67/106)
+2023-11-11T07:55:59.4936396Z Receiving objects:  64% (68/106)
+2023-11-11T07:55:59.4937455Z Receiving objects:  65% (69/106)
+2023-11-11T07:55:59.4938156Z Receiving objects:  66% (70/106)
+2023-11-11T07:55:59.4938666Z Receiving objects:  67% (72/106)
+2023-11-11T07:55:59.4939154Z Receiving objects:  68% (73/106)
+2023-11-11T07:55:59.4939632Z Receiving objects:  69% (74/106)
+2023-11-11T07:55:59.4941057Z Receiving objects:  70% (75/106)
+2023-11-11T07:55:59.4942065Z Receiving objects:  71% (76/106)
+2023-11-11T07:55:59.5067361Z Receiving objects:  72% (77/106)
+2023-11-11T07:55:59.5068122Z Receiving objects:  73% (78/106)
+2023-11-11T07:55:59.5068838Z Receiving objects:  74% (79/106)
+2023-11-11T07:55:59.5070522Z remote: Total 106 (delta 56), reused 28 (delta 9), pack-reused 0        
+2023-11-11T07:55:59.5071613Z Receiving objects:  75% (80/106)
+2023-11-11T07:55:59.5072296Z Receiving objects:  76% (81/106)
+2023-11-11T07:55:59.5072839Z Receiving objects:  77% (82/106)
+2023-11-11T07:55:59.5073335Z Receiving objects:  78% (83/106)
+2023-11-11T07:55:59.5073820Z Receiving objects:  79% (84/106)
+2023-11-11T07:55:59.5074331Z Receiving objects:  80% (85/106)
+2023-11-11T07:55:59.5074823Z Receiving objects:  81% (86/106)
+2023-11-11T07:55:59.5075309Z Receiving objects:  82% (87/106)
+2023-11-11T07:55:59.5075799Z Receiving objects:  83% (88/106)
+2023-11-11T07:55:59.5076296Z Receiving objects:  84% (90/106)
+2023-11-11T07:55:59.5076786Z Receiving objects:  85% (91/106)
+2023-11-11T07:55:59.5077275Z Receiving objects:  86% (92/106)
+2023-11-11T07:55:59.5077765Z Receiving objects:  87% (93/106)
+2023-11-11T07:55:59.5078373Z Receiving objects:  88% (94/106)
+2023-11-11T07:55:59.5079163Z Receiving objects:  89% (95/106)
+2023-11-11T07:55:59.5079878Z Receiving objects:  90% (96/106)
+2023-11-11T07:55:59.5084208Z Receiving objects:  91% (97/106)
+2023-11-11T07:55:59.5085229Z Receiving objects:  92% (98/106)
+2023-11-11T07:55:59.5085903Z Receiving objects:  93% (99/106)
+2023-11-11T07:55:59.5086426Z Receiving objects:  94% (100/106)
+2023-11-11T07:55:59.5086933Z Receiving objects:  95% (101/106)
+2023-11-11T07:55:59.5087437Z Receiving objects:  96% (102/106)
+2023-11-11T07:55:59.5087925Z Receiving objects:  97% (103/106)
+2023-11-11T07:55:59.5088407Z Receiving objects:  98% (104/106)
+2023-11-11T07:55:59.5088912Z Receiving objects:  99% (105/106)
+2023-11-11T07:55:59.5089406Z Receiving objects: 100% (106/106)
+2023-11-11T07:55:59.5090054Z Receiving objects: 100% (106/106), 85.58 KiB | 2.67 MiB/s, done.
+2023-11-11T07:55:59.5094740Z Resolving deltas:   0% (0/56)
+2023-11-11T07:55:59.5096315Z Resolving deltas:   1% (1/56)
+2023-11-11T07:55:59.5098233Z Resolving deltas:   3% (2/56)
+2023-11-11T07:55:59.5099090Z Resolving deltas:   5% (3/56)
+2023-11-11T07:55:59.5099726Z Resolving deltas:   7% (4/56)
+2023-11-11T07:55:59.5101423Z Resolving deltas:   8% (5/56)
+2023-11-11T07:55:59.5101920Z Resolving deltas:  10% (6/56)
+2023-11-11T07:55:59.5102395Z Resolving deltas:  12% (7/56)
+2023-11-11T07:55:59.5104636Z Resolving deltas:  14% (8/56)
+2023-11-11T07:55:59.5105123Z Resolving deltas:  16% (9/56)
+2023-11-11T07:55:59.5105815Z Resolving deltas:  17% (10/56)
+2023-11-11T07:55:59.5107393Z Resolving deltas:  19% (11/56)
+2023-11-11T07:55:59.5107878Z Resolving deltas:  21% (12/56)
+2023-11-11T07:55:59.5108357Z Resolving deltas:  23% (13/56)
+2023-11-11T07:55:59.5108832Z Resolving deltas:  25% (14/56)
+2023-11-11T07:55:59.5109301Z Resolving deltas:  26% (15/56)
+2023-11-11T07:55:59.5109774Z Resolving deltas:  28% (16/56)
+2023-11-11T07:55:59.5110264Z Resolving deltas:  30% (17/56)
+2023-11-11T07:55:59.5110736Z Resolving deltas:  32% (18/56)
+2023-11-11T07:55:59.5111201Z Resolving deltas:  33% (19/56)
+2023-11-11T07:55:59.5111670Z Resolving deltas:  35% (20/56)
+2023-11-11T07:55:59.5112143Z Resolving deltas:  39% (22/56)
+2023-11-11T07:55:59.5112627Z Resolving deltas:  41% (23/56)
+2023-11-11T07:55:59.5113102Z Resolving deltas:  42% (24/56)
+2023-11-11T07:55:59.5113569Z Resolving deltas:  44% (25/56)
+2023-11-11T07:55:59.5114034Z Resolving deltas:  46% (26/56)
+2023-11-11T07:55:59.5114513Z Resolving deltas:  48% (27/56)
+2023-11-11T07:55:59.5114990Z Resolving deltas:  50% (28/56)
+2023-11-11T07:55:59.5115455Z Resolving deltas:  51% (29/56)
+2023-11-11T07:55:59.5116068Z Resolving deltas:  53% (30/56)
+2023-11-11T07:55:59.5116690Z Resolving deltas:  55% (31/56)
+2023-11-11T07:55:59.5117271Z Resolving deltas:  57% (32/56)
+2023-11-11T07:55:59.5117892Z Resolving deltas:  58% (33/56)
+2023-11-11T07:55:59.5118474Z Resolving deltas:  60% (34/56)
+2023-11-11T07:55:59.5119040Z Resolving deltas:  62% (35/56)
+2023-11-11T07:55:59.5119816Z Resolving deltas:  64% (36/56)
+2023-11-11T07:55:59.5121330Z Resolving deltas:  66% (37/56)
+2023-11-11T07:55:59.5122393Z Resolving deltas:  69% (39/56)
+2023-11-11T07:55:59.5123029Z Resolving deltas:  71% (40/56)
+2023-11-11T07:55:59.5123731Z Resolving deltas:  73% (41/56)
+2023-11-11T07:55:59.5124215Z Resolving deltas:  75% (42/56)
+2023-11-11T07:55:59.5124755Z Resolving deltas:  76% (43/56)
+2023-11-11T07:55:59.5125851Z Resolving deltas:  78% (44/56)
+2023-11-11T07:55:59.5126500Z Resolving deltas:  82% (46/56)
+2023-11-11T07:55:59.5126970Z Resolving deltas:  83% (47/56)
+2023-11-11T07:55:59.5127431Z Resolving deltas:  85% (48/56)
+2023-11-11T07:55:59.5128332Z Resolving deltas:  87% (49/56)
+2023-11-11T07:55:59.5129874Z Resolving deltas:  89% (50/56)
+2023-11-11T07:55:59.5130338Z Resolving deltas:  91% (51/56)
+2023-11-11T07:55:59.5130805Z Resolving deltas:  92% (52/56)
+2023-11-11T07:55:59.5132104Z Resolving deltas:  94% (53/56)
+2023-11-11T07:55:59.5132573Z Resolving deltas:  96% (54/56)
+2023-11-11T07:55:59.5133044Z Resolving deltas:  98% (55/56)
+2023-11-11T07:55:59.5133504Z Resolving deltas: 100% (56/56)
+2023-11-11T07:55:59.5133984Z Resolving deltas: 100% (56/56), done.
+2023-11-11T07:55:59.5248798Z From https://github.com/basdijkstra/rest-assured-net
+2023-11-11T07:55:59.5249895Z  * [new ref]         ccc543523c488412d39ee9c96ee2ad5962839e69 -> origin/main
+2023-11-11T07:55:59.5273400Z ##[endgroup]
+2023-11-11T07:55:59.5274075Z ##[group]Determining the checkout info
+2023-11-11T07:55:59.5275763Z ##[endgroup]
+2023-11-11T07:55:59.5276456Z ##[group]Checking out the ref
+2023-11-11T07:55:59.5280561Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2023-11-11T07:55:59.5377986Z Switched to a new branch 'main'
+2023-11-11T07:55:59.5378700Z branch 'main' set up to track 'origin/main'.
+2023-11-11T07:55:59.5385350Z ##[endgroup]
+2023-11-11T07:55:59.5429450Z [command]/usr/bin/git log -1 --format='%H'
+2023-11-11T07:55:59.5461316Z 'ccc543523c488412d39ee9c96ee2ad5962839e69'
+2023-11-11T07:55:59.5817539Z ##[group]Run github/codeql-action/init@v1
+2023-11-11T07:55:59.5817928Z with:
+2023-11-11T07:55:59.5818149Z   languages: csharp
+2023-11-11T07:55:59.5818578Z   token: ***
+2023-11-11T07:55:59.5818840Z   matrix: {
+  "language": "csharp"
+}
+2023-11-11T07:55:59.5819413Z   setup-python-dependencies: true
+2023-11-11T07:55:59.5819746Z   debug: false
+2023-11-11T07:55:59.5819969Z ##[endgroup]
+2023-11-11T07:55:59.8602804Z ##[error]This version of the CodeQL Action was deprecated on January 18th, 2023, and is no longer updated or supported. For better performance, improved security, and new features, upgrade to v2. For more information, see https://github.blog/changelog/2023-01-18-code-scanning-codeql-action-v1-is-now-deprecated/
+2023-11-11T07:56:00.3340647Z ##[warning]2 issues were detected with this workflow: git checkout HEAD^2 is no longer necessary. Please remove this step as Code Scanning recommends analyzing the merge commit for best results. Using on.push.paths can prevent Code Scanning annotating new alerts in your pull requests.
+2023-11-11T07:56:01.1133918Z ##[group]Setup CodeQL tools
+2023-11-11T07:56:01.1167643Z [command]/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/codeql version --format=terse
+2023-11-11T07:56:01.6364723Z 2.15.1
+2023-11-11T07:56:01.6487372Z [command]/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/codeql version --format=json
+2023-11-11T07:56:02.1591059Z {
+2023-11-11T07:56:02.1591979Z   "productName" : "CodeQL",
+2023-11-11T07:56:02.1592981Z   "vendor" : "GitHub",
+2023-11-11T07:56:02.1593858Z   "version" : "2.15.1",
+2023-11-11T07:56:02.1594655Z   "sha" : "9e282a764bc1d84cc6bf2902fd204863d1a646e5",
+2023-11-11T07:56:02.1595292Z   "branches" : [
+2023-11-11T07:56:02.1596042Z     "codeql-cli-2.15.1"
+2023-11-11T07:56:02.1596474Z   ],
+2023-11-11T07:56:02.1597059Z   "copyright" : "Copyright (C) 2019-2023 GitHub, Inc.",
+2023-11-11T07:56:02.1597945Z   "unpackedLocation" : "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql",
+2023-11-11T07:56:02.1598992Z   "configFileLocation" : "/home/runner/.config/codeql/config",
+2023-11-11T07:56:02.1599718Z   "configFileFound" : false,
+2023-11-11T07:56:02.1600180Z   "features" : {
+2023-11-11T07:56:02.1600597Z     "featuresInVersionResult" : true,
+2023-11-11T07:56:02.1601285Z     "indirectTracingSupportsStaticBinaries" : false,
+2023-11-11T07:56:02.1602005Z     "supportsPython312" : true,
+2023-11-11T07:56:02.1602508Z     "mrvaPackCreate" : true
+2023-11-11T07:56:02.1602946Z   }
+2023-11-11T07:56:02.1603243Z }
+2023-11-11T07:56:02.1790523Z ##[endgroup]
+2023-11-11T07:56:02.1796791Z ##[group]Load language configuration
+2023-11-11T07:56:02.1801865Z Languages from configuration: csharp
+2023-11-11T07:56:02.1809758Z [command]/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/codeql resolve queries csharp-code-scanning.qls --format=bylanguage
+2023-11-11T07:56:02.9466324Z Recording pack reference codeql/csharp-queries at /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1.
+2023-11-11T07:56:03.1071865Z Recording pack reference codeql/suite-helpers at /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/.codeql/libraries/codeql/suite-helpers/0.7.1.
+2023-11-11T07:56:04.7599226Z {
+2023-11-11T07:56:04.7599655Z   "byLanguage" : {
+2023-11-11T07:56:04.7600101Z     "csharp" : {
+2023-11-11T07:56:04.7601731Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-117/LogForging.ql" : { },
+2023-11-11T07:56:04.7604194Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-384/AbandonSession.ql" : { },
+2023-11-11T07:56:04.7606485Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-079/XSS.ql" : { },
+2023-11-11T07:56:04.7608914Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-114/AssemblyPathInjection.ql" : { },
+2023-11-11T07:56:04.7639336Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-359/ExposureOfPrivateInformation.ql" : { },
+2023-11-11T07:56:04.7641417Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-352/MissingAntiForgeryTokenValidation.ql" : { },
+2023-11-11T07:56:04.7643328Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-209/ExceptionInformationExposure.ql" : { },
+2023-11-11T07:56:04.7645625Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-022/TaintedPath.ql" : { },
+2023-11-11T07:56:04.7648573Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-022/ZipSlip.ql" : { },
+2023-11-11T07:56:04.7651490Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-078/CommandInjection.ql" : { },
+2023-11-11T07:56:04.7654054Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-312/CleartextStorage.ql" : { },
+2023-11-11T07:56:04.7656703Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CookieWithOverlyBroadDomain.ql" : { },
+2023-11-11T07:56:04.7659200Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/InsufficientKeySize.ql" : { },
+2023-11-11T07:56:04.7661665Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-099/ResourceInjection.ql" : { },
+2023-11-11T07:56:04.7664342Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-248/MissingASPNETGlobalErrorHandler.ql" : { },
+2023-11-11T07:56:04.7667308Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-091/XMLInjection.ql" : { },
+2023-11-11T07:56:04.7669889Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-643/XPathInjection.ql" : { },
+2023-11-11T07:56:04.7672447Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-611/UntrustedDataInsecureXml.ql" : { },
+2023-11-11T07:56:04.7674807Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-807/ConditionalBypass.ql" : { },
+2023-11-11T07:56:04.7676321Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-119/LocalUnvalidatedArithmetic.ql" : { },
+2023-11-11T07:56:04.7677693Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-094/CodeInjection.ql" : { },
+2023-11-11T07:56:04.7679026Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/HeaderCheckingDisabled.ql" : { },
+2023-11-11T07:56:04.7680354Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/PersistentCookie.ql" : { },
+2023-11-11T07:56:04.7681642Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-011/ASPNetDebug.ql" : { },
+2023-11-11T07:56:04.7683019Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-201/ExposureInTransmittedData.ql" : { },
+2023-11-11T07:56:04.7684395Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/InadequateRSAPadding.ql" : { },
+2023-11-11T07:56:04.7685714Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-090/LDAPInjection.ql" : { },
+2023-11-11T07:56:04.7687000Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/Encryption using ECB.ql" : { },
+2023-11-11T07:56:04.7688580Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-601/UrlRedirect.ql" : { },
+2023-11-11T07:56:04.7689867Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/InsecureRandomness.ql" : { },
+2023-11-11T07:56:04.7691379Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-134/UncontrolledFormatString.ql" : { },
+2023-11-11T07:56:04.7692808Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-548/ASPNetDirectoryListing.ql" : { },
+2023-11-11T07:56:04.7694232Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-451/MissingXFrameOptions.ql" : { },
+2023-11-11T07:56:04.7695547Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-614/RequireSSL.ql" : { },
+2023-11-11T07:56:04.7696795Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/WeakEncryption.ql" : { },
+2023-11-11T07:56:04.7698055Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-089/SqlInjection.ql" : { },
+2023-11-11T07:56:04.7699379Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CookieWithOverlyBroadPath.ql" : { },
+2023-11-11T07:56:04.7700660Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-730/ReDoS.ql" : { },
+2023-11-11T07:56:04.7701905Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-730/RegexInjection.ql" : { },
+2023-11-11T07:56:04.7703240Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-502/DeserializedDelegate.ql" : { },
+2023-11-11T07:56:04.7704697Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-502/UnsafeDeserializationUntrustedInput.ql" : { },
+2023-11-11T07:56:04.7706354Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/DiagnosticExtractionErrors.ql" : { },
+2023-11-11T07:56:04.7707687Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/DiagnosticNoExtractionErrors.ql" : { },
+2023-11-11T07:56:04.7708932Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/ExtractorError.ql" : { },
+2023-11-11T07:56:04.7710106Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/CompilerError.ql" : { },
+2023-11-11T07:56:04.7711266Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/ExtractorMessage.ql" : { },
+2023-11-11T07:56:04.7712443Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/CompilerMessage.ql" : { },
+2023-11-11T07:56:04.7713637Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/ExternalLibraryUsage.ql" : { },
+2023-11-11T07:56:04.7714886Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalSources.ql" : { },
+2023-11-11T07:56:04.7716140Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/UnsupportedExternalAPIs.ql" : { },
+2023-11-11T07:56:04.7717376Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalApis.ql" : { },
+2023-11-11T07:56:04.7718607Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalSinks.ql" : { },
+2023-11-11T07:56:04.7719996Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalTaint.ql" : { },
+2023-11-11T07:56:04.7721212Z       "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Metrics/Summaries/LinesOfCode.ql" : { }
+2023-11-11T07:56:04.7721897Z     }
+2023-11-11T07:56:04.7722219Z   },
+2023-11-11T07:56:04.7722432Z   "noDeclaredLanguage" : { },
+2023-11-11T07:56:04.7722749Z   "multipleDeclaredLanguages" : { }
+2023-11-11T07:56:04.7723051Z }
+2023-11-11T07:56:04.7858218Z [command]/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/codeql resolve languages --format=betterjson --extractor-options-verbosity=4
+2023-11-11T07:56:05.5505952Z {
+2023-11-11T07:56:05.5506774Z   "aliases" : {
+2023-11-11T07:56:05.5507463Z     "c" : "cpp",
+2023-11-11T07:56:05.5508577Z     "c++" : "cpp",
+2023-11-11T07:56:05.5509431Z     "c-c++" : "cpp",
+2023-11-11T07:56:05.5510264Z     "c-cpp" : "cpp",
+2023-11-11T07:56:05.5510796Z     "c#" : "csharp",
+2023-11-11T07:56:05.5511301Z     "java-kotlin" : "java",
+2023-11-11T07:56:05.5511752Z     "kotlin" : "java",
+2023-11-11T07:56:05.5513472Z     "javascript-typescript" : "javascript",
+2023-11-11T07:56:05.5514360Z     "typescript" : "javascript"
+2023-11-11T07:56:05.5515035Z   },
+2023-11-11T07:56:05.5515633Z   "extractors" : {
+2023-11-11T07:56:05.5516424Z     "javascript" : [
+2023-11-11T07:56:05.5517851Z       {
+2023-11-11T07:56:05.5518724Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/javascript",
+2023-11-11T07:56:05.5519849Z         "extractor_options" : {
+2023-11-11T07:56:05.5520563Z           "trap" : {
+2023-11-11T07:56:05.5521176Z             "title" : "TRAP options",
+2023-11-11T07:56:05.5522289Z             "description" : "Options about how the extractor handles TRAP files",
+2023-11-11T07:56:05.5523288Z             "type" : "object",
+2023-11-11T07:56:05.5524215Z             "visibility" : 3,
+2023-11-11T07:56:05.5528659Z             "properties" : {
+2023-11-11T07:56:05.5529309Z               "cache" : {
+2023-11-11T07:56:05.5530070Z                 "title" : "TRAP cache options",
+2023-11-11T07:56:05.5532628Z                 "description" : "Options about how the extractor handles its TRAP cache",
+2023-11-11T07:56:05.5534024Z                 "type" : "object",
+2023-11-11T07:56:05.5535020Z                 "properties" : {
+2023-11-11T07:56:05.5535815Z                   "dir" : {
+2023-11-11T07:56:05.5536582Z                     "title" : "TRAP cache directory",
+2023-11-11T07:56:05.5537573Z                     "description" : "The directory of the TRAP cache to use",
+2023-11-11T07:56:05.5538557Z                     "type" : "string"
+2023-11-11T07:56:05.5539192Z                   },
+2023-11-11T07:56:05.5539766Z                   "bound" : {
+2023-11-11T07:56:05.5541785Z                     "title" : "TRAP cache bound",
+2023-11-11T07:56:05.5542673Z                     "description" : "A soft limit (in MB) on the size of the TRAP cache",
+2023-11-11T07:56:05.5543534Z                     "type" : "string",
+2023-11-11T07:56:05.5544266Z                     "pattern" : "[0-9]+"
+2023-11-11T07:56:05.5544816Z                   },
+2023-11-11T07:56:05.5545465Z                   "write" : {
+2023-11-11T07:56:05.5546026Z                     "title" : "TRAP cache writeable",
+2023-11-11T07:56:05.5546919Z                     "description" : "Whether to write to the TRAP cache as well as reading it",
+2023-11-11T07:56:05.5547763Z                     "type" : "string",
+2023-11-11T07:56:05.5548355Z                     "pattern" : "(true|TRUE|false|FALSE)"
+2023-11-11T07:56:05.5548924Z                   }
+2023-11-11T07:56:05.5549286Z                 }
+2023-11-11T07:56:05.5549630Z               }
+2023-11-11T07:56:05.5549956Z             }
+2023-11-11T07:56:05.5550285Z           }
+2023-11-11T07:56:05.5550593Z         }
+2023-11-11T07:56:05.5550891Z       }
+2023-11-11T07:56:05.5551183Z     ],
+2023-11-11T07:56:05.5551490Z     "java" : [
+2023-11-11T07:56:05.5551819Z       {
+2023-11-11T07:56:05.5552390Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/java",
+2023-11-11T07:56:05.5553563Z         "extractor_options" : {
+2023-11-11T07:56:05.5554043Z           "exclude" : {
+2023-11-11T07:56:05.5554579Z             "title" : "A glob excluding files from analysis.",
+2023-11-11T07:56:05.5555510Z             "description" : "A glob indicating what files to exclude from the analysis.\n",
+2023-11-11T07:56:05.5556608Z             "type" : "string"
+2023-11-11T07:56:05.5557028Z           },
+2023-11-11T07:56:05.5557388Z           "add_prefer_source" : {
+2023-11-11T07:56:05.5558083Z             "title" : "Whether to always prefer source files over class files.",
+2023-11-11T07:56:05.5561025Z             "description" : "A value indicating whether source files should be preferred over class files. If set to 'true', the extraction adds '-Xprefer:source' to the javac command line. If set to 'false', the extraction uses the default javac behavior ('-Xprefer:newer'). The default is 'true'.\n",
+2023-11-11T07:56:05.5563493Z             "type" : "string",
+2023-11-11T07:56:05.5563953Z             "pattern" : "^(false|true)$"
+2023-11-11T07:56:05.5564455Z           },
+2023-11-11T07:56:05.5564794Z           "buildless" : {
+2023-11-11T07:56:05.5565502Z             "title" : "Whether to use buildless (standalone) extraction (experimental).",
+2023-11-11T07:56:05.5569630Z             "description" : "A value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+2023-11-11T07:56:05.5572925Z             "type" : "string",
+2023-11-11T07:56:05.5573392Z             "pattern" : "^(false|true)$"
+2023-11-11T07:56:05.5573868Z           }
+2023-11-11T07:56:05.5574172Z         }
+2023-11-11T07:56:05.5574461Z       }
+2023-11-11T07:56:05.5574742Z     ],
+2023-11-11T07:56:05.5575049Z     "swift" : [
+2023-11-11T07:56:05.5575377Z       {
+2023-11-11T07:56:05.5575932Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/swift"
+2023-11-11T07:56:05.5576659Z       }
+2023-11-11T07:56:05.5576951Z     ],
+2023-11-11T07:56:05.5577262Z     "csharp" : [
+2023-11-11T07:56:05.5577614Z       {
+2023-11-11T07:56:05.5578194Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/csharp",
+2023-11-11T07:56:05.5579000Z         "extractor_options" : {
+2023-11-11T07:56:05.5579473Z           "trap" : {
+2023-11-11T07:56:05.5579939Z             "title" : "Options pertaining to TRAP.",
+2023-11-11T07:56:05.5580630Z             "description" : "Options pertaining to TRAP.",
+2023-11-11T07:56:05.5581252Z             "type" : "object",
+2023-11-11T07:56:05.5581711Z             "properties" : {
+2023-11-11T07:56:05.5582149Z               "compression" : {
+2023-11-11T07:56:05.5582614Z                 "title" : "Controls compression for the TRAP files written by the extractor.",
+2023-11-11T07:56:05.5583958Z                 "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'brotli' (the default, to write brotli-compressed TRAP), 'gzip', and 'none' (to write uncompressed TRAP).\n",
+2023-11-11T07:56:05.5584973Z                 "type" : "string",
+2023-11-11T07:56:05.5585549Z                 "pattern" : "^(none|gzip|brotli)$"
+2023-11-11T07:56:05.5585883Z               }
+2023-11-11T07:56:05.5586090Z             }
+2023-11-11T07:56:05.5586292Z           },
+2023-11-11T07:56:05.5586497Z           "buildless" : {
+2023-11-11T07:56:05.5586868Z             "title" : "Whether to use buildless (standalone) extraction.",
+2023-11-11T07:56:05.5589368Z             "description" : "A value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+2023-11-11T07:56:05.5591246Z             "type" : "string",
+2023-11-11T07:56:05.5591530Z             "pattern" : "^(false|true)$"
+2023-11-11T07:56:05.5591968Z           },
+2023-11-11T07:56:05.5592168Z           "cil" : {
+2023-11-11T07:56:05.5592455Z             "title" : "Whether to enable CIL extraction.",
+2023-11-11T07:56:05.5593179Z             "description" : "A value indicating, whether CIL extraction should be enabled. The default is 'true'.\n",
+2023-11-11T07:56:05.5593754Z             "type" : "string",
+2023-11-11T07:56:05.5594038Z             "pattern" : "^(false|true)$"
+2023-11-11T07:56:05.5594339Z           }
+2023-11-11T07:56:05.5594536Z         }
+2023-11-11T07:56:05.5594722Z       }
+2023-11-11T07:56:05.5594907Z     ],
+2023-11-11T07:56:05.5595109Z     "properties" : [
+2023-11-11T07:56:05.5595337Z       {
+2023-11-11T07:56:05.5595712Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/properties"
+2023-11-11T07:56:05.5596172Z       }
+2023-11-11T07:56:05.5596346Z     ],
+2023-11-11T07:56:05.5596536Z     "python" : [
+2023-11-11T07:56:05.5596747Z       {
+2023-11-11T07:56:05.5597081Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/python"
+2023-11-11T07:56:05.5597519Z       }
+2023-11-11T07:56:05.5597695Z     ],
+2023-11-11T07:56:05.5597874Z     "html" : [
+2023-11-11T07:56:05.5598079Z       {
+2023-11-11T07:56:05.5598403Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/html"
+2023-11-11T07:56:05.5598826Z       }
+2023-11-11T07:56:05.5599008Z     ],
+2023-11-11T07:56:05.5599193Z     "ruby" : [
+2023-11-11T07:56:05.5599390Z       {
+2023-11-11T07:56:05.5599725Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/ruby",
+2023-11-11T07:56:05.5600173Z         "extractor_options" : {
+2023-11-11T07:56:05.5600440Z           "trap" : {
+2023-11-11T07:56:05.5600726Z             "title" : "Options pertaining to TRAP.",
+2023-11-11T07:56:05.5601141Z             "description" : "Options pertaining to TRAP.",
+2023-11-11T07:56:05.5601504Z             "type" : "object",
+2023-11-11T07:56:05.5601777Z             "properties" : {
+2023-11-11T07:56:05.5602047Z               "compression" : {
+2023-11-11T07:56:05.5602500Z                 "title" : "Controls compression for the TRAP files written by the extractor.",
+2023-11-11T07:56:05.5603775Z                 "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'gzip' (the default, to write gzip-compressed TRAP) and 'none' (to write uncompressed TRAP).\n",
+2023-11-11T07:56:05.5604727Z                 "type" : "string",
+2023-11-11T07:56:05.5605027Z                 "pattern" : "^(none|gzip)$"
+2023-11-11T07:56:05.5605338Z               }
+2023-11-11T07:56:05.5605543Z             }
+2023-11-11T07:56:05.5605739Z           }
+2023-11-11T07:56:05.5605932Z         }
+2023-11-11T07:56:05.5606118Z       }
+2023-11-11T07:56:05.5606291Z     ],
+2023-11-11T07:56:05.5606482Z     "csv" : [
+2023-11-11T07:56:05.5606679Z       {
+2023-11-11T07:56:05.5607004Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/csv"
+2023-11-11T07:56:05.5607423Z       }
+2023-11-11T07:56:05.5607600Z     ],
+2023-11-11T07:56:05.5607784Z     "go" : [
+2023-11-11T07:56:05.5607982Z       {
+2023-11-11T07:56:05.5608305Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/go"
+2023-11-11T07:56:05.5608710Z       }
+2023-11-11T07:56:05.5608887Z     ],
+2023-11-11T07:56:05.5609073Z     "cpp" : [
+2023-11-11T07:56:05.5609270Z       {
+2023-11-11T07:56:05.5609595Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/cpp"
+2023-11-11T07:56:05.5610012Z       }
+2023-11-11T07:56:05.5610184Z     ],
+2023-11-11T07:56:05.5610367Z     "xml" : [
+2023-11-11T07:56:05.5610564Z       {
+2023-11-11T07:56:05.5610872Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/xml"
+2023-11-11T07:56:05.5611290Z       }
+2023-11-11T07:56:05.5611470Z     ],
+2023-11-11T07:56:05.5611778Z     "yaml" : [
+2023-11-11T07:56:05.5611985Z       {
+2023-11-11T07:56:05.5612312Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/yaml"
+2023-11-11T07:56:05.5612723Z       }
+2023-11-11T07:56:05.5613014Z     ]
+2023-11-11T07:56:05.5613188Z   }
+2023-11-11T07:56:05.5613362Z }
+2023-11-11T07:56:05.5738060Z csharp does not support TRAP caching (missing option group)
+2023-11-11T07:56:05.5739003Z Found 0 languages that support TRAP caching
+2023-11-11T07:56:05.5740679Z Code Scanning configuration file being processed in the codeql CLI.
+2023-11-11T07:56:05.5749354Z ##[endgroup]
+2023-11-11T07:56:05.5761032Z Writing augmented user configuration file to /home/runner/work/_temp/user-config.yaml
+2023-11-11T07:56:05.5761922Z ##[group]Augmented user configuration file contents
+2023-11-11T07:56:05.5766394Z {}
+2023-11-11T07:56:05.5766585Z 
+2023-11-11T07:56:05.5767009Z ##[endgroup]
+2023-11-11T07:56:05.5772381Z [command]/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/codeql database init --db-cluster /home/runner/work/_temp/codeql_databases --source-root=/home/runner/work/rest-assured-net/rest-assured-net --language=csharp --begin-tracing --trace-process-name=Runner.Worker.exe --codescanning-config=/home/runner/work/_temp/user-config.yaml
+2023-11-11T07:56:07.1740513Z Calculating baseline information in /home/runner/work/rest-assured-net/rest-assured-net
+2023-11-11T07:56:07.2499767Z Calculated baseline information for languages: csharp (75ms).
+2023-11-11T07:56:07.3012183Z Resolving extractor csharp.
+2023-11-11T07:56:07.3049926Z Successfully loaded extractor C# (csharp) from /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/csharp.
+2023-11-11T07:56:07.3289791Z Created skeleton CodeQL database at /home/runner/work/_temp/codeql_databases/csharp. This in-progress database is ready to be populated by an extractor.
+2023-11-11T07:56:07.6296629Z ##[group]Run github/codeql-action/autobuild@v1
+2023-11-11T07:56:07.6297015Z with:
+2023-11-11T07:56:07.6297377Z   token: ***
+2023-11-11T07:56:07.6297626Z   matrix: {
+  "language": "csharp"
+}
+2023-11-11T07:56:07.6297936Z env:
+2023-11-11T07:56:07.6298153Z   CODEQL_ACTION_VERSION: 1.1.39
+2023-11-11T07:56:07.6298483Z   CODEQL_ACTION_FEATURE_SARIF_COMBINE: true
+2023-11-11T07:56:07.6298892Z   CODEQL_ACTION_FEATURE_WILL_UPLOAD: true
+2023-11-11T07:56:07.6299384Z   CODEQL_ACTION_ANALYSIS_KEY: .github/workflows/codeql-analysis.yml:analyze
+2023-11-11T07:56:07.6299909Z   CODEQL_WORKFLOW_STARTED_AT: 2023-11-11T07:55:59.851Z
+2023-11-11T07:56:07.6300321Z   CODEQL_ACTION_FEATURE_MULTI_LANGUAGE: false
+2023-11-11T07:56:07.6300674Z   CODEQL_ACTION_FEATURE_SANDWICH: false
+2023-11-11T07:56:07.6300990Z   CODEQL_RAM: 14957
+2023-11-11T07:56:07.6301231Z   CODEQL_THREADS: 4
+2023-11-11T07:56:07.6301594Z   CODEQL_SCRATCH_DIR: /home/runner/work/_temp/codeql_databases/working
+2023-11-11T07:56:07.6302146Z   CODEQL_DIST: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql
+2023-11-11T07:56:07.6302551Z   CODEQL_PLATFORM: linux64
+2023-11-11T07:56:07.6302836Z   CODEQL_PLATFORM_DLL_EXTENSION: .so
+2023-11-11T07:56:07.6303328Z   CODEQL_JAVA_HOME: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/tools/linux64/java
+2023-11-11T07:56:07.6303990Z   CODEQL_EXTRACTOR_CSHARP_ROOT: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/csharp
+2023-11-11T07:56:07.6304669Z   CODEQL_EXTRACTOR_CSHARP_WIP_DATABASE: /home/runner/work/_temp/codeql_databases/csharp
+2023-11-11T07:56:07.6305994Z   CODEQL_EXTRACTOR_CSHARP_DIAGNOSTIC_DIR: /home/runner/work/_temp/codeql_databases/csharp/diagnostic/extractors/csharp
+2023-11-11T07:56:07.6307411Z   CODEQL_EXTRACTOR_CSHARP_LOG_DIR: /home/runner/work/_temp/codeql_databases/csharp/log
+2023-11-11T07:56:07.6308670Z   CODEQL_EXTRACTOR_CSHARP_SCRATCH_DIR: /home/runner/work/_temp/codeql_databases/csharp/working
+2023-11-11T07:56:07.6309476Z   CODEQL_EXTRACTOR_CSHARP_TRAP_DIR: /home/runner/work/_temp/codeql_databases/csharp/trap/csharp
+2023-11-11T07:56:07.6310262Z   CODEQL_EXTRACTOR_CSHARP_SOURCE_ARCHIVE_DIR: /home/runner/work/_temp/codeql_databases/csharp/src
+2023-11-11T07:56:07.6310832Z   DOTNET_GENERATE_ASPNET_CERTIFICATE: false
+2023-11-11T07:56:07.6311196Z   CODEQL_EXTRACTOR_CSHARP_THREADS: 4
+2023-11-11T07:56:07.6311535Z   CODEQL_EXTRACTOR_CSHARP_RAM: 14957
+2023-11-11T07:56:07.6312044Z   CODEQL_TRACER_LOG: /home/runner/work/_temp/codeql_databases/log/build-tracer.log
+2023-11-11T07:56:07.6312962Z   CODEQL_TRACER_DIAGNOSTICS_DIR: /home/runner/work/_temp/codeql_databases/diagnostic/tracer
+2023-11-11T07:56:07.6313489Z   CODEQL_TRACER_LANGUAGES: csharp
+2023-11-11T07:56:07.6314135Z   SEMMLE_PRELOAD_libtrace: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/tools/linux64/${LIB}_${PLATFORM}_trace.so
+2023-11-11T07:56:07.6315036Z   SEMMLE_PRELOAD_libtrace32: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/tools/linux64/lib32trace.so
+2023-11-11T07:56:07.6315855Z   SEMMLE_PRELOAD_libtrace64: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/tools/linux64/lib64trace.so
+2023-11-11T07:56:07.6316683Z   LD_PRELOAD: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/tools/linux64/${LIB}_${PLATFORM}_trace.so
+2023-11-11T07:56:07.6317436Z   CODEQL_RUNNER: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/tools/linux64/runner
+2023-11-11T07:56:07.6317914Z ##[endgroup]
+2023-11-11T07:56:07.9014442Z ##[error]This version of the CodeQL Action was deprecated on January 18th, 2023, and is no longer updated or supported. For better performance, improved security, and new features, upgrade to v2. For more information, see https://github.blog/changelog/2023-01-18-code-scanning-codeql-action-v1-is-now-deprecated/
+2023-11-11T07:56:08.1408028Z ##[group]Attempting to automatically build csharp code
+2023-11-11T07:56:08.1421845Z [command]/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/codeql version --format=terse
+2023-11-11T07:56:08.5552304Z 2.15.1
+2023-11-11T07:56:08.5645252Z [command]/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/csharp/tools/autobuild.sh
+2023-11-11T07:56:09.9040879Z CodeQL C# autobuilder
+2023-11-11T07:56:10.2061581Z Working directory: /home/runner/work/rest-assured-net/rest-assured-net
+2023-11-11T07:56:10.8037859Z Attempting to build using .NET Core
+2023-11-11T07:56:11.0337544Z 
+2023-11-11T07:56:11.0338025Z Running dotnet --info
+2023-11-11T07:56:11.3220995Z .NET SDK:
+2023-11-11T07:56:11.3235551Z  Version:   7.0.403
+2023-11-11T07:56:11.3236007Z  Commit:    142776d834
+2023-11-11T07:56:11.3236349Z 
+2023-11-11T07:56:11.3237442Z Runtime Environment:
+2023-11-11T07:56:11.3237911Z  OS Name:     ubuntu
+2023-11-11T07:56:11.3238210Z  OS Version:  22.04
+2023-11-11T07:56:11.3239857Z  OS Platform: Linux
+2023-11-11T07:56:11.3429515Z  RID:         ubuntu.22.04-x64
+2023-11-11T07:56:11.3430230Z  Base Path:   /usr/share/dotnet/sdk/7.0.403/
+2023-11-11T07:56:11.3439023Z 
+2023-11-11T07:56:11.3439452Z Host:
+2023-11-11T07:56:11.3440245Z   Version:      7.0.13
+2023-11-11T07:56:11.3440848Z   Architecture: x64
+2023-11-11T07:56:11.3441266Z   Commit:       3f73a2f186
+2023-11-11T07:56:11.3441563Z 
+2023-11-11T07:56:11.3441731Z .NET SDKs installed:
+2023-11-11T07:56:11.3445558Z   6.0.416 [/usr/share/dotnet/sdk]
+2023-11-11T07:56:11.3446248Z   7.0.113 [/usr/share/dotnet/sdk]
+2023-11-11T07:56:11.3446980Z   7.0.203 [/usr/share/dotnet/sdk]
+2023-11-11T07:56:11.3447526Z   7.0.310 [/usr/share/dotnet/sdk]
+2023-11-11T07:56:11.3448037Z   7.0.403 [/usr/share/dotnet/sdk]
+2023-11-11T07:56:11.3448375Z 
+2023-11-11T07:56:11.3448562Z .NET runtimes installed:
+2023-11-11T07:56:11.3449421Z   Microsoft.AspNetCore.App 6.0.24 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+2023-11-11T07:56:11.3450739Z   Microsoft.AspNetCore.App 7.0.5 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+2023-11-11T07:56:11.3452081Z   Microsoft.AspNetCore.App 7.0.13 [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+2023-11-11T07:56:11.3452890Z   Microsoft.NETCore.App 6.0.24 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+2023-11-11T07:56:11.3453657Z   Microsoft.NETCore.App 7.0.5 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+2023-11-11T07:56:11.3454431Z   Microsoft.NETCore.App 7.0.13 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+2023-11-11T07:56:11.3454829Z 
+2023-11-11T07:56:11.3454939Z Other architectures found:
+2023-11-11T07:56:11.3455201Z   None
+2023-11-11T07:56:11.3455320Z 
+2023-11-11T07:56:11.3455415Z Environment variables:
+2023-11-11T07:56:11.3455663Z   Not set
+2023-11-11T07:56:11.3455790Z 
+2023-11-11T07:56:11.3455880Z global.json file:
+2023-11-11T07:56:11.3456402Z   Not found
+2023-11-11T07:56:11.3456530Z 
+2023-11-11T07:56:11.3456618Z Learn more:
+2023-11-11T07:56:11.3456855Z   https://aka.ms/dotnet/info
+2023-11-11T07:56:11.3457062Z 
+2023-11-11T07:56:11.3457148Z Download .NET:
+2023-11-11T07:56:11.3457394Z   https://aka.ms/dotnet/download
+2023-11-11T07:56:11.3538685Z Exit code 0
+2023-11-11T07:56:11.3540144Z 
+2023-11-11T07:56:11.3541082Z Running dotnet clean /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.sln
+2023-11-11T07:56:11.5742073Z MSBuild version 17.7.3+4fca21998 for .NET
+2023-11-11T07:56:11.6979460Z Build started 11/11/2023 07:56:11.
+2023-11-11T07:56:11.9646815Z      1>Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.sln" on node 1 (Clean target(s)).
+2023-11-11T07:56:11.9650599Z      1>ValidateSolutionConfiguration:
+2023-11-11T07:56:11.9651477Z          Building solution configuration "Debug|Any CPU".
+2023-11-11T07:56:12.8110180Z      1>Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.sln" (1) is building "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/RestAssured.Net.DemoService.csproj" (2) on node 1 (Clean target(s)).
+2023-11-11T07:56:12.8132361Z      2>Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/RestAssured.Net.DemoService.csproj" (2) is building "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/RestAssured.Net.DemoService.csproj" (2:2) on node 1 (Clean target(s)).
+2023-11-11T07:56:12.8136088Z      2>CoreClean:
+2023-11-11T07:56:12.8706828Z          Creating directory "obj/Debug/net6.0/".
+2023-11-11T07:56:12.8709060Z      2>Done Building Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/RestAssured.Net.DemoService.csproj" (Clean target(s)).
+2023-11-11T07:56:12.9302016Z      1>Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.sln" (1) is building "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj" (3) on node 3 (Clean target(s)).
+2023-11-11T07:56:12.9328880Z      3>Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj" (3) is building "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj" (3:2) on node 3 (Clean target(s)).
+2023-11-11T07:56:12.9334812Z      3>CoreClean:
+2023-11-11T07:56:12.9335496Z          Creating directory "obj/Debug/net6.0/".
+2023-11-11T07:56:12.9550310Z      1>Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.sln" (1) is building "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj" (4) on node 2 (Clean target(s)).
+2023-11-11T07:56:12.9554965Z      4>Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj" (4) is building "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj" (4:3) on node 1 (Clean target(s)).
+2023-11-11T07:56:12.9557551Z      4>CoreClean:
+2023-11-11T07:56:12.9558178Z          Creating directory "obj/Debug/net7.0/".
+2023-11-11T07:56:12.9636507Z      4>Done Building Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj" (Clean target(s)).
+2023-11-11T07:56:12.9771636Z      4>Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj" (4) is building "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj" (4:2) on node 2 (Clean target(s)).
+2023-11-11T07:56:12.9785942Z      4>CoreClean:
+2023-11-11T07:56:12.9786856Z          Creating directory "obj/Debug/net6.0/".
+2023-11-11T07:56:13.0167131Z      4>Done Building Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj" (Clean target(s)).
+2023-11-11T07:56:13.0225920Z      3>Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj" (3) is building "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj" (3:3) on node 3 (Clean target(s)).
+2023-11-11T07:56:13.0233950Z      3>CoreClean:
+2023-11-11T07:56:13.0234974Z          Creating directory "obj/Debug/net7.0/".
+2023-11-11T07:56:13.2248158Z      2>Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/RestAssured.Net.DemoService.csproj" (2) is building "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/RestAssured.Net.DemoService.csproj" (2:6) on node 4 (Clean target(s)).
+2023-11-11T07:56:13.2251975Z      2>CoreClean:
+2023-11-11T07:56:13.2253024Z          Creating directory "obj/Debug/net7.0/".
+2023-11-11T07:56:13.2748410Z      2>Done Building Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/RestAssured.Net.DemoService.csproj" (Clean target(s)).
+2023-11-11T07:56:13.2920984Z      2>Done Building Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/RestAssured.Net.DemoService.csproj" (Clean target(s)).
+2023-11-11T07:56:13.4216327Z      4>Done Building Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj" (Clean target(s)).
+2023-11-11T07:56:13.5095974Z      3>Done Building Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj" (Clean target(s)).
+2023-11-11T07:56:13.5190704Z      3>Done Building Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj" (Clean target(s)).
+2023-11-11T07:56:13.5208820Z      3>Done Building Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj" (Clean target(s)).
+2023-11-11T07:56:13.5217661Z      1>Done Building Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.sln" (Clean target(s)).
+2023-11-11T07:56:13.5436943Z 
+2023-11-11T07:56:13.5437743Z Build succeeded.
+2023-11-11T07:56:13.5438808Z     0 Warning(s)
+2023-11-11T07:56:13.5439435Z     0 Error(s)
+2023-11-11T07:56:13.5439724Z 
+2023-11-11T07:56:13.5439923Z Time Elapsed 00:00:01.84
+2023-11-11T07:56:13.5791020Z Exit code 0
+2023-11-11T07:56:13.5791662Z 
+2023-11-11T07:56:13.5793650Z Running dotnet restore /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.sln
+2023-11-11T07:56:14.4830184Z   Determining projects to restore...
+2023-11-11T07:56:15.9498781Z   Restored /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/RestAssured.Net.DemoService.csproj (in 680 ms).
+2023-11-11T07:56:17.5015606Z   Restored /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj (in 2.26 sec).
+2023-11-11T07:56:17.7454695Z   Restored /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj (in 2.5 sec).
+2023-11-11T07:56:17.8011548Z Exit code 0
+2023-11-11T07:56:17.8011867Z 
+2023-11-11T07:56:17.8012976Z Running dotnet build --no-incremental /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.sln
+2023-11-11T07:56:17.9826863Z MSBuild version 17.7.3+4fca21998 for .NET
+2023-11-11T07:56:18.7538780Z   Determining projects to restore...
+2023-11-11T07:56:19.6260806Z   All projects are up-to-date for restore.
+2023-11-11T07:56:25.0036667Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,164): warning CS8604: Possible null reference argument for parameter 'proxy' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:56:25.0049617Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,190): warning CS8604: Possible null reference argument for parameter 'authenticationHeader' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:56:25.0064363Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,217): warning CS8604: Possible null reference argument for parameter 'contentType' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:56:25.0079138Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,241): warning CS8604: Possible null reference argument for parameter 'contentEncoding' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:56:25.0087184Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(39,36): warning CS0649: Field 'RequestSpecBuilder.timeout' is never assigned to, and will always have its default value [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:56:25.0090598Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(43,53): warning CS0649: Field 'RequestSpecBuilder.authenticationHeader' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:56:25.0093975Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(40,50): warning CS0649: Field 'RequestSpecBuilder.userAgent' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:56:25.0097309Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(41,37): warning CS0649: Field 'RequestSpecBuilder.proxy' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:56:39.7709529Z   RestAssured.Net.DemoService -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/bin/Debug/net6.0/RestAssured.Net.DemoService.dll
+2023-11-11T07:56:40.0998755Z   RestAssured.Net -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/bin/Debug/net6.0/RestAssured.Net.dll
+2023-11-11T07:56:43.2042165Z   RestAssured.Net.DemoService -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/bin/Debug/net7.0/RestAssured.Net.DemoService.dll
+2023-11-11T07:56:43.6725006Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,164): warning CS8604: Possible null reference argument for parameter 'proxy' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:56:43.6740082Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,190): warning CS8604: Possible null reference argument for parameter 'authenticationHeader' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:56:43.6754584Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,217): warning CS8604: Possible null reference argument for parameter 'contentType' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:56:43.6768618Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,241): warning CS8604: Possible null reference argument for parameter 'contentEncoding' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:56:43.6778363Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(40,50): warning CS0649: Field 'RequestSpecBuilder.userAgent' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:56:43.6784400Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(41,37): warning CS0649: Field 'RequestSpecBuilder.proxy' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:56:43.6790463Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(39,36): warning CS0649: Field 'RequestSpecBuilder.timeout' is never assigned to, and will always have its default value [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:56:43.6796768Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(43,53): warning CS0649: Field 'RequestSpecBuilder.authenticationHeader' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:56:45.9745725Z   RestAssured.Net -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/bin/Debug/net7.0/RestAssured.Net.dll
+2023-11-11T07:56:46.6581139Z   Successfully created package '/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/bin/Debug/RestAssured.Net.4.2.0-beta.1.nupkg'.
+2023-11-11T07:56:49.8518792Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/QueryParameterTests.cs(119,13): warning CS0618: 'ExecutableRequest.QueryParams(Dictionary<string, object>)' is obsolete: 'Please use QueryParams(IEnumerable<KeyValuePair<string, object>>) instead. This method will be removed in version 5.0.0' [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj::TargetFramework=net7.0]
+2023-11-11T07:56:50.7086816Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/QueryParameterTests.cs(119,13): warning CS0618: 'ExecutableRequest.QueryParams(Dictionary<string, object>)' is obsolete: 'Please use QueryParams(IEnumerable<KeyValuePair<string, object>>) instead. This method will be removed in version 5.0.0' [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj::TargetFramework=net6.0]
+2023-11-11T07:57:03.0112828Z   RestAssured.Net.Tests -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/bin/Debug/net6.0/RestAssured.Net.Tests.dll
+2023-11-11T07:57:03.1623555Z   RestAssured.Net.Tests -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/bin/Debug/net7.0/RestAssured.Net.Tests.dll
+2023-11-11T07:57:03.2203854Z 
+2023-11-11T07:57:03.2207148Z Build succeeded.
+2023-11-11T07:57:03.2207491Z 
+2023-11-11T07:57:03.2215051Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,164): warning CS8604: Possible null reference argument for parameter 'proxy' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:57:03.2229313Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,190): warning CS8604: Possible null reference argument for parameter 'authenticationHeader' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:57:03.2242980Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,217): warning CS8604: Possible null reference argument for parameter 'contentType' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:57:03.2256106Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,241): warning CS8604: Possible null reference argument for parameter 'contentEncoding' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:57:03.2390056Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(39,36): warning CS0649: Field 'RequestSpecBuilder.timeout' is never assigned to, and will always have its default value [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:57:03.2396178Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(43,53): warning CS0649: Field 'RequestSpecBuilder.authenticationHeader' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:57:03.2402364Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(40,50): warning CS0649: Field 'RequestSpecBuilder.userAgent' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:57:03.2408311Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(41,37): warning CS0649: Field 'RequestSpecBuilder.proxy' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-11T07:57:03.2418896Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,164): warning CS8604: Possible null reference argument for parameter 'proxy' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:57:03.2433276Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,190): warning CS8604: Possible null reference argument for parameter 'authenticationHeader' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:57:03.2447337Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,217): warning CS8604: Possible null reference argument for parameter 'contentType' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:57:03.2460800Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(56,241): warning CS8604: Possible null reference argument for parameter 'contentEncoding' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, IEnumerable<KeyValuePair<string, string>> queryParams, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:57:03.2469920Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(40,50): warning CS0649: Field 'RequestSpecBuilder.userAgent' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:57:03.2475244Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(41,37): warning CS0649: Field 'RequestSpecBuilder.proxy' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:57:03.2480873Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(39,36): warning CS0649: Field 'RequestSpecBuilder.timeout' is never assigned to, and will always have its default value [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:57:03.2486113Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(43,53): warning CS0649: Field 'RequestSpecBuilder.authenticationHeader' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-11T07:57:03.2492537Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/QueryParameterTests.cs(119,13): warning CS0618: 'ExecutableRequest.QueryParams(Dictionary<string, object>)' is obsolete: 'Please use QueryParams(IEnumerable<KeyValuePair<string, object>>) instead. This method will be removed in version 5.0.0' [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj::TargetFramework=net7.0]
+2023-11-11T07:57:03.2499678Z /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/QueryParameterTests.cs(119,13): warning CS0618: 'ExecutableRequest.QueryParams(Dictionary<string, object>)' is obsolete: 'Please use QueryParams(IEnumerable<KeyValuePair<string, object>>) instead. This method will be removed in version 5.0.0' [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj::TargetFramework=net6.0]
+2023-11-11T07:57:03.2503161Z     18 Warning(s)
+2023-11-11T07:57:03.2503509Z     0 Error(s)
+2023-11-11T07:57:03.2503715Z 
+2023-11-11T07:57:03.2503869Z Time Elapsed 00:00:45.09
+2023-11-11T07:57:03.2690238Z Exit code 0
+2023-11-11T07:57:03.2787094Z ##[endgroup]
+2023-11-11T07:57:03.5436530Z ##[group]Run github/codeql-action/analyze@v1
+2023-11-11T07:57:03.5437217Z with:
+2023-11-11T07:57:03.5437632Z   output: ../results
+2023-11-11T07:57:03.5438094Z   upload: true
+2023-11-11T07:57:03.5438536Z   cleanup-level: brutal
+2023-11-11T07:57:03.5439033Z   add-snippets: false
+2023-11-11T07:57:03.5439504Z   skip-queries: false
+2023-11-11T07:57:03.5440191Z   checkout_path: /home/runner/work/rest-assured-net/rest-assured-net
+2023-11-11T07:57:03.5441012Z   upload-database: true
+2023-11-11T07:57:03.5441500Z   wait-for-processing: true
+2023-11-11T07:57:03.5442238Z   token: ***
+2023-11-11T07:57:03.5442678Z   matrix: {
+  "language": "csharp"
+}
+2023-11-11T07:57:03.5443245Z   expect-error: false
+2023-11-11T07:57:03.5443699Z env:
+2023-11-11T07:57:03.5444094Z   CODEQL_ACTION_VERSION: 1.1.39
+2023-11-11T07:57:03.5444703Z   CODEQL_ACTION_FEATURE_SARIF_COMBINE: true
+2023-11-11T07:57:03.5445398Z   CODEQL_ACTION_FEATURE_WILL_UPLOAD: true
+2023-11-11T07:57:03.5446349Z   CODEQL_ACTION_ANALYSIS_KEY: .github/workflows/codeql-analysis.yml:analyze
+2023-11-11T07:57:03.5447342Z   CODEQL_WORKFLOW_STARTED_AT: 2023-11-11T07:55:59.851Z
+2023-11-11T07:57:03.5448101Z   CODEQL_ACTION_FEATURE_MULTI_LANGUAGE: false
+2023-11-11T07:57:03.5448757Z   CODEQL_ACTION_FEATURE_SANDWICH: false
+2023-11-11T07:57:03.5449348Z   CODEQL_RAM: 14957
+2023-11-11T07:57:03.5449785Z   CODEQL_THREADS: 4
+2023-11-11T07:57:03.5450441Z   CODEQL_SCRATCH_DIR: /home/runner/work/_temp/codeql_databases/working
+2023-11-11T07:57:03.5451382Z   CODEQL_DIST: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql
+2023-11-11T07:57:03.5452134Z   CODEQL_PLATFORM: linux64
+2023-11-11T07:57:03.5452678Z   CODEQL_PLATFORM_DLL_EXTENSION: .so
+2023-11-11T07:57:03.5453610Z   CODEQL_JAVA_HOME: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/tools/linux64/java
+2023-11-11T07:57:03.5454886Z   CODEQL_EXTRACTOR_CSHARP_ROOT: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/csharp
+2023-11-11T07:57:03.5456477Z   CODEQL_EXTRACTOR_CSHARP_WIP_DATABASE: /home/runner/work/_temp/codeql_databases/csharp
+2023-11-11T07:57:03.5457975Z   CODEQL_EXTRACTOR_CSHARP_DIAGNOSTIC_DIR: /home/runner/work/_temp/codeql_databases/csharp/diagnostic/extractors/csharp
+2023-11-11T07:57:03.5459498Z   CODEQL_EXTRACTOR_CSHARP_LOG_DIR: /home/runner/work/_temp/codeql_databases/csharp/log
+2023-11-11T07:57:03.5460847Z   CODEQL_EXTRACTOR_CSHARP_SCRATCH_DIR: /home/runner/work/_temp/codeql_databases/csharp/working
+2023-11-11T07:57:03.5462261Z   CODEQL_EXTRACTOR_CSHARP_TRAP_DIR: /home/runner/work/_temp/codeql_databases/csharp/trap/csharp
+2023-11-11T07:57:03.5463656Z   CODEQL_EXTRACTOR_CSHARP_SOURCE_ARCHIVE_DIR: /home/runner/work/_temp/codeql_databases/csharp/src
+2023-11-11T07:57:03.5464737Z   DOTNET_GENERATE_ASPNET_CERTIFICATE: false
+2023-11-11T07:57:03.5465623Z   CODEQL_EXTRACTOR_CSHARP_THREADS: 4
+2023-11-11T07:57:03.5466253Z   CODEQL_EXTRACTOR_CSHARP_RAM: 14957
+2023-11-11T07:57:03.5467166Z   CODEQL_TRACER_LOG: /home/runner/work/_temp/codeql_databases/log/build-tracer.log
+2023-11-11T07:57:03.5468480Z   CODEQL_TRACER_DIAGNOSTICS_DIR: /home/runner/work/_temp/codeql_databases/diagnostic/tracer
+2023-11-11T07:57:03.5469453Z   CODEQL_TRACER_LANGUAGES: csharp
+2023-11-11T07:57:03.5470591Z   SEMMLE_PRELOAD_libtrace: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/tools/linux64/${LIB}_${PLATFORM}_trace.so
+2023-11-11T07:57:03.5472249Z   SEMMLE_PRELOAD_libtrace32: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/tools/linux64/lib32trace.so
+2023-11-11T07:57:03.5473817Z   SEMMLE_PRELOAD_libtrace64: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/tools/linux64/lib64trace.so
+2023-11-11T07:57:03.5475382Z   LD_PRELOAD: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/tools/linux64/${LIB}_${PLATFORM}_trace.so
+2023-11-11T07:57:03.5476798Z   CODEQL_RUNNER: /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/tools/linux64/runner
+2023-11-11T07:57:03.5477734Z ##[endgroup]
+2023-11-11T07:57:03.8120778Z ##[error]This version of the CodeQL Action was deprecated on January 18th, 2023, and is no longer updated or supported. For better performance, improved security, and new features, upgrade to v2. For more information, see https://github.blog/changelog/2023-01-18-code-scanning-codeql-action-v1-is-now-deprecated/
+2023-11-11T07:57:04.0976951Z [command]/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/codeql version --format=terse
+2023-11-11T07:57:04.5115238Z 2.15.1
+2023-11-11T07:57:04.5411167Z ##[group]Finalizing csharp
+2023-11-11T07:57:04.5418248Z [command]/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/codeql database finalize --finalize-dataset --threads=4 --ram=14957 /home/runner/work/_temp/codeql_databases/csharp
+2023-11-11T07:57:05.1767271Z Running pre-finalize script /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/csharp/tools/pre-finalize.sh in /home/runner/work/rest-assured-net/rest-assured-net.
+2023-11-11T07:57:07.0299402Z Running TRAP import for CodeQL database at /home/runner/work/_temp/codeql_databases/csharp...
+2023-11-11T07:57:18.4652197Z TRAP import complete (11.4s).
+2023-11-11T07:57:18.8406862Z ##[endgroup]
+2023-11-11T07:57:18.8417271Z Code Scanning configuration file being processed in the codeql CLI.
+2023-11-11T07:57:18.8419581Z ##[group]Running queries for csharp
+2023-11-11T07:57:18.8425480Z [command]/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/codeql database run-queries --ram=14957 --threads=4 /home/runner/work/_temp/codeql_databases/csharp --min-disk-free=1024 -v
+2023-11-11T07:57:19.4465902Z Writing logs to /home/runner/work/_temp/codeql_databases/csharp/log/database-run-queries-20231111.075719.443.log.
+2023-11-11T07:57:20.0163513Z Writing logs to /home/runner/work/_temp/codeql_databases/csharp/log/execute-queries-20231111.075720.012.log.
+2023-11-11T07:57:20.2907960Z Recording pack reference codeql/csharp-queries at /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1.
+2023-11-11T07:57:23.2826957Z Compiling in 3 threads due to RAM limits.
+2023-11-11T07:57:24.3694529Z [1/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-117/LogForging.qlx.
+2023-11-11T07:57:24.7433510Z [2/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-384/AbandonSession.qlx.
+2023-11-11T07:57:25.0160585Z [3/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-079/XSS.qlx.
+2023-11-11T07:57:25.2251505Z [4/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-114/AssemblyPathInjection.qlx.
+2023-11-11T07:57:25.4632953Z [5/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-352/MissingAntiForgeryTokenValidation.qlx.
+2023-11-11T07:57:25.6695746Z [6/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-359/ExposureOfPrivateInformation.qlx.
+2023-11-11T07:57:25.9453130Z [7/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-022/TaintedPath.qlx.
+2023-11-11T07:57:26.1030868Z [8/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-209/ExceptionInformationExposure.qlx.
+2023-11-11T07:57:26.3395730Z [9/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-078/CommandInjection.qlx.
+2023-11-11T07:57:26.4410861Z [10/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-022/ZipSlip.qlx.
+2023-11-11T07:57:26.4887688Z [11/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CookieWithOverlyBroadDomain.qlx.
+2023-11-11T07:57:26.6728635Z [12/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-312/CleartextStorage.qlx.
+2023-11-11T07:57:26.8020896Z [13/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-099/ResourceInjection.qlx.
+2023-11-11T07:57:26.8115105Z [14/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/InsufficientKeySize.qlx.
+2023-11-11T07:57:26.8179705Z [15/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-248/MissingASPNETGlobalErrorHandler.qlx.
+2023-11-11T07:57:27.1379543Z [16/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-091/XMLInjection.qlx.
+2023-11-11T07:57:27.3188335Z [17/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-611/UntrustedDataInsecureXml.qlx.
+2023-11-11T07:57:27.5267870Z [18/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-643/XPathInjection.qlx.
+2023-11-11T07:57:27.6398861Z [19/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-119/LocalUnvalidatedArithmetic.qlx.
+2023-11-11T07:57:27.7717162Z [20/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-807/ConditionalBypass.qlx.
+2023-11-11T07:57:27.7891640Z [21/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/HeaderCheckingDisabled.qlx.
+2023-11-11T07:57:27.9044849Z [22/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-094/CodeInjection.qlx.
+2023-11-11T07:57:27.9058804Z [23/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-011/ASPNetDebug.qlx.
+2023-11-11T07:57:27.9139874Z [24/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/PersistentCookie.qlx.
+2023-11-11T07:57:27.9318170Z [25/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/InadequateRSAPadding.qlx.
+2023-11-11T07:57:27.9496888Z [26/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/Encryption using ECB.qlx.
+2023-11-11T07:57:28.1965825Z [27/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-090/LDAPInjection.qlx.
+2023-11-11T07:57:28.4151923Z [28/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-601/UrlRedirect.qlx.
+2023-11-11T07:57:28.5469373Z [29/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-201/ExposureInTransmittedData.qlx.
+2023-11-11T07:57:28.6363908Z [30/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/InsecureRandomness.qlx.
+2023-11-11T07:57:28.6384774Z [31/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-548/ASPNetDirectoryListing.qlx.
+2023-11-11T07:57:28.7499012Z [32/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-134/UncontrolledFormatString.qlx.
+2023-11-11T07:57:28.7605138Z [33/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-614/RequireSSL.qlx.
+2023-11-11T07:57:28.7696379Z [34/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-451/MissingXFrameOptions.qlx.
+2023-11-11T07:57:28.7740308Z [35/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/WeakEncryption.qlx.
+2023-11-11T07:57:28.7902032Z [36/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CookieWithOverlyBroadPath.qlx.
+2023-11-11T07:57:29.0400131Z [37/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-730/RegexInjection.qlx.
+2023-11-11T07:57:29.2021291Z [38/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-730/ReDoS.qlx.
+2023-11-11T07:57:29.3355353Z [39/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-089/SqlInjection.qlx.
+2023-11-11T07:57:29.3427268Z [40/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-502/DeserializedDelegate.qlx.
+2023-11-11T07:57:29.3526716Z [41/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/DiagnosticExtractionErrors.qlx.
+2023-11-11T07:57:29.3570300Z [42/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/DiagnosticNoExtractionErrors.qlx.
+2023-11-11T07:57:29.3663971Z [43/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/ExtractorError.qlx.
+2023-11-11T07:57:29.3706959Z [44/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/CompilerError.qlx.
+2023-11-11T07:57:29.3748845Z [45/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/ExtractorMessage.qlx.
+2023-11-11T07:57:29.3827576Z [46/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/CompilerMessage.qlx.
+2023-11-11T07:57:29.3987867Z [47/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/ExternalLibraryUsage.qlx.
+2023-11-11T07:57:29.5694552Z [48/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalSources.qlx.
+2023-11-11T07:57:29.8772120Z [49/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-502/UnsafeDeserializationUntrustedInput.qlx.
+2023-11-11T07:57:29.9922100Z [50/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/UnsupportedExternalAPIs.qlx.
+2023-11-11T07:57:30.1092257Z [51/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalSinks.qlx.
+2023-11-11T07:57:30.1920786Z [52/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalApis.qlx.
+2023-11-11T07:57:30.1923068Z [53/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Metrics/Summaries/LinesOfCode.qlx.
+2023-11-11T07:57:30.2715735Z [54/54] Loaded /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalTaint.qlx.
+2023-11-11T07:57:30.3332602Z Starting evaluation of codeql/csharp-queries/Diagnostics/CompilerMessage.ql.
+2023-11-11T07:57:30.3347184Z Starting evaluation of codeql/csharp-queries/Diagnostics/DiagnosticExtractionErrors.ql.
+2023-11-11T07:57:30.3348928Z Starting evaluation of codeql/csharp-queries/Diagnostics/DiagnosticNoExtractionErrors.ql.
+2023-11-11T07:57:30.3350699Z Starting evaluation of codeql/csharp-queries/Diagnostics/CompilerError.ql.
+2023-11-11T07:57:30.3397733Z Starting evaluation of codeql/csharp-queries/Diagnostics/ExtractorError.ql.
+2023-11-11T07:57:30.3401945Z Starting evaluation of codeql/csharp-queries/Diagnostics/ExtractorMessage.ql.
+2023-11-11T07:57:30.3407351Z Starting evaluation of codeql/csharp-queries/Metrics/Summaries/LinesOfCode.ql.
+2023-11-11T07:57:30.3416236Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-011/ASPNetDebug.ql.
+2023-11-11T07:57:30.4253696Z [1/54 eval 90ms] Evaluation done; writing results to codeql/csharp-queries/Diagnostics/CompilerError.bqrs.
+2023-11-11T07:57:30.4314986Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-022/TaintedPath.ql.
+2023-11-11T07:57:30.4322386Z [2/54 eval 92ms] Evaluation done; writing results to codeql/csharp-queries/Diagnostics/ExtractorError.bqrs.
+2023-11-11T07:57:30.4326104Z [3/54 eval 92ms] Evaluation done; writing results to codeql/csharp-queries/Diagnostics/ExtractorMessage.bqrs.
+2023-11-11T07:57:30.7798285Z [4/54 eval 446ms] Evaluation done; writing results to codeql/csharp-queries/Diagnostics/CompilerMessage.bqrs.
+2023-11-11T07:57:30.7800574Z [5/54 eval 447ms] Evaluation done; writing results to codeql/csharp-queries/Diagnostics/DiagnosticExtractionErrors.bqrs.
+2023-11-11T07:57:30.8068107Z [6/54 eval 464ms] Evaluation done; writing results to codeql/csharp-queries/Metrics/Summaries/LinesOfCode.bqrs.
+2023-11-11T07:57:30.8070628Z [7/54 eval 474ms] Evaluation done; writing results to codeql/csharp-queries/Diagnostics/DiagnosticNoExtractionErrors.bqrs.
+2023-11-11T07:57:37.0813039Z [8/54 eval 6.7s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-011/ASPNetDebug.bqrs.
+2023-11-11T07:58:02.1978282Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-022/ZipSlip.ql.
+2023-11-11T07:58:02.2126966Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-078/CommandInjection.ql.
+2023-11-11T07:58:02.2276063Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-079/XSS.ql.
+2023-11-11T07:58:02.8086780Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-089/SqlInjection.ql.
+2023-11-11T07:58:02.8429169Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-090/LDAPInjection.ql.
+2023-11-11T07:58:02.8465951Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-091/XMLInjection.ql.
+2023-11-11T07:58:02.8525687Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-094/CodeInjection.ql.
+2023-11-11T07:58:02.8567129Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-099/ResourceInjection.ql.
+2023-11-11T07:58:02.8570086Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-114/AssemblyPathInjection.ql.
+2023-11-11T07:58:02.8653205Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-117/LogForging.ql.
+2023-11-11T07:58:02.8680043Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-119/LocalUnvalidatedArithmetic.ql.
+2023-11-11T07:58:02.8699605Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-134/UncontrolledFormatString.ql.
+2023-11-11T07:58:02.8734560Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-201/ExposureInTransmittedData.ql.
+2023-11-11T07:58:02.8768302Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-209/ExceptionInformationExposure.ql.
+2023-11-11T07:58:02.8969815Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-248/MissingASPNETGlobalErrorHandler.ql.
+2023-11-11T07:58:02.8973930Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-312/CleartextStorage.ql.
+2023-11-11T07:58:02.9000231Z [9/54 eval 3ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-248/MissingASPNETGlobalErrorHandler.bqrs.
+2023-11-11T07:58:03.0202550Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-352/MissingAntiForgeryTokenValidation.ql.
+2023-11-11T07:58:03.0429037Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-359/ExposureOfPrivateInformation.ql.
+2023-11-11T07:58:03.0881201Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-384/AbandonSession.ql.
+2023-11-11T07:58:03.1341173Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-451/MissingXFrameOptions.ql.
+2023-11-11T07:58:03.1361551Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-502/DeserializedDelegate.ql.
+2023-11-11T07:58:03.1372156Z [10/54 eval 2ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-451/MissingXFrameOptions.bqrs.
+2023-11-11T07:58:09.4195931Z [11/54 eval 7.2s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-022/ZipSlip.bqrs.
+2023-11-11T07:58:09.4198797Z [12/54 eval 6.6s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-119/LocalUnvalidatedArithmetic.bqrs.
+2023-11-11T07:58:09.4250299Z [13/54 eval 6.3s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-384/AbandonSession.bqrs.
+2023-11-11T07:58:09.4269745Z [14/54 eval 6.4s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-352/MissingAntiForgeryTokenValidation.bqrs.
+2023-11-11T07:58:10.3286320Z [15/54 eval 39.9s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-022/TaintedPath.bqrs.
+2023-11-11T07:58:10.3449150Z [16/54 eval 8.1s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-078/CommandInjection.bqrs.
+2023-11-11T07:58:10.3572581Z [17/54 eval 8.1s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-079/XSS.bqrs.
+2023-11-11T07:58:10.3574974Z [18/54 eval 7.5s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-089/SqlInjection.bqrs.
+2023-11-11T07:58:10.3664419Z [19/54 eval 7.5s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-090/LDAPInjection.bqrs.
+2023-11-11T07:58:10.3957178Z [20/54 eval 7.5s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-094/CodeInjection.bqrs.
+2023-11-11T07:58:10.4025964Z [21/54 eval 7.6s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-091/XMLInjection.bqrs.
+2023-11-11T07:58:10.4029102Z [22/54 eval 7.5s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-099/ResourceInjection.bqrs.
+2023-11-11T07:58:10.4032063Z [23/54 eval 7.5s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-134/UncontrolledFormatString.bqrs.
+2023-11-11T07:58:10.4036088Z [24/54 eval 7.5s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-114/AssemblyPathInjection.bqrs.
+2023-11-11T07:58:10.4096401Z [25/54 eval 7.5s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-117/LogForging.bqrs.
+2023-11-11T07:58:11.0862175Z [26/54 eval 8.2s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-201/ExposureInTransmittedData.bqrs.
+2023-11-11T07:58:11.2541280Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-502/UnsafeDeserializationUntrustedInput.ql.
+2023-11-11T07:58:11.2552242Z [27/54 eval 8.1s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-502/DeserializedDelegate.bqrs.
+2023-11-11T07:58:11.4168403Z [28/54 eval 8.5s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-209/ExceptionInformationExposure.bqrs.
+2023-11-11T07:58:11.4171550Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-548/ASPNetDirectoryListing.ql.
+2023-11-11T07:58:11.4901402Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-601/UrlRedirect.ql.
+2023-11-11T07:58:11.4903957Z [29/54 eval 234ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-502/UnsafeDeserializationUntrustedInput.bqrs.
+2023-11-11T07:58:11.4929038Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-611/UntrustedDataInsecureXml.ql.
+2023-11-11T07:58:11.4930945Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-614/RequireSSL.ql.
+2023-11-11T07:58:11.4947957Z [30/54 eval 77ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-548/ASPNetDirectoryListing.bqrs.
+2023-11-11T07:58:11.4985621Z [31/54 eval 6ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-614/RequireSSL.bqrs.
+2023-11-11T07:58:11.5158907Z [32/54 eval 8.5s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-359/ExposureOfPrivateInformation.bqrs.
+2023-11-11T07:58:11.5250476Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-643/XPathInjection.ql.
+2023-11-11T07:58:11.5254091Z [33/54 eval 8.6s] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-312/CleartextStorage.bqrs.
+2023-11-11T07:58:11.5256279Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-730/ReDoS.ql.
+2023-11-11T07:58:11.9762560Z [34/54 eval 486ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-601/UrlRedirect.bqrs.
+2023-11-11T07:58:12.0289062Z [35/54 eval 503ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-643/XPathInjection.bqrs.
+2023-11-11T07:58:12.0385091Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-730/RegexInjection.ql.
+2023-11-11T07:58:12.2109151Z [36/54 eval 684ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-730/ReDoS.bqrs.
+2023-11-11T07:58:12.2111129Z Starting evaluation of codeql/csharp-queries/Security Features/CWE-807/ConditionalBypass.ql.
+2023-11-11T07:58:12.2156622Z Starting evaluation of codeql/csharp-queries/Security Features/CookieWithOverlyBroadDomain.ql.
+2023-11-11T07:58:12.3650607Z Starting evaluation of codeql/csharp-queries/Security Features/CookieWithOverlyBroadPath.ql.
+2023-11-11T07:58:12.3652911Z [37/54 eval 149ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CookieWithOverlyBroadDomain.bqrs.
+2023-11-11T07:58:12.3654955Z Starting evaluation of codeql/csharp-queries/Security Features/Encryption using ECB.ql.
+2023-11-11T07:58:12.3658296Z [38/54 eval 3ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CookieWithOverlyBroadPath.bqrs.
+2023-11-11T07:58:12.3676698Z Starting evaluation of codeql/csharp-queries/Security Features/HeaderCheckingDisabled.ql.
+2023-11-11T07:58:12.3689063Z [39/54 eval 4ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/Encryption using ECB.bqrs.
+2023-11-11T07:58:12.3743516Z Starting evaluation of codeql/csharp-queries/Security Features/InadequateRSAPadding.ql.
+2023-11-11T07:58:12.3754675Z [40/54 eval 8ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/HeaderCheckingDisabled.bqrs.
+2023-11-11T07:58:12.3887096Z Starting evaluation of codeql/csharp-queries/Security Features/InsecureRandomness.ql.
+2023-11-11T07:58:12.4003692Z [41/54 eval 25ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/InadequateRSAPadding.bqrs.
+2023-11-11T07:58:12.4153881Z [42/54 eval 376ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-730/RegexInjection.bqrs.
+2023-11-11T07:58:12.4379294Z Starting evaluation of codeql/csharp-queries/Security Features/InsufficientKeySize.ql.
+2023-11-11T07:58:12.4384078Z [43/54 eval 945ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-611/UntrustedDataInsecureXml.bqrs.
+2023-11-11T07:58:12.4392438Z Starting evaluation of codeql/csharp-queries/Security Features/PersistentCookie.ql.
+2023-11-11T07:58:12.4504755Z Starting evaluation of codeql/csharp-queries/Security Features/WeakEncryption.ql.
+2023-11-11T07:58:12.4512805Z [44/54 eval 12ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/InsufficientKeySize.bqrs.
+2023-11-11T07:58:12.5528017Z [45/54 eval 102ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/WeakEncryption.bqrs.
+2023-11-11T07:58:12.6097395Z Starting evaluation of codeql/csharp-queries/Telemetry/ExternalLibraryUsage.ql.
+2023-11-11T07:58:12.6297382Z Starting evaluation of codeql/csharp-queries/Telemetry/SupportedExternalApis.ql.
+2023-11-11T07:58:12.6347469Z [46/54 eval 419ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/CWE-807/ConditionalBypass.bqrs.
+2023-11-11T07:58:12.8427267Z Starting evaluation of codeql/csharp-queries/Telemetry/SupportedExternalSinks.ql.
+2023-11-11T07:58:12.8432248Z [47/54 eval 403ms] Evaluation done; writing results to codeql/csharp-queries/Security Features/PersistentCookie.bqrs.
+2023-11-11T07:58:14.6507543Z Starting evaluation of codeql/csharp-queries/Telemetry/SupportedExternalSources.ql.
+2023-11-11T07:58:14.6509586Z [48/54 eval 2s] Evaluation done; writing results to codeql/csharp-queries/Telemetry/ExternalLibraryUsage.bqrs.
+2023-11-11T07:58:15.0927413Z [49/54 eval 2.7s] Evaluation done; writing results to codeql/csharp-queries/Security Features/InsecureRandomness.bqrs.
+2023-11-11T07:58:15.2681056Z Starting evaluation of codeql/csharp-queries/Telemetry/SupportedExternalTaint.ql.
+2023-11-11T07:58:15.2688242Z Starting evaluation of codeql/csharp-queries/Telemetry/UnsupportedExternalAPIs.ql.
+2023-11-11T07:58:15.8504408Z [50/54 eval 1.2s] Evaluation done; writing results to codeql/csharp-queries/Telemetry/SupportedExternalSources.bqrs.
+2023-11-11T07:58:15.8579918Z [51/54 eval 3s] Evaluation done; writing results to codeql/csharp-queries/Telemetry/SupportedExternalSinks.bqrs.
+2023-11-11T07:58:15.8621475Z [52/54 eval 593ms] Evaluation done; writing results to codeql/csharp-queries/Telemetry/UnsupportedExternalAPIs.bqrs.
+2023-11-11T07:58:15.8701032Z [53/54 eval 601ms] Evaluation done; writing results to codeql/csharp-queries/Telemetry/SupportedExternalTaint.bqrs.
+2023-11-11T07:58:16.8018136Z [54/54 eval 4.2s] Evaluation done; writing results to codeql/csharp-queries/Telemetry/SupportedExternalApis.bqrs.
+2023-11-11T07:58:16.8019516Z Shutting down query evaluator.
+2023-11-11T07:58:17.0641862Z ##[group]Interpreting results for csharp
+2023-11-11T07:58:17.0650065Z [command]/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/codeql database interpret-results --threads=4 --format=sarif-latest -v --output=../results/csharp.sarif --no-sarif-add-snippets --print-diagnostics-summary --print-metrics-summary --sarif-group-rules-by-pack --sarif-add-query-help --sarif-add-baseline-file-info /home/runner/work/_temp/codeql_databases/csharp
+2023-11-11T07:58:17.6830282Z Writing logs to /home/runner/work/_temp/codeql_databases/csharp/log/database-interpret-results-20231111.075817.680.log.
+2023-11-11T07:58:17.8146312Z Recording pack reference codeql/csharp-queries at /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1.
+2023-11-11T07:58:19.3825030Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-117/LogForging.ql...
+2023-11-11T07:58:19.4084655Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-117/LogForging.bqrs.
+2023-11-11T07:58:19.4311201Z Interpreted pathproblem query "Log entries created from user input" (cs/log-forging) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-117/LogForging.ql.
+2023-11-11T07:58:19.4320679Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-384/AbandonSession.ql...
+2023-11-11T07:58:19.4443076Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-384/AbandonSession.bqrs.
+2023-11-11T07:58:19.4459606Z Interpreted problem query "Failure to abandon session" (cs/session-reuse) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-384/AbandonSession.ql.
+2023-11-11T07:58:19.4465722Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-079/XSS.ql...
+2023-11-11T07:58:19.4575843Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-079/XSS.bqrs.
+2023-11-11T07:58:19.4588252Z Interpreted pathproblem query "Cross-site scripting" (cs/web/xss) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-079/XSS.ql.
+2023-11-11T07:58:19.4594735Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-114/AssemblyPathInjection.ql...
+2023-11-11T07:58:19.4689078Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-114/AssemblyPathInjection.bqrs.
+2023-11-11T07:58:19.4705568Z Interpreted pathproblem query "Assembly path injection" (cs/assembly-path-injection) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-114/AssemblyPathInjection.ql.
+2023-11-11T07:58:19.4712297Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-359/ExposureOfPrivateInformation.ql...
+2023-11-11T07:58:19.4804765Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-359/ExposureOfPrivateInformation.bqrs.
+2023-11-11T07:58:19.4839278Z Interpreted pathproblem query "Exposure of private information" (cs/exposure-of-sensitive-information) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-359/ExposureOfPrivateInformation.ql.
+2023-11-11T07:58:19.4843234Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-352/MissingAntiForgeryTokenValidation.ql...
+2023-11-11T07:58:19.4917617Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-352/MissingAntiForgeryTokenValidation.bqrs.
+2023-11-11T07:58:19.4927666Z Interpreted problem query "Missing cross-site request forgery token validation" (cs/web/missing-token-validation) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-352/MissingAntiForgeryTokenValidation.ql.
+2023-11-11T07:58:19.4931654Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-209/ExceptionInformationExposure.ql...
+2023-11-11T07:58:19.5005919Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-209/ExceptionInformationExposure.bqrs.
+2023-11-11T07:58:19.5016083Z Interpreted pathproblem query "Information exposure through an exception" (cs/information-exposure-through-exception) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-209/ExceptionInformationExposure.ql.
+2023-11-11T07:58:19.5019987Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-022/TaintedPath.ql...
+2023-11-11T07:58:19.5087477Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-022/TaintedPath.bqrs.
+2023-11-11T07:58:19.5098375Z Interpreted pathproblem query "Uncontrolled data used in path expression" (cs/path-injection) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-022/TaintedPath.ql.
+2023-11-11T07:58:19.5101955Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-022/ZipSlip.ql...
+2023-11-11T07:58:19.5168332Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-022/ZipSlip.bqrs.
+2023-11-11T07:58:19.5178086Z Interpreted pathproblem query "Arbitrary file access during archive extraction ("Zip Slip")" (cs/zipslip) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-022/ZipSlip.ql.
+2023-11-11T07:58:19.5181706Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-078/CommandInjection.ql...
+2023-11-11T07:58:19.5250434Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-078/CommandInjection.bqrs.
+2023-11-11T07:58:19.5259941Z Interpreted pathproblem query "Uncontrolled command line" (cs/command-line-injection) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-078/CommandInjection.ql.
+2023-11-11T07:58:19.5263879Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-312/CleartextStorage.ql...
+2023-11-11T07:58:19.5328000Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-312/CleartextStorage.bqrs.
+2023-11-11T07:58:19.5339238Z Interpreted pathproblem query "Clear text storage of sensitive information" (cs/cleartext-storage-of-sensitive-information) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-312/CleartextStorage.ql.
+2023-11-11T07:58:19.5343264Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CookieWithOverlyBroadDomain.ql...
+2023-11-11T07:58:19.5407749Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CookieWithOverlyBroadDomain.bqrs.
+2023-11-11T07:58:19.5416845Z Interpreted problem query "Cookie security: overly broad domain" (cs/web/broad-cookie-domain) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CookieWithOverlyBroadDomain.ql.
+2023-11-11T07:58:19.5420464Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/InsufficientKeySize.ql...
+2023-11-11T07:58:19.5482430Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/InsufficientKeySize.bqrs.
+2023-11-11T07:58:19.5490710Z Interpreted problem query "Weak encryption: Insufficient key size" (cs/insufficient-key-size) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/InsufficientKeySize.ql.
+2023-11-11T07:58:19.5494439Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-099/ResourceInjection.ql...
+2023-11-11T07:58:19.5555042Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-099/ResourceInjection.bqrs.
+2023-11-11T07:58:19.5563400Z Interpreted pathproblem query "Resource injection" (cs/resource-injection) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-099/ResourceInjection.ql.
+2023-11-11T07:58:19.5567102Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-248/MissingASPNETGlobalErrorHandler.ql...
+2023-11-11T07:58:19.5624181Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-248/MissingASPNETGlobalErrorHandler.bqrs.
+2023-11-11T07:58:19.5632676Z Interpreted problem query "Missing global error handler" (cs/web/missing-global-error-handler) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-248/MissingASPNETGlobalErrorHandler.ql.
+2023-11-11T07:58:19.5636398Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-091/XMLInjection.ql...
+2023-11-11T07:58:19.5699674Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-091/XMLInjection.bqrs.
+2023-11-11T07:58:19.5710042Z Interpreted pathproblem query "XML injection" (cs/xml-injection) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-091/XMLInjection.ql.
+2023-11-11T07:58:19.5713149Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-643/XPathInjection.ql...
+2023-11-11T07:58:19.5764924Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-643/XPathInjection.bqrs.
+2023-11-11T07:58:19.5780493Z Interpreted pathproblem query "XPath injection" (cs/xml/xpath-injection) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-643/XPathInjection.ql.
+2023-11-11T07:58:19.5783899Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-611/UntrustedDataInsecureXml.ql...
+2023-11-11T07:58:19.5846239Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-611/UntrustedDataInsecureXml.bqrs.
+2023-11-11T07:58:19.5856436Z Interpreted pathproblem query "Untrusted XML is read insecurely" (cs/xml/insecure-dtd-handling) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-611/UntrustedDataInsecureXml.ql.
+2023-11-11T07:58:19.5859945Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-807/ConditionalBypass.ql...
+2023-11-11T07:58:19.5921076Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-807/ConditionalBypass.bqrs.
+2023-11-11T07:58:19.5930254Z Interpreted pathproblem query "User-controlled bypass of sensitive method" (cs/user-controlled-bypass) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-807/ConditionalBypass.ql.
+2023-11-11T07:58:19.5933646Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-119/LocalUnvalidatedArithmetic.ql...
+2023-11-11T07:58:19.5988866Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-119/LocalUnvalidatedArithmetic.bqrs.
+2023-11-11T07:58:19.5997826Z Interpreted problem query "Unvalidated local pointer arithmetic" (cs/unvalidated-local-pointer-arithmetic) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-119/LocalUnvalidatedArithmetic.ql.
+2023-11-11T07:58:19.6001654Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-094/CodeInjection.ql...
+2023-11-11T07:58:19.6057021Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-094/CodeInjection.bqrs.
+2023-11-11T07:58:19.6066138Z Interpreted pathproblem query "Improper control of generation of code" (cs/code-injection) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-094/CodeInjection.ql.
+2023-11-11T07:58:19.6069365Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/HeaderCheckingDisabled.ql...
+2023-11-11T07:58:19.6124666Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/HeaderCheckingDisabled.bqrs.
+2023-11-11T07:58:19.6133175Z Interpreted problem query "Header checking disabled" (cs/web/disabled-header-checking) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/HeaderCheckingDisabled.ql.
+2023-11-11T07:58:19.6136295Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/PersistentCookie.ql...
+2023-11-11T07:58:19.6190457Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/PersistentCookie.bqrs.
+2023-11-11T07:58:19.6199560Z Interpreted problem query "Cookie security: persistent cookie" (cs/web/persistent-cookie) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/PersistentCookie.ql.
+2023-11-11T07:58:19.6203049Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-011/ASPNetDebug.ql...
+2023-11-11T07:58:19.6259414Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-011/ASPNetDebug.bqrs.
+2023-11-11T07:58:19.6267682Z Interpreted problem query "Creating an ASP.NET debug binary may reveal sensitive information" (cs/web/debug-binary) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-011/ASPNetDebug.ql.
+2023-11-11T07:58:19.6271407Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-201/ExposureInTransmittedData.ql...
+2023-11-11T07:58:19.6324194Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-201/ExposureInTransmittedData.bqrs.
+2023-11-11T07:58:19.6332890Z Interpreted pathproblem query "Information exposure through transmitted data" (cs/sensitive-data-transmission) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-201/ExposureInTransmittedData.ql.
+2023-11-11T07:58:19.6336699Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/InadequateRSAPadding.ql...
+2023-11-11T07:58:19.6386728Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/InadequateRSAPadding.bqrs.
+2023-11-11T07:58:19.6394748Z Interpreted problem query "Weak encryption: inadequate RSA padding" (cs/inadequate-rsa-padding) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/InadequateRSAPadding.ql.
+2023-11-11T07:58:19.6398379Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-090/LDAPInjection.ql...
+2023-11-11T07:58:19.6449591Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-090/LDAPInjection.bqrs.
+2023-11-11T07:58:19.6458265Z Interpreted pathproblem query "LDAP query built from user-controlled sources" (cs/ldap-injection) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-090/LDAPInjection.ql.
+2023-11-11T07:58:19.6461841Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/Encryption using ECB.ql...
+2023-11-11T07:58:19.6516569Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/Encryption using ECB.bqrs.
+2023-11-11T07:58:19.6525138Z Interpreted problem query "Encryption using ECB" (cs/ecb-encryption) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/Encryption using ECB.ql.
+2023-11-11T07:58:19.6528618Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-601/UrlRedirect.ql...
+2023-11-11T07:58:19.6577596Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-601/UrlRedirect.bqrs.
+2023-11-11T07:58:19.6586602Z Interpreted pathproblem query "URL redirection from remote source" (cs/web/unvalidated-url-redirection) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-601/UrlRedirect.ql.
+2023-11-11T07:58:19.6590251Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/InsecureRandomness.ql...
+2023-11-11T07:58:19.6638191Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/InsecureRandomness.bqrs.
+2023-11-11T07:58:19.6646249Z Interpreted pathproblem query "Insecure randomness" (cs/insecure-randomness) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/InsecureRandomness.ql.
+2023-11-11T07:58:19.6649908Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-134/UncontrolledFormatString.ql...
+2023-11-11T07:58:19.6698789Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-134/UncontrolledFormatString.bqrs.
+2023-11-11T07:58:19.6707567Z Interpreted pathproblem query "Uncontrolled format string" (cs/uncontrolled-format-string) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-134/UncontrolledFormatString.ql.
+2023-11-11T07:58:19.6711310Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-548/ASPNetDirectoryListing.ql...
+2023-11-11T07:58:19.6767842Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-548/ASPNetDirectoryListing.bqrs.
+2023-11-11T07:58:19.6779344Z Interpreted problem query "ASP.NET config file enables directory browsing" (cs/web/directory-browse-enabled) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-548/ASPNetDirectoryListing.ql.
+2023-11-11T07:58:19.6783003Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-451/MissingXFrameOptions.ql...
+2023-11-11T07:58:19.6830311Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-451/MissingXFrameOptions.bqrs.
+2023-11-11T07:58:19.6838933Z Interpreted problem query "Missing X-Frame-Options HTTP header" (cs/web/missing-x-frame-options) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-451/MissingXFrameOptions.ql.
+2023-11-11T07:58:19.6842985Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-614/RequireSSL.ql...
+2023-11-11T07:58:19.6894288Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-614/RequireSSL.bqrs.
+2023-11-11T07:58:19.6902710Z Interpreted problem query "'requireSSL' attribute is not set to true" (cs/web/requiressl-not-set) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-614/RequireSSL.ql.
+2023-11-11T07:58:19.6906587Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/WeakEncryption.ql...
+2023-11-11T07:58:19.6965579Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/WeakEncryption.bqrs.
+2023-11-11T07:58:19.6974254Z Interpreted problem query "Weak encryption" (cs/weak-encryption) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/WeakEncryption.ql.
+2023-11-11T07:58:19.6977339Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-089/SqlInjection.ql...
+2023-11-11T07:58:19.7028264Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-089/SqlInjection.bqrs.
+2023-11-11T07:58:19.7037861Z Interpreted pathproblem query "SQL query built from user-controlled sources" (cs/sql-injection) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-089/SqlInjection.ql.
+2023-11-11T07:58:19.7041463Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CookieWithOverlyBroadPath.ql...
+2023-11-11T07:58:19.7090487Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CookieWithOverlyBroadPath.bqrs.
+2023-11-11T07:58:19.7097982Z Interpreted problem query "Cookie security: overly broad path" (cs/web/broad-cookie-path) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CookieWithOverlyBroadPath.ql.
+2023-11-11T07:58:19.7101304Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-730/ReDoS.ql...
+2023-11-11T07:58:19.7152533Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-730/ReDoS.bqrs.
+2023-11-11T07:58:19.7166069Z Interpreted pathproblem query "Denial of Service from comparison of user input against expensive regex" (cs/redos) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-730/ReDoS.ql.
+2023-11-11T07:58:19.7169589Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-730/RegexInjection.ql...
+2023-11-11T07:58:19.7216881Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-730/RegexInjection.bqrs.
+2023-11-11T07:58:19.7228867Z Interpreted pathproblem query "Regular expression injection" (cs/regex-injection) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-730/RegexInjection.ql.
+2023-11-11T07:58:19.7232412Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-502/DeserializedDelegate.ql...
+2023-11-11T07:58:19.7282193Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-502/DeserializedDelegate.bqrs.
+2023-11-11T07:58:19.7290314Z Interpreted problem query "Deserialized delegate" (cs/deserialized-delegate) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-502/DeserializedDelegate.ql.
+2023-11-11T07:58:19.7294336Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-502/UnsafeDeserializationUntrustedInput.ql...
+2023-11-11T07:58:19.7483238Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Security Features/CWE-502/UnsafeDeserializationUntrustedInput.bqrs.
+2023-11-11T07:58:19.7490658Z Interpreted pathproblem query "Deserialization of untrusted data" (cs/unsafe-deserialization-untrusted-input) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Security Features/CWE-502/UnsafeDeserializationUntrustedInput.ql.
+2023-11-11T07:58:19.7494689Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/DiagnosticExtractionErrors.ql...
+2023-11-11T07:58:19.7538317Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/DiagnosticExtractionErrors.bqrs.
+2023-11-11T07:58:19.7556679Z Interpreted diagnostic query "Extraction errors" (cs/diagnostics/extraction-errors) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/DiagnosticExtractionErrors.ql.
+2023-11-11T07:58:19.7560575Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/DiagnosticNoExtractionErrors.ql...
+2023-11-11T07:58:19.7599851Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/DiagnosticNoExtractionErrors.bqrs.
+2023-11-11T07:58:19.7605544Z Interpreted diagnostic query "Successfully extracted files" (cs/diagnostics/successfully-extracted-files) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/DiagnosticNoExtractionErrors.ql.
+2023-11-11T07:58:19.7609141Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/ExtractorError.ql...
+2023-11-11T07:58:19.7649490Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/ExtractorError.bqrs.
+2023-11-11T07:58:19.7659322Z Interpreted diagnostic query "Extraction error" (cs/extraction-error) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/ExtractorError.ql.
+2023-11-11T07:58:19.7662465Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/CompilerError.ql...
+2023-11-11T07:58:19.7701237Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/CompilerError.bqrs.
+2023-11-11T07:58:19.7708494Z Interpreted diagnostic query "Compilation error" (cs/compilation-error) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/CompilerError.ql.
+2023-11-11T07:58:19.7711796Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/ExtractorMessage.ql...
+2023-11-11T07:58:19.7749881Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/ExtractorMessage.bqrs.
+2023-11-11T07:58:19.7755883Z Interpreted diagnostic query "Extraction message" (cs/extraction-message) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/ExtractorMessage.ql.
+2023-11-11T07:58:19.7759057Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/CompilerMessage.ql...
+2023-11-11T07:58:19.7795941Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Diagnostics/CompilerMessage.bqrs.
+2023-11-11T07:58:19.7803255Z Interpreted diagnostic query "Compilation message" (cs/compilation-message) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Diagnostics/CompilerMessage.ql.
+2023-11-11T07:58:19.7806879Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/ExternalLibraryUsage.ql...
+2023-11-11T07:58:19.7844167Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/ExternalLibraryUsage.bqrs.
+2023-11-11T07:58:19.7860025Z Interpreted metric query "External libraries" (cs/telemetry/external-libs) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/ExternalLibraryUsage.ql.
+2023-11-11T07:58:19.7863542Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalSources.ql...
+2023-11-11T07:58:19.7900546Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/SupportedExternalSources.bqrs.
+2023-11-11T07:58:19.7906937Z Interpreted metric query "Supported sources in external libraries" (cs/telemetry/supported-external-api-sources) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalSources.ql.
+2023-11-11T07:58:19.7910777Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/UnsupportedExternalAPIs.ql...
+2023-11-11T07:58:19.7949101Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/UnsupportedExternalAPIs.bqrs.
+2023-11-11T07:58:19.7955390Z Interpreted metric query "Usage of unsupported APIs coming from external libraries" (cs/telemetry/unsupported-external-api) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/UnsupportedExternalAPIs.ql.
+2023-11-11T07:58:19.7959216Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalApis.ql...
+2023-11-11T07:58:19.8018594Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/SupportedExternalApis.bqrs.
+2023-11-11T07:58:19.8022568Z Interpreted metric query "Usage of supported APIs coming from external libraries" (cs/telemetry/supported-external-api) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalApis.ql.
+2023-11-11T07:58:19.8090807Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalSinks.ql...
+2023-11-11T07:58:19.8118084Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/SupportedExternalSinks.bqrs.
+2023-11-11T07:58:19.8121567Z Interpreted metric query "Supported sinks in external libraries" (cs/telemetry/supported-external-api-sinks) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalSinks.ql.
+2023-11-11T07:58:19.8125085Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalTaint.ql...
+2023-11-11T07:58:19.8127574Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Telemetry/SupportedExternalTaint.bqrs.
+2023-11-11T07:58:19.8130990Z Interpreted metric query "Supported flow steps in external libraries" (cs/telemetry/supported-external-api-taint) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Telemetry/SupportedExternalTaint.ql.
+2023-11-11T07:58:19.8134322Z Interpreting /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Metrics/Summaries/LinesOfCode.ql...
+2023-11-11T07:58:19.8140711Z  ... found results file at /home/runner/work/_temp/codeql_databases/csharp/results/codeql/csharp-queries/Metrics/Summaries/LinesOfCode.bqrs.
+2023-11-11T07:58:19.8146508Z Interpreted metric query "Total lines of C# code in the database" (cs/summary/lines-of-code) at path /opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/qlpacks/codeql/csharp-queries/0.8.1/Metrics/Summaries/LinesOfCode.ql.
+2023-11-11T07:58:19.9037777Z Interpreting file coverage baseline information
+2023-11-11T07:58:19.9052928Z Finished interpreting file coverage baseline information.
+2023-11-11T07:58:19.9060945Z Interpreting diagnostic messages...
+2023-11-11T07:58:19.9267142Z Found 0 raw diagnostic messages.
+2023-11-11T07:58:19.9289030Z Processed diagnostic messages (removed 0 due to limits, created 0 summary diagnostics for status page).
+2023-11-11T07:58:19.9306850Z Interpreted diagnostic messages (22ms).
+2023-11-11T07:58:20.0729978Z Analysis produced the following diagnostic data:
+2023-11-11T07:58:20.0730809Z 
+2023-11-11T07:58:20.0763219Z |          Diagnostic          |  Summary   |
+2023-11-11T07:58:20.0764659Z +------------------------------+------------+
+2023-11-11T07:58:20.0770309Z | Successfully extracted files | 84 results |
+2023-11-11T07:58:20.0771462Z | Compilation message          | 22 results |
+2023-11-11T07:58:20.0771957Z 
+2023-11-11T07:58:20.0776248Z Analysis produced the following metric data:
+2023-11-11T07:58:20.0777101Z 
+2023-11-11T07:58:20.0801421Z |                 Metric                 | Value |
+2023-11-11T07:58:20.0802408Z +----------------------------------------+-------+
+2023-11-11T07:58:20.0803872Z | Total lines of C# code in the database |  6109 |
+2023-11-11T07:58:20.0804339Z 
+2023-11-11T07:58:20.0804529Z Exporting results to SARIF...
+2023-11-11T07:58:20.2506412Z Exported results to SARIF (170ms).
+2023-11-11T07:58:20.2959188Z ##[endgroup]
+2023-11-11T07:58:20.2959764Z Analysis produced the following diagnostic data:
+2023-11-11T07:58:20.2960269Z 
+2023-11-11T07:58:20.2960493Z |          Diagnostic          |  Summary   |
+2023-11-11T07:58:20.2961369Z +------------------------------+------------+
+2023-11-11T07:58:20.2962083Z | Successfully extracted files | 84 results |
+2023-11-11T07:58:20.2962787Z | Compilation message          | 22 results |
+2023-11-11T07:58:20.2963267Z 
+2023-11-11T07:58:20.2963521Z Analysis produced the following metric data:
+2023-11-11T07:58:20.2963966Z 
+2023-11-11T07:58:20.2964692Z |                 Metric                 | Value |
+2023-11-11T07:58:20.2965542Z +----------------------------------------+-------+
+2023-11-11T07:58:20.2966213Z | Total lines of C# code in the database |  6109 |
+2023-11-11T07:58:20.2966716Z 
+2023-11-11T07:58:20.2966724Z 
+2023-11-11T07:58:20.2968176Z [command]/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/codeql database print-baseline /home/runner/work/_temp/codeql_databases/csharp
+2023-11-11T07:58:20.8544693Z Counted a baseline of 6111 lines of code for csharp.
+2023-11-11T07:58:20.8759725Z Counted a baseline of 6111 lines of code for csharp.
+2023-11-11T07:58:20.8760259Z 
+2023-11-11T07:58:20.8762978Z ##[group]Cleaning up databases
+2023-11-11T07:58:20.8767739Z [command]/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/codeql database cleanup /home/runner/work/_temp/codeql_databases/csharp --mode=brutal
+2023-11-11T07:58:21.4519951Z Cleaning up existing TRAP files after import...
+2023-11-11T07:58:21.4564325Z TRAP files cleaned up (3ms).
+2023-11-11T07:58:21.4565129Z Cleaning up scratch directory...
+2023-11-11T07:58:21.4565996Z Scratch directory cleaned up (0ms).
+2023-11-11T07:58:21.6561871Z ##[endgroup]
+2023-11-11T07:58:21.6664609Z ##[group]Uploading results
+2023-11-11T07:58:21.6666522Z Processing sarif files: ["/home/runner/work/rest-assured-net/results/csharp.sarif"]
+2023-11-11T07:58:21.7895979Z Uploading results
+2023-11-11T07:58:22.1733648Z Successfully uploaded results
+2023-11-11T07:58:22.1734377Z ##[endgroup]
+2023-11-11T07:58:22.1788969Z [command]/opt/hostedtoolcache/CodeQL/2.15.1/x64/codeql/codeql database bundle /home/runner/work/_temp/codeql_databases/csharp --output=/home/runner/work/_temp/codeql_databases/csharp.zip --name=csharp
+2023-11-11T07:58:22.9175741Z Creating bundle metadata for /home/runner/work/_temp/codeql_databases/csharp...
+2023-11-11T07:58:23.1028935Z Creating zip file at /home/runner/work/_temp/codeql_databases/csharp.zip.
+2023-11-11T07:58:35.2741250Z ##[group]Waiting for processing to finish
+2023-11-11T07:58:35.4748775Z Analysis upload status is complete.
+2023-11-11T07:58:35.4749854Z ##[endgroup]
+2023-11-11T07:58:35.7019575Z Post job cleanup.
+2023-11-11T07:58:35.9839345Z Post job cleanup.
+2023-11-11T07:58:36.4971752Z Post job cleanup.
+2023-11-11T07:58:36.5835406Z [command]/usr/bin/git version
+2023-11-11T07:58:36.5892797Z git version 2.42.0
+2023-11-11T07:58:36.5932452Z Temporarily overriding HOME='/home/runner/work/_temp/0ec779d9-24cf-4712-974f-283098aa3c00' before making global git config changes
+2023-11-11T07:58:36.5933819Z Adding repository directory to the temporary git global config as a safe directory
+2023-11-11T07:58:36.5938992Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rest-assured-net/rest-assured-net
+2023-11-11T07:58:36.5996499Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-11-11T07:58:36.6050065Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-11-11T07:58:36.6515483Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-11-11T07:58:36.6557824Z http.https://github.com/.extraheader
+2023-11-11T07:58:36.6571734Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-11-11T07:58:36.6624795Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-11-11T07:58:36.7303125Z Cleaning up orphan processes
+2023-11-11T07:58:36.7722397Z Terminate orphan process: pid (2234) (dotnet)
+2023-11-11T07:58:36.7795417Z Terminate orphan process: pid (2235) (dotnet)
+2023-11-11T07:58:36.7865876Z Terminate orphan process: pid (2268) (dotnet)

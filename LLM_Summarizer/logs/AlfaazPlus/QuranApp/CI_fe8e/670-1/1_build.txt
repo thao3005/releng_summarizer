@@ -1,0 +1,724 @@
+2023-09-27T21:00:15.3432495Z Requested labels: ubuntu-latest
+2023-09-27T21:00:15.3432740Z Job defined at: AlfaazPlus/QuranApp/.github/workflows/ci.yml@refs/pull/399/merge
+2023-09-27T21:00:15.3432894Z Waiting for a runner to pick up this job...
+2023-09-27T21:00:16.0916942Z Job is waiting for a hosted runner to come online.
+2023-09-27T21:00:18.4756336Z Job is about to start running on the hosted runner: GitHub Actions 2 (hosted)
+2023-09-27T21:00:22.4763505Z Current runner version: '2.309.0'
+2023-09-27T21:00:22.4793523Z ##[group]Operating System
+2023-09-27T21:00:22.4794031Z Ubuntu
+2023-09-27T21:00:22.4794343Z 22.04.3
+2023-09-27T21:00:22.4794625Z LTS
+2023-09-27T21:00:22.4794885Z ##[endgroup]
+2023-09-27T21:00:22.4795345Z ##[group]Runner Image
+2023-09-27T21:00:22.4795712Z Image: ubuntu-22.04
+2023-09-27T21:00:22.4795990Z Version: 20230917.1.0
+2023-09-27T21:00:22.4796535Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230917.1/images/linux/Ubuntu2204-Readme.md
+2023-09-27T21:00:22.4797231Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230917.1
+2023-09-27T21:00:22.4797955Z ##[endgroup]
+2023-09-27T21:00:22.4798259Z ##[group]Runner Image Provisioner
+2023-09-27T21:00:22.4798617Z 2.0.299.1
+2023-09-27T21:00:22.4798921Z ##[endgroup]
+2023-09-27T21:00:22.4799636Z ##[group]GITHUB_TOKEN Permissions
+2023-09-27T21:00:22.4801384Z Contents: read
+2023-09-27T21:00:22.4801718Z Metadata: read
+2023-09-27T21:00:22.4802343Z Packages: read
+2023-09-27T21:00:22.4802744Z ##[endgroup]
+2023-09-27T21:00:22.4806299Z Secret source: None
+2023-09-27T21:00:22.4806787Z Prepare workflow directory
+2023-09-27T21:00:22.5581065Z Prepare all required actions
+2023-09-27T21:00:22.5776269Z Getting action download info
+2023-09-27T21:00:22.8189342Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2023-09-27T21:00:23.1545197Z Download action repository 'actions/setup-java@v3' (SHA:0ab4596768b603586c0de567f2430c30f5b0d2b0)
+2023-09-27T21:00:23.4506389Z Download action repository 'actions/upload-artifact@v3' (SHA:a8a3f3ad30e3422c9c7b888a15615d19a852ae32)
+2023-09-27T21:00:23.7973462Z Complete job name: build
+2023-09-27T21:00:23.9066622Z ##[group]Run actions/checkout@v3
+2023-09-27T21:00:23.9066991Z with:
+2023-09-27T21:00:23.9067266Z   repository: AlfaazPlus/QuranApp
+2023-09-27T21:00:23.9067794Z   token: ***
+2023-09-27T21:00:23.9068040Z   ssh-strict: true
+2023-09-27T21:00:23.9068312Z   persist-credentials: true
+2023-09-27T21:00:23.9068588Z   clean: true
+2023-09-27T21:00:23.9068848Z   sparse-checkout-cone-mode: true
+2023-09-27T21:00:23.9069131Z   fetch-depth: 1
+2023-09-27T21:00:23.9069366Z   fetch-tags: false
+2023-09-27T21:00:23.9069586Z   lfs: false
+2023-09-27T21:00:23.9069813Z   submodules: false
+2023-09-27T21:00:23.9070064Z   set-safe-directory: true
+2023-09-27T21:00:23.9070304Z ##[endgroup]
+2023-09-27T21:00:24.1219970Z Syncing repository: AlfaazPlus/QuranApp
+2023-09-27T21:00:24.1222067Z ##[group]Getting Git version info
+2023-09-27T21:00:24.1222687Z Working directory is '/home/runner/work/QuranApp/QuranApp'
+2023-09-27T21:00:24.1224424Z [command]/usr/bin/git version
+2023-09-27T21:00:24.1237093Z git version 2.42.0
+2023-09-27T21:00:24.1275106Z ##[endgroup]
+2023-09-27T21:00:24.1291067Z Temporarily overriding HOME='/home/runner/work/_temp/2d34e291-31fb-4867-9dd6-68f8dc03b3ee' before making global git config changes
+2023-09-27T21:00:24.1291657Z Adding repository directory to the temporary git global config as a safe directory
+2023-09-27T21:00:24.1292280Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/QuranApp/QuranApp
+2023-09-27T21:00:24.1377799Z Deleting the contents of '/home/runner/work/QuranApp/QuranApp'
+2023-09-27T21:00:24.1379590Z ##[group]Initializing the repository
+2023-09-27T21:00:24.1380723Z [command]/usr/bin/git init /home/runner/work/QuranApp/QuranApp
+2023-09-27T21:00:24.1416509Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-09-27T21:00:24.1419432Z hint: is subject to change. To configure the initial branch name to use in all
+2023-09-27T21:00:24.1422297Z hint: of your new repositories, which will suppress this warning, call:
+2023-09-27T21:00:24.1424976Z hint: 
+2023-09-27T21:00:24.1427798Z hint: 	git config --global init.defaultBranch <name>
+2023-09-27T21:00:24.1430448Z hint: 
+2023-09-27T21:00:24.1433274Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-09-27T21:00:24.1436352Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-09-27T21:00:24.1439525Z hint: 
+2023-09-27T21:00:24.1442129Z hint: 	git branch -m <name>
+2023-09-27T21:00:24.1444877Z Initialized empty Git repository in /home/runner/work/QuranApp/QuranApp/.git/
+2023-09-27T21:00:24.1450939Z [command]/usr/bin/git remote add origin https://github.com/AlfaazPlus/QuranApp
+2023-09-27T21:00:24.1541421Z ##[endgroup]
+2023-09-27T21:00:24.1548184Z ##[group]Disabling automatic garbage collection
+2023-09-27T21:00:24.1548752Z [command]/usr/bin/git config --local gc.auto 0
+2023-09-27T21:00:24.1549591Z ##[endgroup]
+2023-09-27T21:00:24.1550019Z ##[group]Setting up auth
+2023-09-27T21:00:24.1550495Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-09-27T21:00:24.1616915Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-09-27T21:00:24.1958824Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-09-27T21:00:24.1993172Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-09-27T21:00:24.2237187Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-09-27T21:00:24.2281269Z ##[endgroup]
+2023-09-27T21:00:24.2282092Z ##[group]Fetching the repository
+2023-09-27T21:00:24.2293374Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +c08a2372cae32c25ed53e3e06f8ef2d4e2a5f5bf:refs/remotes/pull/399/merge
+2023-09-27T21:00:24.4747237Z remote: Enumerating objects: 2005, done.        
+2023-09-27T21:00:24.4747921Z remote: Counting objects:   0% (1/2005)        
+2023-09-27T21:00:24.4763240Z remote: Counting objects:   1% (21/2005)        
+2023-09-27T21:00:24.4766332Z remote: Counting objects:   2% (41/2005)        
+2023-09-27T21:00:24.4793664Z remote: Counting objects:   3% (61/2005)        
+2023-09-27T21:00:24.4794057Z remote: Counting objects:   4% (81/2005)        
+2023-09-27T21:00:24.4794367Z remote: Counting objects:   5% (101/2005)        
+2023-09-27T21:00:24.4794685Z remote: Counting objects:   6% (121/2005)        
+2023-09-27T21:00:24.4794992Z remote: Counting objects:   7% (141/2005)        
+2023-09-27T21:00:24.4795304Z remote: Counting objects:   8% (161/2005)        
+2023-09-27T21:00:24.4795601Z remote: Counting objects:   9% (181/2005)        
+2023-09-27T21:00:24.4795903Z remote: Counting objects:  10% (201/2005)        
+2023-09-27T21:00:24.4796226Z remote: Counting objects:  11% (221/2005)        
+2023-09-27T21:00:24.4796514Z remote: Counting objects:  12% (241/2005)        
+2023-09-27T21:00:24.4796806Z remote: Counting objects:  13% (261/2005)        
+2023-09-27T21:00:24.4797097Z remote: Counting objects:  14% (281/2005)        
+2023-09-27T21:00:24.4797636Z remote: Counting objects:  15% (301/2005)        
+2023-09-27T21:00:24.4797937Z remote: Counting objects:  16% (321/2005)        
+2023-09-27T21:00:24.4798231Z remote: Counting objects:  17% (341/2005)        
+2023-09-27T21:00:24.4798513Z remote: Counting objects:  18% (361/2005)        
+2023-09-27T21:00:24.4798813Z remote: Counting objects:  19% (381/2005)        
+2023-09-27T21:00:24.4799105Z remote: Counting objects:  20% (401/2005)        
+2023-09-27T21:00:24.4799395Z remote: Counting objects:  21% (422/2005)        
+2023-09-27T21:00:24.4799678Z remote: Counting objects:  22% (442/2005)        
+2023-09-27T21:00:24.4799968Z remote: Counting objects:  23% (462/2005)        
+2023-09-27T21:00:24.4800310Z remote: Counting objects:  24% (482/2005)        
+2023-09-27T21:00:24.4800592Z remote: Counting objects:  25% (502/2005)        
+2023-09-27T21:00:24.4802010Z remote: Counting objects:  26% (522/2005)        
+2023-09-27T21:00:24.4802310Z remote: Counting objects:  27% (542/2005)        
+2023-09-27T21:00:24.4802987Z remote: Counting objects:  28% (562/2005)        
+2023-09-27T21:00:24.4803281Z remote: Counting objects:  29% (582/2005)        
+2023-09-27T21:00:24.4803567Z remote: Counting objects:  30% (602/2005)        
+2023-09-27T21:00:24.4803859Z remote: Counting objects:  31% (622/2005)        
+2023-09-27T21:00:24.4804334Z remote: Counting objects:  32% (642/2005)        
+2023-09-27T21:00:24.4804627Z remote: Counting objects:  33% (662/2005)        
+2023-09-27T21:00:24.4804918Z remote: Counting objects:  34% (682/2005)        
+2023-09-27T21:00:24.4805201Z remote: Counting objects:  35% (702/2005)        
+2023-09-27T21:00:24.4805495Z remote: Counting objects:  36% (722/2005)        
+2023-09-27T21:00:24.4805794Z remote: Counting objects:  37% (742/2005)        
+2023-09-27T21:00:24.4806092Z remote: Counting objects:  38% (762/2005)        
+2023-09-27T21:00:24.4806381Z remote: Counting objects:  39% (782/2005)        
+2023-09-27T21:00:24.4806670Z remote: Counting objects:  40% (802/2005)        
+2023-09-27T21:00:24.4806964Z remote: Counting objects:  41% (823/2005)        
+2023-09-27T21:00:24.4807245Z remote: Counting objects:  42% (843/2005)        
+2023-09-27T21:00:24.4807531Z remote: Counting objects:  43% (863/2005)        
+2023-09-27T21:00:24.4807834Z remote: Counting objects:  44% (883/2005)        
+2023-09-27T21:00:24.4808112Z remote: Counting objects:  45% (903/2005)        
+2023-09-27T21:00:24.4819342Z remote: Counting objects:  46% (923/2005)        
+2023-09-27T21:00:24.4819687Z remote: Counting objects:  47% (943/2005)        
+2023-09-27T21:00:24.4819980Z remote: Counting objects:  48% (963/2005)        
+2023-09-27T21:00:24.4820266Z remote: Counting objects:  49% (983/2005)        
+2023-09-27T21:00:24.4820827Z remote: Counting objects:  50% (1003/2005)        
+2023-09-27T21:00:24.4821150Z remote: Counting objects:  51% (1023/2005)        
+2023-09-27T21:00:24.4821457Z remote: Counting objects:  52% (1043/2005)        
+2023-09-27T21:00:24.4821769Z remote: Counting objects:  53% (1063/2005)        
+2023-09-27T21:00:24.4822086Z remote: Counting objects:  54% (1083/2005)        
+2023-09-27T21:00:24.4845508Z remote: Counting objects:  55% (1103/2005)        
+2023-09-27T21:00:24.4892411Z remote: Counting objects:  56% (1123/2005)        
+2023-09-27T21:00:24.4982494Z remote: Counting objects:  57% (1143/2005)        
+2023-09-27T21:00:24.5080835Z remote: Counting objects:  58% (1163/2005)        
+2023-09-27T21:00:24.5170283Z remote: Counting objects:  59% (1183/2005)        
+2023-09-27T21:00:24.5259485Z remote: Counting objects:  60% (1203/2005)        
+2023-09-27T21:00:24.5335605Z remote: Counting objects:  61% (1224/2005)        
+2023-09-27T21:00:24.5399729Z remote: Counting objects:  62% (1244/2005)        
+2023-09-27T21:00:24.5481836Z remote: Counting objects:  63% (1264/2005)        
+2023-09-27T21:00:24.5556110Z remote: Counting objects:  64% (1284/2005)        
+2023-09-27T21:00:24.5616971Z remote: Counting objects:  65% (1304/2005)        
+2023-09-27T21:00:24.5677058Z remote: Counting objects:  66% (1324/2005)        
+2023-09-27T21:00:24.5739493Z remote: Counting objects:  67% (1344/2005)        
+2023-09-27T21:00:24.5800959Z remote: Counting objects:  68% (1364/2005)        
+2023-09-27T21:00:24.5866576Z remote: Counting objects:  69% (1384/2005)        
+2023-09-27T21:00:24.5921991Z remote: Counting objects:  70% (1404/2005)        
+2023-09-27T21:00:24.5979630Z remote: Counting objects:  71% (1424/2005)        
+2023-09-27T21:00:24.6055606Z remote: Counting objects:  72% (1444/2005)        
+2023-09-27T21:00:24.6106121Z remote: Counting objects:  73% (1464/2005)        
+2023-09-27T21:00:24.6171202Z remote: Counting objects:  74% (1484/2005)        
+2023-09-27T21:00:24.6230542Z remote: Counting objects:  75% (1504/2005)        
+2023-09-27T21:00:24.6293763Z remote: Counting objects:  76% (1524/2005)        
+2023-09-27T21:00:24.6371631Z remote: Counting objects:  77% (1544/2005)        
+2023-09-27T21:00:24.6417312Z remote: Counting objects:  78% (1564/2005)        
+2023-09-27T21:00:24.6482838Z remote: Counting objects:  79% (1584/2005)        
+2023-09-27T21:00:24.6607516Z remote: Counting objects:  80% (1604/2005)        
+2023-09-27T21:00:24.6634045Z remote: Counting objects:  81% (1625/2005)        
+2023-09-27T21:00:24.6702919Z remote: Counting objects:  82% (1645/2005)        
+2023-09-27T21:00:24.6768955Z remote: Counting objects:  83% (1665/2005)        
+2023-09-27T21:00:24.6820011Z remote: Counting objects:  84% (1685/2005)        
+2023-09-27T21:00:24.6895134Z remote: Counting objects:  85% (1705/2005)        
+2023-09-27T21:00:24.6921238Z remote: Counting objects:  86% (1725/2005)        
+2023-09-27T21:00:24.6972327Z remote: Counting objects:  87% (1745/2005)        
+2023-09-27T21:00:24.7012916Z remote: Counting objects:  88% (1765/2005)        
+2023-09-27T21:00:24.7036821Z remote: Counting objects:  89% (1785/2005)        
+2023-09-27T21:00:24.7037290Z remote: Counting objects:  90% (1805/2005)        
+2023-09-27T21:00:24.7037768Z remote: Counting objects:  91% (1825/2005)        
+2023-09-27T21:00:24.7043618Z remote: Counting objects:  92% (1845/2005)        
+2023-09-27T21:00:24.7044093Z remote: Counting objects:  93% (1865/2005)        
+2023-09-27T21:00:24.7044774Z remote: Counting objects:  94% (1885/2005)        
+2023-09-27T21:00:24.7082216Z remote: Counting objects:  95% (1905/2005)        
+2023-09-27T21:00:24.7084571Z remote: Counting objects:  96% (1925/2005)        
+2023-09-27T21:00:24.7085513Z remote: Counting objects:  97% (1945/2005)        
+2023-09-27T21:00:24.7085965Z remote: Counting objects:  98% (1965/2005)        
+2023-09-27T21:00:24.7086569Z remote: Counting objects:  99% (1985/2005)        
+2023-09-27T21:00:24.7087307Z remote: Counting objects: 100% (2005/2005)        
+2023-09-27T21:00:24.7088487Z remote: Counting objects: 100% (2005/2005), done.        
+2023-09-27T21:00:24.7101131Z remote: Compressing objects:   0% (1/1648)        
+2023-09-27T21:00:24.7109903Z remote: Compressing objects:   1% (17/1648)        
+2023-09-27T21:00:24.7145692Z remote: Compressing objects:   2% (33/1648)        
+2023-09-27T21:00:24.7178695Z remote: Compressing objects:   3% (50/1648)        
+2023-09-27T21:00:24.7215877Z remote: Compressing objects:   4% (66/1648)        
+2023-09-27T21:00:24.7231277Z remote: Compressing objects:   5% (83/1648)        
+2023-09-27T21:00:24.7268220Z remote: Compressing objects:   6% (99/1648)        
+2023-09-27T21:00:24.7270705Z remote: Compressing objects:   7% (116/1648)        
+2023-09-27T21:00:24.7291880Z remote: Compressing objects:   8% (132/1648)        
+2023-09-27T21:00:24.7306500Z remote: Compressing objects:   9% (149/1648)        
+2023-09-27T21:00:24.7310491Z remote: Compressing objects:  10% (165/1648)        
+2023-09-27T21:00:24.7313027Z remote: Compressing objects:  11% (182/1648)        
+2023-09-27T21:00:24.7331056Z remote: Compressing objects:  12% (198/1648)        
+2023-09-27T21:00:24.7339434Z remote: Compressing objects:  13% (215/1648)        
+2023-09-27T21:00:24.7369638Z remote: Compressing objects:  14% (231/1648)        
+2023-09-27T21:00:24.7375628Z remote: Compressing objects:  15% (248/1648)        
+2023-09-27T21:00:25.1762637Z remote: Compressing objects:  16% (264/1648)        
+2023-09-27T21:00:25.7513782Z remote: Compressing objects:  17% (281/1648)        
+2023-09-27T21:00:26.0881851Z remote: Compressing objects:  17% (285/1648)        
+2023-09-27T21:00:26.6815662Z remote: Compressing objects:  18% (297/1648)        
+2023-09-27T21:00:26.6822347Z remote: Compressing objects:  19% (314/1648)        
+2023-09-27T21:00:26.6852766Z remote: Compressing objects:  20% (330/1648)        
+2023-09-27T21:00:26.6861785Z remote: Compressing objects:  21% (347/1648)        
+2023-09-27T21:00:26.6919362Z remote: Compressing objects:  22% (363/1648)        
+2023-09-27T21:00:26.6931400Z remote: Compressing objects:  23% (380/1648)        
+2023-09-27T21:00:26.6942705Z remote: Compressing objects:  24% (396/1648)        
+2023-09-27T21:00:26.6953164Z remote: Compressing objects:  25% (412/1648)        
+2023-09-27T21:00:26.6961761Z remote: Compressing objects:  26% (429/1648)        
+2023-09-27T21:00:26.6964103Z remote: Compressing objects:  27% (445/1648)        
+2023-09-27T21:00:26.7109103Z remote: Compressing objects:  28% (462/1648)        
+2023-09-27T21:00:26.7321242Z remote: Compressing objects:  28% (473/1648)        
+2023-09-27T21:00:26.7635449Z remote: Compressing objects:  29% (478/1648)        
+2023-09-27T21:00:26.7643411Z remote: Compressing objects:  30% (495/1648)        
+2023-09-27T21:00:26.7653316Z remote: Compressing objects:  31% (511/1648)        
+2023-09-27T21:00:26.7664428Z remote: Compressing objects:  32% (528/1648)        
+2023-09-27T21:00:26.7670909Z remote: Compressing objects:  33% (544/1648)        
+2023-09-27T21:00:26.7674873Z remote: Compressing objects:  34% (561/1648)        
+2023-09-27T21:00:26.7687028Z remote: Compressing objects:  35% (577/1648)        
+2023-09-27T21:00:26.7690516Z remote: Compressing objects:  36% (594/1648)        
+2023-09-27T21:00:26.7705755Z remote: Compressing objects:  37% (610/1648)        
+2023-09-27T21:00:26.7887620Z remote: Compressing objects:  38% (627/1648)        
+2023-09-27T21:00:26.7888902Z remote: Compressing objects:  39% (643/1648)        
+2023-09-27T21:00:26.7889508Z remote: Compressing objects:  40% (660/1648)        
+2023-09-27T21:00:26.7920240Z remote: Compressing objects:  41% (676/1648)        
+2023-09-27T21:00:26.7943658Z remote: Compressing objects:  42% (693/1648)        
+2023-09-27T21:00:26.7982221Z remote: Compressing objects:  43% (709/1648)        
+2023-09-27T21:00:26.8015391Z remote: Compressing objects:  44% (726/1648)        
+2023-09-27T21:00:26.8049932Z remote: Compressing objects:  45% (742/1648)        
+2023-09-27T21:00:26.8091948Z remote: Compressing objects:  46% (759/1648)        
+2023-09-27T21:00:26.8158186Z remote: Compressing objects:  47% (775/1648)        
+2023-09-27T21:00:26.8178975Z remote: Compressing objects:  48% (792/1648)        
+2023-09-27T21:00:26.8203550Z remote: Compressing objects:  49% (808/1648)        
+2023-09-27T21:00:26.8221431Z remote: Compressing objects:  50% (824/1648)        
+2023-09-27T21:00:26.8251038Z remote: Compressing objects:  51% (841/1648)        
+2023-09-27T21:00:26.8251497Z remote: Compressing objects:  52% (857/1648)        
+2023-09-27T21:00:26.8251889Z remote: Compressing objects:  53% (874/1648)        
+2023-09-27T21:00:26.8255105Z remote: Compressing objects:  54% (890/1648)        
+2023-09-27T21:00:26.8257667Z remote: Compressing objects:  55% (907/1648)        
+2023-09-27T21:00:26.8260226Z remote: Compressing objects:  56% (923/1648)        
+2023-09-27T21:00:26.8262799Z remote: Compressing objects:  57% (940/1648)        
+2023-09-27T21:00:26.8264169Z remote: Compressing objects:  58% (956/1648)        
+2023-09-27T21:00:26.8264589Z remote: Compressing objects:  59% (973/1648)        
+2023-09-27T21:00:26.8265010Z remote: Compressing objects:  60% (989/1648)        
+2023-09-27T21:00:26.8265443Z remote: Compressing objects:  61% (1006/1648)        
+2023-09-27T21:00:26.8265880Z remote: Compressing objects:  62% (1022/1648)        
+2023-09-27T21:00:26.8266401Z remote: Compressing objects:  63% (1039/1648)        
+2023-09-27T21:00:26.8266839Z remote: Compressing objects:  64% (1055/1648)        
+2023-09-27T21:00:26.8267269Z remote: Compressing objects:  65% (1072/1648)        
+2023-09-27T21:00:26.8267699Z remote: Compressing objects:  66% (1088/1648)        
+2023-09-27T21:00:26.8268150Z remote: Compressing objects:  67% (1105/1648)        
+2023-09-27T21:00:26.8268575Z remote: Compressing objects:  68% (1121/1648)        
+2023-09-27T21:00:26.8268999Z remote: Compressing objects:  69% (1138/1648)        
+2023-09-27T21:00:26.8269405Z remote: Compressing objects:  70% (1154/1648)        
+2023-09-27T21:00:26.8269824Z remote: Compressing objects:  71% (1171/1648)        
+2023-09-27T21:00:26.8270246Z remote: Compressing objects:  72% (1187/1648)        
+2023-09-27T21:00:26.8270663Z remote: Compressing objects:  73% (1204/1648)        
+2023-09-27T21:00:26.8271099Z remote: Compressing objects:  74% (1220/1648)        
+2023-09-27T21:00:26.8271550Z remote: Compressing objects:  75% (1236/1648)        
+2023-09-27T21:00:26.8272163Z remote: Compressing objects:  76% (1253/1648)        
+2023-09-27T21:00:26.8272580Z remote: Compressing objects:  77% (1269/1648)        
+2023-09-27T21:00:26.8272985Z remote: Compressing objects:  78% (1286/1648)        
+2023-09-27T21:00:26.8273429Z remote: Compressing objects:  79% (1302/1648)        
+2023-09-27T21:00:26.8273822Z remote: Compressing objects:  80% (1319/1648)        
+2023-09-27T21:00:26.8274333Z remote: Compressing objects:  81% (1335/1648)        
+2023-09-27T21:00:26.8274808Z remote: Compressing objects:  82% (1352/1648)        
+2023-09-27T21:00:26.8275290Z remote: Compressing objects:  83% (1368/1648)        
+2023-09-27T21:00:26.8276133Z remote: Compressing objects:  84% (1385/1648)        
+2023-09-27T21:00:26.8276510Z remote: Compressing objects:  85% (1401/1648)        
+2023-09-27T21:00:26.8276796Z remote: Compressing objects:  86% (1418/1648)        
+2023-09-27T21:00:26.8277064Z remote: Compressing objects:  87% (1434/1648)        
+2023-09-27T21:00:26.8277741Z remote: Compressing objects:  88% (1451/1648)        
+2023-09-27T21:00:26.8278034Z remote: Compressing objects:  89% (1467/1648)        
+2023-09-27T21:00:26.8278306Z remote: Compressing objects:  90% (1484/1648)        
+2023-09-27T21:00:26.8278562Z remote: Compressing objects:  91% (1500/1648)        
+2023-09-27T21:00:26.8278822Z remote: Compressing objects:  92% (1517/1648)        
+2023-09-27T21:00:26.8279092Z remote: Compressing objects:  93% (1533/1648)        
+2023-09-27T21:00:26.8279355Z remote: Compressing objects:  94% (1550/1648)        
+2023-09-27T21:00:26.8279611Z remote: Compressing objects:  95% (1566/1648)        
+2023-09-27T21:00:26.8280332Z remote: Compressing objects:  96% (1583/1648)        
+2023-09-27T21:00:26.8280616Z remote: Compressing objects:  97% (1599/1648)        
+2023-09-27T21:00:26.8280872Z remote: Compressing objects:  98% (1616/1648)        
+2023-09-27T21:00:26.8281141Z remote: Compressing objects:  99% (1632/1648)        
+2023-09-27T21:00:26.8281400Z remote: Compressing objects: 100% (1648/1648)        
+2023-09-27T21:00:26.8281693Z remote: Compressing objects: 100% (1648/1648), done.        
+2023-09-27T21:00:26.8298143Z Receiving objects:   0% (1/2005)
+2023-09-27T21:00:26.8338195Z Receiving objects:   1% (21/2005)
+2023-09-27T21:00:26.8367868Z Receiving objects:   2% (41/2005)
+2023-09-27T21:00:26.9585180Z Receiving objects:   3% (61/2005)
+2023-09-27T21:00:26.9775610Z Receiving objects:   4% (81/2005)
+2023-09-27T21:00:27.0116723Z Receiving objects:   5% (101/2005)
+2023-09-27T21:00:27.0119424Z Receiving objects:   6% (121/2005)
+2023-09-27T21:00:27.0119899Z Receiving objects:   7% (141/2005)
+2023-09-27T21:00:27.0125141Z Receiving objects:   8% (161/2005)
+2023-09-27T21:00:27.0145029Z Receiving objects:   9% (181/2005)
+2023-09-27T21:00:27.0156837Z Receiving objects:  10% (201/2005)
+2023-09-27T21:00:27.0164684Z Receiving objects:  11% (221/2005)
+2023-09-27T21:00:27.0171666Z Receiving objects:  12% (241/2005)
+2023-09-27T21:00:27.0175888Z Receiving objects:  13% (261/2005)
+2023-09-27T21:00:27.0177668Z Receiving objects:  14% (281/2005)
+2023-09-27T21:00:27.0183449Z Receiving objects:  15% (301/2005)
+2023-09-27T21:00:27.0185827Z Receiving objects:  16% (321/2005)
+2023-09-27T21:00:27.0188323Z Receiving objects:  17% (341/2005)
+2023-09-27T21:00:27.0194299Z Receiving objects:  18% (361/2005)
+2023-09-27T21:00:27.0208780Z Receiving objects:  19% (381/2005)
+2023-09-27T21:00:27.0213923Z Receiving objects:  20% (401/2005)
+2023-09-27T21:00:27.0222756Z Receiving objects:  21% (422/2005)
+2023-09-27T21:00:27.0228081Z Receiving objects:  22% (442/2005)
+2023-09-27T21:00:27.0232625Z Receiving objects:  23% (462/2005)
+2023-09-27T21:00:27.0242330Z Receiving objects:  24% (482/2005)
+2023-09-27T21:00:27.0250048Z Receiving objects:  25% (502/2005)
+2023-09-27T21:00:27.0260437Z Receiving objects:  26% (522/2005)
+2023-09-27T21:00:27.0262873Z Receiving objects:  27% (542/2005)
+2023-09-27T21:00:27.0269918Z Receiving objects:  28% (562/2005)
+2023-09-27T21:00:27.0276437Z Receiving objects:  29% (582/2005)
+2023-09-27T21:00:27.0285505Z Receiving objects:  30% (602/2005)
+2023-09-27T21:00:27.0298708Z Receiving objects:  31% (622/2005)
+2023-09-27T21:00:27.0307435Z Receiving objects:  32% (642/2005)
+2023-09-27T21:00:27.0314338Z Receiving objects:  33% (662/2005)
+2023-09-27T21:00:27.0320448Z Receiving objects:  34% (682/2005)
+2023-09-27T21:00:27.0322955Z Receiving objects:  35% (702/2005)
+2023-09-27T21:00:27.0327628Z Receiving objects:  36% (722/2005)
+2023-09-27T21:00:27.0328210Z Receiving objects:  37% (742/2005)
+2023-09-27T21:00:27.0331507Z Receiving objects:  38% (762/2005)
+2023-09-27T21:00:27.0332849Z Receiving objects:  39% (782/2005)
+2023-09-27T21:00:27.0336322Z Receiving objects:  40% (802/2005)
+2023-09-27T21:00:27.0360228Z Receiving objects:  41% (823/2005)
+2023-09-27T21:00:27.0372211Z Receiving objects:  42% (843/2005)
+2023-09-27T21:00:27.0409664Z Receiving objects:  43% (863/2005)
+2023-09-27T21:00:27.0480494Z Receiving objects:  44% (883/2005)
+2023-09-27T21:00:27.0690192Z Receiving objects:  45% (903/2005)
+2023-09-27T21:00:27.0694932Z Receiving objects:  46% (923/2005)
+2023-09-27T21:00:27.0697805Z Receiving objects:  47% (943/2005)
+2023-09-27T21:00:27.0700406Z Receiving objects:  48% (963/2005)
+2023-09-27T21:00:27.0702299Z Receiving objects:  49% (983/2005)
+2023-09-27T21:00:27.0704669Z Receiving objects:  50% (1003/2005)
+2023-09-27T21:00:27.0707328Z Receiving objects:  51% (1023/2005)
+2023-09-27T21:00:27.0713383Z Receiving objects:  52% (1043/2005)
+2023-09-27T21:00:27.0736539Z Receiving objects:  53% (1063/2005)
+2023-09-27T21:00:27.0754189Z Receiving objects:  54% (1083/2005)
+2023-09-27T21:00:27.0760690Z Receiving objects:  55% (1103/2005)
+2023-09-27T21:00:27.0770407Z Receiving objects:  56% (1123/2005)
+2023-09-27T21:00:27.0773609Z Receiving objects:  57% (1143/2005)
+2023-09-27T21:00:27.1543587Z Receiving objects:  58% (1163/2005)
+2023-09-27T21:00:27.1556934Z Receiving objects:  59% (1183/2005)
+2023-09-27T21:00:27.8290923Z Receiving objects:  60% (1203/2005)
+2023-09-27T21:00:27.9502876Z Receiving objects:  60% (1208/2005), 56.19 MiB | 56.18 MiB/s
+2023-09-27T21:00:27.9998007Z Receiving objects:  61% (1224/2005), 56.19 MiB | 56.18 MiB/s
+2023-09-27T21:00:28.0481074Z Receiving objects:  62% (1244/2005), 56.19 MiB | 56.18 MiB/s
+2023-09-27T21:00:28.0960477Z Receiving objects:  63% (1264/2005), 56.19 MiB | 56.18 MiB/s
+2023-09-27T21:00:28.1433446Z Receiving objects:  64% (1284/2005), 56.19 MiB | 56.18 MiB/s
+2023-09-27T21:00:28.1884264Z Receiving objects:  65% (1304/2005), 56.19 MiB | 56.18 MiB/s
+2023-09-27T21:00:28.2363161Z Receiving objects:  66% (1324/2005), 56.19 MiB | 56.18 MiB/s
+2023-09-27T21:00:28.2842122Z Receiving objects:  67% (1344/2005), 56.19 MiB | 56.18 MiB/s
+2023-09-27T21:00:28.3326101Z Receiving objects:  68% (1364/2005), 56.19 MiB | 56.18 MiB/s
+2023-09-27T21:00:28.3811754Z Receiving objects:  69% (1384/2005), 77.12 MiB | 51.41 MiB/s
+2023-09-27T21:00:28.4288559Z Receiving objects:  70% (1404/2005), 77.12 MiB | 51.41 MiB/s
+2023-09-27T21:00:28.4762200Z Receiving objects:  71% (1424/2005), 77.12 MiB | 51.41 MiB/s
+2023-09-27T21:00:28.5234007Z Receiving objects:  72% (1444/2005), 77.12 MiB | 51.41 MiB/s
+2023-09-27T21:00:28.5709233Z Receiving objects:  73% (1464/2005), 77.12 MiB | 51.41 MiB/s
+2023-09-27T21:00:28.6200705Z Receiving objects:  74% (1484/2005), 77.12 MiB | 51.41 MiB/s
+2023-09-27T21:00:28.6692649Z Receiving objects:  75% (1504/2005), 77.12 MiB | 51.41 MiB/s
+2023-09-27T21:00:28.7163221Z Receiving objects:  76% (1524/2005), 77.12 MiB | 51.41 MiB/s
+2023-09-27T21:00:28.7615693Z Receiving objects:  77% (1544/2005), 77.12 MiB | 51.41 MiB/s
+2023-09-27T21:00:28.8086529Z Receiving objects:  78% (1564/2005), 77.12 MiB | 51.41 MiB/s
+2023-09-27T21:00:28.8291858Z Receiving objects:  79% (1584/2005), 77.12 MiB | 51.41 MiB/s
+2023-09-27T21:00:28.8555695Z Receiving objects:  79% (1592/2005), 95.37 MiB | 47.68 MiB/s
+2023-09-27T21:00:28.9037257Z Receiving objects:  80% (1604/2005), 95.37 MiB | 47.68 MiB/s
+2023-09-27T21:00:28.9502208Z Receiving objects:  81% (1625/2005), 95.37 MiB | 47.68 MiB/s
+2023-09-27T21:00:28.9979186Z Receiving objects:  82% (1645/2005), 95.37 MiB | 47.68 MiB/s
+2023-09-27T21:00:29.0444626Z Receiving objects:  83% (1665/2005), 95.37 MiB | 47.68 MiB/s
+2023-09-27T21:00:29.0916778Z Receiving objects:  84% (1685/2005), 95.37 MiB | 47.68 MiB/s
+2023-09-27T21:00:29.1376912Z Receiving objects:  85% (1705/2005), 95.37 MiB | 47.68 MiB/s
+2023-09-27T21:00:29.1827950Z Receiving objects:  86% (1725/2005), 95.37 MiB | 47.68 MiB/s
+2023-09-27T21:00:29.2244730Z Receiving objects:  87% (1745/2005), 95.37 MiB | 47.68 MiB/s
+2023-09-27T21:00:29.2635379Z Receiving objects:  88% (1765/2005), 95.37 MiB | 47.68 MiB/s
+2023-09-27T21:00:29.3090256Z Receiving objects:  89% (1785/2005), 95.37 MiB | 47.68 MiB/s
+2023-09-27T21:00:29.3504235Z Receiving objects:  90% (1805/2005), 95.37 MiB | 47.68 MiB/s
+2023-09-27T21:00:29.6124750Z Receiving objects:  91% (1825/2005), 113.92 MiB | 45.57 MiB/s
+2023-09-27T21:00:29.8293058Z Receiving objects:  92% (1845/2005), 113.92 MiB | 45.57 MiB/s
+2023-09-27T21:00:29.8754064Z Receiving objects:  92% (1861/2005), 126.01 MiB | 42.00 MiB/s
+2023-09-27T21:00:30.0394917Z Receiving objects:  93% (1865/2005), 126.01 MiB | 42.00 MiB/s
+2023-09-27T21:00:30.0401777Z Receiving objects:  94% (1885/2005), 126.01 MiB | 42.00 MiB/s
+2023-09-27T21:00:30.0409871Z Receiving objects:  95% (1905/2005), 126.01 MiB | 42.00 MiB/s
+2023-09-27T21:00:30.0410283Z Receiving objects:  96% (1925/2005), 126.01 MiB | 42.00 MiB/s
+2023-09-27T21:00:30.0413790Z Receiving objects:  97% (1945/2005), 126.01 MiB | 42.00 MiB/s
+2023-09-27T21:00:30.0416434Z Receiving objects:  98% (1965/2005), 126.01 MiB | 42.00 MiB/s
+2023-09-27T21:00:30.1149267Z Receiving objects:  99% (1985/2005), 126.01 MiB | 42.00 MiB/s
+2023-09-27T21:00:30.1150181Z remote: Total 2005 (delta 280), reused 1738 (delta 251), pack-reused 0        
+2023-09-27T21:00:30.1166823Z Receiving objects: 100% (2005/2005), 126.01 MiB | 42.00 MiB/s
+2023-09-27T21:00:30.1167460Z Receiving objects: 100% (2005/2005), 135.20 MiB | 41.13 MiB/s, done.
+2023-09-27T21:00:30.1175017Z Resolving deltas:   0% (0/280)
+2023-09-27T21:00:30.1176213Z Resolving deltas:   1% (3/280)
+2023-09-27T21:00:30.1177922Z Resolving deltas:   2% (6/280)
+2023-09-27T21:00:30.1424046Z Resolving deltas:   3% (9/280)
+2023-09-27T21:00:30.1424648Z Resolving deltas:   4% (12/280)
+2023-09-27T21:00:30.1428864Z Resolving deltas:   5% (14/280)
+2023-09-27T21:00:30.1429359Z Resolving deltas:   6% (17/280)
+2023-09-27T21:00:30.1430010Z Resolving deltas:   7% (20/280)
+2023-09-27T21:00:30.1430297Z Resolving deltas:   8% (23/280)
+2023-09-27T21:00:30.1430518Z Resolving deltas:   9% (26/280)
+2023-09-27T21:00:30.1430744Z Resolving deltas:  10% (28/280)
+2023-09-27T21:00:30.1434818Z Resolving deltas:  11% (31/280)
+2023-09-27T21:00:30.1436677Z Resolving deltas:  12% (34/280)
+2023-09-27T21:00:30.1437082Z Resolving deltas:  13% (37/280)
+2023-09-27T21:00:30.1442144Z Resolving deltas:  14% (40/280)
+2023-09-27T21:00:30.1442492Z Resolving deltas:  15% (42/280)
+2023-09-27T21:00:30.1442900Z Resolving deltas:  16% (45/280)
+2023-09-27T21:00:30.1446639Z Resolving deltas:  17% (48/280)
+2023-09-27T21:00:30.1447076Z Resolving deltas:  18% (51/280)
+2023-09-27T21:00:30.1447459Z Resolving deltas:  19% (54/280)
+2023-09-27T21:00:30.1451721Z Resolving deltas:  20% (56/280)
+2023-09-27T21:00:30.1452165Z Resolving deltas:  21% (59/280)
+2023-09-27T21:00:30.1452532Z Resolving deltas:  22% (62/280)
+2023-09-27T21:00:30.1452787Z Resolving deltas:  23% (65/280)
+2023-09-27T21:00:30.1453013Z Resolving deltas:  24% (68/280)
+2023-09-27T21:00:30.1453244Z Resolving deltas:  25% (70/280)
+2023-09-27T21:00:30.1453453Z Resolving deltas:  26% (73/280)
+2023-09-27T21:00:30.1458153Z Resolving deltas:  27% (76/280)
+2023-09-27T21:00:30.1458540Z Resolving deltas:  28% (79/280)
+2023-09-27T21:00:30.1458943Z Resolving deltas:  29% (82/280)
+2023-09-27T21:00:30.1462968Z Resolving deltas:  30% (84/280)
+2023-09-27T21:00:30.1463347Z Resolving deltas:  31% (87/280)
+2023-09-27T21:00:30.1463722Z Resolving deltas:  32% (90/280)
+2023-09-27T21:00:30.1464122Z Resolving deltas:  33% (93/280)
+2023-09-27T21:00:30.1464380Z Resolving deltas:  34% (96/280)
+2023-09-27T21:00:30.1464934Z Resolving deltas:  35% (98/280)
+2023-09-27T21:00:30.1465161Z Resolving deltas:  36% (101/280)
+2023-09-27T21:00:30.1465398Z Resolving deltas:  37% (104/280)
+2023-09-27T21:00:30.1465613Z Resolving deltas:  38% (107/280)
+2023-09-27T21:00:30.1465834Z Resolving deltas:  39% (110/280)
+2023-09-27T21:00:30.1467392Z Resolving deltas:  40% (112/280)
+2023-09-27T21:00:30.1470234Z Resolving deltas:  41% (115/280)
+2023-09-27T21:00:30.1479564Z Resolving deltas:  42% (118/280)
+2023-09-27T21:00:30.1480675Z Resolving deltas:  43% (121/280)
+2023-09-27T21:00:30.1482658Z Resolving deltas:  44% (124/280)
+2023-09-27T21:00:30.1483051Z Resolving deltas:  45% (126/280)
+2023-09-27T21:00:30.1483391Z Resolving deltas:  46% (129/280)
+2023-09-27T21:00:30.1486926Z Resolving deltas:  47% (132/280)
+2023-09-27T21:00:30.1487301Z Resolving deltas:  48% (135/280)
+2023-09-27T21:00:30.1487640Z Resolving deltas:  49% (138/280)
+2023-09-27T21:00:30.1487974Z Resolving deltas:  50% (140/280)
+2023-09-27T21:00:30.1665149Z Resolving deltas:  51% (143/280)
+2023-09-27T21:00:30.1665943Z Resolving deltas:  52% (146/280)
+2023-09-27T21:00:30.1666634Z Resolving deltas:  53% (149/280)
+2023-09-27T21:00:30.1666927Z Resolving deltas:  54% (152/280)
+2023-09-27T21:00:30.1667162Z Resolving deltas:  55% (154/280)
+2023-09-27T21:00:30.1667395Z Resolving deltas:  56% (157/280)
+2023-09-27T21:00:30.1669083Z Resolving deltas:  57% (160/280)
+2023-09-27T21:00:30.1669468Z Resolving deltas:  58% (163/280)
+2023-09-27T21:00:30.1672015Z Resolving deltas:  59% (166/280)
+2023-09-27T21:00:30.1672374Z Resolving deltas:  60% (168/280)
+2023-09-27T21:00:30.1674929Z Resolving deltas:  61% (171/280)
+2023-09-27T21:00:30.1675601Z Resolving deltas:  62% (174/280)
+2023-09-27T21:00:30.1678282Z Resolving deltas:  63% (177/280)
+2023-09-27T21:00:30.1678649Z Resolving deltas:  64% (180/280)
+2023-09-27T21:00:30.1681192Z Resolving deltas:  65% (182/280)
+2023-09-27T21:00:30.1681530Z Resolving deltas:  66% (185/280)
+2023-09-27T21:00:30.1684073Z Resolving deltas:  67% (188/280)
+2023-09-27T21:00:30.1684422Z Resolving deltas:  68% (191/280)
+2023-09-27T21:00:30.1686982Z Resolving deltas:  69% (194/280)
+2023-09-27T21:00:30.1687349Z Resolving deltas:  70% (196/280)
+2023-09-27T21:00:30.1689882Z Resolving deltas:  71% (199/280)
+2023-09-27T21:00:30.1690227Z Resolving deltas:  72% (202/280)
+2023-09-27T21:00:30.1692762Z Resolving deltas:  73% (205/280)
+2023-09-27T21:00:30.1693117Z Resolving deltas:  74% (208/280)
+2023-09-27T21:00:30.1695652Z Resolving deltas:  75% (210/280)
+2023-09-27T21:00:30.1695996Z Resolving deltas:  76% (213/280)
+2023-09-27T21:00:30.1698543Z Resolving deltas:  77% (216/280)
+2023-09-27T21:00:30.1698881Z Resolving deltas:  78% (219/280)
+2023-09-27T21:00:30.1701449Z Resolving deltas:  79% (222/280)
+2023-09-27T21:00:30.1701790Z Resolving deltas:  80% (224/280)
+2023-09-27T21:00:30.1704328Z Resolving deltas:  81% (227/280)
+2023-09-27T21:00:30.1705986Z Resolving deltas:  82% (230/280)
+2023-09-27T21:00:30.1706332Z Resolving deltas:  83% (233/280)
+2023-09-27T21:00:30.1706690Z Resolving deltas:  84% (236/280)
+2023-09-27T21:00:30.1709239Z Resolving deltas:  85% (238/280)
+2023-09-27T21:00:30.1709592Z Resolving deltas:  86% (241/280)
+2023-09-27T21:00:30.1712145Z Resolving deltas:  87% (244/280)
+2023-09-27T21:00:30.1712487Z Resolving deltas:  88% (247/280)
+2023-09-27T21:00:30.1715031Z Resolving deltas:  89% (250/280)
+2023-09-27T21:00:30.1716292Z Resolving deltas:  90% (252/280)
+2023-09-27T21:00:30.1716622Z Resolving deltas:  91% (255/280)
+2023-09-27T21:00:30.1716966Z Resolving deltas:  92% (258/280)
+2023-09-27T21:00:30.1719621Z Resolving deltas:  93% (261/280)
+2023-09-27T21:00:30.2323751Z Resolving deltas:  94% (264/280)
+2023-09-27T21:00:30.2458516Z Resolving deltas:  95% (266/280)
+2023-09-27T21:00:30.2459057Z Resolving deltas:  96% (269/280)
+2023-09-27T21:00:30.2459531Z Resolving deltas:  97% (272/280)
+2023-09-27T21:00:30.2459906Z Resolving deltas:  98% (275/280)
+2023-09-27T21:00:30.3512205Z Resolving deltas:  99% (278/280)
+2023-09-27T21:00:30.3513997Z Resolving deltas: 100% (280/280)
+2023-09-27T21:00:30.3515807Z Resolving deltas: 100% (280/280), done.
+2023-09-27T21:00:30.7444964Z From https://github.com/AlfaazPlus/QuranApp
+2023-09-27T21:00:30.7446707Z  * [new ref]         c08a2372cae32c25ed53e3e06f8ef2d4e2a5f5bf -> pull/399/merge
+2023-09-27T21:00:30.7469014Z ##[endgroup]
+2023-09-27T21:00:30.7469665Z ##[group]Determining the checkout info
+2023-09-27T21:00:30.7471068Z ##[endgroup]
+2023-09-27T21:00:30.7471510Z ##[group]Checking out the ref
+2023-09-27T21:00:30.7476590Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/399/merge
+2023-09-27T21:00:31.8601682Z Updating files:  92% (1587/1718)
+2023-09-27T21:00:32.0836574Z Updating files:  93% (1598/1718)
+2023-09-27T21:00:32.0845053Z Updating files:  94% (1615/1718)
+2023-09-27T21:00:32.0853473Z Updating files:  95% (1633/1718)
+2023-09-27T21:00:32.0857270Z Updating files:  96% (1650/1718)
+2023-09-27T21:00:32.0861720Z Updating files:  97% (1667/1718)
+2023-09-27T21:00:32.0868182Z Updating files:  98% (1684/1718)
+2023-09-27T21:00:32.1140682Z Updating files:  99% (1701/1718)
+2023-09-27T21:00:32.1140908Z Updating files: 100% (1718/1718)
+2023-09-27T21:00:32.1141654Z Updating files: 100% (1718/1718), done.
+2023-09-27T21:00:32.1173774Z Note: switching to 'refs/remotes/pull/399/merge'.
+2023-09-27T21:00:32.1174527Z 
+2023-09-27T21:00:32.1176362Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-09-27T21:00:32.1176894Z changes and commit them, and you can discard any commits you make in this
+2023-09-27T21:00:32.1177479Z state without impacting any branches by switching back to a branch.
+2023-09-27T21:00:32.1178818Z 
+2023-09-27T21:00:32.1179387Z If you want to create a new branch to retain commits you create, you may
+2023-09-27T21:00:32.1179967Z do so (now or later) by using -c with the switch command. Example:
+2023-09-27T21:00:32.1180446Z 
+2023-09-27T21:00:32.1183036Z   git switch -c <new-branch-name>
+2023-09-27T21:00:32.1227147Z 
+2023-09-27T21:00:32.1227885Z Or undo this operation with:
+2023-09-27T21:00:32.1228136Z 
+2023-09-27T21:00:32.1228301Z   git switch -
+2023-09-27T21:00:32.1228484Z 
+2023-09-27T21:00:32.1228725Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-09-27T21:00:32.1228998Z 
+2023-09-27T21:00:32.1229269Z HEAD is now at c08a237 Merge d1070d6e24e5c2f15e3c1361605e7dbdc9a86e09 into 2a23b5b73cf2d2f170f9b92ef0900e204cfc65e2
+2023-09-27T21:00:32.1230557Z ##[endgroup]
+2023-09-27T21:00:32.1266717Z [command]/usr/bin/git log -1 --format='%H'
+2023-09-27T21:00:32.1301563Z 'c08a2372cae32c25ed53e3e06f8ef2d4e2a5f5bf'
+2023-09-27T21:00:32.1671166Z ##[group]Run actions/setup-java@v3
+2023-09-27T21:00:32.1671505Z with:
+2023-09-27T21:00:32.1671849Z   java-version: 17
+2023-09-27T21:00:32.1672088Z   distribution: temurin
+2023-09-27T21:00:32.1672370Z   cache: gradle
+2023-09-27T21:00:32.1672666Z   java-package: jdk
+2023-09-27T21:00:32.1672905Z   check-latest: false
+2023-09-27T21:00:32.1673243Z   server-id: github
+2023-09-27T21:00:32.1673539Z   server-username: GITHUB_ACTOR
+2023-09-27T21:00:32.1673836Z   server-password: GITHUB_TOKEN
+2023-09-27T21:00:32.1674163Z   overwrite-settings: true
+2023-09-27T21:00:32.1674459Z   job-status: success
+2023-09-27T21:00:32.1674930Z   token: ***
+2023-09-27T21:00:32.1675150Z ##[endgroup]
+2023-09-27T21:00:32.3839626Z ##[group]Installed distributions
+2023-09-27T21:00:32.3892848Z Resolved Java 17.0.8+1 from tool-cache
+2023-09-27T21:00:32.3893432Z Setting Java 17.0.8+1 as the default
+2023-09-27T21:00:32.3915312Z Creating toolchains.xml for JDK version 17 from temurin
+2023-09-27T21:00:32.4019164Z Writing to /home/runner/.m2/toolchains.xml
+2023-09-27T21:00:32.4019510Z 
+2023-09-27T21:00:32.4019932Z Java configuration:
+2023-09-27T21:00:32.4020334Z   Distribution: temurin
+2023-09-27T21:00:32.4020699Z   Version: 17.0.8+1
+2023-09-27T21:00:32.4021417Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.8-1/x64
+2023-09-27T21:00:32.4021694Z 
+2023-09-27T21:00:32.4022172Z ##[endgroup]
+2023-09-27T21:00:32.4046741Z Creating settings.xml with server-id: github
+2023-09-27T21:00:32.4047396Z Writing to /home/runner/.m2/settings.xml
+2023-09-27T21:00:32.7342320Z gradle cache is not found
+2023-09-27T21:00:32.7491887Z ##[group]Run chmod +x gradlew && ./gradlew assembleDebug
+2023-09-27T21:00:32.7492374Z [36;1mchmod +x gradlew && ./gradlew assembleDebug[0m
+2023-09-27T21:00:32.7558657Z shell: /usr/bin/bash -e {0}
+2023-09-27T21:00:32.7558973Z env:
+2023-09-27T21:00:32.7559351Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.8-1/x64
+2023-09-27T21:00:32.7559797Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.8-1/x64
+2023-09-27T21:00:32.7560261Z ##[endgroup]
+2023-09-27T21:00:32.7770675Z ./gradlew: 23: cd: can't cd to "./
+2023-09-27T21:00:32.9514556Z Downloading https://services.gradle.org/distributions/gradle-8.0-bin.zip
+2023-09-27T21:00:34.7243976Z ......................................................................................................................
+2023-09-27T21:00:34.7255182Z Unzipping /home/runner/.gradle/wrapper/dists/gradle-8.0-bin/ca5e32bp14vu59qr306oxotwh/gradle-8.0-bin.zip to /home/runner/.gradle/wrapper/dists/gradle-8.0-bin/ca5e32bp14vu59qr306oxotwh
+2023-09-27T21:00:35.6250586Z Set executable permissions for: /home/runner/.gradle/wrapper/dists/gradle-8.0-bin/ca5e32bp14vu59qr306oxotwh/gradle-8.0/bin/gradle
+2023-09-27T21:00:36.0149994Z 
+2023-09-27T21:00:36.0153487Z Welcome to Gradle 8.0!
+2023-09-27T21:00:36.0153723Z 
+2023-09-27T21:00:36.0154187Z For more details see https://docs.gradle.org/8.0/release-notes.html
+2023-09-27T21:00:36.0154463Z 
+2023-09-27T21:00:36.1140591Z Starting a Gradle Daemon (subsequent builds will be faster)
+2023-09-27T21:01:23.6161993Z > Task :app:preBuild UP-TO-DATE
+2023-09-27T21:01:23.6162787Z > Task :app:preDebugBuild UP-TO-DATE
+2023-09-27T21:01:23.6163673Z > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+2023-09-27T21:01:38.5143762Z 
+2023-09-27T21:01:38.5144439Z > Task :app:dataBindingMergeDependencyArtifactsDebug
+2023-09-27T21:01:38.5151841Z WARNING: [Processor] Library '/home/runner/.gradle/caches/modules-2/files-2.1/com.google.android.exoplayer/exoplayer-ui/2.18.7/9de06a2a5abd94cb0c699c1c31961d184fca411/exoplayer-ui-2.18.7.aar' contains references to both AndroidX and old support library. This seems like the library is partially migrated. Jetifier will try to rewrite the library anyway.
+2023-09-27T21:01:38.5153104Z  Example of androidX reference: 'androidx/core/app/NotificationCompat$Builder'
+2023-09-27T21:01:38.5154214Z  Example of support library reference: 'android/support/v4/media/session/MediaSessionCompat$Token'
+2023-09-27T21:01:38.5159923Z WARNING: [Processor] Library '/home/runner/.gradle/caches/modules-2/files-2.1/com.google.android.exoplayer/extension-mediasession/2.18.7/2e28e4d6c43f12cb5493b38e37dee85671a96f90/extension-mediasession-2.18.7.aar' contains references to both AndroidX and old support library. This seems like the library is partially migrated. Jetifier will try to rewrite the library anyway.
+2023-09-27T21:01:38.5160815Z  Example of androidX reference: 'androidx/annotation/Nullable'
+2023-09-27T21:01:38.5161429Z  Example of support library reference: 'android/support/v4/media/session/MediaSessionCompat$Callback'
+2023-09-27T21:01:46.7144321Z 
+2023-09-27T21:01:46.7144987Z > Task :app:generateDebugResValues
+2023-09-27T21:01:46.7145764Z > Task :app:generateDebugResources
+2023-09-27T21:01:46.7146859Z > Task :peacedesign:preBuild UP-TO-DATE
+2023-09-27T21:01:46.7147301Z > Task :peacedesign:preDebugBuild UP-TO-DATE
+2023-09-27T21:01:46.7147718Z > Task :peacedesign:generateDebugResValues
+2023-09-27T21:01:46.7148301Z > Task :peacedesign:generateDebugResources
+2023-09-27T21:01:47.0138729Z > Task :peacedesign:packageDebugResources
+2023-09-27T21:01:51.3138320Z > Task :app:dataBindingTriggerDebug
+2023-09-27T21:01:51.3139060Z > Task :app:generateDebugBuildConfig
+2023-09-27T21:01:52.9137732Z > Task :peacedesign:writeDebugAarMetadata
+2023-09-27T21:01:53.1198883Z > Task :app:checkDebugAarMetadata
+2023-09-27T21:01:53.1200043Z > Task :app:mapDebugSourceSetPaths
+2023-09-27T21:01:53.2156792Z > Task :app:createDebugCompatibleScreenManifests
+2023-09-27T21:01:53.2158054Z > Task :app:extractDeepLinksDebug
+2023-09-27T21:01:53.2159101Z > Task :peacedesign:extractDeepLinksDebug
+2023-09-27T21:01:53.3138060Z > Task :app:mergeDebugResources
+2023-09-27T21:01:53.4140814Z > Task :peacedesign:processDebugManifest
+2023-09-27T21:01:53.9142819Z > Task :app:dataBindingGenBaseClassesDebug
+2023-09-27T21:01:54.4138102Z > Task :app:processDebugMainManifest
+2023-09-27T21:01:54.7137363Z > Task :app:processDebugManifest
+2023-09-27T21:01:55.2138366Z > Task :app:processDebugManifestForPackage
+2023-09-27T21:01:55.2138931Z > Task :peacedesign:compileDebugLibraryResources
+2023-09-27T21:01:55.7140820Z > Task :peacedesign:generateDebugBuildConfig
+2023-09-27T21:01:55.7141594Z > Task :peacedesign:javaPreCompileDebug
+2023-09-27T21:01:55.8137601Z > Task :peacedesign:parseDebugLocalResources
+2023-09-27T21:01:56.9138141Z > Task :app:javaPreCompileDebug
+2023-09-27T21:02:03.8142681Z > Task :app:mergeDebugShaders
+2023-09-27T21:02:03.8143568Z > Task :app:compileDebugShaders NO-SOURCE
+2023-09-27T21:02:03.8144405Z > Task :app:generateDebugAssets UP-TO-DATE
+2023-09-27T21:02:03.8144827Z > Task :peacedesign:mergeDebugShaders
+2023-09-27T21:02:03.8145346Z > Task :peacedesign:compileDebugShaders NO-SOURCE
+2023-09-27T21:02:03.8145897Z > Task :peacedesign:generateDebugAssets UP-TO-DATE
+2023-09-27T21:02:03.8146442Z > Task :peacedesign:packageDebugAssets
+2023-09-27T21:02:04.0145532Z > Task :peacedesign:generateDebugRFile
+2023-09-27T21:02:04.2137924Z > Task :app:mergeDebugAssets
+2023-09-27T21:02:07.3137759Z > Task :app:processDebugResources
+2023-09-27T21:02:10.0137881Z > Task :app:compressDebugAssets
+2023-09-27T21:02:21.3137833Z > Task :peacedesign:compileDebugKotlin
+2023-09-27T21:02:29.1138568Z Note: Some input files use or override a deprecated API.
+2023-09-27T21:02:29.1138870Z 
+2023-09-27T21:02:29.1139132Z > Task :peacedesign:compileDebugJavaWithJavac
+2023-09-27T21:02:29.1139959Z Note: Recompile with -Xlint:deprecation for details.
+2023-09-27T21:02:31.6143664Z 
+2023-09-27T21:02:31.6144848Z > Task :app:l8DexDesugarLibDebug
+2023-09-27T21:02:31.9148982Z > Task :peacedesign:bundleLibRuntimeToJarDebug
+2023-09-27T21:02:31.9149694Z > Task :peacedesign:bundleLibCompileToJarDebug
+2023-09-27T21:02:38.1140349Z > Task :app:desugarDebugFileDependencies
+2023-09-27T21:02:38.1141277Z > Task :app:processDebugJavaRes NO-SOURCE
+2023-09-27T21:02:38.1141835Z > Task :peacedesign:processDebugJavaRes NO-SOURCE
+2023-09-27T21:02:38.1142532Z > Task :peacedesign:bundleLibResDebug
+2023-09-27T21:02:39.8137491Z > Task :app:checkDebugDuplicateClasses
+2023-09-27T21:03:01.9137630Z > Task :app:kaptGenerateStubsDebugKotlin
+2023-09-27T21:03:09.8137738Z > Task :app:mergeExtDexDebug
+2023-09-27T21:03:57.2138440Z > Task :app:mergeLibDexDebug
+2023-09-27T21:03:57.3139189Z > Task :app:mergeDebugJniLibFolders
+2023-09-27T21:03:57.3139997Z > Task :peacedesign:mergeDebugJniLibFolders
+2023-09-27T21:03:57.3236576Z > Task :peacedesign:mergeDebugNativeLibs NO-SOURCE
+2023-09-27T21:03:57.3237120Z > Task :peacedesign:copyDebugJniLibsProjectOnly
+2023-09-27T21:03:57.6140724Z > Task :app:mergeDebugNativeLibs NO-SOURCE
+2023-09-27T21:03:57.6211696Z > Task :app:stripDebugDebugSymbols NO-SOURCE
+2023-09-27T21:03:58.8140607Z > Task :app:validateSigningDebug
+2023-09-27T21:03:58.8140968Z > Task :app:writeDebugAppMetadata
+2023-09-27T21:03:58.8141256Z > Task :app:writeDebugSigningConfigVersions
+2023-09-27T21:03:58.8141817Z > Task :peacedesign:stripDebugDebugSymbols NO-SOURCE
+2023-09-27T21:03:58.8142172Z > Task :peacedesign:copyDebugJniLibsProjectAndLocalJars
+2023-09-27T21:04:03.9142997Z > Task :app:kaptDebugKotlin
+2023-09-27T21:04:11.5146473Z > Task :peacedesign:extractDebugAnnotations
+2023-09-27T21:04:11.5147068Z > Task :peacedesign:extractDeepLinksForAarDebug
+2023-09-27T21:04:11.5147489Z > Task :peacedesign:mergeDebugGeneratedProguardFiles
+2023-09-27T21:04:11.5147909Z > Task :peacedesign:mergeDebugConsumerProguardFiles
+2023-09-27T21:04:11.5148315Z > Task :peacedesign:prepareDebugArtProfile
+2023-09-27T21:04:11.5148681Z > Task :peacedesign:prepareLintJarForPublish
+2023-09-27T21:04:11.7140585Z > Task :peacedesign:mergeDebugJavaResource
+2023-09-27T21:04:11.7141433Z > Task :peacedesign:syncDebugLibJars
+2023-09-27T21:04:11.8138001Z > Task :peacedesign:bundleDebugAar
+2023-09-27T21:04:11.8138501Z > Task :peacedesign:assembleDebug
+2023-09-27T21:04:36.5137719Z > Task :app:compileDebugKotlin
+2023-09-27T21:04:56.3138237Z w: file:///home/runner/work/QuranApp/QuranApp/app/src/main/java/com/quranapp/android/utils/reader/factory/QuranTranslationFactory.kt:431:9 Parameter 'limit' is never used
+2023-09-27T21:04:56.3139423Z w: file:///home/runner/work/QuranApp/QuranApp/app/src/main/java/com/quranapp/android/utils/reader/factory/QuranTranslationFactory.kt:432:9 Parameter 'offset' is never used
+2023-09-27T21:04:56.3140472Z w: file:///home/runner/work/QuranApp/QuranApp/app/src/main/java/com/quranapp/android/utils/receivers/NetworkStateReceiver.kt:9:20 'NetworkInfo' is deprecated. Deprecated in Java
+2023-09-27T21:04:56.3282708Z w: file:///home/runner/work/QuranApp/QuranApp/app/src/main/java/com/quranapp/android/utils/receivers/NetworkStateReceiver.kt:88:61 'CONNECTIVITY_ACTION: String' is deprecated. Deprecated in Java
+2023-09-27T21:05:00.9138292Z Note: Some input files use or override a deprecated API.
+2023-09-27T21:05:00.9138543Z 
+2023-09-27T21:05:00.9139516Z Note: Recompile with -Xlint:deprecation for details.
+2023-09-27T21:05:00.9139970Z Note: Some input files use unchecked or unsafe operations.
+2023-09-27T21:05:00.9140405Z Note: Recompile with -Xlint:unchecked for details.
+2023-09-27T21:05:00.9140755Z > Task :app:compileDebugJavaWithJavac
+2023-09-27T21:05:11.2145078Z 
+2023-09-27T21:05:11.2145795Z > Task :app:dexBuilderDebug
+2023-09-27T21:05:11.5137203Z > Task :app:mergeDebugGlobalSynthetics
+2023-09-27T21:05:12.9137494Z > Task :app:mergeProjectDexDebug
+2023-09-27T21:05:13.0137316Z > Task :app:mergeDebugJavaResource
+2023-09-27T21:05:14.6169839Z > Task :app:packageDebug
+2023-09-27T21:05:14.6170669Z > Task :app:createDebugApkListingFileRedirect
+2023-09-27T21:05:14.6171067Z > Task :app:assembleDebug
+2023-09-27T21:05:14.6171335Z 
+2023-09-27T21:05:14.6171544Z BUILD SUCCESSFUL in 4m 41s
+2023-09-27T21:05:14.6171860Z 66 actionable tasks: 66 executed
+2023-09-27T21:05:14.9805926Z ##[group]Run actions/upload-artifact@v3
+2023-09-27T21:05:14.9806186Z with:
+2023-09-27T21:05:14.9806394Z   name: debug-apk
+2023-09-27T21:05:14.9806641Z   path: app/build/outputs/apk/debug/app-debug.apk
+2023-09-27T21:05:14.9806922Z   if-no-files-found: warn
+2023-09-27T21:05:14.9807155Z env:
+2023-09-27T21:05:14.9807422Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.8-1/x64
+2023-09-27T21:05:14.9807803Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.8-1/x64
+2023-09-27T21:05:14.9808097Z ##[endgroup]
+2023-09-27T21:05:15.0690902Z ##[warning]No files were found with the provided path: app/build/outputs/apk/debug/app-debug.apk. No artifacts will be uploaded.
+2023-09-27T21:05:15.0782598Z Post job cleanup.
+2023-09-27T21:05:15.3081440Z [command]/usr/bin/tar --posix -z -cf cache.tgz --exclude cache.tgz -P -C /home/runner/work/QuranApp/QuranApp --files-from manifest.txt
+2023-09-27T21:06:13.1815520Z Cache Size: ~655 MB (686921514 B)
+2023-09-27T21:06:13.2855734Z Cache saved successfully
+2023-09-27T21:06:13.3691697Z Cache saved with the key: setup-java-Linux-gradle-f8c7bbd65ebe9a5c359d3d4af89c11779bb18a7c6080e487d220a822c876b877
+2023-09-27T21:06:13.3836601Z Post job cleanup.
+2023-09-27T21:06:13.4983375Z [command]/usr/bin/git version
+2023-09-27T21:06:13.5040176Z git version 2.42.0
+2023-09-27T21:06:13.5089638Z Temporarily overriding HOME='/home/runner/work/_temp/79852cdd-3b7d-449a-9ee7-5f607cd83e8a' before making global git config changes
+2023-09-27T21:06:13.5091759Z Adding repository directory to the temporary git global config as a safe directory
+2023-09-27T21:06:13.5098545Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/QuranApp/QuranApp
+2023-09-27T21:06:13.5147434Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-09-27T21:06:13.5197479Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-09-27T21:06:13.5485356Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-09-27T21:06:13.5517491Z http.https://github.com/.extraheader
+2023-09-27T21:06:13.5532827Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-09-27T21:06:13.5579978Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-09-27T21:06:13.6093977Z Cleaning up orphan processes
+2023-09-27T21:06:13.6439616Z Terminate orphan process: pid (1811) (java)
+2023-09-27T21:06:13.6464608Z Terminate orphan process: pid (1932) (java)

@@ -1,0 +1,1025 @@
+2023-09-23T19:22:45.6461899Z Requested labels: ubuntu-latest
+2023-09-23T19:22:45.6462177Z Job defined at: Aircoookie/WLED/.github/workflows/wled-ci.yml@refs/heads/main
+2023-09-23T19:22:45.6462334Z Waiting for a runner to pick up this job...
+2023-09-23T19:22:46.0175549Z Job is waiting for a hosted runner to come online.
+2023-09-23T19:22:48.6322835Z Job is about to start running on the hosted runner: GitHub Actions 5 (hosted)
+2023-09-23T19:22:50.9837956Z Current runner version: '2.309.0'
+2023-09-23T19:22:50.9862355Z ##[group]Operating System
+2023-09-23T19:22:50.9863071Z Ubuntu
+2023-09-23T19:22:50.9863392Z 22.04.3
+2023-09-23T19:22:50.9863641Z LTS
+2023-09-23T19:22:50.9863960Z ##[endgroup]
+2023-09-23T19:22:50.9864305Z ##[group]Runner Image
+2023-09-23T19:22:50.9864703Z Image: ubuntu-22.04
+2023-09-23T19:22:50.9865055Z Version: 20230917.1.0
+2023-09-23T19:22:50.9865616Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230917.1/images/linux/Ubuntu2204-Readme.md
+2023-09-23T19:22:50.9866256Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230917.1
+2023-09-23T19:22:50.9866747Z ##[endgroup]
+2023-09-23T19:22:50.9867175Z ##[group]Runner Image Provisioner
+2023-09-23T19:22:50.9867492Z 2.0.299.1
+2023-09-23T19:22:50.9867806Z ##[endgroup]
+2023-09-23T19:22:50.9868888Z ##[group]GITHUB_TOKEN Permissions
+2023-09-23T19:22:50.9870642Z Actions: write
+2023-09-23T19:22:50.9871006Z Checks: write
+2023-09-23T19:22:50.9871541Z Contents: write
+2023-09-23T19:22:50.9872070Z Deployments: write
+2023-09-23T19:22:50.9872436Z Discussions: write
+2023-09-23T19:22:50.9872778Z Issues: write
+2023-09-23T19:22:50.9873077Z Metadata: read
+2023-09-23T19:22:50.9873492Z Packages: write
+2023-09-23T19:22:50.9873837Z Pages: write
+2023-09-23T19:22:50.9874135Z PullRequests: write
+2023-09-23T19:22:50.9874534Z RepositoryProjects: write
+2023-09-23T19:22:50.9874936Z SecurityEvents: write
+2023-09-23T19:22:50.9875356Z Statuses: write
+2023-09-23T19:22:50.9875648Z ##[endgroup]
+2023-09-23T19:22:50.9879113Z Secret source: Actions
+2023-09-23T19:22:50.9879650Z Prepare workflow directory
+2023-09-23T19:22:51.0612415Z Prepare all required actions
+2023-09-23T19:22:51.0801143Z Getting action download info
+2023-09-23T19:22:51.2820624Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2023-09-23T19:22:51.9590838Z Download action repository 'actions/cache@v3' (SHA:704facf57e6136b1bc63b828d79edcd491f0ee84)
+2023-09-23T19:22:52.6554251Z Download action repository 'actions/setup-python@v4' (SHA:61a6322f88396a6271a6ee3565807d608ecaddd1)
+2023-09-23T19:22:53.2222201Z Download action repository 'actions/upload-artifact@v2' (SHA:82c141cc518b40d92cc801eee768e7aafc9c2fa2)
+2023-09-23T19:22:54.7917963Z Complete job name: Build Enviornments (esp32dev)
+2023-09-23T19:22:54.9011399Z ##[group]Run actions/checkout@v3
+2023-09-23T19:22:54.9011714Z with:
+2023-09-23T19:22:54.9011954Z   repository: Aircoookie/WLED
+2023-09-23T19:22:54.9012405Z   token: ***
+2023-09-23T19:22:54.9012638Z   ssh-strict: true
+2023-09-23T19:22:54.9012898Z   persist-credentials: true
+2023-09-23T19:22:54.9013129Z   clean: true
+2023-09-23T19:22:54.9013381Z   sparse-checkout-cone-mode: true
+2023-09-23T19:22:54.9013641Z   fetch-depth: 1
+2023-09-23T19:22:54.9013857Z   fetch-tags: false
+2023-09-23T19:22:54.9014081Z   lfs: false
+2023-09-23T19:22:54.9014317Z   submodules: false
+2023-09-23T19:22:54.9014544Z   set-safe-directory: true
+2023-09-23T19:22:54.9014785Z ##[endgroup]
+2023-09-23T19:22:55.1596070Z Syncing repository: Aircoookie/WLED
+2023-09-23T19:22:55.1597830Z ##[group]Getting Git version info
+2023-09-23T19:22:55.1598360Z Working directory is '/home/runner/work/WLED/WLED'
+2023-09-23T19:22:55.1598899Z [command]/usr/bin/git version
+2023-09-23T19:22:55.1619970Z git version 2.42.0
+2023-09-23T19:22:55.1645312Z ##[endgroup]
+2023-09-23T19:22:55.1661301Z Temporarily overriding HOME='/home/runner/work/_temp/ab97fc9c-e411-4eb9-b89e-714c6af2fb46' before making global git config changes
+2023-09-23T19:22:55.1661864Z Adding repository directory to the temporary git global config as a safe directory
+2023-09-23T19:22:55.1666008Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/WLED/WLED
+2023-09-23T19:22:55.1711700Z Deleting the contents of '/home/runner/work/WLED/WLED'
+2023-09-23T19:22:55.1716387Z ##[group]Initializing the repository
+2023-09-23T19:22:55.1720072Z [command]/usr/bin/git init /home/runner/work/WLED/WLED
+2023-09-23T19:22:55.1787201Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-09-23T19:22:55.1788529Z hint: is subject to change. To configure the initial branch name to use in all
+2023-09-23T19:22:55.1789436Z hint: of your new repositories, which will suppress this warning, call:
+2023-09-23T19:22:55.1789951Z hint: 
+2023-09-23T19:22:55.1790740Z hint: 	git config --global init.defaultBranch <name>
+2023-09-23T19:22:55.1791226Z hint: 
+2023-09-23T19:22:55.1792009Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-09-23T19:22:55.1792719Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-09-23T19:22:55.1793404Z hint: 
+2023-09-23T19:22:55.1793870Z hint: 	git branch -m <name>
+2023-09-23T19:22:55.1799010Z Initialized empty Git repository in /home/runner/work/WLED/WLED/.git/
+2023-09-23T19:22:55.1815226Z [command]/usr/bin/git remote add origin https://github.com/Aircoookie/WLED
+2023-09-23T19:22:55.1866356Z ##[endgroup]
+2023-09-23T19:22:55.1868247Z ##[group]Disabling automatic garbage collection
+2023-09-23T19:22:55.1874998Z [command]/usr/bin/git config --local gc.auto 0
+2023-09-23T19:22:55.1913565Z ##[endgroup]
+2023-09-23T19:22:55.1914203Z ##[group]Setting up auth
+2023-09-23T19:22:55.1919989Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-09-23T19:22:55.1956796Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-09-23T19:22:55.2344842Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-09-23T19:22:55.2380516Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-09-23T19:22:55.2609136Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-09-23T19:22:55.2649131Z ##[endgroup]
+2023-09-23T19:22:55.2649902Z ##[group]Fetching the repository
+2023-09-23T19:22:55.2658539Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +ea7e0c620450440af647678d69be173d10fc35b8:refs/remotes/origin/main
+2023-09-23T19:22:55.5788197Z remote: Enumerating objects: 496, done.        
+2023-09-23T19:22:55.5789209Z remote: Counting objects:   0% (1/496)        
+2023-09-23T19:22:55.5790773Z remote: Counting objects:   1% (5/496)        
+2023-09-23T19:22:55.5791086Z remote: Counting objects:   2% (10/496)        
+2023-09-23T19:22:55.5791380Z remote: Counting objects:   3% (15/496)        
+2023-09-23T19:22:55.5791684Z remote: Counting objects:   4% (20/496)        
+2023-09-23T19:22:55.5791981Z remote: Counting objects:   5% (25/496)        
+2023-09-23T19:22:55.5792265Z remote: Counting objects:   6% (30/496)        
+2023-09-23T19:22:55.5792558Z remote: Counting objects:   7% (35/496)        
+2023-09-23T19:22:55.5792868Z remote: Counting objects:   8% (40/496)        
+2023-09-23T19:22:55.5793159Z remote: Counting objects:   9% (45/496)        
+2023-09-23T19:22:55.5793439Z remote: Counting objects:  10% (50/496)        
+2023-09-23T19:22:55.5793891Z remote: Counting objects:  11% (55/496)        
+2023-09-23T19:22:55.5794196Z remote: Counting objects:  12% (60/496)        
+2023-09-23T19:22:55.5794473Z remote: Counting objects:  13% (65/496)        
+2023-09-23T19:22:55.5794758Z remote: Counting objects:  14% (70/496)        
+2023-09-23T19:22:55.5795051Z remote: Counting objects:  15% (75/496)        
+2023-09-23T19:22:55.5795327Z remote: Counting objects:  16% (80/496)        
+2023-09-23T19:22:55.5795617Z remote: Counting objects:  17% (85/496)        
+2023-09-23T19:22:55.5795910Z remote: Counting objects:  18% (90/496)        
+2023-09-23T19:22:55.5796196Z remote: Counting objects:  19% (95/496)        
+2023-09-23T19:22:55.5796478Z remote: Counting objects:  20% (100/496)        
+2023-09-23T19:22:55.5796781Z remote: Counting objects:  21% (105/496)        
+2023-09-23T19:22:55.5797341Z remote: Counting objects:  22% (110/496)        
+2023-09-23T19:22:55.5797626Z remote: Counting objects:  23% (115/496)        
+2023-09-23T19:22:55.5797919Z remote: Counting objects:  24% (120/496)        
+2023-09-23T19:22:55.5798226Z remote: Counting objects:  25% (124/496)        
+2023-09-23T19:22:55.5798507Z remote: Counting objects:  26% (129/496)        
+2023-09-23T19:22:55.5798801Z remote: Counting objects:  27% (134/496)        
+2023-09-23T19:22:55.5799123Z remote: Counting objects:  28% (139/496)        
+2023-09-23T19:22:55.5799403Z remote: Counting objects:  29% (144/496)        
+2023-09-23T19:22:55.5799696Z remote: Counting objects:  30% (149/496)        
+2023-09-23T19:22:55.5799989Z remote: Counting objects:  31% (154/496)        
+2023-09-23T19:22:55.5800278Z remote: Counting objects:  32% (159/496)        
+2023-09-23T19:22:55.5800558Z remote: Counting objects:  33% (164/496)        
+2023-09-23T19:22:55.5800850Z remote: Counting objects:  34% (169/496)        
+2023-09-23T19:22:55.5801149Z remote: Counting objects:  35% (174/496)        
+2023-09-23T19:22:55.5801425Z remote: Counting objects:  36% (179/496)        
+2023-09-23T19:22:55.5801716Z remote: Counting objects:  37% (184/496)        
+2023-09-23T19:22:55.5802013Z remote: Counting objects:  38% (189/496)        
+2023-09-23T19:22:55.5802288Z remote: Counting objects:  39% (194/496)        
+2023-09-23T19:22:55.5802778Z remote: Counting objects:  40% (199/496)        
+2023-09-23T19:22:55.5803074Z remote: Counting objects:  41% (204/496)        
+2023-09-23T19:22:55.5803351Z remote: Counting objects:  42% (209/496)        
+2023-09-23T19:22:55.5803641Z remote: Counting objects:  43% (214/496)        
+2023-09-23T19:22:55.5803930Z remote: Counting objects:  44% (219/496)        
+2023-09-23T19:22:55.5804223Z remote: Counting objects:  45% (224/496)        
+2023-09-23T19:22:55.5804504Z remote: Counting objects:  46% (229/496)        
+2023-09-23T19:22:55.5804797Z remote: Counting objects:  47% (234/496)        
+2023-09-23T19:22:55.5805092Z remote: Counting objects:  48% (239/496)        
+2023-09-23T19:22:55.5805367Z remote: Counting objects:  49% (244/496)        
+2023-09-23T19:22:55.5805664Z remote: Counting objects:  50% (248/496)        
+2023-09-23T19:22:55.5806093Z remote: Counting objects:  51% (253/496)        
+2023-09-23T19:22:55.5806378Z remote: Counting objects:  52% (258/496)        
+2023-09-23T19:22:55.5806667Z remote: Counting objects:  53% (263/496)        
+2023-09-23T19:22:55.5806954Z remote: Counting objects:  54% (268/496)        
+2023-09-23T19:22:55.5807235Z remote: Counting objects:  55% (273/496)        
+2023-09-23T19:22:55.5807524Z remote: Counting objects:  56% (278/496)        
+2023-09-23T19:22:55.5807809Z remote: Counting objects:  57% (283/496)        
+2023-09-23T19:22:55.5808097Z remote: Counting objects:  58% (288/496)        
+2023-09-23T19:22:55.5966115Z remote: Counting objects:  59% (293/496)        
+2023-09-23T19:22:55.5966510Z remote: Counting objects:  60% (298/496)        
+2023-09-23T19:22:55.5971764Z remote: Counting objects:  61% (303/496)        
+2023-09-23T19:22:55.5972487Z remote: Counting objects:  62% (308/496)        
+2023-09-23T19:22:55.5973206Z remote: Counting objects:  63% (313/496)        
+2023-09-23T19:22:55.5973805Z remote: Counting objects:  64% (318/496)        
+2023-09-23T19:22:55.5974438Z remote: Counting objects:  65% (323/496)        
+2023-09-23T19:22:55.5975017Z remote: Counting objects:  66% (328/496)        
+2023-09-23T19:22:55.5975724Z remote: Counting objects:  67% (333/496)        
+2023-09-23T19:22:55.5976406Z remote: Counting objects:  68% (338/496)        
+2023-09-23T19:22:55.5976976Z remote: Counting objects:  69% (343/496)        
+2023-09-23T19:22:55.5977676Z remote: Counting objects:  70% (348/496)        
+2023-09-23T19:22:55.5978317Z remote: Counting objects:  71% (353/496)        
+2023-09-23T19:22:55.5979451Z remote: Counting objects:  72% (358/496)        
+2023-09-23T19:22:55.5979993Z remote: Counting objects:  73% (363/496)        
+2023-09-23T19:22:55.5980743Z remote: Counting objects:  74% (368/496)        
+2023-09-23T19:22:55.5981361Z remote: Counting objects:  75% (372/496)        
+2023-09-23T19:22:55.5981952Z remote: Counting objects:  76% (377/496)        
+2023-09-23T19:22:55.5982927Z remote: Counting objects:  77% (382/496)        
+2023-09-23T19:22:55.5983607Z remote: Counting objects:  78% (387/496)        
+2023-09-23T19:22:55.5984255Z remote: Counting objects:  79% (392/496)        
+2023-09-23T19:22:55.5987191Z remote: Counting objects:  80% (397/496)        
+2023-09-23T19:22:55.5987607Z remote: Counting objects:  81% (402/496)        
+2023-09-23T19:22:55.5987951Z remote: Counting objects:  82% (407/496)        
+2023-09-23T19:22:55.5988276Z remote: Counting objects:  83% (412/496)        
+2023-09-23T19:22:55.5988610Z remote: Counting objects:  84% (417/496)        
+2023-09-23T19:22:55.5988949Z remote: Counting objects:  85% (422/496)        
+2023-09-23T19:22:55.5989267Z remote: Counting objects:  86% (427/496)        
+2023-09-23T19:22:55.5989615Z remote: Counting objects:  87% (432/496)        
+2023-09-23T19:22:55.5989950Z remote: Counting objects:  88% (437/496)        
+2023-09-23T19:22:55.5990272Z remote: Counting objects:  89% (442/496)        
+2023-09-23T19:22:55.5990600Z remote: Counting objects:  90% (447/496)        
+2023-09-23T19:22:55.5990945Z remote: Counting objects:  91% (452/496)        
+2023-09-23T19:22:55.5991261Z remote: Counting objects:  92% (457/496)        
+2023-09-23T19:22:55.5991595Z remote: Counting objects:  93% (462/496)        
+2023-09-23T19:22:55.5991925Z remote: Counting objects:  94% (467/496)        
+2023-09-23T19:22:55.5992252Z remote: Counting objects:  95% (472/496)        
+2023-09-23T19:22:55.5992574Z remote: Counting objects:  96% (477/496)        
+2023-09-23T19:22:55.5992905Z remote: Counting objects:  97% (482/496)        
+2023-09-23T19:22:55.5993235Z remote: Counting objects:  98% (487/496)        
+2023-09-23T19:22:55.5993552Z remote: Counting objects:  99% (492/496)        
+2023-09-23T19:22:55.5993889Z remote: Counting objects: 100% (496/496)        
+2023-09-23T19:22:55.5994240Z remote: Counting objects: 100% (496/496), done.        
+2023-09-23T19:22:55.5994598Z remote: Compressing objects:   0% (1/448)        
+2023-09-23T19:22:55.5994959Z remote: Compressing objects:   1% (5/448)        
+2023-09-23T19:22:55.5995574Z remote: Compressing objects:   2% (9/448)        
+2023-09-23T19:22:55.5995933Z remote: Compressing objects:   3% (14/448)        
+2023-09-23T19:22:55.5996294Z remote: Compressing objects:   4% (18/448)        
+2023-09-23T19:22:55.5996654Z remote: Compressing objects:   5% (23/448)        
+2023-09-23T19:22:55.5997006Z remote: Compressing objects:   6% (27/448)        
+2023-09-23T19:22:55.5997343Z remote: Compressing objects:   7% (32/448)        
+2023-09-23T19:22:55.5997703Z remote: Compressing objects:   8% (36/448)        
+2023-09-23T19:22:55.5998061Z remote: Compressing objects:   9% (41/448)        
+2023-09-23T19:22:55.5998401Z remote: Compressing objects:  10% (45/448)        
+2023-09-23T19:22:55.5998758Z remote: Compressing objects:  11% (50/448)        
+2023-09-23T19:22:55.5999106Z remote: Compressing objects:  12% (54/448)        
+2023-09-23T19:22:55.5999443Z remote: Compressing objects:  13% (59/448)        
+2023-09-23T19:22:55.5999795Z remote: Compressing objects:  14% (63/448)        
+2023-09-23T19:22:55.6000141Z remote: Compressing objects:  15% (68/448)        
+2023-09-23T19:22:55.6000554Z remote: Compressing objects:  16% (72/448)        
+2023-09-23T19:22:55.6001329Z remote: Compressing objects:  17% (77/448)        
+2023-09-23T19:22:55.6001995Z remote: Compressing objects:  18% (81/448)        
+2023-09-23T19:22:55.6002820Z remote: Compressing objects:  19% (86/448)        
+2023-09-23T19:22:55.6003483Z remote: Compressing objects:  20% (90/448)        
+2023-09-23T19:22:55.6007477Z remote: Compressing objects:  21% (95/448)        
+2023-09-23T19:22:55.6008151Z remote: Compressing objects:  22% (99/448)        
+2023-09-23T19:22:55.6016666Z remote: Compressing objects:  23% (104/448)        
+2023-09-23T19:22:55.6038276Z remote: Compressing objects:  24% (108/448)        
+2023-09-23T19:22:55.6047855Z remote: Compressing objects:  25% (112/448)        
+2023-09-23T19:22:55.6127774Z remote: Compressing objects:  26% (117/448)        
+2023-09-23T19:22:55.6129936Z remote: Compressing objects:  27% (121/448)        
+2023-09-23T19:22:55.6130687Z remote: Compressing objects:  28% (126/448)        
+2023-09-23T19:22:55.6131521Z remote: Compressing objects:  29% (130/448)        
+2023-09-23T19:22:55.6132186Z remote: Compressing objects:  30% (135/448)        
+2023-09-23T19:22:55.6132499Z remote: Compressing objects:  31% (139/448)        
+2023-09-23T19:22:55.6133147Z remote: Compressing objects:  32% (144/448)        
+2023-09-23T19:22:55.6133454Z remote: Compressing objects:  33% (148/448)        
+2023-09-23T19:22:55.6133759Z remote: Compressing objects:  34% (153/448)        
+2023-09-23T19:22:55.6134048Z remote: Compressing objects:  35% (157/448)        
+2023-09-23T19:22:55.6135148Z remote: Compressing objects:  36% (162/448)        
+2023-09-23T19:22:55.6135788Z remote: Compressing objects:  37% (166/448)        
+2023-09-23T19:22:55.6136738Z remote: Compressing objects:  38% (171/448)        
+2023-09-23T19:22:55.6137047Z remote: Compressing objects:  39% (175/448)        
+2023-09-23T19:22:55.6137364Z remote: Compressing objects:  40% (180/448)        
+2023-09-23T19:22:55.6138315Z remote: Compressing objects:  41% (184/448)        
+2023-09-23T19:22:55.6138618Z remote: Compressing objects:  42% (189/448)        
+2023-09-23T19:22:55.6138926Z remote: Compressing objects:  43% (193/448)        
+2023-09-23T19:22:55.6139230Z remote: Compressing objects:  44% (198/448)        
+2023-09-23T19:22:55.6139874Z remote: Compressing objects:  45% (202/448)        
+2023-09-23T19:22:55.6140510Z remote: Compressing objects:  46% (207/448)        
+2023-09-23T19:22:55.6140813Z remote: Compressing objects:  47% (211/448)        
+2023-09-23T19:22:55.6141116Z remote: Compressing objects:  48% (216/448)        
+2023-09-23T19:22:55.6141415Z remote: Compressing objects:  49% (220/448)        
+2023-09-23T19:22:55.6142060Z remote: Compressing objects:  50% (224/448)        
+2023-09-23T19:22:55.6142683Z remote: Compressing objects:  51% (229/448)        
+2023-09-23T19:22:55.6142976Z remote: Compressing objects:  52% (233/448)        
+2023-09-23T19:22:55.6143495Z remote: Compressing objects:  53% (238/448)        
+2023-09-23T19:22:55.6143807Z remote: Compressing objects:  54% (242/448)        
+2023-09-23T19:22:55.6144112Z remote: Compressing objects:  55% (247/448)        
+2023-09-23T19:22:55.6144533Z remote: Compressing objects:  56% (251/448)        
+2023-09-23T19:22:55.6144947Z remote: Compressing objects:  57% (256/448)        
+2023-09-23T19:22:55.6145247Z remote: Compressing objects:  58% (260/448)        
+2023-09-23T19:22:55.6148014Z remote: Compressing objects:  59% (265/448)        
+2023-09-23T19:22:55.6157722Z remote: Compressing objects:  60% (269/448)        
+2023-09-23T19:22:55.6171342Z remote: Compressing objects:  61% (274/448)        
+2023-09-23T19:22:55.6173654Z remote: Compressing objects:  62% (278/448)        
+2023-09-23T19:22:55.6175641Z remote: Compressing objects:  63% (283/448)        
+2023-09-23T19:22:55.6198707Z remote: Compressing objects:  64% (287/448)        
+2023-09-23T19:22:55.6233457Z remote: Compressing objects:  65% (292/448)        
+2023-09-23T19:22:55.6236872Z remote: Compressing objects:  66% (296/448)        
+2023-09-23T19:22:55.6281889Z remote: Compressing objects:  67% (301/448)        
+2023-09-23T19:22:55.6282247Z remote: Compressing objects:  68% (305/448)        
+2023-09-23T19:22:55.6327341Z remote: Compressing objects:  69% (310/448)        
+2023-09-23T19:22:55.6327805Z remote: Compressing objects:  70% (314/448)        
+2023-09-23T19:22:55.6335555Z remote: Compressing objects:  71% (319/448)        
+2023-09-23T19:22:55.6358000Z remote: Compressing objects:  72% (323/448)        
+2023-09-23T19:22:55.6376488Z remote: Compressing objects:  73% (328/448)        
+2023-09-23T19:22:55.6401275Z remote: Compressing objects:  74% (332/448)        
+2023-09-23T19:22:55.6452515Z remote: Compressing objects:  75% (336/448)        
+2023-09-23T19:22:55.6453345Z remote: Compressing objects:  76% (341/448)        
+2023-09-23T19:22:55.6483037Z remote: Compressing objects:  77% (345/448)        
+2023-09-23T19:22:55.6489144Z remote: Compressing objects:  78% (350/448)        
+2023-09-23T19:22:55.6489607Z remote: Compressing objects:  79% (354/448)        
+2023-09-23T19:22:55.6490644Z remote: Compressing objects:  80% (359/448)        
+2023-09-23T19:22:55.6491097Z remote: Compressing objects:  81% (363/448)        
+2023-09-23T19:22:55.6491986Z remote: Compressing objects:  82% (368/448)        
+2023-09-23T19:22:55.6492511Z remote: Compressing objects:  83% (372/448)        
+2023-09-23T19:22:55.6493027Z remote: Compressing objects:  84% (377/448)        
+2023-09-23T19:22:55.6493819Z remote: Compressing objects:  85% (381/448)        
+2023-09-23T19:22:55.6494420Z remote: Compressing objects:  86% (386/448)        
+2023-09-23T19:22:55.6495131Z remote: Compressing objects:  87% (390/448)        
+2023-09-23T19:22:55.6495723Z remote: Compressing objects:  88% (395/448)        
+2023-09-23T19:22:55.6496427Z remote: Compressing objects:  89% (399/448)        
+2023-09-23T19:22:55.6496957Z remote: Compressing objects:  90% (404/448)        
+2023-09-23T19:22:55.6497514Z remote: Compressing objects:  91% (408/448)        
+2023-09-23T19:22:55.6498247Z remote: Compressing objects:  92% (413/448)        
+2023-09-23T19:22:55.6498948Z remote: Compressing objects:  93% (417/448)        
+2023-09-23T19:22:55.6499557Z remote: Compressing objects:  94% (422/448)        
+2023-09-23T19:22:55.6500353Z remote: Compressing objects:  95% (426/448)        
+2023-09-23T19:22:55.6500949Z remote: Compressing objects:  96% (431/448)        
+2023-09-23T19:22:55.6501702Z remote: Compressing objects:  97% (435/448)        
+2023-09-23T19:22:55.6502401Z remote: Compressing objects:  98% (440/448)        
+2023-09-23T19:22:55.6503005Z remote: Compressing objects:  99% (444/448)        
+2023-09-23T19:22:55.6503593Z remote: Compressing objects: 100% (448/448)        
+2023-09-23T19:22:55.6504372Z remote: Compressing objects: 100% (448/448), done.        
+2023-09-23T19:22:55.6540009Z Receiving objects:   0% (1/496)
+2023-09-23T19:22:55.6540570Z Receiving objects:   1% (5/496)
+2023-09-23T19:22:55.6541291Z Receiving objects:   2% (10/496)
+2023-09-23T19:22:55.6541567Z Receiving objects:   3% (15/496)
+2023-09-23T19:22:55.6644711Z Receiving objects:   4% (20/496)
+2023-09-23T19:22:55.8006334Z Receiving objects:   5% (25/496)
+2023-09-23T19:22:55.8034683Z Receiving objects:   6% (30/496)
+2023-09-23T19:22:55.8045208Z Receiving objects:   7% (35/496)
+2023-09-23T19:22:55.8051872Z Receiving objects:   8% (40/496)
+2023-09-23T19:22:55.8056196Z Receiving objects:   9% (45/496)
+2023-09-23T19:22:55.8059336Z Receiving objects:  10% (50/496)
+2023-09-23T19:22:55.8064599Z Receiving objects:  11% (55/496)
+2023-09-23T19:22:55.8084594Z Receiving objects:  12% (60/496)
+2023-09-23T19:22:55.8089568Z Receiving objects:  13% (65/496)
+2023-09-23T19:22:55.8096236Z Receiving objects:  14% (70/496)
+2023-09-23T19:22:55.8101290Z Receiving objects:  15% (75/496)
+2023-09-23T19:22:55.8134103Z Receiving objects:  16% (80/496)
+2023-09-23T19:22:55.8205791Z Receiving objects:  17% (85/496)
+2023-09-23T19:22:55.8210557Z Receiving objects:  18% (90/496)
+2023-09-23T19:22:55.8264790Z Receiving objects:  19% (95/496)
+2023-09-23T19:22:55.8271024Z Receiving objects:  20% (100/496)
+2023-09-23T19:22:55.8308132Z Receiving objects:  21% (105/496)
+2023-09-23T19:22:55.8361009Z Receiving objects:  22% (110/496)
+2023-09-23T19:22:55.8365787Z Receiving objects:  23% (115/496)
+2023-09-23T19:22:55.8370211Z Receiving objects:  24% (120/496)
+2023-09-23T19:22:55.8374006Z Receiving objects:  25% (124/496)
+2023-09-23T19:22:55.8382918Z Receiving objects:  26% (129/496)
+2023-09-23T19:22:55.8389036Z Receiving objects:  27% (134/496)
+2023-09-23T19:22:55.8397560Z Receiving objects:  28% (139/496)
+2023-09-23T19:22:55.8404618Z Receiving objects:  29% (144/496)
+2023-09-23T19:22:55.8409616Z Receiving objects:  30% (149/496)
+2023-09-23T19:22:55.8414214Z Receiving objects:  31% (154/496)
+2023-09-23T19:22:55.8420270Z Receiving objects:  32% (159/496)
+2023-09-23T19:22:55.8456942Z Receiving objects:  33% (164/496)
+2023-09-23T19:22:55.8974020Z Receiving objects:  34% (169/496)
+2023-09-23T19:22:55.9246693Z Receiving objects:  35% (174/496)
+2023-09-23T19:22:55.9253540Z Receiving objects:  36% (179/496)
+2023-09-23T19:22:55.9272658Z Receiving objects:  37% (184/496)
+2023-09-23T19:22:55.9378866Z Receiving objects:  38% (189/496)
+2023-09-23T19:22:55.9441831Z Receiving objects:  39% (194/496)
+2023-09-23T19:22:55.9447272Z Receiving objects:  40% (199/496)
+2023-09-23T19:22:55.9452533Z Receiving objects:  41% (204/496)
+2023-09-23T19:22:55.9459826Z Receiving objects:  42% (209/496)
+2023-09-23T19:22:55.9463886Z Receiving objects:  43% (214/496)
+2023-09-23T19:22:55.9471846Z Receiving objects:  44% (219/496)
+2023-09-23T19:22:55.9476933Z Receiving objects:  45% (224/496)
+2023-09-23T19:22:55.9483380Z Receiving objects:  46% (229/496)
+2023-09-23T19:22:55.9490262Z Receiving objects:  47% (234/496)
+2023-09-23T19:22:55.9497673Z Receiving objects:  48% (239/496)
+2023-09-23T19:22:55.9502528Z Receiving objects:  49% (244/496)
+2023-09-23T19:22:55.9507535Z Receiving objects:  50% (248/496)
+2023-09-23T19:22:55.9513722Z Receiving objects:  51% (253/496)
+2023-09-23T19:22:55.9529183Z Receiving objects:  52% (258/496)
+2023-09-23T19:22:55.9534154Z Receiving objects:  53% (263/496)
+2023-09-23T19:22:55.9538851Z Receiving objects:  54% (268/496)
+2023-09-23T19:22:55.9545045Z Receiving objects:  55% (273/496)
+2023-09-23T19:22:55.9555438Z Receiving objects:  56% (278/496)
+2023-09-23T19:22:55.9559406Z Receiving objects:  57% (283/496)
+2023-09-23T19:22:55.9566913Z Receiving objects:  58% (288/496)
+2023-09-23T19:22:55.9614405Z Receiving objects:  59% (293/496)
+2023-09-23T19:22:55.9633307Z Receiving objects:  60% (298/496)
+2023-09-23T19:22:55.9651755Z Receiving objects:  61% (303/496)
+2023-09-23T19:22:55.9658647Z Receiving objects:  62% (308/496)
+2023-09-23T19:22:55.9667011Z Receiving objects:  63% (313/496)
+2023-09-23T19:22:55.9672578Z Receiving objects:  64% (318/496)
+2023-09-23T19:22:55.9679522Z Receiving objects:  65% (323/496)
+2023-09-23T19:22:55.9704367Z Receiving objects:  66% (328/496)
+2023-09-23T19:22:55.9708467Z Receiving objects:  67% (333/496)
+2023-09-23T19:22:55.9717551Z Receiving objects:  68% (338/496)
+2023-09-23T19:22:55.9729130Z Receiving objects:  69% (343/496)
+2023-09-23T19:22:55.9740498Z Receiving objects:  70% (348/496)
+2023-09-23T19:22:55.9749047Z Receiving objects:  71% (353/496)
+2023-09-23T19:22:55.9760598Z Receiving objects:  72% (358/496)
+2023-09-23T19:22:55.9767405Z Receiving objects:  73% (363/496)
+2023-09-23T19:22:55.9789515Z Receiving objects:  74% (368/496)
+2023-09-23T19:22:55.9861670Z Receiving objects:  75% (372/496)
+2023-09-23T19:22:55.9876004Z Receiving objects:  76% (377/496)
+2023-09-23T19:22:55.9882285Z Receiving objects:  77% (382/496)
+2023-09-23T19:22:55.9891970Z Receiving objects:  78% (387/496)
+2023-09-23T19:22:55.9900448Z Receiving objects:  79% (392/496)
+2023-09-23T19:22:55.9912058Z Receiving objects:  80% (397/496)
+2023-09-23T19:22:55.9915950Z Receiving objects:  81% (402/496)
+2023-09-23T19:22:55.9919820Z Receiving objects:  82% (407/496)
+2023-09-23T19:22:55.9923173Z Receiving objects:  83% (412/496)
+2023-09-23T19:22:55.9926312Z Receiving objects:  84% (417/496)
+2023-09-23T19:22:55.9929484Z Receiving objects:  85% (422/496)
+2023-09-23T19:22:55.9933438Z Receiving objects:  86% (427/496)
+2023-09-23T19:22:55.9937069Z Receiving objects:  87% (432/496)
+2023-09-23T19:22:55.9942897Z Receiving objects:  88% (437/496)
+2023-09-23T19:22:55.9950787Z Receiving objects:  89% (442/496)
+2023-09-23T19:22:55.9972974Z Receiving objects:  90% (447/496)
+2023-09-23T19:22:55.9977053Z Receiving objects:  91% (452/496)
+2023-09-23T19:22:55.9983349Z Receiving objects:  92% (457/496)
+2023-09-23T19:22:55.9987804Z Receiving objects:  93% (462/496)
+2023-09-23T19:22:55.9992823Z Receiving objects:  94% (467/496)
+2023-09-23T19:22:56.0002499Z Receiving objects:  95% (472/496)
+2023-09-23T19:22:56.0005878Z Receiving objects:  96% (477/496)
+2023-09-23T19:22:56.0006983Z remote: Total 496 (delta 36), reused 433 (delta 34), pack-reused 0        
+2023-09-23T19:22:56.0015148Z Receiving objects:  97% (482/496)
+2023-09-23T19:22:56.0021919Z Receiving objects:  98% (487/496)
+2023-09-23T19:22:56.0028955Z Receiving objects:  99% (492/496)
+2023-09-23T19:22:56.0032692Z Receiving objects: 100% (496/496)
+2023-09-23T19:22:56.0033052Z Receiving objects: 100% (496/496), 7.69 MiB | 22.06 MiB/s, done.
+2023-09-23T19:22:56.0037885Z Resolving deltas:   0% (0/36)
+2023-09-23T19:22:56.0038352Z Resolving deltas:   2% (1/36)
+2023-09-23T19:22:56.0038797Z Resolving deltas:   5% (2/36)
+2023-09-23T19:22:56.0039297Z Resolving deltas:   8% (3/36)
+2023-09-23T19:22:56.0039711Z Resolving deltas:  11% (4/36)
+2023-09-23T19:22:56.0044807Z Resolving deltas:  13% (5/36)
+2023-09-23T19:22:56.0045296Z Resolving deltas:  16% (6/36)
+2023-09-23T19:22:56.0045803Z Resolving deltas:  19% (7/36)
+2023-09-23T19:22:56.0046221Z Resolving deltas:  22% (8/36)
+2023-09-23T19:22:56.0046643Z Resolving deltas:  25% (9/36)
+2023-09-23T19:22:56.0049410Z Resolving deltas:  27% (10/36)
+2023-09-23T19:22:56.0051338Z Resolving deltas:  30% (11/36)
+2023-09-23T19:22:56.0053255Z Resolving deltas:  33% (12/36)
+2023-09-23T19:22:56.0055375Z Resolving deltas:  36% (13/36)
+2023-09-23T19:22:56.0057131Z Resolving deltas:  38% (14/36)
+2023-09-23T19:22:56.0059014Z Resolving deltas:  41% (15/36)
+2023-09-23T19:22:56.0063686Z Resolving deltas:  44% (16/36)
+2023-09-23T19:22:56.0064108Z Resolving deltas:  47% (17/36)
+2023-09-23T19:22:56.0064539Z Resolving deltas:  50% (18/36)
+2023-09-23T19:22:56.0064965Z Resolving deltas:  52% (19/36)
+2023-09-23T19:22:56.0065402Z Resolving deltas:  55% (20/36)
+2023-09-23T19:22:56.0065843Z Resolving deltas:  58% (21/36)
+2023-09-23T19:22:56.0066265Z Resolving deltas:  61% (22/36)
+2023-09-23T19:22:56.0066681Z Resolving deltas:  63% (23/36)
+2023-09-23T19:22:56.0067097Z Resolving deltas:  66% (24/36)
+2023-09-23T19:22:56.0067488Z Resolving deltas:  69% (25/36)
+2023-09-23T19:22:56.0067984Z Resolving deltas:  72% (26/36)
+2023-09-23T19:22:56.0068397Z Resolving deltas:  75% (27/36)
+2023-09-23T19:22:56.0068764Z Resolving deltas:  77% (28/36)
+2023-09-23T19:22:56.0069416Z Resolving deltas:  80% (29/36)
+2023-09-23T19:22:56.0069933Z Resolving deltas:  83% (30/36)
+2023-09-23T19:22:56.0079397Z Resolving deltas:  86% (31/36)
+2023-09-23T19:22:56.0084104Z Resolving deltas:  88% (32/36)
+2023-09-23T19:22:56.0090641Z Resolving deltas:  91% (33/36)
+2023-09-23T19:22:56.0096011Z Resolving deltas:  94% (34/36)
+2023-09-23T19:22:56.0102140Z Resolving deltas:  97% (35/36)
+2023-09-23T19:22:56.0106879Z Resolving deltas: 100% (36/36)
+2023-09-23T19:22:56.0107327Z Resolving deltas: 100% (36/36), done.
+2023-09-23T19:22:56.0334341Z From https://github.com/Aircoookie/WLED
+2023-09-23T19:22:56.0335213Z  * [new ref]         ea7e0c620450440af647678d69be173d10fc35b8 -> origin/main
+2023-09-23T19:22:56.0378538Z ##[endgroup]
+2023-09-23T19:22:56.0379324Z ##[group]Determining the checkout info
+2023-09-23T19:22:56.0380001Z ##[endgroup]
+2023-09-23T19:22:56.0380577Z ##[group]Checking out the ref
+2023-09-23T19:22:56.0381335Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2023-09-23T19:22:56.0975466Z Switched to a new branch 'main'
+2023-09-23T19:22:56.0982596Z branch 'main' set up to track 'origin/main'.
+2023-09-23T19:22:56.1035664Z ##[endgroup]
+2023-09-23T19:22:56.1060770Z [command]/usr/bin/git log -1 --format='%H'
+2023-09-23T19:22:56.1079671Z 'ea7e0c620450440af647678d69be173d10fc35b8'
+2023-09-23T19:22:56.2968223Z ##[group]Run actions/cache@v3
+2023-09-23T19:22:56.2968663Z with:
+2023-09-23T19:22:56.2968997Z   path: ~/.cache/pip
+2023-09-23T19:22:56.2969466Z   key: Linux-pip-81ff51cfad9e9eb735c6b16e2b137bb04b536de75d900d6b02aa29724c130501
+2023-09-23T19:22:56.2969890Z   restore-keys: Linux-pip-
+
+2023-09-23T19:22:56.2970307Z   enableCrossOsArchive: false
+2023-09-23T19:22:56.2970676Z   fail-on-cache-miss: false
+2023-09-23T19:22:56.2971151Z   lookup-only: false
+2023-09-23T19:22:56.2971454Z ##[endgroup]
+2023-09-23T19:22:57.5760092Z Cache Size: ~4 MB (3959889 B)
+2023-09-23T19:22:57.5787329Z [command]/usr/bin/tar -xf /home/runner/work/_temp/d9b18266-0752-4985-8378-8c3748604638/cache.tzst -P -C /home/runner/work/WLED/WLED --use-compress-program unzstd
+2023-09-23T19:22:57.6000386Z Cache restored successfully
+2023-09-23T19:22:57.6258522Z Cache restored from key: Linux-pip-81ff51cfad9e9eb735c6b16e2b137bb04b536de75d900d6b02aa29724c130501
+2023-09-23T19:22:57.7608138Z ##[group]Run actions/cache@v3
+2023-09-23T19:22:57.7608382Z with:
+2023-09-23T19:22:57.7608607Z   path: ~/.platformio
+2023-09-23T19:22:57.7608853Z   key: Linux-
+2023-09-23T19:22:57.7609112Z   enableCrossOsArchive: false
+2023-09-23T19:22:57.7609393Z   fail-on-cache-miss: false
+2023-09-23T19:22:57.7609634Z   lookup-only: false
+2023-09-23T19:22:57.7609869Z ##[endgroup]
+2023-09-23T19:22:59.2461755Z Received 58720256 of 201123108 (29.2%), 56.0 MBs/sec
+2023-09-23T19:22:59.9811968Z Cache Size: ~192 MB (201123108 B)
+2023-09-23T19:22:59.9854507Z [command]/usr/bin/tar -xf /home/runner/work/_temp/884426cc-e924-49fa-aed9-8effe0c87276/cache.tzst -P -C /home/runner/work/WLED/WLED --use-compress-program unzstd
+2023-09-23T19:23:00.2467905Z Received 201123108 of 201123108 (100.0%), 95.9 MBs/sec
+2023-09-23T19:23:00.7936598Z Cache restored successfully
+2023-09-23T19:23:00.8336253Z Cache restored from key: Linux-
+2023-09-23T19:23:00.8490745Z ##[group]Run actions/setup-python@v4
+2023-09-23T19:23:00.8491032Z with:
+2023-09-23T19:23:00.8491270Z   python-version: 3.9
+2023-09-23T19:23:00.8491529Z   check-latest: false
+2023-09-23T19:23:00.8491980Z   token: ***
+2023-09-23T19:23:00.8492239Z   update-environment: true
+2023-09-23T19:23:00.8492513Z   allow-prereleases: false
+2023-09-23T19:23:00.8492807Z ##[endgroup]
+2023-09-23T19:23:01.0205964Z ##[group]Installed versions
+2023-09-23T19:23:01.0347393Z Successfully set up CPython (3.9.18)
+2023-09-23T19:23:01.0348599Z ##[endgroup]
+2023-09-23T19:23:01.0480295Z ##[group]Run pip install -r requirements.txt
+2023-09-23T19:23:01.0480729Z [36;1mpip install -r requirements.txt[0m
+2023-09-23T19:23:01.0549875Z shell: /usr/bin/bash -e {0}
+2023-09-23T19:23:01.0550149Z env:
+2023-09-23T19:23:01.0550466Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.18/x64
+2023-09-23T19:23:01.0550865Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib/pkgconfig
+2023-09-23T19:23:01.0551251Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+2023-09-23T19:23:01.0551613Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+2023-09-23T19:23:01.0551969Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+2023-09-23T19:23:01.0552331Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib
+2023-09-23T19:23:01.0552637Z ##[endgroup]
+2023-09-23T19:23:02.1103352Z Collecting aiofiles==22.1.0 (from -r requirements.txt (line 7))
+2023-09-23T19:23:02.1126037Z   Using cached aiofiles-22.1.0-py3-none-any.whl (14 kB)
+2023-09-23T19:23:02.1582831Z Collecting ajsonrpc==1.2.0 (from -r requirements.txt (line 9))
+2023-09-23T19:23:02.1604253Z   Using cached ajsonrpc-1.2.0-py3-none-any.whl (22 kB)
+2023-09-23T19:23:02.2090055Z Collecting anyio==3.6.2 (from -r requirements.txt (line 11))
+2023-09-23T19:23:02.2113132Z   Using cached anyio-3.6.2-py3-none-any.whl (80 kB)
+2023-09-23T19:23:02.2480922Z Collecting bottle==0.12.25 (from -r requirements.txt (line 13))
+2023-09-23T19:23:02.2502951Z   Using cached bottle-0.12.25-py3-none-any.whl (90 kB)
+2023-09-23T19:23:02.2902124Z Collecting certifi==2023.7.22 (from -r requirements.txt (line 15))
+2023-09-23T19:23:02.2907769Z   Obtaining dependency information for certifi==2023.7.22 from https://files.pythonhosted.org/packages/4c/dd/2234eab22353ffc7d94e8d13177aaa050113286e93e7b40eae01fbf7c3d9/certifi-2023.7.22-py3-none-any.whl.metadata
+2023-09-23T19:23:02.2931138Z   Using cached certifi-2023.7.22-py3-none-any.whl.metadata (2.2 kB)
+2023-09-23T19:23:02.4258425Z Collecting charset-normalizer==3.1.0 (from -r requirements.txt (line 17))
+2023-09-23T19:23:02.4282465Z   Using cached charset_normalizer-3.1.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (199 kB)
+2023-09-23T19:23:02.4739904Z Collecting click==8.1.3 (from -r requirements.txt (line 19))
+2023-09-23T19:23:02.4760816Z   Using cached click-8.1.3-py3-none-any.whl (96 kB)
+2023-09-23T19:23:02.5120853Z Collecting colorama==0.4.6 (from -r requirements.txt (line 23))
+2023-09-23T19:23:02.5141569Z   Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+2023-09-23T19:23:02.5380060Z Collecting h11==0.14.0 (from -r requirements.txt (line 25))
+2023-09-23T19:23:02.5400645Z   Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+2023-09-23T19:23:02.5685583Z Collecting idna==3.4 (from -r requirements.txt (line 29))
+2023-09-23T19:23:02.5709768Z   Using cached idna-3.4-py3-none-any.whl (61 kB)
+2023-09-23T19:23:02.6551735Z Collecting marshmallow==3.19.0 (from -r requirements.txt (line 33))
+2023-09-23T19:23:02.6572951Z   Using cached marshmallow-3.19.0-py3-none-any.whl (49 kB)
+2023-09-23T19:23:02.6999412Z Collecting packaging==23.1 (from -r requirements.txt (line 35))
+2023-09-23T19:23:02.7020259Z   Using cached packaging-23.1-py3-none-any.whl (48 kB)
+2023-09-23T19:23:02.7515501Z Collecting platformio==6.1.6 (from -r requirements.txt (line 37))
+2023-09-23T19:23:02.7516525Z   Using cached platformio-6.1.6-py3-none-any.whl
+2023-09-23T19:23:02.7838352Z Collecting pyelftools==0.29 (from -r requirements.txt (line 39))
+2023-09-23T19:23:02.7861466Z   Using cached pyelftools-0.29-py2.py3-none-any.whl (174 kB)
+2023-09-23T19:23:02.8117413Z Collecting pyserial==3.5 (from -r requirements.txt (line 41))
+2023-09-23T19:23:02.8138601Z   Using cached pyserial-3.5-py2.py3-none-any.whl (90 kB)
+2023-09-23T19:23:02.8748321Z Collecting requests==2.31.0 (from -r requirements.txt (line 43))
+2023-09-23T19:23:02.8750788Z   Obtaining dependency information for requests==2.31.0 from https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl.metadata
+2023-09-23T19:23:02.8770650Z   Using cached requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+2023-09-23T19:23:02.9082974Z Collecting semantic-version==2.10.0 (from -r requirements.txt (line 45))
+2023-09-23T19:23:02.9103606Z   Using cached semantic_version-2.10.0-py2.py3-none-any.whl (15 kB)
+2023-09-23T19:23:02.9314840Z Collecting sniffio==1.3.0 (from -r requirements.txt (line 47))
+2023-09-23T19:23:02.9336535Z   Using cached sniffio-1.3.0-py3-none-any.whl (10 kB)
+2023-09-23T19:23:03.0269077Z Collecting starlette==0.23.1 (from -r requirements.txt (line 49))
+2023-09-23T19:23:03.0289747Z   Using cached starlette-0.23.1-py3-none-any.whl (64 kB)
+2023-09-23T19:23:03.0563115Z Collecting tabulate==0.9.0 (from -r requirements.txt (line 51))
+2023-09-23T19:23:03.0583840Z   Using cached tabulate-0.9.0-py3-none-any.whl (35 kB)
+2023-09-23T19:23:03.1246122Z Collecting urllib3==1.26.15 (from -r requirements.txt (line 53))
+2023-09-23T19:23:03.1267661Z   Using cached urllib3-1.26.15-py2.py3-none-any.whl (140 kB)
+2023-09-23T19:23:03.1762464Z Collecting uvicorn==0.20.0 (from -r requirements.txt (line 55))
+2023-09-23T19:23:03.1783146Z   Using cached uvicorn-0.20.0-py3-none-any.whl (56 kB)
+2023-09-23T19:23:03.2038973Z Collecting wsproto==1.2.0 (from -r requirements.txt (line 57))
+2023-09-23T19:23:03.2059783Z   Using cached wsproto-1.2.0-py3-none-any.whl (24 kB)
+2023-09-23T19:23:03.4673816Z Collecting typing-extensions>=3.10.0 (from starlette==0.23.1->-r requirements.txt (line 49))
+2023-09-23T19:23:03.4675731Z   Obtaining dependency information for typing-extensions>=3.10.0 from https://files.pythonhosted.org/packages/24/21/7d397a4b7934ff4028987914ac1044d3b7d52712f30e2ac7a2ae5bc86dd0/typing_extensions-4.8.0-py3-none-any.whl.metadata
+2023-09-23T19:23:03.5872560Z   Downloading typing_extensions-4.8.0-py3-none-any.whl.metadata (3.0 kB)
+2023-09-23T19:23:03.6947204Z Using cached certifi-2023.7.22-py3-none-any.whl (158 kB)
+2023-09-23T19:23:03.6970413Z Using cached requests-2.31.0-py3-none-any.whl (62 kB)
+2023-09-23T19:23:03.7101105Z Downloading typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+2023-09-23T19:23:03.8800436Z Installing collected packages: pyserial, pyelftools, bottle, urllib3, typing-extensions, tabulate, sniffio, semantic-version, packaging, idna, h11, colorama, click, charset-normalizer, certifi, ajsonrpc, aiofiles, wsproto, uvicorn, requests, marshmallow, anyio, starlette, platformio
+2023-09-23T19:23:05.1830257Z Successfully installed aiofiles-22.1.0 ajsonrpc-1.2.0 anyio-3.6.2 bottle-0.12.25 certifi-2023.7.22 charset-normalizer-3.1.0 click-8.1.3 colorama-0.4.6 h11-0.14.0 idna-3.4 marshmallow-3.19.0 packaging-23.1 platformio-6.1.6 pyelftools-0.29 pyserial-3.5 requests-2.31.0 semantic-version-2.10.0 sniffio-1.3.0 starlette-0.23.1 tabulate-0.9.0 typing-extensions-4.8.0 urllib3-1.26.15 uvicorn-0.20.0 wsproto-1.2.0
+2023-09-23T19:23:05.4195849Z 
+2023-09-23T19:23:05.4197037Z [notice] A new release of pip is available: 23.0.1 -> 23.2.1
+2023-09-23T19:23:05.4197897Z [notice] To update, run: pip install --upgrade pip
+2023-09-23T19:23:05.5217807Z ##[group]Run pio run -e esp32dev
+2023-09-23T19:23:05.5218135Z [36;1mpio run -e esp32dev[0m
+2023-09-23T19:23:05.5279527Z shell: /usr/bin/bash -e {0}
+2023-09-23T19:23:05.5279778Z env:
+2023-09-23T19:23:05.5280087Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.18/x64
+2023-09-23T19:23:05.5280488Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib/pkgconfig
+2023-09-23T19:23:05.5280876Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+2023-09-23T19:23:05.5281242Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+2023-09-23T19:23:05.5281613Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+2023-09-23T19:23:05.5281978Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib
+2023-09-23T19:23:05.5282284Z   WLED_RELEASE: true
+2023-09-23T19:23:05.5282695Z ##[endgroup]
+2023-09-23T19:23:05.7946114Z Processing esp32dev (board: esp32dev; platform: espressif32@3.5.0; framework: arduino)
+2023-09-23T19:23:05.7950097Z --------------------------------------------------------------------------------
+2023-09-23T19:23:05.8127867Z Library Manager: Installing git+https://github.com/lorol/LITTLEFS.git
+2023-09-23T19:23:05.8213346Z git version 2.42.0
+2023-09-23T19:23:05.8256752Z Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-drszh0vp'...
+2023-09-23T19:23:06.9445296Z Library Manager: LittleFS_esp32@1.0.6+sha.f0817ca has been installed!
+2023-09-23T19:23:06.9457560Z Library Manager: Installing git+https://github.com/pbolduc/AsyncTCP.git @ 1.2.0
+2023-09-23T19:23:06.9489452Z git version 2.42.0
+2023-09-23T19:23:06.9523890Z Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-d5ppp1tb'...
+2023-09-23T19:23:07.3332238Z Library Manager: AsyncTCP@1.2.0+sha.38b8475 has been installed!
+2023-09-23T19:23:07.3340042Z Library Manager: Installing fastled/FastLED @ 3.6.0
+2023-09-23T19:23:10.5130131Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2023-09-23T19:23:10.5477811Z Unpacking
+2023-09-23T19:23:10.6126881Z Library Manager: FastLED@3.6.0 has been installed!
+2023-09-23T19:23:10.6135847Z Library Manager: Installing makuna/NeoPixelBus @ 2.7.5
+2023-09-23T19:23:13.0844261Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2023-09-23T19:23:13.1122608Z Unpacking
+2023-09-23T19:23:13.1755078Z Library Manager: NeoPixelBus@2.7.5 has been installed!
+2023-09-23T19:23:13.1758121Z Library Manager: Resolving dependencies...
+2023-09-23T19:23:13.1788305Z Library Manager: Installing SPI
+2023-09-23T19:23:13.8129511Z Library Manager: Installing git+https://github.com/Aircoookie/ESPAsyncWebServer.git @ ~2.0.7
+2023-09-23T19:23:13.8172239Z git version 2.42.0
+2023-09-23T19:23:13.8217247Z Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-65hq1jby'...
+2023-09-23T19:23:14.3429373Z Library Manager: ESPAsyncWebServerAircoookie@2.0.7+sha.b9349dc has been installed!
+2023-09-23T19:23:14.3431478Z Library Manager: Resolving dependencies...
+2023-09-23T19:23:14.6305308Z Verbose mode can be enabled via `-v, --verbose` option
+2023-09-23T19:23:14.6414102Z CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+2023-09-23T19:23:14.6414995Z PLATFORM: Espressif 32 (3.5.0) > Espressif ESP32 Dev Module
+2023-09-23T19:23:14.6415441Z HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+2023-09-23T19:23:14.6416324Z DEBUG: Current (esp-prog) External (esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+2023-09-23T19:23:14.6416901Z PACKAGES: 
+2023-09-23T19:23:14.6417385Z  - framework-arduinoespressif32 @ 0.0.0+sha.4b0c087 
+2023-09-23T19:23:14.6417892Z  - tool-esptoolpy @ 1.30100.210531 (3.1.0) 
+2023-09-23T19:23:14.6418341Z  - toolchain-xtensa32 @ 2.50200.97 (5.2.0)
+2023-09-23T19:23:14.6454611Z Converting wled00.ino
+2023-09-23T19:23:14.6800696Z LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+2023-09-23T19:23:14.6801488Z LDF Modes: Finder ~ chain, Compatibility ~ strict
+2023-09-23T19:23:14.7811371Z Library Manager: Installing IRremoteESP8266 @ 2.8.2
+2023-09-23T19:23:18.8678308Z Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+2023-09-23T19:23:18.9324968Z Unpacking
+2023-09-23T19:23:19.0547207Z Library Manager: IRremoteESP8266@2.8.2 has been installed!
+2023-09-23T19:23:19.1303578Z Found 34 compatible libraries
+2023-09-23T19:23:19.1304176Z Scanning dependencies...
+2023-09-23T19:23:20.3396086Z Dependency Graph
+2023-09-23T19:23:20.3396818Z |-- LittleFS_esp32 @ 1.0.6+sha.f0817ca
+2023-09-23T19:23:20.3397157Z |   |-- FS @ 1.0
+2023-09-23T19:23:20.3397510Z |-- AsyncTCP @ 1.2.0+sha.38b8475
+2023-09-23T19:23:20.3400355Z |-- FastLED @ 3.6.0
+2023-09-23T19:23:20.3403624Z |   |-- SPI @ 1.0
+2023-09-23T19:23:20.3406443Z |-- IRremoteESP8266 @ 2.8.2
+2023-09-23T19:23:20.3408629Z |-- NeoPixelBus @ 2.7.5
+2023-09-23T19:23:20.3409191Z |   |-- SPI @ 1.0
+2023-09-23T19:23:20.3417516Z |-- ESPAsyncWebServerAircoookie @ 2.0.7+sha.b9349dc
+2023-09-23T19:23:20.3418215Z |   |-- AsyncTCP @ 1.2.0+sha.38b8475
+2023-09-23T19:23:20.3421054Z |   |-- FS @ 1.0
+2023-09-23T19:23:20.3472841Z |   |-- WiFi @ 1.0
+2023-09-23T19:23:20.3473160Z |-- Wire @ 1.0.1
+2023-09-23T19:23:20.3473442Z |-- SD(esp32) @ 1.0.5
+2023-09-23T19:23:20.3473713Z |   |-- FS @ 1.0
+2023-09-23T19:23:20.3473973Z |   |-- SPI @ 1.0
+2023-09-23T19:23:20.3474237Z |-- SD_MMC @ 1.0
+2023-09-23T19:23:20.3474492Z |   |-- FS @ 1.0
+2023-09-23T19:23:20.3474746Z |-- SPI @ 1.0
+2023-09-23T19:23:20.3475006Z |-- EEPROM @ 1.0.3
+2023-09-23T19:23:20.3475283Z |-- ArduinoOTA @ 1.0
+2023-09-23T19:23:20.3475560Z |   |-- Update @ 1.0
+2023-09-23T19:23:20.3475812Z |   |-- WiFi @ 1.0
+2023-09-23T19:23:20.3476082Z |   |-- ESPmDNS @ 1.0
+2023-09-23T19:23:20.3476359Z |   |   |-- WiFi @ 1.0
+2023-09-23T19:23:20.3476636Z |-- DNSServer @ 1.1.0
+2023-09-23T19:23:20.3476910Z |   |-- WiFi @ 1.0
+2023-09-23T19:23:20.3477169Z |-- ESPmDNS @ 1.0
+2023-09-23T19:23:20.3477430Z |   |-- WiFi @ 1.0
+2023-09-23T19:23:20.3477686Z |-- WiFi @ 1.0
+2023-09-23T19:23:20.3477971Z |-- ESP32 Async UDP @ 1.0.0
+2023-09-23T19:23:20.3478257Z |-- WebServer @ 1.0
+2023-09-23T19:23:20.3478520Z |   |-- WiFi @ 1.0
+2023-09-23T19:23:20.3478787Z |   |-- FS @ 1.0
+2023-09-23T19:23:20.4437106Z Building in release mode
+2023-09-23T19:23:20.6685525Z Compiling .pio/build/esp32dev/libeb3/FastLED/FastLED.cpp.o
+2023-09-23T19:23:20.6756356Z Compiling .pio/build/esp32dev/libeb3/FastLED/bitswap.cpp.o
+2023-09-23T19:23:21.1842180Z Compiling .pio/build/esp32dev/libeb3/FastLED/colorpalettes.cpp.o
+2023-09-23T19:23:21.2485560Z Compiling .pio/build/esp32dev/libeb3/FastLED/colorutils.cpp.o
+2023-09-23T19:23:21.6925477Z Compiling .pio/build/esp32dev/libeb3/FastLED/hsv2rgb.cpp.o
+2023-09-23T19:23:22.0285588Z Compiling .pio/build/esp32dev/libeb3/FastLED/lib8tion.cpp.o
+2023-09-23T19:23:22.2672668Z Compiling .pio/build/esp32dev/libeb3/FastLED/noise.cpp.o
+2023-09-23T19:23:22.5436775Z Compiling .pio/build/esp32dev/libeb3/FastLED/platforms.cpp.o
+2023-09-23T19:23:22.5725193Z Compiling .pio/build/esp32dev/libeb3/FastLED/platforms/esp/32/clockless_rmt_esp32.cpp.o
+2023-09-23T19:23:23.0991296Z Compiling .pio/build/esp32dev/libeb3/FastLED/power_mgt.cpp.o
+2023-09-23T19:23:23.1445752Z Compiling .pio/build/esp32dev/libeb3/FastLED/wiring.cpp.o
+2023-09-23T19:23:23.8369585Z Compiling .pio/build/esp32dev/src/FX.cpp.o
+2023-09-23T19:23:23.9085447Z Compiling .pio/build/esp32dev/src/FX_2Dfcn.cpp.o
+2023-09-23T19:23:25.5445818Z Compiling .pio/build/esp32dev/src/FX_fcn.cpp.o
+2023-09-23T19:23:27.8245505Z Compiling .pio/build/esp32dev/src/alexa.cpp.o
+2023-09-23T19:23:29.2783264Z Compiling .pio/build/esp32dev/src/bus_manager.cpp.o
+2023-09-23T19:23:29.3085005Z Compiling .pio/build/esp32dev/src/button.cpp.o
+2023-09-23T19:23:30.5445460Z Compiling .pio/build/esp32dev/src/cfg.cpp.o
+2023-09-23T19:23:31.1325441Z Compiling .pio/build/esp32dev/src/colors.cpp.o
+2023-09-23T19:23:32.3805614Z Compiling .pio/build/esp32dev/src/dmx.cpp.o
+2023-09-23T19:23:33.4885621Z Compiling .pio/build/esp32dev/src/e131.cpp.o
+2023-09-23T19:23:33.9445543Z Compiling .pio/build/esp32dev/src/file.cpp.o
+2023-09-23T19:23:34.8165350Z Compiling .pio/build/esp32dev/src/hue.cpp.o
+2023-09-23T19:23:35.4876741Z Compiling .pio/build/esp32dev/src/improv.cpp.o
+2023-09-23T19:23:36.3125427Z Compiling .pio/build/esp32dev/src/ir.cpp.o
+2023-09-23T19:23:36.6695654Z Compiling .pio/build/esp32dev/src/json.cpp.o
+2023-09-23T19:23:38.0284639Z Compiling .pio/build/esp32dev/src/led.cpp.o
+2023-09-23T19:23:39.2565461Z Compiling .pio/build/esp32dev/src/lx_parser.cpp.o
+2023-09-23T19:23:39.4591760Z Compiling .pio/build/esp32dev/src/mqtt.cpp.o
+2023-09-23T19:23:40.4166335Z Compiling .pio/build/esp32dev/src/net_debug.cpp.o
+2023-09-23T19:23:40.8246046Z Compiling .pio/build/esp32dev/src/network.cpp.o
+2023-09-23T19:23:41.5446700Z Compiling .pio/build/esp32dev/src/ntp.cpp.o
+2023-09-23T19:23:41.9486187Z Compiling .pio/build/esp32dev/src/overlay.cpp.o
+2023-09-23T19:23:42.8046130Z Compiling .pio/build/esp32dev/src/pin_manager.cpp.o
+2023-09-23T19:23:43.1247076Z Compiling .pio/build/esp32dev/src/playlist.cpp.o
+2023-09-23T19:23:44.0925489Z Compiling .pio/build/esp32dev/src/presets.cpp.o
+2023-09-23T19:23:44.5446796Z Compiling .pio/build/esp32dev/src/remote.cpp.o
+2023-09-23T19:23:45.6965589Z Compiling .pio/build/esp32dev/src/set.cpp.o
+2023-09-23T19:23:45.7726092Z Compiling .pio/build/esp32dev/src/src/dependencies/async-mqtt-client/AsyncMqttClient.cpp.o
+2023-09-23T19:23:47.5418119Z Compiling .pio/build/esp32dev/src/src/dependencies/async-mqtt-client/AsyncMqttClient/Packets/ConnAckPacket.cpp.o
+2023-09-23T19:23:47.7726077Z Compiling .pio/build/esp32dev/src/src/dependencies/async-mqtt-client/AsyncMqttClient/Packets/PingRespPacket.cpp.o
+2023-09-23T19:23:47.9886893Z Compiling .pio/build/esp32dev/src/src/dependencies/async-mqtt-client/AsyncMqttClient/Packets/PubAckPacket.cpp.o
+2023-09-23T19:23:48.2086143Z Compiling .pio/build/esp32dev/src/src/dependencies/async-mqtt-client/AsyncMqttClient/Packets/PubCompPacket.cpp.o
+2023-09-23T19:23:48.4247010Z Compiling .pio/build/esp32dev/src/src/dependencies/async-mqtt-client/AsyncMqttClient/Packets/PubRecPacket.cpp.o
+2023-09-23T19:23:48.6486069Z Compiling .pio/build/esp32dev/src/src/dependencies/async-mqtt-client/AsyncMqttClient/Packets/PubRelPacket.cpp.o
+2023-09-23T19:23:48.8606135Z Compiling .pio/build/esp32dev/src/src/dependencies/async-mqtt-client/AsyncMqttClient/Packets/PublishPacket.cpp.o
+2023-09-23T19:23:49.0885602Z Compiling .pio/build/esp32dev/src/src/dependencies/async-mqtt-client/AsyncMqttClient/Packets/SubAckPacket.cpp.o
+2023-09-23T19:23:49.3325957Z Compiling .pio/build/esp32dev/src/src/dependencies/async-mqtt-client/AsyncMqttClient/Packets/UnsubAckPacket.cpp.o
+2023-09-23T19:23:49.5834403Z Compiling .pio/build/esp32dev/src/src/dependencies/dmx/ESPDMX.cpp.o
+2023-09-23T19:23:49.6206064Z Compiling .pio/build/esp32dev/src/src/dependencies/dmx/SparkFunDMX.cpp.o
+2023-09-23T19:23:49.8645556Z Compiling .pio/build/esp32dev/src/src/dependencies/e131/ESPAsyncE131.cpp.o
+2023-09-23T19:23:50.0246188Z Compiling .pio/build/esp32dev/src/src/dependencies/espalexa/EspalexaDevice.cpp.o
+2023-09-23T19:23:50.4805746Z Compiling .pio/build/esp32dev/src/src/dependencies/network/Network.cpp.o
+2023-09-23T19:23:50.6045264Z Compiling .pio/build/esp32dev/src/src/dependencies/time/DS1307RTC.cpp.o
+2023-09-23T19:23:50.7926756Z Compiling .pio/build/esp32dev/src/src/dependencies/time/DateStrings.cpp.o
+2023-09-23T19:23:50.8525167Z Compiling .pio/build/esp32dev/src/src/dependencies/time/Time.cpp.o
+2023-09-23T19:23:50.9861063Z Compiling .pio/build/esp32dev/src/src/dependencies/timezone/Timezone.cpp.o
+2023-09-23T19:23:51.3005289Z Compiling .pio/build/esp32dev/src/udp.cpp.o
+2023-09-23T19:23:51.4094347Z Compiling .pio/build/esp32dev/src/um_manager.cpp.o
+2023-09-23T19:23:52.5866177Z Compiling .pio/build/esp32dev/src/usermod.cpp.o
+2023-09-23T19:23:53.0445491Z Compiling .pio/build/esp32dev/src/usermods_list.cpp.o
+2023-09-23T19:23:53.7224584Z Compiling .pio/build/esp32dev/src/util.cpp.o
+2023-09-23T19:23:54.1764636Z Compiling .pio/build/esp32dev/src/wled.cpp.o
+2023-09-23T19:23:55.1232739Z Compiling .pio/build/esp32dev/src/wled00.ino.cpp.o
+2023-09-23T19:23:55.7205653Z Compiling .pio/build/esp32dev/src/wled_eeprom.cpp.o
+2023-09-23T19:23:55.7686775Z Compiling .pio/build/esp32dev/src/wled_math.cpp.o
+2023-09-23T19:23:56.1886223Z Compiling .pio/build/esp32dev/src/wled_serial.cpp.o
+2023-09-23T19:23:56.3805626Z Compiling .pio/build/esp32dev/src/wled_server.cpp.o
+2023-09-23T19:23:57.6405549Z Compiling .pio/build/esp32dev/src/ws.cpp.o
+2023-09-23T19:23:58.7445490Z Compiling .pio/build/esp32dev/src/xml.cpp.o
+2023-09-23T19:23:59.1397955Z Generating partitions .pio/build/esp32dev/partitions.bin
+2023-09-23T19:23:59.2365410Z Compiling .pio/build/esp32dev/lib7aa/FS/FS.cpp.o
+2023-09-23T19:23:59.7885564Z Compiling .pio/build/esp32dev/lib7aa/FS/vfs_api.cpp.o
+2023-09-23T19:24:00.3285348Z Compiling .pio/build/esp32dev/lib4dc/LittleFS_esp32/LITTLEFS.cpp.o
+2023-09-23T19:24:00.4154274Z Archiving .pio/build/esp32dev/lib7aa/libFS.a
+2023-09-23T19:24:00.4282650Z Indexing .pio/build/esp32dev/lib7aa/libFS.a
+2023-09-23T19:24:00.4645235Z Compiling .pio/build/esp32dev/lib4dc/LittleFS_esp32/esp_littlefs.c.o
+2023-09-23T19:24:00.7925896Z Compiling .pio/build/esp32dev/lib4dc/LittleFS_esp32/lfs.c.o
+2023-09-23T19:24:00.8445993Z Compiling .pio/build/esp32dev/lib4dc/LittleFS_esp32/lfs_util.c.o
+2023-09-23T19:24:00.8965215Z Compiling .pio/build/esp32dev/lib4dc/LittleFS_esp32/littlefs_api.c.o
+2023-09-23T19:24:01.1165442Z Compiling .pio/build/esp32dev/lib740/AsyncTCP/AsyncTCP.cpp.o
+2023-09-23T19:24:01.5353097Z Archiving .pio/build/esp32dev/lib4dc/libLittleFS_esp32.a
+2023-09-23T19:24:01.5485707Z Indexing .pio/build/esp32dev/lib4dc/libLittleFS_esp32.a
+2023-09-23T19:24:01.5840256Z Compiling .pio/build/esp32dev/lib30b/SPI/SPI.cpp.o
+2023-09-23T19:24:01.6838674Z Archiving .pio/build/esp32dev/lib30b/libSPI.a
+2023-09-23T19:24:01.6906844Z Indexing .pio/build/esp32dev/lib30b/libSPI.a
+2023-09-23T19:24:01.7685018Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/IRac.cpp.o
+2023-09-23T19:24:02.0325446Z Archiving .pio/build/esp32dev/lib740/libAsyncTCP.a
+2023-09-23T19:24:02.0442529Z Indexing .pio/build/esp32dev/lib740/libAsyncTCP.a
+2023-09-23T19:24:02.0684740Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/IRrecv.cpp.o
+2023-09-23T19:24:02.4245997Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/IRsend.cpp.o
+2023-09-23T19:24:02.6445327Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/IRtext.cpp.o
+2023-09-23T19:24:02.9125858Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/IRtimer.cpp.o
+2023-09-23T19:24:03.0605503Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/IRutils.cpp.o
+2023-09-23T19:24:03.3084529Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Airton.cpp.o
+2023-09-23T19:24:03.7929052Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Airwell.cpp.o
+2023-09-23T19:24:03.8324440Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Aiwa.cpp.o
+2023-09-23T19:24:04.2206427Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Amcor.cpp.o
+2023-09-23T19:24:04.2444751Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Argo.cpp.o
+2023-09-23T19:24:04.6840038Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Arris.cpp.o
+2023-09-23T19:24:04.7326496Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Bose.cpp.o
+2023-09-23T19:24:05.0795289Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Carrier.cpp.o
+2023-09-23T19:24:05.1270238Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Coolix.cpp.o
+2023-09-23T19:24:05.6288904Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Corona.cpp.o
+2023-09-23T19:24:05.6564419Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Daikin.cpp.o
+2023-09-23T19:24:06.1844367Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Delonghi.cpp.o
+2023-09-23T19:24:06.6765477Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Denon.cpp.o
+2023-09-23T19:24:06.9839616Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Dish.cpp.o
+2023-09-23T19:24:07.0725647Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Doshisha.cpp.o
+2023-09-23T19:24:07.3726170Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Ecoclim.cpp.o
+2023-09-23T19:24:07.4725848Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Electra.cpp.o
+2023-09-23T19:24:07.9406086Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_EliteScreens.cpp.o
+2023-09-23T19:24:07.9766774Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Epson.cpp.o
+2023-09-23T19:24:08.4045686Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Fujitsu.cpp.o
+2023-09-23T19:24:08.4485776Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_GICable.cpp.o
+2023-09-23T19:24:08.8365511Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_GlobalCache.cpp.o
+2023-09-23T19:24:09.0126249Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Goodweather.cpp.o
+2023-09-23T19:24:09.1005545Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Gree.cpp.o
+2023-09-23T19:24:09.5005676Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Haier.cpp.o
+2023-09-23T19:24:09.6685549Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Hitachi.cpp.o
+2023-09-23T19:24:10.2165417Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Inax.cpp.o
+2023-09-23T19:24:10.4645701Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_JVC.cpp.o
+2023-09-23T19:24:10.6079268Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Kelon.cpp.o
+2023-09-23T19:24:10.8645582Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Kelvinator.cpp.o
+2023-09-23T19:24:11.1142649Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_LG.cpp.o
+2023-09-23T19:24:11.4366230Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Lasertag.cpp.o
+2023-09-23T19:24:11.7413137Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Lego.cpp.o
+2023-09-23T19:24:11.8365658Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Lutron.cpp.o
+2023-09-23T19:24:12.1383854Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_MWM.cpp.o
+2023-09-23T19:24:12.2365696Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Magiquest.cpp.o
+2023-09-23T19:24:12.5365451Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Metz.cpp.o
+2023-09-23T19:24:12.6285838Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Midea.cpp.o
+2023-09-23T19:24:12.9278299Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_MilesTag2.cpp.o
+2023-09-23T19:24:13.2354855Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Mirage.cpp.o
+2023-09-23T19:24:13.3274127Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Mitsubishi.cpp.o
+2023-09-23T19:24:13.6325748Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_MitsubishiHeavy.cpp.o
+2023-09-23T19:24:14.0238127Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Multibrackets.cpp.o
+2023-09-23T19:24:14.3967107Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_NEC.cpp.o
+2023-09-23T19:24:14.4884601Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Neoclima.cpp.o
+2023-09-23T19:24:14.8048911Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Nikai.cpp.o
+2023-09-23T19:24:15.0404388Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Panasonic.cpp.o
+2023-09-23T19:24:15.1968288Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Pioneer.cpp.o
+2023-09-23T19:24:15.5846350Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Pronto.cpp.o
+2023-09-23T19:24:15.6606042Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_RC5_RC6.cpp.o
+2023-09-23T19:24:15.8486059Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_RCMM.cpp.o
+2023-09-23T19:24:16.0924713Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Rhoss.cpp.o
+2023-09-23T19:24:16.2406109Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Samsung.cpp.o
+2023-09-23T19:24:16.5486270Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Sanyo.cpp.o
+2023-09-23T19:24:16.8526319Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Sharp.cpp.o
+2023-09-23T19:24:17.1224353Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Sherwood.cpp.o
+2023-09-23T19:24:17.3830303Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Sony.cpp.o
+2023-09-23T19:24:17.4246125Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Symphony.cpp.o
+2023-09-23T19:24:17.7886453Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Tcl.cpp.o
+2023-09-23T19:24:17.8245724Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Technibel.cpp.o
+2023-09-23T19:24:18.3086682Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Teco.cpp.o
+2023-09-23T19:24:18.3405595Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Teknopoint.cpp.o
+2023-09-23T19:24:18.7427116Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Toshiba.cpp.o
+2023-09-23T19:24:18.7925866Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Transcold.cpp.o
+2023-09-23T19:24:19.2485621Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Trotec.cpp.o
+2023-09-23T19:24:19.2724708Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Truma.cpp.o
+2023-09-23T19:24:19.7285634Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Vestel.cpp.o
+2023-09-23T19:24:19.7805591Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Voltas.cpp.o
+2023-09-23T19:24:20.2806338Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Whirlpool.cpp.o
+2023-09-23T19:24:20.3206098Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Whynter.cpp.o
+2023-09-23T19:24:20.7685747Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Xmp.cpp.o
+2023-09-23T19:24:20.9606218Z Compiling .pio/build/esp32dev/lib9f3/IRremoteESP8266/ir_Zepeal.cpp.o
+2023-09-23T19:24:21.2525789Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/animations/NeoPixelAnimator.cpp.o
+2023-09-23T19:24:21.3553029Z Archiving .pio/build/esp32dev/lib9f3/libIRremoteESP8266.a
+2023-09-23T19:24:21.5005733Z Indexing .pio/build/esp32dev/lib9f3/libIRremoteESP8266.a
+2023-09-23T19:24:21.8789472Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/colors/HsbColor.cpp.o
+2023-09-23T19:24:21.8880546Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/colors/HslColor.cpp.o
+2023-09-23T19:24:22.2860678Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/colors/HtmlColor.cpp.o
+2023-09-23T19:24:22.3085833Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/colors/HtmlColorNameStrings.cpp.o
+2023-09-23T19:24:22.6816228Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/colors/HtmlColorNames.cpp.o
+2023-09-23T19:24:22.7005557Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/colors/HtmlColorShortNames.cpp.o
+2023-09-23T19:24:23.0766373Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/colors/NeoGammaDynamicTableMethod.cpp.o
+2023-09-23T19:24:23.0953755Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/colors/NeoGammaTableMethod.cpp.o
+2023-09-23T19:24:23.4806359Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/colors/Rgb48Color.cpp.o
+2023-09-23T19:24:23.5005533Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/colors/RgbColor.cpp.o
+2023-09-23T19:24:23.9127232Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/colors/RgbColorBase.cpp.o
+2023-09-23T19:24:23.9244642Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/colors/Rgbw64Color.cpp.o
+2023-09-23T19:24:24.3166037Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/colors/RgbwColor.cpp.o
+2023-09-23T19:24:24.3565873Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/colors/SegmentDigit.cpp.o
+2023-09-23T19:24:24.7566159Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/methods/Esp32_i2s.c.o
+2023-09-23T19:24:24.7885858Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/methods/NeoEsp32RmtMethod.cpp.o
+2023-09-23T19:24:25.0205072Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/methods/NeoEsp8266I2sMethodCore.cpp.o
+2023-09-23T19:24:25.2606075Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/methods/NeoEsp8266UartMethod.cpp.o
+2023-09-23T19:24:25.2963502Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/methods/NeoEspBitBangMethod.cpp.o
+2023-09-23T19:24:25.4006658Z Compiling .pio/build/esp32dev/lib30f/NeoPixelBus/internal/methods/NeoPixelAvr.c.o
+2023-09-23T19:24:25.4964183Z Compiling .pio/build/esp32dev/lib989/WiFi/ETH.cpp.o
+2023-09-23T19:24:25.6926070Z Archiving .pio/build/esp32dev/lib30f/libNeoPixelBus.a
+2023-09-23T19:24:25.7318441Z Indexing .pio/build/esp32dev/lib30f/libNeoPixelBus.a
+2023-09-23T19:24:25.8326150Z Compiling .pio/build/esp32dev/lib989/WiFi/WiFi.cpp.o
+2023-09-23T19:24:26.0364315Z Compiling .pio/build/esp32dev/lib989/WiFi/WiFiAP.cpp.o
+2023-09-23T19:24:26.3284390Z Compiling .pio/build/esp32dev/lib989/WiFi/WiFiClient.cpp.o
+2023-09-23T19:24:26.5725985Z Compiling .pio/build/esp32dev/lib989/WiFi/WiFiGeneric.cpp.o
+2023-09-23T19:24:27.0886479Z Compiling .pio/build/esp32dev/lib989/WiFi/WiFiMulti.cpp.o
+2023-09-23T19:24:27.3965888Z Compiling .pio/build/esp32dev/lib989/WiFi/WiFiSTA.cpp.o
+2023-09-23T19:24:27.6446500Z Compiling .pio/build/esp32dev/lib989/WiFi/WiFiScan.cpp.o
+2023-09-23T19:24:27.9886280Z Compiling .pio/build/esp32dev/lib989/WiFi/WiFiServer.cpp.o
+2023-09-23T19:24:28.1645972Z Compiling .pio/build/esp32dev/lib989/WiFi/WiFiUdp.cpp.o
+2023-09-23T19:24:28.5582367Z Compiling .pio/build/esp32dev/lib24b/ESPAsyncWebServerAircoookie/AsyncEventSource.cpp.o
+2023-09-23T19:24:28.6482104Z Archiving .pio/build/esp32dev/lib989/libWiFi.a
+2023-09-23T19:24:28.6742480Z Indexing .pio/build/esp32dev/lib989/libWiFi.a
+2023-09-23T19:24:28.7487869Z Compiling .pio/build/esp32dev/lib24b/ESPAsyncWebServerAircoookie/AsyncWebSocket.cpp.o
+2023-09-23T19:24:29.4592454Z Compiling .pio/build/esp32dev/lib24b/ESPAsyncWebServerAircoookie/SPIFFSEditor.cpp.o
+2023-09-23T19:24:30.0566168Z Compiling .pio/build/esp32dev/lib24b/ESPAsyncWebServerAircoookie/WebAuthentication.cpp.o
+2023-09-23T19:24:30.2326300Z Compiling .pio/build/esp32dev/lib24b/ESPAsyncWebServerAircoookie/WebHandlers.cpp.o
+2023-09-23T19:24:30.5481845Z Compiling .pio/build/esp32dev/lib24b/ESPAsyncWebServerAircoookie/WebRequest.cpp.o
+2023-09-23T19:24:30.9914731Z Compiling .pio/build/esp32dev/lib24b/ESPAsyncWebServerAircoookie/WebResponses.cpp.o
+2023-09-23T19:24:31.8765716Z Compiling .pio/build/esp32dev/lib24b/ESPAsyncWebServerAircoookie/WebServer.cpp.o
+2023-09-23T19:24:32.1606320Z Compiling .pio/build/esp32dev/liba33/Wire/Wire.cpp.o
+2023-09-23T19:24:32.6258034Z Archiving .pio/build/esp32dev/liba33/libWire.a
+2023-09-23T19:24:32.6346553Z Indexing .pio/build/esp32dev/liba33/libWire.a
+2023-09-23T19:24:32.7084011Z Compiling .pio/build/esp32dev/lib770/SD/SD.cpp.o
+2023-09-23T19:24:32.7509174Z Archiving .pio/build/esp32dev/lib24b/libESPAsyncWebServerAircoookie.a
+2023-09-23T19:24:32.7788036Z Indexing .pio/build/esp32dev/lib24b/libESPAsyncWebServerAircoookie.a
+2023-09-23T19:24:32.8524247Z Compiling .pio/build/esp32dev/lib770/SD/sd_diskio.cpp.o
+2023-09-23T19:24:33.2844965Z Compiling .pio/build/esp32dev/lib770/SD/sd_diskio_crc.c.o
+2023-09-23T19:24:33.3873558Z Compiling .pio/build/esp32dev/libc3a/SD_MMC/SD_MMC.cpp.o
+2023-09-23T19:24:33.4900727Z Archiving .pio/build/esp32dev/lib770/libSD.a
+2023-09-23T19:24:33.5008104Z Indexing .pio/build/esp32dev/lib770/libSD.a
+2023-09-23T19:24:33.5724124Z Compiling .pio/build/esp32dev/libc24/EEPROM/EEPROM.cpp.o
+2023-09-23T19:24:33.9159200Z Archiving .pio/build/esp32dev/libc3a/libSD_MMC.a
+2023-09-23T19:24:33.9252759Z Indexing .pio/build/esp32dev/libc3a/libSD_MMC.a
+2023-09-23T19:24:33.9925371Z Compiling .pio/build/esp32dev/lib4b6/Update/HttpsOTAUpdate.cpp.o
+2023-09-23T19:24:34.1123341Z Archiving .pio/build/esp32dev/libc24/libEEPROM.a
+2023-09-23T19:24:34.1209953Z Indexing .pio/build/esp32dev/libc24/libEEPROM.a
+2023-09-23T19:24:34.1443758Z Compiling .pio/build/esp32dev/lib4b6/Update/Updater.cpp.o
+2023-09-23T19:24:34.4586748Z Compiling .pio/build/esp32dev/lib4b6/ESPmDNS/ESPmDNS.cpp.o
+2023-09-23T19:24:34.6613131Z Archiving .pio/build/esp32dev/lib4b6/libUpdate.a
+2023-09-23T19:24:34.6717900Z Indexing .pio/build/esp32dev/lib4b6/libUpdate.a
+2023-09-23T19:24:34.7584176Z Compiling .pio/build/esp32dev/lib134/ArduinoOTA/ArduinoOTA.cpp.o
+2023-09-23T19:24:35.0100604Z Archiving .pio/build/esp32dev/lib4b6/libESPmDNS.a
+2023-09-23T19:24:35.0179722Z Indexing .pio/build/esp32dev/lib4b6/libESPmDNS.a
+2023-09-23T19:24:35.0942320Z Compiling .pio/build/esp32dev/lib147/DNSServer/DNSServer.cpp.o
+2023-09-23T19:24:35.4205686Z Archiving .pio/build/esp32dev/lib134/libArduinoOTA.a
+2023-09-23T19:24:35.4317978Z Indexing .pio/build/esp32dev/lib134/libArduinoOTA.a
+2023-09-23T19:24:35.5233245Z Compiling .pio/build/esp32dev/lib59e/AsyncUDP/AsyncUDP.cpp.o
+2023-09-23T19:24:35.5391707Z Archiving .pio/build/esp32dev/lib147/libDNSServer.a
+2023-09-23T19:24:35.5471025Z Indexing .pio/build/esp32dev/lib147/libDNSServer.a
+2023-09-23T19:24:35.6285237Z Compiling .pio/build/esp32dev/lib1ce/WebServer/Parsing.cpp.o
+2023-09-23T19:24:36.2674872Z Archiving .pio/build/esp32dev/lib59e/libAsyncUDP.a
+2023-09-23T19:24:36.2792272Z Indexing .pio/build/esp32dev/lib59e/libAsyncUDP.a
+2023-09-23T19:24:36.3008729Z Compiling .pio/build/esp32dev/lib1ce/WebServer/WebServer.cpp.o
+2023-09-23T19:24:36.4405921Z Compiling .pio/build/esp32dev/lib1ce/WebServer/detail/mimetable.cpp.o
+2023-09-23T19:24:36.4703646Z Archiving .pio/build/esp32dev/libFrameworkArduinoVariant.a
+2023-09-23T19:24:36.4763633Z Indexing .pio/build/esp32dev/libFrameworkArduinoVariant.a
+2023-09-23T19:24:36.5364641Z Compiling .pio/build/esp32dev/FrameworkArduino/Esp.cpp.o
+2023-09-23T19:24:37.0845988Z Compiling .pio/build/esp32dev/FrameworkArduino/FunctionalInterrupt.cpp.o
+2023-09-23T19:24:37.3236148Z Archiving .pio/build/esp32dev/lib1ce/libWebServer.a
+2023-09-23T19:24:37.3365412Z Indexing .pio/build/esp32dev/lib1ce/libWebServer.a
+2023-09-23T19:24:37.3647688Z Compiling .pio/build/esp32dev/FrameworkArduino/HardwareSerial.cpp.o
+2023-09-23T19:24:37.5085837Z Compiling .pio/build/esp32dev/FrameworkArduino/IPAddress.cpp.o
+2023-09-23T19:24:37.5666934Z Compiling .pio/build/esp32dev/FrameworkArduino/IPv6Address.cpp.o
+2023-09-23T19:24:37.9205844Z Compiling .pio/build/esp32dev/FrameworkArduino/MD5Builder.cpp.o
+2023-09-23T19:24:37.9685647Z Compiling .pio/build/esp32dev/FrameworkArduino/Print.cpp.o
+2023-09-23T19:24:38.3284170Z Compiling .pio/build/esp32dev/FrameworkArduino/Stream.cpp.o
+2023-09-23T19:24:38.4446356Z Compiling .pio/build/esp32dev/FrameworkArduino/StreamString.cpp.o
+2023-09-23T19:24:38.7766205Z Compiling .pio/build/esp32dev/FrameworkArduino/WMath.cpp.o
+2023-09-23T19:24:38.8566205Z Compiling .pio/build/esp32dev/FrameworkArduino/WString.cpp.o
+2023-09-23T19:24:38.9126006Z Compiling .pio/build/esp32dev/FrameworkArduino/base64.cpp.o
+2023-09-23T19:24:39.3732328Z Compiling .pio/build/esp32dev/FrameworkArduino/cbuf.cpp.o
+2023-09-23T19:24:39.4606388Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-adc.c.o
+2023-09-23T19:24:39.5564693Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-bt.c.o
+2023-09-23T19:24:39.7057441Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-cpu.c.o
+2023-09-23T19:24:39.7269289Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-dac.c.o
+2023-09-23T19:24:39.8846503Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-gpio.c.o
+2023-09-23T19:24:39.9150086Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-i2c.c.o
+2023-09-23T19:24:40.0806422Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-ledc.c.o
+2023-09-23T19:24:40.2925988Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-log.c.o
+2023-09-23T19:24:40.3205802Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-matrix.c.o
+2023-09-23T19:24:40.3525622Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-misc.c.o
+2023-09-23T19:24:40.4606325Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-psram.c.o
+2023-09-23T19:24:40.5366467Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-rmt.c.o
+2023-09-23T19:24:40.6006373Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-sigmadelta.c.o
+2023-09-23T19:24:40.7565141Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-spi.c.o
+2023-09-23T19:24:40.8148398Z /home/runner/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-spi.c: In function 'spiTransferBytesNL':
+2023-09-23T19:24:40.8149720Z /home/runner/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-spi.c:922:39: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+2023-09-23T19:24:40.8150818Z                  uint8_t * last_out8 = &result[c_longs-1];
+2023-09-23T19:24:40.8151746Z                                        ^
+2023-09-23T19:24:40.8152919Z /home/runner/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-spi.c:923:40: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+2023-09-23T19:24:40.8153665Z                  uint8_t * last_data8 = &last_data;
+2023-09-23T19:24:40.8154309Z                                         ^
+2023-09-23T19:24:40.8644465Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-time.c.o
+2023-09-23T19:24:41.0407304Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-timer.c.o
+2023-09-23T19:24:41.1924661Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-touch.c.o
+2023-09-23T19:24:41.2806320Z Compiling .pio/build/esp32dev/FrameworkArduino/esp32-hal-uart.c.o
+2023-09-23T19:24:41.3726760Z Compiling .pio/build/esp32dev/FrameworkArduino/libb64/cdecode.c.o
+2023-09-23T19:24:41.4305821Z Compiling .pio/build/esp32dev/FrameworkArduino/libb64/cencode.c.o
+2023-09-23T19:24:41.4766171Z Compiling .pio/build/esp32dev/FrameworkArduino/main.cpp.o
+2023-09-23T19:24:41.5646373Z Compiling .pio/build/esp32dev/FrameworkArduino/stdlib_noniso.c.o
+2023-09-23T19:24:41.6404271Z Compiling .pio/build/esp32dev/FrameworkArduino/wiring_pulse.c.o
+2023-09-23T19:24:41.7844429Z Compiling .pio/build/esp32dev/FrameworkArduino/wiring_shift.c.o
+2023-09-23T19:24:41.9242099Z Archiving .pio/build/esp32dev/libFrameworkArduino.a
+2023-09-23T19:24:41.9803478Z Indexing .pio/build/esp32dev/libFrameworkArduino.a
+2023-09-23T19:24:42.1411239Z Linking .pio/build/esp32dev/firmware.elf
+2023-09-23T19:24:49.4960887Z Retrieving maximum program size .pio/build/esp32dev/firmware.elf
+2023-09-23T19:24:49.4963444Z Checking size .pio/build/esp32dev/firmware.elf
+2023-09-23T19:24:49.5125928Z Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+2023-09-23T19:24:49.5150001Z RAM:   [==        ]  22.1% (used 72388 bytes from 327680 bytes)
+2023-09-23T19:24:49.5150669Z Flash: [========  ]  80.9% (used 1272665 bytes from 1572864 bytes)
+2023-09-23T19:24:49.5152098Z Building .pio/build/esp32dev/firmware.bin
+2023-09-23T19:24:49.7999403Z esptool.py v3.1
+2023-09-23T19:24:49.8000046Z Merged 1 ELF section
+2023-09-23T19:24:49.8068591Z bin_rename_copy([".pio/build/esp32dev/firmware.bin"], [".pio/build/esp32dev/firmware.elf"])
+2023-09-23T19:24:49.8089674Z bin_gzip([".pio/build/esp32dev/firmware.bin"], [".pio/build/esp32dev/firmware.elf"])
+2023-09-23T19:24:50.2016346Z ======================== [SUCCESS] Took 104.41 seconds ========================
+2023-09-23T19:24:50.2019806Z 
+2023-09-23T19:24:50.2025408Z Environment    Status    Duration
+2023-09-23T19:24:50.2026135Z -------------  --------  ------------
+2023-09-23T19:24:50.2026796Z esp32dev       SUCCESS   00:01:44.405
+2023-09-23T19:24:50.2027312Z ========================= 1 succeeded in 00:01:44.405 =========================
+2023-09-23T19:24:51.3002030Z 
+2023-09-23T19:24:51.3002776Z ********************************************************************************
+2023-09-23T19:24:51.3003251Z There is a new version 6.1.11 of PlatformIO available.
+2023-09-23T19:24:51.3006792Z Please upgrade it via `platformio upgrade` or `pip install -U platformio` command.
+2023-09-23T19:24:51.3008588Z Changes: https://docs.platformio.org/en/latest/history.html
+2023-09-23T19:24:51.3009101Z ********************************************************************************
+2023-09-23T19:24:51.3010408Z 
+2023-09-23T19:24:51.3102896Z 
+2023-09-23T19:24:51.3103170Z ********************************************************************************
+2023-09-23T19:24:51.3103667Z We found 1.24MB of unnecessary PlatformIO system data (temporary files, unnecessary packages, etc.).
+2023-09-23T19:24:51.3104406Z Use `pio system prune --dry-run` to list them or `pio system prune` to save disk space.
+2023-09-23T19:24:51.3477113Z ##[group]Run actions/upload-artifact@v2
+2023-09-23T19:24:51.3477695Z with:
+2023-09-23T19:24:51.3477941Z   name: firmware-esp32dev
+2023-09-23T19:24:51.3478283Z   path: build_output/firmware/*.bin
+build_output/firmware/*.gz
+
+2023-09-23T19:24:51.3478616Z   if-no-files-found: warn
+2023-09-23T19:24:51.3478899Z env:
+2023-09-23T19:24:51.3479197Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.18/x64
+2023-09-23T19:24:51.3479602Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib/pkgconfig
+2023-09-23T19:24:51.3479974Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+2023-09-23T19:24:51.3480344Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+2023-09-23T19:24:51.3480711Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+2023-09-23T19:24:51.3481073Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib
+2023-09-23T19:24:51.3481369Z ##[endgroup]
+2023-09-23T19:24:51.4181001Z With the provided path, there will be 2 files uploaded
+2023-09-23T19:24:51.4189309Z Starting artifact upload
+2023-09-23T19:24:51.4190528Z For more detailed logs during the artifact upload process, enable step-debugging: https://docs.github.com/actions/monitoring-and-troubleshooting-workflows/enabling-debug-logging#enabling-step-debug-logging
+2023-09-23T19:24:51.4283100Z Artifact name is valid!
+2023-09-23T19:24:51.5932316Z Container for artifact "firmware-esp32dev" successfully created. Starting upload of file(s)
+2023-09-23T19:24:52.1555490Z Total size of all the files uploaded is 1690160 bytes
+2023-09-23T19:24:52.1555987Z File upload process has finished. Finalizing the artifact upload
+2023-09-23T19:24:52.3098618Z Artifact has been finalized. All files have been successfully uploaded!
+2023-09-23T19:24:52.3098927Z 
+2023-09-23T19:24:52.3099168Z The raw size of all the files that were specified for upload is 2117255 bytes
+2023-09-23T19:24:52.3099859Z The size of all the files that were uploaded is 1690160 bytes. This takes into account any gzip compression used to reduce the upload size, time and storage
+2023-09-23T19:24:52.3100274Z 
+2023-09-23T19:24:52.3100943Z Note: The size of downloaded zips can differ significantly from the reported size. For more information see: https://github.com/actions/upload-artifact#zipped-artifact-downloads 
+2023-09-23T19:24:52.3101438Z 
+2023-09-23T19:24:52.3101741Z Artifact firmware-esp32dev has been successfully uploaded!
+2023-09-23T19:24:52.3196676Z Post job cleanup.
+2023-09-23T19:24:52.6797430Z Post job cleanup.
+2023-09-23T19:24:52.8255612Z Cache hit occurred on the primary key Linux-, not saving cache.
+2023-09-23T19:24:53.0767047Z Post job cleanup.
+2023-09-23T19:24:53.2267004Z Cache hit occurred on the primary key Linux-pip-81ff51cfad9e9eb735c6b16e2b137bb04b536de75d900d6b02aa29724c130501, not saving cache.
+2023-09-23T19:24:53.2365679Z Post job cleanup.
+2023-09-23T19:24:53.3445069Z [command]/usr/bin/git version
+2023-09-23T19:24:53.3496369Z git version 2.42.0
+2023-09-23T19:24:53.3539484Z Temporarily overriding HOME='/home/runner/work/_temp/ea643d09-654e-45f4-9e29-beada7f7c960' before making global git config changes
+2023-09-23T19:24:53.3540603Z Adding repository directory to the temporary git global config as a safe directory
+2023-09-23T19:24:53.3546347Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/WLED/WLED
+2023-09-23T19:24:53.3590620Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-09-23T19:24:53.3630117Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-09-23T19:24:53.3902107Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-09-23T19:24:53.3932843Z http.https://github.com/.extraheader
+2023-09-23T19:24:53.3947219Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-09-23T19:24:53.3998914Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-09-23T19:24:53.4507090Z Cleaning up orphan processes

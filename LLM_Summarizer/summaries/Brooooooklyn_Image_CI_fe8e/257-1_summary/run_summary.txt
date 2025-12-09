@@ -1,0 +1,17 @@
+Run 'Brooooooklyn_Image_CI_fe8e\257-1' summary (10 jobs):
+- Job 10_stable - armv7-linux-androideabi - node@18: succeeded
+- Job 11_stable - aarch64-unknown-linux-musl - node@18: succeeded
+- Job 1_Build FreeBSD: failed
+- Job 1_Publish: succeeded
+- Job 1_Test bindings on aarch64-unknown-linux-gnu - node@16: succeeded
+- Job 1_Test bindings on armv7-unknown-linux-gnueabihf - node@16: succeeded
+- Job 1_build: succeeded
+- Job 1_stable - x86_64-apple-darwin - node@18: succeeded
+- Job 2_Build FreeBSD: succeeded
+- Job 2_Test bindings on Linux-x64-gnu - node@18: succeeded
+
+Description:
+The overall run was mostly successful with 9 out of 10 jobs completing without issues. The single failure occurred in the job "1_Build FreeBSD," where two tests in the packages/binding folder failed due to SIGILL errors in optimize.spec.mjs and transformer.spec.mjs test files. All other build, test, and publish jobs finished cleanly with all tests passing.
+
+Recommendation:
+Investigate the SIGILL test failures in the "1_Build FreeBSD" job, focusing on the optimize.spec.mjs and transformer.spec.mjs tests. Ensuring these tests are stable and exploring possible compatibility or code issues on FreeBSD builds will help achieve a fully successful pipeline in future runs.

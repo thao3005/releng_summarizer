@@ -1,0 +1,27 @@
+Run 'Brooooooklyn_Image_CI_fe8e\256-1' summary (20 jobs):
+- Job 1_Build FreeBSD: failed
+- Job 1_build: succeeded
+- Job 1_stable - x86_64-apple-darwin - node@18: failed
+- Job 2_Build FreeBSD: succeeded
+- Job 2_stable - x86_64-pc-windows-msvc - node@18: failed
+- Job 3_stable - i686-pc-windows-msvc - node@18: failed
+- Job 3_test-macOS-windows-binding: succeeded
+- Job 4_stable - x86_64-unknown-linux-gnu - node@18: failed
+- Job 4_test-linux-x64-gnu-binding: succeeded
+- Job 5_stable - x86_64-unknown-linux-musl - node@18: failed
+- Job 5_test-linux-x64-musl-binding: succeeded
+- Job 6_stable - aarch64-apple-darwin - node@18: failed
+- Job 6_test-linux-aarch64-gnu-binding: succeeded
+- Job 7_stable - aarch64-unknown-linux-gnu - node@18: failed
+- Job 7_test-linux-arm-gnueabihf-binding: succeeded
+- Job 8_Publish: succeeded
+- Job 8_stable - armv7-unknown-linux-gnueabihf - node@18: failed
+- Job 9_stable - aarch64-linux-android - node@18: failed
+- Job 10_stable - armv7-linux-androideabi - node@18: failed
+- Job 11_stable - aarch64-unknown-linux-musl - node@18: failed
+
+Description:
+This CI/CD pipeline run had 20 jobs, with the majority of "stable" build jobs failing due to consistent Rust compilation errors related to function pointer type mismatches in the `packages/binding/src/jpeg.rs` file. The main error was using functions with an "extern C" calling convention instead of the expected "extern C-unwind" convention. This issue caused failures across various target platforms including Linux, Windows, macOS, Android, and FreeBSD. In contrast, the supportive test and build jobs (non-stable, binding tests, and publish jobs) generally succeeded without errors.
+
+Recommendation:
+Investigate the ABI mismatch errors in `packages/binding/src/jpeg.rs` that are causing the stable build jobs to fail. Focus primarily on correcting the function pointer calling conventions from "C" to "C-unwind" in the affected source code. Fixing these issues in the stable build pipeline jobs (notably jobs 1_Build FreeBSD, 1_stable x86_64-apple-darwin, 2_stable windows-msvc, 3_stable windows-msvc, 4_stable linux-gnu, 5_stable linux-musl, 6_stable aarch64-darwin, 7_stable aarch64-linux-gnu, 8_stable armv7, 9_stable android, 10_stable armv7-android, and 11_stable aarch64-musl) should restore successful builds.

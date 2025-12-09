@@ -1,0 +1,822 @@
+2023-09-16T00:04:21.3052429Z Requested labels: ubuntu-latest
+2023-09-16T00:04:21.3052699Z Job defined at: adamint/spotify-web-api-kotlin/.github/workflows/release.yml@refs/heads/main
+2023-09-16T00:04:21.3052860Z Waiting for a runner to pick up this job...
+2023-09-16T00:04:21.5743317Z Job is waiting for a hosted runner to come online.
+2023-09-16T00:04:24.8300467Z Job is about to start running on the hosted runner: GitHub Actions 3 (hosted)
+2023-09-16T00:04:27.2783986Z Current runner version: '2.309.0'
+2023-09-16T00:04:27.2814541Z ##[group]Operating System
+2023-09-16T00:04:27.2815915Z Ubuntu
+2023-09-16T00:04:27.2817003Z 22.04.3
+2023-09-16T00:04:27.2818064Z LTS
+2023-09-16T00:04:27.2819107Z ##[endgroup]
+2023-09-16T00:04:27.2820229Z ##[group]Runner Image
+2023-09-16T00:04:27.2821596Z Image: ubuntu-22.04
+2023-09-16T00:04:27.2822703Z Version: 20230911.1.0
+2023-09-16T00:04:27.2824247Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230911.1/images/linux/Ubuntu2204-Readme.md
+2023-09-16T00:04:27.2826080Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230911.1
+2023-09-16T00:04:27.2827444Z ##[endgroup]
+2023-09-16T00:04:27.2828603Z ##[group]Runner Image Provisioner
+2023-09-16T00:04:27.2829783Z 2.0.299.1
+2023-09-16T00:04:27.2830836Z ##[endgroup]
+2023-09-16T00:04:27.2833493Z ##[group]GITHUB_TOKEN Permissions
+2023-09-16T00:04:27.2836235Z Actions: write
+2023-09-16T00:04:27.2837428Z Checks: write
+2023-09-16T00:04:27.2838778Z Contents: write
+2023-09-16T00:04:27.2840052Z Deployments: write
+2023-09-16T00:04:27.2841195Z Discussions: write
+2023-09-16T00:04:27.2842316Z Issues: write
+2023-09-16T00:04:27.2843417Z Metadata: read
+2023-09-16T00:04:27.2844557Z Packages: write
+2023-09-16T00:04:27.2845685Z Pages: write
+2023-09-16T00:04:27.2846758Z PullRequests: write
+2023-09-16T00:04:27.2847982Z RepositoryProjects: write
+2023-09-16T00:04:27.2849171Z SecurityEvents: write
+2023-09-16T00:04:27.2850270Z Statuses: write
+2023-09-16T00:04:27.2851407Z ##[endgroup]
+2023-09-16T00:04:27.2855868Z Secret source: Actions
+2023-09-16T00:04:27.2972140Z Prepare workflow directory
+2023-09-16T00:04:27.4057246Z Prepare all required actions
+2023-09-16T00:04:27.4273085Z Getting action download info
+2023-09-16T00:04:27.7068172Z Download action repository 'actions/checkout@v2' (SHA:ee0669bd1cc54295c223e0bb666b733df41de1c5)
+2023-09-16T00:04:28.2749486Z Download action repository 'actions/setup-java@v2' (SHA:91d3aa4956ec4a53e477c4907347b5e3481be8c9)
+2023-09-16T00:04:28.7896294Z Download action repository 'cpina/github-action-push-to-another-repository@main' (SHA:07c4d7b3def0a8ebe788a8f2c843a4e1de4f6900)
+2023-09-16T00:04:29.2548805Z Complete job name: release_docs
+2023-09-16T00:04:29.3286684Z ##[group]Build container for action use: '/home/runner/work/_actions/cpina/github-action-push-to-another-repository/main/Dockerfile'.
+2023-09-16T00:04:29.3371650Z ##[command]/usr/bin/docker build -t 94351b:f4f6470c098b41a2a5970c2f31031850 -f "/home/runner/work/_actions/cpina/github-action-push-to-another-repository/main/Dockerfile" "/home/runner/work/_actions/cpina/github-action-push-to-another-repository/main"
+2023-09-16T00:04:29.8726195Z #0 building with "default" instance using docker driver
+2023-09-16T00:04:29.8728085Z 
+2023-09-16T00:04:29.8728657Z #1 [internal] load .dockerignore
+2023-09-16T00:04:29.8729493Z #1 transferring context: 2B done
+2023-09-16T00:04:29.8730224Z #1 DONE 0.0s
+2023-09-16T00:04:29.8730590Z 
+2023-09-16T00:04:29.8730954Z #2 [internal] load build definition from Dockerfile
+2023-09-16T00:04:29.8731815Z #2 transferring dockerfile: 175B done
+2023-09-16T00:04:29.8732571Z #2 DONE 0.0s
+2023-09-16T00:04:29.8732937Z 
+2023-09-16T00:04:29.8733413Z #3 [internal] load metadata for docker.io/library/alpine:latest
+2023-09-16T00:04:30.0219645Z #3 ...
+2023-09-16T00:04:30.0220219Z 
+2023-09-16T00:04:30.0220718Z #4 [auth] library/alpine:pull token for registry-1.docker.io
+2023-09-16T00:04:30.0221826Z #4 DONE 0.0s
+2023-09-16T00:04:30.1719206Z 
+2023-09-16T00:04:30.1723632Z #3 [internal] load metadata for docker.io/library/alpine:latest
+2023-09-16T00:04:30.4287273Z #3 DONE 0.7s
+2023-09-16T00:04:30.5833989Z 
+2023-09-16T00:04:30.5834903Z #5 [1/3] FROM docker.io/library/alpine:latest@sha256:7144f7bab3d4c2648d7e59409f15ec52a18006a128c733fcff20d3a4a54ba44a
+2023-09-16T00:04:30.5835955Z #5 DONE 0.0s
+2023-09-16T00:04:30.5836333Z 
+2023-09-16T00:04:30.5836668Z #6 [internal] load build context
+2023-09-16T00:04:30.5837444Z #6 transferring context: 6.11kB done
+2023-09-16T00:04:30.5838181Z #6 DONE 0.0s
+2023-09-16T00:04:30.5839002Z 
+2023-09-16T00:04:30.5839401Z #7 [2/3] RUN apk add --no-cache git git-lfs openssh-client
+2023-09-16T00:04:30.6868395Z #7 0.248 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz
+2023-09-16T00:04:30.9847153Z #7 0.424 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/community/x86_64/APKINDEX.tar.gz
+2023-09-16T00:04:31.1213857Z #7 0.685 (1/16) Installing ca-certificates (20230506-r0)
+2023-09-16T00:04:31.2389571Z #7 0.713 (2/16) Installing brotli-libs (1.0.9-r14)
+2023-09-16T00:04:31.2390722Z #7 0.755 (3/16) Installing libunistring (1.1-r1)
+2023-09-16T00:04:31.2391736Z #7 0.784 (4/16) Installing libidn2 (2.3.4-r1)
+2023-09-16T00:04:31.2392781Z #7 0.801 (5/16) Installing nghttp2-libs (1.55.1-r0)
+2023-09-16T00:04:31.3532724Z #7 0.817 (6/16) Installing libcurl (8.2.1-r0)
+2023-09-16T00:04:31.3533775Z #7 0.844 (7/16) Installing libexpat (2.5.0-r1)
+2023-09-16T00:04:31.3534859Z #7 0.860 (8/16) Installing pcre2 (10.42-r1)
+2023-09-16T00:04:31.3535850Z #7 0.917 (9/16) Installing git (2.40.1-r0)
+2023-09-16T00:04:31.5038410Z #7 1.007 (10/16) Installing git-lfs (3.3.0-r4)
+2023-09-16T00:04:31.6044275Z #7 1.113 Executing git-lfs-3.3.0-r4.post-install
+2023-09-16T00:04:31.6045342Z #7 1.128 Git LFS initialized.
+2023-09-16T00:04:31.6046225Z #7 1.129 (11/16) Installing openssh-keygen (9.3_p2-r0)
+2023-09-16T00:04:31.6047272Z #7 1.149 (12/16) Installing ncurses-terminfo-base (6.4_p20230506-r0)
+2023-09-16T00:04:31.6048348Z #7 1.168 (13/16) Installing libncursesw (6.4_p20230506-r0)
+2023-09-16T00:04:31.7047956Z #7 1.188 (14/16) Installing libedit (20221030.3.1-r1)
+2023-09-16T00:04:31.7049042Z #7 1.204 (15/16) Installing openssh-client-common (9.3_p2-r0)
+2023-09-16T00:04:31.7050096Z #7 1.245 (16/16) Installing openssh-client-default (9.3_p2-r0)
+2023-09-16T00:04:31.7051117Z #7 1.269 Executing busybox-1.36.1-r2.trigger
+2023-09-16T00:04:31.8622566Z #7 1.275 Executing ca-certificates-20230506-r0.trigger
+2023-09-16T00:04:31.8624356Z #7 1.314 OK: 35 MiB in 31 packages
+2023-09-16T00:04:32.0064912Z #7 DONE 1.5s
+2023-09-16T00:04:32.0065974Z 
+2023-09-16T00:04:32.0117450Z #8 [3/3] COPY entrypoint.sh /entrypoint.sh
+2023-09-16T00:04:32.0118271Z #8 DONE 0.0s
+2023-09-16T00:04:32.0118631Z 
+2023-09-16T00:04:32.0119302Z #9 exporting to image
+2023-09-16T00:04:32.0120014Z #9 exporting layers
+2023-09-16T00:04:32.1431188Z #9 exporting layers 0.2s done
+2023-09-16T00:04:32.1558896Z #9 writing image sha256:af5301f30235b994d88bf0c803b943281156c62bffb7edc9670c3e9d326692d6 done
+2023-09-16T00:04:32.1560018Z #9 naming to docker.io/library/94351b:f4f6470c098b41a2a5970c2f31031850 done
+2023-09-16T00:04:32.1560884Z #9 DONE 0.2s
+2023-09-16T00:04:32.1588970Z ##[endgroup]
+2023-09-16T00:04:32.1984037Z ##[group]Run actions/checkout@v2
+2023-09-16T00:04:32.1984786Z with:
+2023-09-16T00:04:32.1985499Z   repository: adamint/spotify-web-api-kotlin
+2023-09-16T00:04:32.1986564Z   token: ***
+2023-09-16T00:04:32.1987243Z   ssh-strict: true
+2023-09-16T00:04:32.1987936Z   persist-credentials: true
+2023-09-16T00:04:32.1988629Z   clean: true
+2023-09-16T00:04:32.1989301Z   fetch-depth: 1
+2023-09-16T00:04:32.1989939Z   lfs: false
+2023-09-16T00:04:32.1990598Z   submodules: false
+2023-09-16T00:04:32.1991290Z   set-safe-directory: true
+2023-09-16T00:04:32.1991960Z env:
+2023-09-16T00:04:32.1992702Z   SPOTIFY_CLIENT_ID: ***
+2023-09-16T00:04:32.1993488Z   SPOTIFY_CLIENT_SECRET: ***
+2023-09-16T00:04:32.1994390Z   SPOTIFY_REDIRECT_URI: https://***.com/projects/spotify/callback
+2023-09-16T00:04:32.1995331Z   NEXUS_USERNAME: ***
+2023-09-16T00:04:32.1996080Z   NEXUS_PASSWORD: ***
+2023-09-16T00:04:32.2017426Z   ORG_GRADLE_PROJECT_SIGNING_KEY: ***
+2023-09-16T00:04:32.2018320Z   ORG_GRADLE_PROJECT_SIGNING_PASSWORD: ***
+2023-09-16T00:04:32.2019121Z   SPOTIFY_API_PUBLISH_VERSION: 4.0.3
+2023-09-16T00:04:32.2019867Z ##[endgroup]
+2023-09-16T00:04:32.4853169Z Syncing repository: adamint/spotify-web-api-kotlin
+2023-09-16T00:04:32.4855610Z ##[group]Getting Git version info
+2023-09-16T00:04:32.4857010Z Working directory is '/home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin'
+2023-09-16T00:04:32.4858829Z [command]/usr/bin/git version
+2023-09-16T00:04:32.4876803Z git version 2.42.0
+2023-09-16T00:04:32.4907174Z ##[endgroup]
+2023-09-16T00:04:32.4927221Z Temporarily overriding HOME='/home/runner/work/_temp/a613440b-4e61-4c41-984d-f11c602633a6' before making global git config changes
+2023-09-16T00:04:32.4928487Z Adding repository directory to the temporary git global config as a safe directory
+2023-09-16T00:04:32.4929901Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin
+2023-09-16T00:04:32.4969817Z Deleting the contents of '/home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin'
+2023-09-16T00:04:32.4975288Z ##[group]Initializing the repository
+2023-09-16T00:04:32.4979323Z [command]/usr/bin/git init /home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin
+2023-09-16T00:04:32.5052495Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-09-16T00:04:32.5053934Z hint: is subject to change. To configure the initial branch name to use in all
+2023-09-16T00:04:32.5055206Z hint: of your new repositories, which will suppress this warning, call:
+2023-09-16T00:04:32.5056292Z hint: 
+2023-09-16T00:04:32.5057353Z hint: 	git config --global init.defaultBranch <name>
+2023-09-16T00:04:32.5058249Z hint: 
+2023-09-16T00:04:32.5059296Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-09-16T00:04:32.5060619Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-09-16T00:04:32.5062114Z hint: 
+2023-09-16T00:04:32.5062874Z hint: 	git branch -m <name>
+2023-09-16T00:04:32.5069786Z Initialized empty Git repository in /home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/.git/
+2023-09-16T00:04:32.5078483Z [command]/usr/bin/git remote add origin https://github.com/adamint/spotify-web-api-kotlin
+2023-09-16T00:04:32.5124432Z ##[endgroup]
+2023-09-16T00:04:32.5126554Z ##[group]Disabling automatic garbage collection
+2023-09-16T00:04:32.5128517Z [command]/usr/bin/git config --local gc.auto 0
+2023-09-16T00:04:32.5165240Z ##[endgroup]
+2023-09-16T00:04:32.5167068Z ##[group]Setting up auth
+2023-09-16T00:04:32.5172349Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-09-16T00:04:32.5210471Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-09-16T00:04:32.5586221Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-09-16T00:04:32.5622980Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-09-16T00:04:32.5876306Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-09-16T00:04:32.5910964Z ##[endgroup]
+2023-09-16T00:04:32.5915433Z ##[group]Fetching the repository
+2023-09-16T00:04:32.5929181Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +f1f54530807e3744014c8726240886eeb19c74f9:refs/remotes/origin/main
+2023-09-16T00:04:32.8947509Z remote: Enumerating objects: 217, done.        
+2023-09-16T00:04:32.8948644Z remote: Counting objects:   0% (1/217)        
+2023-09-16T00:04:32.8949940Z remote: Counting objects:   1% (3/217)        
+2023-09-16T00:04:32.8955116Z remote: Counting objects:   2% (5/217)        
+2023-09-16T00:04:32.8956881Z remote: Counting objects:   3% (7/217)        
+2023-09-16T00:04:32.8957792Z remote: Counting objects:   4% (9/217)        
+2023-09-16T00:04:32.8958687Z remote: Counting objects:   5% (11/217)        
+2023-09-16T00:04:32.8959565Z remote: Counting objects:   6% (14/217)        
+2023-09-16T00:04:32.8960461Z remote: Counting objects:   7% (16/217)        
+2023-09-16T00:04:32.8961451Z remote: Counting objects:   8% (18/217)        
+2023-09-16T00:04:32.8963176Z remote: Counting objects:   9% (20/217)        
+2023-09-16T00:04:32.8964146Z remote: Counting objects:  10% (22/217)        
+2023-09-16T00:04:32.8965876Z remote: Counting objects:  11% (24/217)        
+2023-09-16T00:04:32.8966829Z remote: Counting objects:  12% (27/217)        
+2023-09-16T00:04:32.8968196Z remote: Counting objects:  13% (29/217)        
+2023-09-16T00:04:32.8969144Z remote: Counting objects:  14% (31/217)        
+2023-09-16T00:04:32.8970032Z remote: Counting objects:  15% (33/217)        
+2023-09-16T00:04:32.8971686Z remote: Counting objects:  16% (35/217)        
+2023-09-16T00:04:32.8972765Z remote: Counting objects:  17% (37/217)        
+2023-09-16T00:04:32.8974551Z remote: Counting objects:  18% (40/217)        
+2023-09-16T00:04:32.8979172Z remote: Counting objects:  19% (42/217)        
+2023-09-16T00:04:32.8980761Z remote: Counting objects:  20% (44/217)        
+2023-09-16T00:04:32.8981867Z remote: Counting objects:  21% (46/217)        
+2023-09-16T00:04:32.8983307Z remote: Counting objects:  22% (48/217)        
+2023-09-16T00:04:32.8984261Z remote: Counting objects:  23% (50/217)        
+2023-09-16T00:04:32.8985701Z remote: Counting objects:  24% (53/217)        
+2023-09-16T00:04:32.8986592Z remote: Counting objects:  25% (55/217)        
+2023-09-16T00:04:32.8987454Z remote: Counting objects:  26% (57/217)        
+2023-09-16T00:04:32.8988332Z remote: Counting objects:  27% (59/217)        
+2023-09-16T00:04:32.9003879Z remote: Counting objects:  28% (61/217)        
+2023-09-16T00:04:32.9004930Z remote: Counting objects:  29% (63/217)        
+2023-09-16T00:04:32.9005780Z remote: Counting objects:  30% (66/217)        
+2023-09-16T00:04:32.9006673Z remote: Counting objects:  31% (68/217)        
+2023-09-16T00:04:32.9007551Z remote: Counting objects:  32% (70/217)        
+2023-09-16T00:04:32.9008403Z remote: Counting objects:  33% (72/217)        
+2023-09-16T00:04:32.9009284Z remote: Counting objects:  34% (74/217)        
+2023-09-16T00:04:32.9010163Z remote: Counting objects:  35% (76/217)        
+2023-09-16T00:04:32.9011036Z remote: Counting objects:  36% (79/217)        
+2023-09-16T00:04:32.9011885Z remote: Counting objects:  37% (81/217)        
+2023-09-16T00:04:32.9012824Z remote: Counting objects:  38% (83/217)        
+2023-09-16T00:04:32.9013709Z remote: Counting objects:  39% (85/217)        
+2023-09-16T00:04:32.9014561Z remote: Counting objects:  40% (87/217)        
+2023-09-16T00:04:32.9015427Z remote: Counting objects:  41% (89/217)        
+2023-09-16T00:04:32.9016303Z remote: Counting objects:  42% (92/217)        
+2023-09-16T00:04:32.9017990Z remote: Counting objects:  43% (94/217)        
+2023-09-16T00:04:32.9018872Z remote: Counting objects:  44% (96/217)        
+2023-09-16T00:04:32.9019742Z remote: Counting objects:  45% (98/217)        
+2023-09-16T00:04:32.9020618Z remote: Counting objects:  46% (100/217)        
+2023-09-16T00:04:32.9021857Z remote: Counting objects:  47% (102/217)        
+2023-09-16T00:04:32.9031063Z remote: Counting objects:  48% (105/217)        
+2023-09-16T00:04:32.9031924Z remote: Counting objects:  49% (107/217)        
+2023-09-16T00:04:32.9032736Z remote: Counting objects:  50% (109/217)        
+2023-09-16T00:04:32.9033527Z remote: Counting objects:  51% (111/217)        
+2023-09-16T00:04:32.9034321Z remote: Counting objects:  52% (113/217)        
+2023-09-16T00:04:32.9035110Z remote: Counting objects:  53% (116/217)        
+2023-09-16T00:04:32.9035893Z remote: Counting objects:  54% (118/217)        
+2023-09-16T00:04:32.9036693Z remote: Counting objects:  55% (120/217)        
+2023-09-16T00:04:32.9037490Z remote: Counting objects:  56% (122/217)        
+2023-09-16T00:04:32.9038307Z remote: Counting objects:  57% (124/217)        
+2023-09-16T00:04:32.9039106Z remote: Counting objects:  58% (126/217)        
+2023-09-16T00:04:32.9039900Z remote: Counting objects:  59% (129/217)        
+2023-09-16T00:04:32.9040679Z remote: Counting objects:  60% (131/217)        
+2023-09-16T00:04:32.9041472Z remote: Counting objects:  61% (133/217)        
+2023-09-16T00:04:32.9042478Z remote: Counting objects:  62% (135/217)        
+2023-09-16T00:04:32.9043279Z remote: Counting objects:  63% (137/217)        
+2023-09-16T00:04:32.9044087Z remote: Counting objects:  64% (139/217)        
+2023-09-16T00:04:32.9044879Z remote: Counting objects:  65% (142/217)        
+2023-09-16T00:04:32.9045657Z remote: Counting objects:  66% (144/217)        
+2023-09-16T00:04:32.9046444Z remote: Counting objects:  67% (146/217)        
+2023-09-16T00:04:32.9047225Z remote: Counting objects:  68% (148/217)        
+2023-09-16T00:04:32.9048005Z remote: Counting objects:  69% (150/217)        
+2023-09-16T00:04:32.9048801Z remote: Counting objects:  70% (152/217)        
+2023-09-16T00:04:32.9049599Z remote: Counting objects:  71% (155/217)        
+2023-09-16T00:04:32.9050366Z remote: Counting objects:  72% (157/217)        
+2023-09-16T00:04:32.9051160Z remote: Counting objects:  73% (159/217)        
+2023-09-16T00:04:32.9051943Z remote: Counting objects:  74% (161/217)        
+2023-09-16T00:04:32.9052727Z remote: Counting objects:  75% (163/217)        
+2023-09-16T00:04:32.9053518Z remote: Counting objects:  76% (165/217)        
+2023-09-16T00:04:32.9054303Z remote: Counting objects:  77% (168/217)        
+2023-09-16T00:04:32.9055072Z remote: Counting objects:  78% (170/217)        
+2023-09-16T00:04:32.9055864Z remote: Counting objects:  79% (172/217)        
+2023-09-16T00:04:32.9056651Z remote: Counting objects:  80% (174/217)        
+2023-09-16T00:04:32.9057420Z remote: Counting objects:  81% (176/217)        
+2023-09-16T00:04:32.9058203Z remote: Counting objects:  82% (178/217)        
+2023-09-16T00:04:32.9058993Z remote: Counting objects:  83% (181/217)        
+2023-09-16T00:04:32.9059768Z remote: Counting objects:  84% (183/217)        
+2023-09-16T00:04:32.9060559Z remote: Counting objects:  85% (185/217)        
+2023-09-16T00:04:32.9061599Z remote: Counting objects:  86% (187/217)        
+2023-09-16T00:04:32.9062386Z remote: Counting objects:  87% (189/217)        
+2023-09-16T00:04:32.9063184Z remote: Counting objects:  88% (191/217)        
+2023-09-16T00:04:32.9063975Z remote: Counting objects:  89% (194/217)        
+2023-09-16T00:04:32.9064748Z remote: Counting objects:  90% (196/217)        
+2023-09-16T00:04:32.9065533Z remote: Counting objects:  91% (198/217)        
+2023-09-16T00:04:32.9066320Z remote: Counting objects:  92% (200/217)        
+2023-09-16T00:04:32.9067088Z remote: Counting objects:  93% (202/217)        
+2023-09-16T00:04:32.9067875Z remote: Counting objects:  94% (204/217)        
+2023-09-16T00:04:32.9068672Z remote: Counting objects:  95% (207/217)        
+2023-09-16T00:04:32.9069633Z remote: Counting objects:  96% (209/217)        
+2023-09-16T00:04:32.9070437Z remote: Counting objects:  97% (211/217)        
+2023-09-16T00:04:32.9071228Z remote: Counting objects:  98% (213/217)        
+2023-09-16T00:04:32.9072002Z remote: Counting objects:  99% (215/217)        
+2023-09-16T00:04:32.9072789Z remote: Counting objects: 100% (217/217)        
+2023-09-16T00:04:32.9073605Z remote: Counting objects: 100% (217/217), done.        
+2023-09-16T00:04:32.9074445Z remote: Compressing objects:   0% (1/166)        
+2023-09-16T00:04:32.9075270Z remote: Compressing objects:   1% (2/166)        
+2023-09-16T00:04:32.9076088Z remote: Compressing objects:   2% (4/166)        
+2023-09-16T00:04:32.9077537Z remote: Compressing objects:   3% (5/166)        
+2023-09-16T00:04:32.9078357Z remote: Compressing objects:   4% (7/166)        
+2023-09-16T00:04:32.9079168Z remote: Compressing objects:   5% (9/166)        
+2023-09-16T00:04:32.9079974Z remote: Compressing objects:   6% (10/166)        
+2023-09-16T00:04:32.9081160Z remote: Compressing objects:   7% (12/166)        
+2023-09-16T00:04:32.9081981Z remote: Compressing objects:   8% (14/166)        
+2023-09-16T00:04:32.9082779Z remote: Compressing objects:   9% (15/166)        
+2023-09-16T00:04:32.9083597Z remote: Compressing objects:  10% (17/166)        
+2023-09-16T00:04:32.9084408Z remote: Compressing objects:  11% (19/166)        
+2023-09-16T00:04:32.9085374Z remote: Compressing objects:  12% (20/166)        
+2023-09-16T00:04:32.9086197Z remote: Compressing objects:  13% (22/166)        
+2023-09-16T00:04:32.9087009Z remote: Compressing objects:  14% (24/166)        
+2023-09-16T00:04:32.9087804Z remote: Compressing objects:  15% (25/166)        
+2023-09-16T00:04:32.9088625Z remote: Compressing objects:  16% (27/166)        
+2023-09-16T00:04:32.9089569Z remote: Compressing objects:  17% (29/166)        
+2023-09-16T00:04:32.9090472Z remote: Compressing objects:  18% (30/166)        
+2023-09-16T00:04:32.9091352Z remote: Compressing objects:  19% (32/166)        
+2023-09-16T00:04:32.9092239Z remote: Compressing objects:  20% (34/166)        
+2023-09-16T00:04:32.9093151Z remote: Compressing objects:  21% (35/166)        
+2023-09-16T00:04:32.9094020Z remote: Compressing objects:  22% (37/166)        
+2023-09-16T00:04:32.9094901Z remote: Compressing objects:  23% (39/166)        
+2023-09-16T00:04:32.9095788Z remote: Compressing objects:  24% (40/166)        
+2023-09-16T00:04:32.9096681Z remote: Compressing objects:  25% (42/166)        
+2023-09-16T00:04:32.9097554Z remote: Compressing objects:  26% (44/166)        
+2023-09-16T00:04:32.9107849Z remote: Compressing objects:  27% (45/166)        
+2023-09-16T00:04:32.9110551Z remote: Compressing objects:  28% (47/166)        
+2023-09-16T00:04:32.9111374Z remote: Compressing objects:  29% (49/166)        
+2023-09-16T00:04:32.9112205Z remote: Compressing objects:  30% (50/166)        
+2023-09-16T00:04:32.9113014Z remote: Compressing objects:  31% (52/166)        
+2023-09-16T00:04:32.9113824Z remote: Compressing objects:  32% (54/166)        
+2023-09-16T00:04:32.9114647Z remote: Compressing objects:  33% (55/166)        
+2023-09-16T00:04:32.9115779Z remote: Compressing objects:  34% (57/166)        
+2023-09-16T00:04:32.9116580Z remote: Compressing objects:  35% (59/166)        
+2023-09-16T00:04:32.9117409Z remote: Compressing objects:  36% (60/166)        
+2023-09-16T00:04:32.9118228Z remote: Compressing objects:  37% (62/166)        
+2023-09-16T00:04:32.9119020Z remote: Compressing objects:  38% (64/166)        
+2023-09-16T00:04:32.9119951Z remote: Compressing objects:  39% (65/166)        
+2023-09-16T00:04:32.9227538Z remote: Compressing objects:  40% (67/166)        
+2023-09-16T00:04:32.9228436Z remote: Compressing objects:  41% (69/166)        
+2023-09-16T00:04:32.9229964Z remote: Compressing objects:  42% (70/166)        
+2023-09-16T00:04:32.9230798Z remote: Compressing objects:  43% (72/166)        
+2023-09-16T00:04:32.9231599Z remote: Compressing objects:  44% (74/166)        
+2023-09-16T00:04:32.9232669Z remote: Compressing objects:  45% (75/166)        
+2023-09-16T00:04:32.9233513Z remote: Compressing objects:  46% (77/166)        
+2023-09-16T00:04:32.9234531Z remote: Compressing objects:  47% (79/166)        
+2023-09-16T00:04:32.9235396Z remote: Compressing objects:  48% (80/166)        
+2023-09-16T00:04:32.9236463Z remote: Compressing objects:  49% (82/166)        
+2023-09-16T00:04:32.9237651Z remote: Compressing objects:  50% (83/166)        
+2023-09-16T00:04:32.9238705Z remote: Compressing objects:  51% (85/166)        
+2023-09-16T00:04:32.9239777Z remote: Compressing objects:  52% (87/166)        
+2023-09-16T00:04:32.9240843Z remote: Compressing objects:  53% (88/166)        
+2023-09-16T00:04:32.9241895Z remote: Compressing objects:  54% (90/166)        
+2023-09-16T00:04:32.9242961Z remote: Compressing objects:  55% (92/166)        
+2023-09-16T00:04:32.9243938Z remote: Compressing objects:  56% (93/166)        
+2023-09-16T00:04:32.9246508Z remote: Compressing objects:  57% (95/166)        
+2023-09-16T00:04:32.9256006Z remote: Compressing objects:  58% (97/166)        
+2023-09-16T00:04:32.9258593Z remote: Compressing objects:  59% (98/166)        
+2023-09-16T00:04:32.9266082Z remote: Compressing objects:  60% (100/166)        
+2023-09-16T00:04:32.9270885Z remote: Compressing objects:  61% (102/166)        
+2023-09-16T00:04:32.9278255Z remote: Compressing objects:  62% (103/166)        
+2023-09-16T00:04:32.9282413Z remote: Compressing objects:  63% (105/166)        
+2023-09-16T00:04:32.9285802Z remote: Compressing objects:  64% (107/166)        
+2023-09-16T00:04:32.9286618Z remote: Compressing objects:  65% (108/166)        
+2023-09-16T00:04:32.9328193Z remote: Compressing objects:  66% (110/166)        
+2023-09-16T00:04:32.9329154Z remote: Compressing objects:  67% (112/166)        
+2023-09-16T00:04:32.9330059Z remote: Compressing objects:  68% (113/166)        
+2023-09-16T00:04:32.9330973Z remote: Compressing objects:  69% (115/166)        
+2023-09-16T00:04:32.9331884Z remote: Compressing objects:  70% (117/166)        
+2023-09-16T00:04:32.9332780Z remote: Compressing objects:  71% (118/166)        
+2023-09-16T00:04:32.9333682Z remote: Compressing objects:  72% (120/166)        
+2023-09-16T00:04:32.9334614Z remote: Compressing objects:  73% (122/166)        
+2023-09-16T00:04:32.9335517Z remote: Compressing objects:  74% (123/166)        
+2023-09-16T00:04:32.9336400Z remote: Compressing objects:  75% (125/166)        
+2023-09-16T00:04:32.9337301Z remote: Compressing objects:  76% (127/166)        
+2023-09-16T00:04:32.9338201Z remote: Compressing objects:  77% (128/166)        
+2023-09-16T00:04:32.9339080Z remote: Compressing objects:  78% (130/166)        
+2023-09-16T00:04:32.9339985Z remote: Compressing objects:  79% (132/166)        
+2023-09-16T00:04:32.9340881Z remote: Compressing objects:  80% (133/166)        
+2023-09-16T00:04:32.9342005Z remote: Compressing objects:  81% (135/166)        
+2023-09-16T00:04:32.9342889Z remote: Compressing objects:  82% (137/166)        
+2023-09-16T00:04:32.9343788Z remote: Compressing objects:  83% (138/166)        
+2023-09-16T00:04:32.9344674Z remote: Compressing objects:  84% (140/166)        
+2023-09-16T00:04:32.9345548Z remote: Compressing objects:  85% (142/166)        
+2023-09-16T00:04:32.9346437Z remote: Compressing objects:  86% (143/166)        
+2023-09-16T00:04:32.9347321Z remote: Compressing objects:  87% (145/166)        
+2023-09-16T00:04:32.9371756Z remote: Compressing objects:  88% (147/166)        
+2023-09-16T00:04:32.9372724Z remote: Compressing objects:  89% (148/166)        
+2023-09-16T00:04:32.9373666Z remote: Compressing objects:  90% (150/166)        
+2023-09-16T00:04:32.9374576Z remote: Compressing objects:  91% (152/166)        
+2023-09-16T00:04:32.9375454Z remote: Compressing objects:  92% (153/166)        
+2023-09-16T00:04:32.9376369Z remote: Compressing objects:  93% (155/166)        
+2023-09-16T00:04:32.9377269Z remote: Compressing objects:  94% (157/166)        
+2023-09-16T00:04:32.9378151Z remote: Compressing objects:  95% (158/166)        
+2023-09-16T00:04:32.9379241Z remote: Compressing objects:  96% (160/166)        
+2023-09-16T00:04:32.9380151Z remote: Compressing objects:  97% (162/166)        
+2023-09-16T00:04:32.9381039Z remote: Compressing objects:  98% (163/166)        
+2023-09-16T00:04:32.9382087Z remote: Compressing objects:  99% (165/166)        
+2023-09-16T00:04:32.9382998Z remote: Compressing objects: 100% (166/166)        
+2023-09-16T00:04:32.9383923Z remote: Compressing objects: 100% (166/166), done.        
+2023-09-16T00:04:32.9427408Z Receiving objects:   0% (1/217)
+2023-09-16T00:04:32.9428214Z Receiving objects:   1% (3/217)
+2023-09-16T00:04:32.9428939Z Receiving objects:   2% (5/217)
+2023-09-16T00:04:32.9429658Z Receiving objects:   3% (7/217)
+2023-09-16T00:04:32.9430349Z Receiving objects:   4% (9/217)
+2023-09-16T00:04:32.9431200Z Receiving objects:   5% (11/217)
+2023-09-16T00:04:32.9550051Z Receiving objects:   6% (14/217)
+2023-09-16T00:04:32.9551264Z Receiving objects:   7% (16/217)
+2023-09-16T00:04:32.9554280Z Receiving objects:   8% (18/217)
+2023-09-16T00:04:32.9555061Z Receiving objects:   9% (20/217)
+2023-09-16T00:04:32.9829291Z Receiving objects:  10% (22/217)
+2023-09-16T00:04:32.9830168Z Receiving objects:  11% (24/217)
+2023-09-16T00:04:32.9832512Z Receiving objects:  12% (27/217)
+2023-09-16T00:04:32.9834180Z Receiving objects:  13% (29/217)
+2023-09-16T00:04:32.9835208Z Receiving objects:  14% (31/217)
+2023-09-16T00:04:32.9836178Z Receiving objects:  15% (33/217)
+2023-09-16T00:04:32.9837493Z Receiving objects:  16% (35/217)
+2023-09-16T00:04:32.9850545Z Receiving objects:  17% (37/217)
+2023-09-16T00:04:32.9851399Z Receiving objects:  18% (40/217)
+2023-09-16T00:04:32.9852219Z Receiving objects:  19% (42/217)
+2023-09-16T00:04:32.9853026Z Receiving objects:  20% (44/217)
+2023-09-16T00:04:32.9898944Z Receiving objects:  21% (46/217)
+2023-09-16T00:04:32.9899830Z Receiving objects:  22% (48/217)
+2023-09-16T00:04:32.9900637Z Receiving objects:  23% (50/217)
+2023-09-16T00:04:32.9901623Z Receiving objects:  24% (53/217)
+2023-09-16T00:04:32.9902447Z Receiving objects:  25% (55/217)
+2023-09-16T00:04:32.9903235Z Receiving objects:  26% (57/217)
+2023-09-16T00:04:32.9904035Z Receiving objects:  27% (59/217)
+2023-09-16T00:04:32.9904844Z Receiving objects:  28% (61/217)
+2023-09-16T00:04:32.9905622Z Receiving objects:  29% (63/217)
+2023-09-16T00:04:32.9906420Z Receiving objects:  30% (66/217)
+2023-09-16T00:04:32.9907230Z Receiving objects:  31% (68/217)
+2023-09-16T00:04:32.9908024Z Receiving objects:  32% (70/217)
+2023-09-16T00:04:32.9963930Z Receiving objects:  33% (72/217)
+2023-09-16T00:04:32.9964808Z Receiving objects:  34% (74/217)
+2023-09-16T00:04:32.9965641Z Receiving objects:  35% (76/217)
+2023-09-16T00:04:32.9966447Z Receiving objects:  36% (79/217)
+2023-09-16T00:04:33.0079030Z Receiving objects:  37% (81/217)
+2023-09-16T00:04:33.0079915Z Receiving objects:  38% (83/217)
+2023-09-16T00:04:33.0080718Z Receiving objects:  39% (85/217)
+2023-09-16T00:04:33.0092786Z Receiving objects:  40% (87/217)
+2023-09-16T00:04:33.0093639Z Receiving objects:  41% (89/217)
+2023-09-16T00:04:33.0094472Z Receiving objects:  42% (92/217)
+2023-09-16T00:04:33.0095273Z Receiving objects:  43% (94/217)
+2023-09-16T00:04:33.0096092Z Receiving objects:  44% (96/217)
+2023-09-16T00:04:33.0101785Z Receiving objects:  45% (98/217)
+2023-09-16T00:04:33.0102644Z Receiving objects:  46% (100/217)
+2023-09-16T00:04:33.0105506Z Receiving objects:  47% (102/217)
+2023-09-16T00:04:33.0110061Z Receiving objects:  48% (105/217)
+2023-09-16T00:04:33.0112076Z Receiving objects:  49% (107/217)
+2023-09-16T00:04:33.0112921Z Receiving objects:  50% (109/217)
+2023-09-16T00:04:33.0115966Z Receiving objects:  51% (111/217)
+2023-09-16T00:04:33.0117515Z Receiving objects:  52% (113/217)
+2023-09-16T00:04:33.0118921Z Receiving objects:  53% (116/217)
+2023-09-16T00:04:33.0119747Z Receiving objects:  54% (118/217)
+2023-09-16T00:04:33.0124353Z Receiving objects:  55% (120/217)
+2023-09-16T00:04:33.0128364Z Receiving objects:  56% (122/217)
+2023-09-16T00:04:33.0130087Z Receiving objects:  57% (124/217)
+2023-09-16T00:04:33.0131147Z Receiving objects:  58% (126/217)
+2023-09-16T00:04:33.0131959Z Receiving objects:  59% (129/217)
+2023-09-16T00:04:33.0139096Z Receiving objects:  60% (131/217)
+2023-09-16T00:04:33.0140022Z Receiving objects:  61% (133/217)
+2023-09-16T00:04:33.0141539Z Receiving objects:  62% (135/217)
+2023-09-16T00:04:33.0185378Z Receiving objects:  63% (137/217)
+2023-09-16T00:04:33.0186700Z Receiving objects:  64% (139/217)
+2023-09-16T00:04:33.0187863Z Receiving objects:  65% (142/217)
+2023-09-16T00:04:33.0188921Z Receiving objects:  66% (144/217)
+2023-09-16T00:04:33.0190084Z Receiving objects:  67% (146/217)
+2023-09-16T00:04:33.0191277Z Receiving objects:  68% (148/217)
+2023-09-16T00:04:33.0192445Z Receiving objects:  69% (150/217)
+2023-09-16T00:04:33.0193545Z Receiving objects:  70% (152/217)
+2023-09-16T00:04:33.0194716Z Receiving objects:  71% (155/217)
+2023-09-16T00:04:33.0244320Z Receiving objects:  72% (157/217)
+2023-09-16T00:04:33.0347400Z Receiving objects:  73% (159/217)
+2023-09-16T00:04:33.0348204Z Receiving objects:  74% (161/217)
+2023-09-16T00:04:33.0348909Z Receiving objects:  75% (163/217)
+2023-09-16T00:04:33.0349607Z Receiving objects:  76% (165/217)
+2023-09-16T00:04:33.0350326Z Receiving objects:  77% (168/217)
+2023-09-16T00:04:33.0351032Z Receiving objects:  78% (170/217)
+2023-09-16T00:04:33.0351751Z Receiving objects:  79% (172/217)
+2023-09-16T00:04:33.0352691Z Receiving objects:  80% (174/217)
+2023-09-16T00:04:33.0353387Z Receiving objects:  81% (176/217)
+2023-09-16T00:04:33.0415398Z Receiving objects:  82% (178/217)
+2023-09-16T00:04:33.0416630Z remote: Total 217 (delta 31), reused 90 (delta 2), pack-reused 0        
+2023-09-16T00:04:33.0454910Z Receiving objects:  83% (181/217)
+2023-09-16T00:04:33.0455781Z Receiving objects:  84% (183/217)
+2023-09-16T00:04:33.0456572Z Receiving objects:  85% (185/217)
+2023-09-16T00:04:33.0457374Z Receiving objects:  86% (187/217)
+2023-09-16T00:04:33.0458184Z Receiving objects:  87% (189/217)
+2023-09-16T00:04:33.0458980Z Receiving objects:  88% (191/217)
+2023-09-16T00:04:33.0459776Z Receiving objects:  89% (194/217)
+2023-09-16T00:04:33.0460590Z Receiving objects:  90% (196/217)
+2023-09-16T00:04:33.0461530Z Receiving objects:  91% (198/217)
+2023-09-16T00:04:33.0462314Z Receiving objects:  92% (200/217)
+2023-09-16T00:04:33.0463132Z Receiving objects:  93% (202/217)
+2023-09-16T00:04:33.0463938Z Receiving objects:  94% (204/217)
+2023-09-16T00:04:33.0464729Z Receiving objects:  95% (207/217)
+2023-09-16T00:04:33.0465526Z Receiving objects:  96% (209/217)
+2023-09-16T00:04:33.0466318Z Receiving objects:  97% (211/217)
+2023-09-16T00:04:33.0467106Z Receiving objects:  98% (213/217)
+2023-09-16T00:04:33.0467882Z Receiving objects:  99% (215/217)
+2023-09-16T00:04:33.0468681Z Receiving objects: 100% (217/217)
+2023-09-16T00:04:33.0469556Z Receiving objects: 100% (217/217), 375.64 KiB | 3.58 MiB/s, done.
+2023-09-16T00:04:33.0475338Z Resolving deltas:   0% (0/31)
+2023-09-16T00:04:33.0476146Z Resolving deltas:   3% (1/31)
+2023-09-16T00:04:33.0478090Z Resolving deltas:   6% (2/31)
+2023-09-16T00:04:33.0478921Z Resolving deltas:   9% (3/31)
+2023-09-16T00:04:33.0480554Z Resolving deltas:  12% (4/31)
+2023-09-16T00:04:33.0481772Z Resolving deltas:  16% (5/31)
+2023-09-16T00:04:33.0483816Z Resolving deltas:  19% (6/31)
+2023-09-16T00:04:33.0485936Z Resolving deltas:  22% (7/31)
+2023-09-16T00:04:33.0487436Z Resolving deltas:  25% (8/31)
+2023-09-16T00:04:33.0488327Z Resolving deltas:  29% (9/31)
+2023-09-16T00:04:33.0489420Z Resolving deltas:  32% (10/31)
+2023-09-16T00:04:33.0490318Z Resolving deltas:  35% (11/31)
+2023-09-16T00:04:33.0491951Z Resolving deltas:  38% (12/31)
+2023-09-16T00:04:33.0495001Z Resolving deltas:  41% (13/31)
+2023-09-16T00:04:33.0495947Z Resolving deltas:  45% (14/31)
+2023-09-16T00:04:33.0497408Z Resolving deltas:  48% (15/31)
+2023-09-16T00:04:33.0500189Z Resolving deltas:  51% (16/31)
+2023-09-16T00:04:33.0501272Z Resolving deltas:  54% (17/31)
+2023-09-16T00:04:33.0504178Z Resolving deltas:  58% (18/31)
+2023-09-16T00:04:33.0505066Z Resolving deltas:  61% (19/31)
+2023-09-16T00:04:33.0506831Z Resolving deltas:  64% (20/31)
+2023-09-16T00:04:33.0507762Z Resolving deltas:  67% (21/31)
+2023-09-16T00:04:33.0509655Z Resolving deltas:  70% (22/31)
+2023-09-16T00:04:33.0512629Z Resolving deltas:  74% (23/31)
+2023-09-16T00:04:33.0516030Z Resolving deltas:  77% (24/31)
+2023-09-16T00:04:33.0516764Z Resolving deltas:  80% (25/31)
+2023-09-16T00:04:33.0518051Z Resolving deltas:  83% (26/31)
+2023-09-16T00:04:33.0520257Z Resolving deltas:  87% (27/31)
+2023-09-16T00:04:33.0520966Z Resolving deltas:  90% (28/31)
+2023-09-16T00:04:33.0523261Z Resolving deltas:  93% (29/31)
+2023-09-16T00:04:33.0523969Z Resolving deltas:  96% (30/31)
+2023-09-16T00:04:33.0543939Z Resolving deltas: 100% (31/31)
+2023-09-16T00:04:33.0544848Z Resolving deltas: 100% (31/31), done.
+2023-09-16T00:04:33.0603728Z From https://github.com/adamint/spotify-web-api-kotlin
+2023-09-16T00:04:33.0605083Z  * [new ref]         f1f54530807e3744014c8726240886eeb19c74f9 -> origin/main
+2023-09-16T00:04:33.0629309Z ##[endgroup]
+2023-09-16T00:04:33.0630783Z ##[group]Determining the checkout info
+2023-09-16T00:04:33.0632387Z ##[endgroup]
+2023-09-16T00:04:33.0633662Z ##[group]Checking out the ref
+2023-09-16T00:04:33.0636051Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2023-09-16T00:04:33.0884346Z Switched to a new branch 'main'
+2023-09-16T00:04:33.0889340Z branch 'main' set up to track 'origin/main'.
+2023-09-16T00:04:33.0893625Z ##[endgroup]
+2023-09-16T00:04:33.0945645Z [command]/usr/bin/git log -1 --format='%H'
+2023-09-16T00:04:33.0981014Z 'f1f54530807e3744014c8726240886eeb19c74f9'
+2023-09-16T00:04:33.1338701Z ##[group]Run actions/setup-java@v2
+2023-09-16T00:04:33.1339452Z with:
+2023-09-16T00:04:33.1340107Z   distribution: adopt
+2023-09-16T00:04:33.1340806Z   java-version: 17
+2023-09-16T00:04:33.1341738Z   java-package: jdk
+2023-09-16T00:04:33.1342413Z   architecture: x64
+2023-09-16T00:04:33.1343106Z   check-latest: false
+2023-09-16T00:04:33.1343789Z   server-id: github
+2023-09-16T00:04:33.1344484Z   server-username: GITHUB_ACTOR
+2023-09-16T00:04:33.1345227Z   server-password: GITHUB_TOKEN
+2023-09-16T00:04:33.1345957Z   overwrite-settings: true
+2023-09-16T00:04:33.1346647Z   job-status: success
+2023-09-16T00:04:33.1347306Z env:
+2023-09-16T00:04:33.1348330Z   SPOTIFY_CLIENT_ID: ***
+2023-09-16T00:04:33.1349099Z   SPOTIFY_CLIENT_SECRET: ***
+2023-09-16T00:04:33.1350003Z   SPOTIFY_REDIRECT_URI: https://***.com/projects/spotify/callback
+2023-09-16T00:04:33.1350963Z   NEXUS_USERNAME: ***
+2023-09-16T00:04:33.1351696Z   NEXUS_PASSWORD: ***
+2023-09-16T00:04:33.1373314Z   ORG_GRADLE_PROJECT_SIGNING_KEY: ***
+2023-09-16T00:04:33.1374158Z   ORG_GRADLE_PROJECT_SIGNING_PASSWORD: ***
+2023-09-16T00:04:33.1374971Z   SPOTIFY_API_PUBLISH_VERSION: 4.0.3
+2023-09-16T00:04:33.1375725Z ##[endgroup]
+2023-09-16T00:04:33.3249151Z Trying to resolve the latest version from remote
+2023-09-16T00:04:34.3947010Z Resolved latest version as 17.0.8+101
+2023-09-16T00:04:34.3947927Z Trying to download...
+2023-09-16T00:04:34.3949770Z Downloading Java 17.0.8+101 (Adopt-Hotspot) from https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.8.1%2B1/OpenJDK17U-jdk_x64_linux_hotspot_17.0.8.1_1.tar.gz ...
+2023-09-16T00:04:35.8024830Z Extracting Java archive...
+2023-09-16T00:04:35.8151517Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/16c5f626-1d13-4e5f-b897-482ac4bf529f -f /home/runner/work/_temp/e87b9d20-5391-4e91-a3a4-6734b2afff38
+2023-09-16T00:04:39.2539957Z Java 17.0.8+101 was downloaded
+2023-09-16T00:04:39.2541057Z Setting Java 17.0.8+101 as the default
+2023-09-16T00:04:39.2553135Z 
+2023-09-16T00:04:39.2553647Z Java configuration:
+2023-09-16T00:04:39.2554577Z   Distribution: adopt
+2023-09-16T00:04:39.2555739Z   Version: 17.0.8+101
+2023-09-16T00:04:39.2556873Z   Path: /opt/hostedtoolcache/Java_Adopt_jdk/17.0.8-101/x64
+2023-09-16T00:04:39.2557422Z 
+2023-09-16T00:04:39.2592917Z Creating settings.xml with server-id: github
+2023-09-16T00:04:39.2655961Z Writing to /home/runner/.m2/settings.xml
+2023-09-16T00:04:39.2860396Z ##[group]Run ./gradlew dokkaHtml
+2023-09-16T00:04:39.2861460Z [36;1m./gradlew dokkaHtml[0m
+2023-09-16T00:04:39.2928444Z shell: /usr/bin/bash -e {0}
+2023-09-16T00:04:39.2929140Z env:
+2023-09-16T00:04:39.2929941Z   SPOTIFY_CLIENT_ID: ***
+2023-09-16T00:04:39.2930730Z   SPOTIFY_CLIENT_SECRET: ***
+2023-09-16T00:04:39.2931626Z   SPOTIFY_REDIRECT_URI: https://***.com/projects/spotify/callback
+2023-09-16T00:04:39.2932556Z   NEXUS_USERNAME: ***
+2023-09-16T00:04:39.2933274Z   NEXUS_PASSWORD: ***
+2023-09-16T00:04:39.2954768Z   ORG_GRADLE_PROJECT_SIGNING_KEY: ***
+2023-09-16T00:04:39.2955653Z   ORG_GRADLE_PROJECT_SIGNING_PASSWORD: ***
+2023-09-16T00:04:39.2956467Z   SPOTIFY_API_PUBLISH_VERSION: 4.0.3
+2023-09-16T00:04:39.2957304Z   JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/17.0.8-101/x64
+2023-09-16T00:04:39.2958159Z ##[endgroup]
+2023-09-16T00:04:39.8112774Z Downloading https://services.gradle.org/distributions/gradle-8.3-bin.zip
+2023-09-16T00:04:41.8431572Z ............10%............20%.............30%............40%.............50%............60%.............70%............80%.............90%............100%
+2023-09-16T00:04:43.6149843Z 
+2023-09-16T00:04:43.6150723Z Welcome to Gradle 8.3!
+2023-09-16T00:04:43.6151159Z 
+2023-09-16T00:04:43.6151566Z Here are the highlights of this release:
+2023-09-16T00:04:43.6152595Z  - Faster Java compilation
+2023-09-16T00:04:43.6153348Z  - Reduced memory usage
+2023-09-16T00:04:43.6154545Z  - Support for running on Java 20
+2023-09-16T00:04:43.6154955Z 
+2023-09-16T00:04:43.6155502Z For more details see https://docs.gradle.org/8.3/release-notes.html
+2023-09-16T00:04:43.6156111Z 
+2023-09-16T00:04:43.7163795Z Starting a Gradle Daemon (subsequent builds will be faster)
+2023-09-16T00:06:27.2143485Z 
+2023-09-16T00:06:27.2160365Z > Configure project :
+2023-09-16T00:06:27.2177829Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/build.gradle.kts:59:9: 'targetSdk: Int?' is deprecated. Will be removed from library DSL in v9.0
+2023-09-16T00:06:27.2200156Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/build.gradle.kts:113:13: 'webpackTask(KotlinWebpack.() -> Unit): Unit' is deprecated. Please use webpackTask(Action)
+2023-09-16T00:06:27.2205169Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/build.gradle.kts:118:13: 'testTask(KotlinJsTest.() -> Unit): Unit' is deprecated. Please use testTask(Action)
+2023-09-16T00:06:27.2293459Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/build.gradle.kts:355:30: 'getter for buildDir: File!' is deprecated. Deprecated in Java
+2023-09-16T00:06:29.5136894Z 
+2023-09-16T00:06:29.5137859Z Please wait while Kotlin/Native compiler 1.9.10 is being installed.
+2023-09-16T00:06:30.1140436Z Download https://download.jetbrains.com/kotlin/native/builds/releases/1.9.10/linux-x86_64/kotlin-native-prebuilt-linux-x86_64-1.9.10.tar.gz (192.68 MB)
+2023-09-16T00:06:33.1142649Z Download kotlin-native-prebuilt-linux-x86_64-1.9.10.tar.gz finished, took 2 s 998 ms
+2023-09-16T00:06:33.1144454Z Unpack Kotlin/Native compiler to /home/runner/.konan/kotlin-native-prebuilt-linux-x86_64-1.9.10
+2023-09-16T00:06:36.0136794Z Unpack Kotlin/Native compiler to /home/runner/.konan/kotlin-native-prebuilt-linux-x86_64-1.9.10 finished, took 2 s 875 ms
+2023-09-16T00:06:38.9136749Z 
+2023-09-16T00:06:38.9138114Z Some Kotlin/Native targets cannot be built on this linux_x64 machine and are disabled:
+2023-09-16T00:06:38.9139597Z     * In project ':':
+2023-09-16T00:06:38.9140855Z         * targets 'macosX64', 'iosArm64', 'iosX64' (can be built with one of the hosts: macos_x64, macos_arm64)
+2023-09-16T00:06:38.9142788Z To hide this message, add 'kotlin.native.ignoreDisabledTargets=true' to the Gradle properties.
+2023-09-16T00:06:38.9143491Z 
+2023-09-16T00:06:41.8150355Z 
+2023-09-16T00:06:41.8151269Z > Task :commonizeNativeDistribution
+2023-09-16T00:06:41.8152461Z   Warning: No libraries found for target macos_x64. This target will be excluded from commonization.
+2023-09-16T00:06:41.8154225Z   Warning: No libraries found for target ios_arm64. This target will be excluded from commonization.
+2023-09-16T00:06:41.8155578Z   Warning: No libraries found for target ios_x64. This target will be excluded from commonization.
+2023-09-16T00:07:15.4136996Z 
+2023-09-16T00:07:15.4138084Z > Task :transformCommonMainDependenciesMetadata
+2023-09-16T00:07:27.7137079Z > Task :preBuild UP-TO-DATE
+2023-09-16T00:07:27.7138264Z > Task :preDebugBuild UP-TO-DATE
+2023-09-16T00:07:27.8136787Z > Task :generateDebugResValues
+2023-09-16T00:07:27.8137917Z > Task :generateDebugResources
+2023-09-16T00:07:28.1136821Z > Task :packageDebugResources
+2023-09-16T00:07:30.2143527Z > Task :parseDebugLocalResources
+2023-09-16T00:07:30.4141941Z 
+2023-09-16T00:07:30.4146383Z > Task :processDebugManifest
+2023-09-16T00:07:30.4149281Z package="com.***.spotify" found in source AndroidManifest.xml: /home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/src/androidMain/AndroidManifest.xml.
+2023-09-16T00:07:30.4151812Z Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+2023-09-16T00:07:30.4156698Z Recommendation: remove package="com.***.spotify" from the source AndroidManifest.xml: /home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/src/androidMain/AndroidManifest.xml.
+2023-09-16T00:07:30.6141887Z 
+2023-09-16T00:07:30.6143937Z > Task :generateDebugRFile
+2023-09-16T00:07:30.6145475Z > Task :preReleaseBuild UP-TO-DATE
+2023-09-16T00:07:30.6146282Z > Task :generateReleaseResValues
+2023-09-16T00:07:30.6148225Z > Task :generateReleaseResources
+2023-09-16T00:07:30.6164393Z > Task :packageReleaseResources
+2023-09-16T00:07:30.7147288Z > Task :parseReleaseLocalResources
+2023-09-16T00:07:30.7147813Z 
+2023-09-16T00:07:30.7148176Z > Task :processReleaseManifest
+2023-09-16T00:07:30.7150017Z package="com.***.spotify" found in source AndroidManifest.xml: /home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/src/androidMain/AndroidManifest.xml.
+2023-09-16T00:07:30.7151605Z Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+2023-09-16T00:07:30.7153476Z Recommendation: remove package="com.***.spotify" from the source AndroidManifest.xml: /home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/src/androidMain/AndroidManifest.xml.
+2023-09-16T00:07:30.7154398Z 
+2023-09-16T00:07:30.7154740Z > Task :generateReleaseRFile
+2023-09-16T00:07:30.7155629Z > Task :metadataCommonMainProcessResources NO-SOURCE
+2023-09-16T00:07:31.0138840Z > Task :transformCommonJvmLikeMainDependenciesMetadata
+2023-09-16T00:07:31.5136435Z > Task :transformDesktopMainDependenciesMetadata
+2023-09-16T00:07:50.9142959Z 
+2023-09-16T00:07:50.9144133Z > Task :compileCommonMainKotlinMetadata
+2023-09-16T00:07:50.9146455Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/src/commonMain/kotlin/com.***.spotify/utils/Utils.kt:20:39 Parameter 'catchInternalServerError' is never used
+2023-09-16T00:07:50.9147649Z 
+2023-09-16T00:07:50.9148107Z > Task :metadataCommonMainClasses
+2023-09-16T00:08:09.8135923Z 
+2023-09-16T00:08:09.8137026Z > Task :dokkaHtml
+2023-09-16T00:08:09.8274778Z Execution optimizations have been disabled for task ':dokkaHtml' to ensure correctness due to the following reasons:
+2023-09-16T00:08:09.8277703Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$0.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:09.8282071Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$1.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:09.8285934Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$2.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:09.8289733Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$3.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:09.8293704Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$4.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:09.8297424Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$5.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:09.8301330Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$6.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:09.8305032Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$7.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:09.8308776Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$8.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:09.8312482Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$9.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:09.8316261Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$10.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:09.8320072Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$11.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:09.8323937Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$12.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:09.8327685Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$13.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:09.8331469Z   - In plugin 'org.jetbrains.dokka' type 'org.jetbrains.dokka.gradle.DokkaTask' property 'unsuppressedSourceSets.$14.sourceLinks.$0.remoteUrl' has @Input annotation used on type 'java.net.URL' or a property of this type. Reason: Type 'java.net.URL' is not supported on properties annotated with @Input because Java Serialization can be inconsistent for this type. For more information, please refer to https://docs.gradle.org/8.3/userguide/validation_problems.html#unsupported_value_type in the Gradle documentation.
+2023-09-16T00:08:11.8136060Z Initializing plugins
+2023-09-16T00:08:12.0142714Z Dokka is performing: documentation for spotify-api-kotlin
+2023-09-16T00:08:12.0144034Z Validity check
+2023-09-16T00:08:12.0144836Z Creating documentation models
+2023-09-16T00:08:34.0136268Z Transforming documentation model before merging
+2023-09-16T00:08:34.2139168Z Merging documentation models
+2023-09-16T00:08:34.2140305Z Transforming documentation model after merging
+2023-09-16T00:08:34.4136310Z Creating pages
+2023-09-16T00:08:35.5136137Z Transforming pages
+2023-09-16T00:08:35.9135948Z Rendering
+2023-09-16T00:09:08.5136756Z Running post-actions
+2023-09-16T00:09:08.6135208Z 
+2023-09-16T00:09:09.1141949Z 
+2023-09-16T00:09:09.1143796Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2023-09-16T00:09:09.1144800Z 
+2023-09-16T00:09:09.1146994Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2023-09-16T00:09:09.1147952Z 
+2023-09-16T00:09:09.1148966Z For more on this, please refer to https://docs.gradle.org/8.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2023-09-16T00:09:09.1149940Z 
+2023-09-16T00:09:09.1225557Z Execution optimizations have been disabled for 1 invalid unit(s) of work during this build to ensure correctness.
+2023-09-16T00:09:09.1227057Z Please consult deprecation warnings for more details.
+2023-09-16T00:09:09.1227767Z 
+2023-09-16T00:09:09.1228716Z BUILD SUCCESSFUL in 4m 29s
+2023-09-16T00:09:09.1229545Z 16 actionable tasks: 16 executed
+2023-09-16T00:09:09.4874755Z ##[group]Run cpina/github-action-push-to-another-repository@main
+2023-09-16T00:09:09.4875738Z with:
+2023-09-16T00:09:09.4876474Z   source-directory: docs
+2023-09-16T00:09:09.4877261Z   destination-github-username: adamint
+2023-09-16T00:09:09.4878167Z   destination-repository-name: spotify-web-api-kotlin-docs
+2023-09-16T00:09:09.4879174Z   user-email: adam@***.com
+2023-09-16T00:09:09.4879919Z   target-branch: main
+2023-09-16T00:09:09.4880649Z   github-server: github.com
+2023-09-16T00:09:09.4881685Z   commit-message: Update from ORIGIN_COMMIT
+2023-09-16T00:09:09.4882555Z   create-target-branch-if-needed: false
+2023-09-16T00:09:09.4883314Z env:
+2023-09-16T00:09:09.4884080Z   SPOTIFY_CLIENT_ID: ***
+2023-09-16T00:09:09.4885239Z   SPOTIFY_CLIENT_SECRET: ***
+2023-09-16T00:09:09.4886513Z   SPOTIFY_REDIRECT_URI: https://***.com/projects/spotify/callback
+2023-09-16T00:09:09.4906755Z   NEXUS_USERNAME: ***
+2023-09-16T00:09:09.4907571Z   NEXUS_PASSWORD: ***
+2023-09-16T00:09:09.4928973Z   ORG_GRADLE_PROJECT_SIGNING_KEY: ***
+2023-09-16T00:09:09.4929859Z   ORG_GRADLE_PROJECT_SIGNING_PASSWORD: ***
+2023-09-16T00:09:09.4930702Z   SPOTIFY_API_PUBLISH_VERSION: 4.0.3
+2023-09-16T00:09:09.4931579Z   JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/17.0.8-101/x64
+2023-09-16T00:09:09.4932642Z   API_TOKEN_GITHUB: ***
+2023-09-16T00:09:09.4933351Z ##[endgroup]
+2023-09-16T00:09:09.5255597Z ##[command]/usr/bin/docker run --name bf4f6470c098b41a2a5970c2f31031850_39dbdb --label 94351b --workdir /github/workspace --rm -e "SPOTIFY_CLIENT_ID" -e "SPOTIFY_CLIENT_SECRET" -e "SPOTIFY_REDIRECT_URI" -e "NEXUS_USERNAME" -e "NEXUS_PASSWORD" -e "ORG_GRADLE_PROJECT_SIGNING_KEY" -e "ORG_GRADLE_PROJECT_SIGNING_PASSWORD" -e "SPOTIFY_API_PUBLISH_VERSION" -e "JAVA_HOME" -e "API_TOKEN_GITHUB" -e "INPUT_SOURCE-DIRECTORY" -e "INPUT_DESTINATION-GITHUB-USERNAME" -e "INPUT_DESTINATION-REPOSITORY-NAME" -e "INPUT_USER-EMAIL" -e "INPUT_TARGET-BRANCH" -e "INPUT_SOURCE-BEFORE-DIRECTORY" -e "INPUT_GITHUB-SERVER" -e "INPUT_USER-NAME" -e "INPUT_DESTINATION-REPOSITORY-USERNAME" -e "INPUT_COMMIT-MESSAGE" -e "INPUT_TARGET-DIRECTORY" -e "INPUT_CREATE-TARGET-BRANCH-IF-NEEDED" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin":"/github/workspace" 94351b:f4f6470c098b41a2a5970c2f31031850  "" "docs" "adamint" "spotify-web-api-kotlin-docs" "github.com" "adam@***.com" "" "" "main" "Update from ORIGIN_COMMIT" "" "false"
+2023-09-16T00:09:09.9694453Z [+] Action start
+2023-09-16T00:09:09.9695377Z [+] Using API_TOKEN_GITHUB
+2023-09-16T00:09:09.9717154Z [+] Git version
+2023-09-16T00:09:09.9804626Z git version 2.40.1
+2023-09-16T00:09:09.9816366Z [+] Enable git lfs
+2023-09-16T00:09:10.0007808Z Git LFS initialized.
+2023-09-16T00:09:10.0014161Z [+] Cloning destination git repository spotify-web-api-kotlin-docs
+2023-09-16T00:09:10.0062942Z Cloning into '/tmp/tmp.eoBmOP'...
+2023-09-16T00:09:11.2159462Z total 648
+2023-09-16T00:09:11.2161501Z drwx------    7 root     root          4096 Sep 16 00:09 .
+2023-09-16T00:09:11.2162595Z drwxrwxrwt    1 root     root          4096 Sep 16 00:09 ..
+2023-09-16T00:09:11.2163769Z drwxr-xr-x    8 root     root          4096 Sep 16 00:09 .git
+2023-09-16T00:09:11.2164944Z drwxr-xr-x    3 root     root          4096 Sep 16 00:09 images
+2023-09-16T00:09:11.2166135Z -rw-r--r--    1 root     root         22532 Sep 16 00:09 index.html
+2023-09-16T00:09:11.2167769Z -rw-r--r--    1 root     root        607650 Sep 16 00:09 navigation.html
+2023-09-16T00:09:11.2169037Z drwxr-xr-x    2 root     root          4096 Sep 16 00:09 scripts
+2023-09-16T00:09:11.2170301Z drwxr-xr-x   17 root     root          4096 Sep 16 00:09 spotify-api-kotlin
+2023-09-16T00:09:11.2171533Z drwxr-xr-x    2 root     root          4096 Sep 16 00:09 styles
+2023-09-16T00:09:11.2178319Z [+] Deleting /tmp/tmp.eoBmOP//
+2023-09-16T00:09:11.3098643Z [+] Creating (now empty) /tmp/tmp.eoBmOP//
+2023-09-16T00:09:11.3106984Z [+] Listing Current Directory Location
+2023-09-16T00:09:11.3121848Z total 148
+2023-09-16T00:09:11.3123075Z drwxr-xr-x   10 1001     127           4096 Sep 16 00:08 .
+2023-09-16T00:09:11.3128145Z drwxr-xr-x    6 root     root          4096 Sep 16 00:09 ..
+2023-09-16T00:09:11.3129644Z drwxr-xr-x    8 1001     127           4096 Sep 16 00:04 .git
+2023-09-16T00:09:11.3130943Z drwxr-xr-x    5 1001     127           4096 Sep 16 00:04 .github
+2023-09-16T00:09:11.3132270Z -rw-r--r--    1 1001     127           6460 Sep 16 00:04 .gitignore
+2023-09-16T00:09:11.3134735Z drwxr-xr-x    6 1001     127           4096 Sep 16 00:07 .gradle
+2023-09-16T00:09:11.3135969Z -rw-r--r--    1 1001     127            471 Sep 16 00:04 CONTRIBUTING.md
+2023-09-16T00:09:11.3137288Z -rw-r--r--    1 1001     127           1090 Sep 16 00:04 LICENSE
+2023-09-16T00:09:11.3146704Z -rw-r--r--    1 1001     127          27998 Sep 16 00:04 README.md
+2023-09-16T00:09:11.3148190Z -rw-r--r--    1 1001     127          14074 Sep 16 00:04 README_ANDROID.md
+2023-09-16T00:09:11.3149428Z -rw-r--r--    1 1001     127           1869 Sep 16 00:04 TESTING.md
+2023-09-16T00:09:11.3150680Z drwxr-xr-x    9 1001     127           4096 Sep 16 00:07 build
+2023-09-16T00:09:11.3152015Z -rw-r--r--    1 1001     127          15182 Sep 16 00:04 build.gradle.kts
+2023-09-16T00:09:11.3153203Z drwxr-xr-x    6 1001     127           4096 Sep 16 00:09 docs
+2023-09-16T00:09:11.3154439Z drwxr-xr-x    3 1001     127           4096 Sep 16 00:04 gradle
+2023-09-16T00:09:11.3155662Z -rw-r--r--    1 1001     127            537 Sep 16 00:04 gradle.properties
+2023-09-16T00:09:11.3156994Z -rwxr-xr-x    1 1001     127           8070 Sep 16 00:04 gradlew
+2023-09-16T00:09:11.3158258Z -rw-r--r--    1 1001     127           2763 Sep 16 00:04 gradlew.bat
+2023-09-16T00:09:11.3159334Z -rw-r--r--    1 1001     127            443 Sep 16 00:04 publish_all.sh
+2023-09-16T00:09:11.3160599Z -rw-r--r--    1 1001     127           1414 Sep 16 00:04 settings.gradle.kts
+2023-09-16T00:09:11.3161632Z drwxr-xr-x   18 1001     127           4096 Sep 16 00:04 src
+2023-09-16T00:09:11.3162846Z drwxr-xr-x    2 1001     127           4096 Sep 16 00:04 webpack.config.d
+2023-09-16T00:09:11.3163960Z -rw-r--r--    1 1001     127             69 Sep 16 00:04 webpack.config.js
+2023-09-16T00:09:11.3164862Z [+] Listing root Location
+2023-09-16T00:09:11.3169377Z total 84
+2023-09-16T00:09:11.3170268Z drwxr-xr-x    1 root     root          4096 Sep 16 00:09 .
+2023-09-16T00:09:11.3171287Z drwxr-xr-x    1 root     root          4096 Sep 16 00:09 ..
+2023-09-16T00:09:11.3172319Z -rwxr-xr-x    1 root     root             0 Sep 16 00:09 .dockerenv
+2023-09-16T00:09:11.3173515Z drwxr-xr-x    2 root     root          4096 Aug  7 13:09 bin
+2023-09-16T00:09:11.3174530Z drwxr-xr-x    5 root     root           340 Sep 16 00:09 dev
+2023-09-16T00:09:11.3175566Z -rwxr-xr-x    1 root     root          6069 May 19 21:31 entrypoint.sh
+2023-09-16T00:09:11.3176900Z drwxr-xr-x    1 root     root          4096 Sep 16 00:09 etc
+2023-09-16T00:09:11.3177924Z drwxr-xr-x    6 root     root          4096 Sep 16 00:09 github
+2023-09-16T00:09:11.3178915Z drwxr-xr-x    2 root     root          4096 Aug  7 13:09 home
+2023-09-16T00:09:11.3179910Z drwxr-xr-x    1 root     root          4096 Aug  7 13:09 lib
+2023-09-16T00:09:11.3180897Z drwxr-xr-x    5 root     root          4096 Aug  7 13:09 media
+2023-09-16T00:09:11.3182062Z drwxr-xr-x    2 root     root          4096 Aug  7 13:09 mnt
+2023-09-16T00:09:11.3183232Z drwxr-xr-x    2 root     root          4096 Aug  7 13:09 opt
+2023-09-16T00:09:11.3184229Z dr-xr-xr-x  203 root     root             0 Sep 16 00:09 proc
+2023-09-16T00:09:11.3185205Z drwx------    2 root     root          4096 Aug  7 13:09 root
+2023-09-16T00:09:11.3186391Z drwxr-xr-x    1 root     root          4096 Sep 16 00:09 run
+2023-09-16T00:09:11.3187436Z drwxr-xr-x    2 root     root          4096 Aug  7 13:09 sbin
+2023-09-16T00:09:11.3188429Z drwxr-xr-x    2 root     root          4096 Aug  7 13:09 srv
+2023-09-16T00:09:11.3189423Z dr-xr-xr-x   12 root     root             0 Sep 16 00:09 sys
+2023-09-16T00:09:11.3190342Z drwxrwxrwt    1 root     root          4096 Sep 16 00:09 tmp
+2023-09-16T00:09:11.3191311Z drwxr-xr-x    1 root     root          4096 Sep 16 00:04 usr
+2023-09-16T00:09:11.3192309Z drwxr-xr-x    1 root     root          4096 Sep 16 00:04 var
+2023-09-16T00:09:11.3193183Z [+] List contents of docs
+2023-09-16T00:09:11.3193870Z images
+2023-09-16T00:09:11.3194549Z index.html
+2023-09-16T00:09:11.3195243Z navigation.html
+2023-09-16T00:09:11.3195916Z scripts
+2023-09-16T00:09:11.3196646Z spotify-api-kotlin
+2023-09-16T00:09:11.3197344Z styles
+2023-09-16T00:09:11.3198046Z [+] Checking if local docs exist
+2023-09-16T00:09:11.3199211Z [+] Copying contents of source repository folder docs to folder  in git repo spotify-web-api-kotlin-docs
+2023-09-16T00:09:11.5293243Z [+] Files that will be pushed
+2023-09-16T00:09:11.5297377Z total 648
+2023-09-16T00:09:11.5301424Z drwxr-xr-x    7 1001     127           4096 Sep 16 00:09 .
+2023-09-16T00:09:11.5302689Z drwxrwxrwt    1 root     root          4096 Sep 16 00:09 ..
+2023-09-16T00:09:11.5305020Z drwxr-xr-x    8 root     root          4096 Sep 16 00:09 .git
+2023-09-16T00:09:11.5306187Z drwxr-xr-x    3 1001     127           4096 Sep 16 00:09 images
+2023-09-16T00:09:11.5307332Z -rw-r--r--    1 1001     127          22532 Sep 16 00:09 index.html
+2023-09-16T00:09:11.5308530Z -rw-r--r--    1 1001     127         607650 Sep 16 00:09 navigation.html
+2023-09-16T00:09:11.5309705Z drwxr-xr-x    2 1001     127           4096 Sep 16 00:09 scripts
+2023-09-16T00:09:11.5310879Z drwxr-xr-x   17 1001     127           4096 Sep 16 00:09 spotify-api-kotlin
+2023-09-16T00:09:11.5312003Z drwxr-xr-x    2 1001     127           4096 Sep 16 00:09 styles
+2023-09-16T00:09:11.5312971Z [+] Set directory is safe (/tmp/tmp.eoBmOP)
+2023-09-16T00:09:11.5322095Z [+] Adding git commit
+2023-09-16T00:09:11.7493931Z [+] git status:
+2023-09-16T00:09:11.7812001Z On branch main
+2023-09-16T00:09:11.7813218Z Your branch is up to date with 'origin/main'.
+2023-09-16T00:09:11.7813797Z 
+2023-09-16T00:09:11.7814222Z nothing to commit, working tree clean
+2023-09-16T00:09:11.7815169Z [+] git diff-index:
+2023-09-16T00:09:11.7980288Z [+] Pushing git commit
+2023-09-16T00:09:12.0135546Z Everything up-to-date
+2023-09-16T00:09:12.0137460Z branch 'main' set up to track '***github.com/adamint/spotify-web-api-kotlin-docs.git/main'.
+2023-09-16T00:09:12.2865486Z Post job cleanup.
+2023-09-16T00:09:12.4689014Z Post job cleanup.
+2023-09-16T00:09:12.6096853Z [command]/usr/bin/git version
+2023-09-16T00:09:12.6156766Z git version 2.42.0
+2023-09-16T00:09:12.6209853Z Temporarily overriding HOME='/home/runner/work/_temp/48e84bd4-1bd6-4eab-88d4-f5cfedb9465a' before making global git config changes
+2023-09-16T00:09:12.6214093Z Adding repository directory to the temporary git global config as a safe directory
+2023-09-16T00:09:12.6221549Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin
+2023-09-16T00:09:12.6268994Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-09-16T00:09:12.6311548Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-09-16T00:09:12.6584990Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-09-16T00:09:12.6615347Z http.https://github.com/.extraheader
+2023-09-16T00:09:12.6626678Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-09-16T00:09:12.6666433Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-09-16T00:09:12.7218350Z Cleaning up orphan processes
+2023-09-16T00:09:12.7627867Z Terminate orphan process: pid (1942) (java)
+2023-09-16T00:09:12.7707264Z Terminate orphan process: pid (2104) (java)

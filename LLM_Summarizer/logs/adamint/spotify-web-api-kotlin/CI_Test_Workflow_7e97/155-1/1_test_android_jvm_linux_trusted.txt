@@ -1,0 +1,836 @@
+2023-09-15T23:26:16.9996586Z Requested labels: ubuntu-latest
+2023-09-15T23:26:16.9996854Z Job defined at: adamint/spotify-web-api-kotlin/.github/workflows/ci.yml@refs/pull/328/merge
+2023-09-15T23:26:16.9996971Z Waiting for a runner to pick up this job...
+2023-09-15T23:26:17.2604312Z Job is waiting for a hosted runner to come online.
+2023-09-15T23:26:20.7787574Z Job is about to start running on the hosted runner: GitHub Actions 2 (hosted)
+2023-09-15T23:26:23.7723431Z Current runner version: '2.309.0'
+2023-09-15T23:26:23.7756227Z ##[group]Operating System
+2023-09-15T23:26:23.7756936Z Ubuntu
+2023-09-15T23:26:23.7757322Z 22.04.3
+2023-09-15T23:26:23.7757849Z LTS
+2023-09-15T23:26:23.7758188Z ##[endgroup]
+2023-09-15T23:26:23.7758627Z ##[group]Runner Image
+2023-09-15T23:26:23.7759091Z Image: ubuntu-22.04
+2023-09-15T23:26:23.7759529Z Version: 20230911.1.0
+2023-09-15T23:26:23.7760344Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230911.1/images/linux/Ubuntu2204-Readme.md
+2023-09-15T23:26:23.7761303Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230911.1
+2023-09-15T23:26:23.7761854Z ##[endgroup]
+2023-09-15T23:26:23.7762895Z ##[group]Runner Image Provisioner
+2023-09-15T23:26:23.7763533Z 2.0.299.1
+2023-09-15T23:26:23.7763959Z ##[endgroup]
+2023-09-15T23:26:23.7765315Z ##[group]GITHUB_TOKEN Permissions
+2023-09-15T23:26:23.7767595Z Actions: write
+2023-09-15T23:26:23.7768494Z Checks: write
+2023-09-15T23:26:23.7769166Z Contents: write
+2023-09-15T23:26:23.7769819Z Deployments: write
+2023-09-15T23:26:23.7770278Z Discussions: write
+2023-09-15T23:26:23.7770651Z Issues: write
+2023-09-15T23:26:23.7771061Z Metadata: read
+2023-09-15T23:26:23.7771519Z Packages: write
+2023-09-15T23:26:23.7772023Z Pages: write
+2023-09-15T23:26:23.7772451Z PullRequests: write
+2023-09-15T23:26:23.7772874Z RepositoryProjects: write
+2023-09-15T23:26:23.7773358Z SecurityEvents: write
+2023-09-15T23:26:23.7773883Z Statuses: write
+2023-09-15T23:26:23.7774309Z ##[endgroup]
+2023-09-15T23:26:23.7778619Z Secret source: Actions
+2023-09-15T23:26:23.7779209Z Prepare workflow directory
+2023-09-15T23:26:23.9178498Z Prepare all required actions
+2023-09-15T23:26:23.9411893Z Getting action download info
+2023-09-15T23:26:24.1851797Z Download action repository 'actions/checkout@v2' (SHA:ee0669bd1cc54295c223e0bb666b733df41de1c5)
+2023-09-15T23:26:24.5835891Z Download action repository 'actions/setup-java@v2' (SHA:91d3aa4956ec4a53e477c4907347b5e3481be8c9)
+2023-09-15T23:26:24.8585565Z Download action repository 'actions/upload-artifact@v2' (SHA:82c141cc518b40d92cc801eee768e7aafc9c2fa2)
+2023-09-15T23:26:25.1720177Z Complete job name: test_android_jvm_linux_trusted
+2023-09-15T23:26:25.2865071Z ##[group]Run actions/checkout@v2
+2023-09-15T23:26:25.2865485Z with:
+2023-09-15T23:26:25.2865858Z   repository: adamint/spotify-web-api-kotlin
+2023-09-15T23:26:25.2866520Z   token: ***
+2023-09-15T23:26:25.2866811Z   ssh-strict: true
+2023-09-15T23:26:25.2867149Z   persist-credentials: true
+2023-09-15T23:26:25.2867480Z   clean: true
+2023-09-15T23:26:25.2867771Z   fetch-depth: 1
+2023-09-15T23:26:25.2868062Z   lfs: false
+2023-09-15T23:26:25.2868335Z   submodules: false
+2023-09-15T23:26:25.2868662Z   set-safe-directory: true
+2023-09-15T23:26:25.2868973Z env:
+2023-09-15T23:26:25.2869352Z   SPOTIFY_CLIENT_ID: ***
+2023-09-15T23:26:25.2869772Z   SPOTIFY_CLIENT_SECRET: ***
+2023-09-15T23:26:25.2870094Z ##[endgroup]
+2023-09-15T23:26:25.6957813Z Syncing repository: adamint/spotify-web-api-kotlin
+2023-09-15T23:26:25.6960100Z ##[group]Getting Git version info
+2023-09-15T23:26:25.6960923Z Working directory is '/home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin'
+2023-09-15T23:26:25.6961905Z [command]/usr/bin/git version
+2023-09-15T23:26:25.7010054Z git version 2.42.0
+2023-09-15T23:26:25.7161297Z ##[endgroup]
+2023-09-15T23:26:25.7178296Z Temporarily overriding HOME='/home/runner/work/_temp/a44bf8f0-f5c9-428c-9e0e-eb9188da7c7f' before making global git config changes
+2023-09-15T23:26:25.7179108Z Adding repository directory to the temporary git global config as a safe directory
+2023-09-15T23:26:25.7180036Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin
+2023-09-15T23:26:25.7180958Z Deleting the contents of '/home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin'
+2023-09-15T23:26:25.7181966Z ##[group]Initializing the repository
+2023-09-15T23:26:25.7182677Z [command]/usr/bin/git init /home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin
+2023-09-15T23:26:25.7325564Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-09-15T23:26:25.7326342Z hint: is subject to change. To configure the initial branch name to use in all
+2023-09-15T23:26:25.7327051Z hint: of your new repositories, which will suppress this warning, call:
+2023-09-15T23:26:25.7333423Z hint: 
+2023-09-15T23:26:25.7334096Z hint: 	git config --global init.defaultBranch <name>
+2023-09-15T23:26:25.7334498Z hint: 
+2023-09-15T23:26:25.7335040Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-09-15T23:26:25.7335741Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-09-15T23:26:25.7336189Z hint: 
+2023-09-15T23:26:25.7336556Z hint: 	git branch -m <name>
+2023-09-15T23:26:25.7339550Z Initialized empty Git repository in /home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/.git/
+2023-09-15T23:26:25.7346075Z [command]/usr/bin/git remote add origin https://github.com/adamint/spotify-web-api-kotlin
+2023-09-15T23:26:25.7425230Z ##[endgroup]
+2023-09-15T23:26:25.7426279Z ##[group]Disabling automatic garbage collection
+2023-09-15T23:26:25.7483517Z [command]/usr/bin/git config --local gc.auto 0
+2023-09-15T23:26:25.7556015Z ##[endgroup]
+2023-09-15T23:26:25.7562294Z ##[group]Setting up auth
+2023-09-15T23:26:25.7563110Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-09-15T23:26:25.7646626Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-09-15T23:26:25.8236113Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-09-15T23:26:25.8280510Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-09-15T23:26:25.8631450Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-09-15T23:26:25.8708572Z ##[endgroup]
+2023-09-15T23:26:25.8710038Z ##[group]Fetching the repository
+2023-09-15T23:26:25.8711530Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +7f9ad31378738b8439834b3e25aa45af9b2b5707:refs/remotes/pull/328/merge
+2023-09-15T23:26:26.1017391Z remote: Enumerating objects: 217, done.        
+2023-09-15T23:26:26.1018663Z remote: Counting objects:   0% (1/217)        
+2023-09-15T23:26:26.1019559Z remote: Counting objects:   1% (3/217)        
+2023-09-15T23:26:26.1020310Z remote: Counting objects:   2% (5/217)        
+2023-09-15T23:26:26.1021500Z remote: Counting objects:   3% (7/217)        
+2023-09-15T23:26:26.1022250Z remote: Counting objects:   4% (9/217)        
+2023-09-15T23:26:26.1022988Z remote: Counting objects:   5% (11/217)        
+2023-09-15T23:26:26.1023814Z remote: Counting objects:   6% (14/217)        
+2023-09-15T23:26:26.1024456Z remote: Counting objects:   7% (16/217)        
+2023-09-15T23:26:26.1025096Z remote: Counting objects:   8% (18/217)        
+2023-09-15T23:26:26.1025669Z remote: Counting objects:   9% (20/217)        
+2023-09-15T23:26:26.1026237Z remote: Counting objects:  10% (22/217)        
+2023-09-15T23:26:26.1026802Z remote: Counting objects:  11% (24/217)        
+2023-09-15T23:26:26.1027539Z remote: Counting objects:  12% (27/217)        
+2023-09-15T23:26:26.1028109Z remote: Counting objects:  13% (29/217)        
+2023-09-15T23:26:26.1028740Z remote: Counting objects:  14% (31/217)        
+2023-09-15T23:26:26.1029481Z remote: Counting objects:  15% (33/217)        
+2023-09-15T23:26:26.1030059Z remote: Counting objects:  16% (35/217)        
+2023-09-15T23:26:26.1030628Z remote: Counting objects:  17% (37/217)        
+2023-09-15T23:26:26.1031175Z remote: Counting objects:  18% (40/217)        
+2023-09-15T23:26:26.1031744Z remote: Counting objects:  19% (42/217)        
+2023-09-15T23:26:26.1032711Z remote: Counting objects:  20% (44/217)        
+2023-09-15T23:26:26.1033278Z remote: Counting objects:  21% (46/217)        
+2023-09-15T23:26:26.1033859Z remote: Counting objects:  22% (48/217)        
+2023-09-15T23:26:26.1034425Z remote: Counting objects:  23% (50/217)        
+2023-09-15T23:26:26.1034987Z remote: Counting objects:  24% (53/217)        
+2023-09-15T23:26:26.1035981Z remote: Counting objects:  25% (55/217)        
+2023-09-15T23:26:26.1037703Z remote: Counting objects:  26% (57/217)        
+2023-09-15T23:26:26.1038356Z remote: Counting objects:  27% (59/217)        
+2023-09-15T23:26:26.1038902Z remote: Counting objects:  28% (61/217)        
+2023-09-15T23:26:26.1039459Z remote: Counting objects:  29% (63/217)        
+2023-09-15T23:26:26.1039993Z remote: Counting objects:  30% (66/217)        
+2023-09-15T23:26:26.1040528Z remote: Counting objects:  31% (68/217)        
+2023-09-15T23:26:26.1041068Z remote: Counting objects:  32% (70/217)        
+2023-09-15T23:26:26.1041625Z remote: Counting objects:  33% (72/217)        
+2023-09-15T23:26:26.1042149Z remote: Counting objects:  34% (74/217)        
+2023-09-15T23:26:26.1042685Z remote: Counting objects:  35% (76/217)        
+2023-09-15T23:26:26.1043205Z remote: Counting objects:  36% (79/217)        
+2023-09-15T23:26:26.1043726Z remote: Counting objects:  37% (81/217)        
+2023-09-15T23:26:26.1044230Z remote: Counting objects:  38% (83/217)        
+2023-09-15T23:26:26.1044981Z remote: Counting objects:  39% (85/217)        
+2023-09-15T23:26:26.1045533Z remote: Counting objects:  40% (87/217)        
+2023-09-15T23:26:26.1046066Z remote: Counting objects:  41% (89/217)        
+2023-09-15T23:26:26.1046589Z remote: Counting objects:  42% (92/217)        
+2023-09-15T23:26:26.1047410Z remote: Counting objects:  43% (94/217)        
+2023-09-15T23:26:26.1048020Z remote: Counting objects:  44% (96/217)        
+2023-09-15T23:26:26.1048761Z remote: Counting objects:  45% (98/217)        
+2023-09-15T23:26:26.1049281Z remote: Counting objects:  46% (100/217)        
+2023-09-15T23:26:26.1049845Z remote: Counting objects:  47% (102/217)        
+2023-09-15T23:26:26.1050759Z remote: Counting objects:  48% (105/217)        
+2023-09-15T23:26:26.1051333Z remote: Counting objects:  49% (107/217)        
+2023-09-15T23:26:26.1051869Z remote: Counting objects:  50% (109/217)        
+2023-09-15T23:26:26.1052402Z remote: Counting objects:  51% (111/217)        
+2023-09-15T23:26:26.1052928Z remote: Counting objects:  52% (113/217)        
+2023-09-15T23:26:26.1053454Z remote: Counting objects:  53% (116/217)        
+2023-09-15T23:26:26.1054149Z remote: Counting objects:  54% (118/217)        
+2023-09-15T23:26:26.1054698Z remote: Counting objects:  55% (120/217)        
+2023-09-15T23:26:26.1055227Z remote: Counting objects:  56% (122/217)        
+2023-09-15T23:26:26.1055736Z remote: Counting objects:  57% (124/217)        
+2023-09-15T23:26:26.1056279Z remote: Counting objects:  58% (126/217)        
+2023-09-15T23:26:26.1056805Z remote: Counting objects:  59% (129/217)        
+2023-09-15T23:26:26.1057731Z remote: Counting objects:  60% (131/217)        
+2023-09-15T23:26:26.1058296Z remote: Counting objects:  61% (133/217)        
+2023-09-15T23:26:26.1058822Z remote: Counting objects:  62% (135/217)        
+2023-09-15T23:26:26.1059348Z remote: Counting objects:  63% (137/217)        
+2023-09-15T23:26:26.1060111Z remote: Counting objects:  64% (139/217)        
+2023-09-15T23:26:26.1060643Z remote: Counting objects:  65% (142/217)        
+2023-09-15T23:26:26.1061169Z remote: Counting objects:  66% (144/217)        
+2023-09-15T23:26:26.1061843Z remote: Counting objects:  67% (146/217)        
+2023-09-15T23:26:26.1062392Z remote: Counting objects:  68% (148/217)        
+2023-09-15T23:26:26.1062919Z remote: Counting objects:  69% (150/217)        
+2023-09-15T23:26:26.1063468Z remote: Counting objects:  70% (152/217)        
+2023-09-15T23:26:26.1063995Z remote: Counting objects:  71% (155/217)        
+2023-09-15T23:26:26.1064518Z remote: Counting objects:  72% (157/217)        
+2023-09-15T23:26:26.1065305Z remote: Counting objects:  73% (159/217)        
+2023-09-15T23:26:26.1065818Z remote: Counting objects:  74% (161/217)        
+2023-09-15T23:26:26.1073722Z remote: Counting objects:  75% (163/217)        
+2023-09-15T23:26:26.1074373Z remote: Counting objects:  76% (165/217)        
+2023-09-15T23:26:26.1074907Z remote: Counting objects:  77% (168/217)        
+2023-09-15T23:26:26.1075405Z remote: Counting objects:  78% (170/217)        
+2023-09-15T23:26:26.1075888Z remote: Counting objects:  79% (172/217)        
+2023-09-15T23:26:26.1076361Z remote: Counting objects:  80% (174/217)        
+2023-09-15T23:26:26.1076850Z remote: Counting objects:  81% (176/217)        
+2023-09-15T23:26:26.1077748Z remote: Counting objects:  82% (178/217)        
+2023-09-15T23:26:26.1078446Z remote: Counting objects:  83% (181/217)        
+2023-09-15T23:26:26.1078996Z remote: Counting objects:  84% (183/217)        
+2023-09-15T23:26:26.1079489Z remote: Counting objects:  85% (185/217)        
+2023-09-15T23:26:26.1083866Z remote: Counting objects:  86% (187/217)        
+2023-09-15T23:26:26.1087344Z remote: Counting objects:  87% (189/217)        
+2023-09-15T23:26:26.1088305Z remote: Counting objects:  88% (191/217)        
+2023-09-15T23:26:26.1088876Z remote: Counting objects:  89% (194/217)        
+2023-09-15T23:26:26.1089455Z remote: Counting objects:  90% (196/217)        
+2023-09-15T23:26:26.1089977Z remote: Counting objects:  91% (198/217)        
+2023-09-15T23:26:26.1090501Z remote: Counting objects:  92% (200/217)        
+2023-09-15T23:26:26.1091144Z remote: Counting objects:  93% (202/217)        
+2023-09-15T23:26:26.1091675Z remote: Counting objects:  94% (204/217)        
+2023-09-15T23:26:26.1092184Z remote: Counting objects:  95% (207/217)        
+2023-09-15T23:26:26.1093342Z remote: Counting objects:  96% (209/217)        
+2023-09-15T23:26:26.1093847Z remote: Counting objects:  97% (211/217)        
+2023-09-15T23:26:26.1094521Z remote: Counting objects:  98% (213/217)        
+2023-09-15T23:26:26.1095055Z remote: Counting objects:  99% (215/217)        
+2023-09-15T23:26:26.1095550Z remote: Counting objects: 100% (217/217)        
+2023-09-15T23:26:26.1096635Z remote: Counting objects: 100% (217/217), done.        
+2023-09-15T23:26:26.1097611Z remote: Compressing objects:   0% (1/165)        
+2023-09-15T23:26:26.1098173Z remote: Compressing objects:   1% (2/165)        
+2023-09-15T23:26:26.1098696Z remote: Compressing objects:   2% (4/165)        
+2023-09-15T23:26:26.1099218Z remote: Compressing objects:   3% (5/165)        
+2023-09-15T23:26:26.1099729Z remote: Compressing objects:   4% (7/165)        
+2023-09-15T23:26:26.1100237Z remote: Compressing objects:   5% (9/165)        
+2023-09-15T23:26:26.1100752Z remote: Compressing objects:   6% (10/165)        
+2023-09-15T23:26:26.1101573Z remote: Compressing objects:   7% (12/165)        
+2023-09-15T23:26:26.1102335Z remote: Compressing objects:   8% (14/165)        
+2023-09-15T23:26:26.1102891Z remote: Compressing objects:   9% (15/165)        
+2023-09-15T23:26:26.1104190Z remote: Compressing objects:  10% (17/165)        
+2023-09-15T23:26:26.1104753Z remote: Compressing objects:  11% (19/165)        
+2023-09-15T23:26:26.1105326Z remote: Compressing objects:  12% (20/165)        
+2023-09-15T23:26:26.1105876Z remote: Compressing objects:  13% (22/165)        
+2023-09-15T23:26:26.1106420Z remote: Compressing objects:  14% (24/165)        
+2023-09-15T23:26:26.1107283Z remote: Compressing objects:  15% (25/165)        
+2023-09-15T23:26:26.1107951Z remote: Compressing objects:  16% (27/165)        
+2023-09-15T23:26:26.1108505Z remote: Compressing objects:  17% (29/165)        
+2023-09-15T23:26:26.1109035Z remote: Compressing objects:  18% (30/165)        
+2023-09-15T23:26:26.1115721Z remote: Compressing objects:  19% (32/165)        
+2023-09-15T23:26:26.1116352Z remote: Compressing objects:  20% (33/165)        
+2023-09-15T23:26:26.1117384Z remote: Compressing objects:  21% (35/165)        
+2023-09-15T23:26:26.1118044Z remote: Compressing objects:  22% (37/165)        
+2023-09-15T23:26:26.1118961Z remote: Compressing objects:  23% (38/165)        
+2023-09-15T23:26:26.1119482Z remote: Compressing objects:  24% (40/165)        
+2023-09-15T23:26:26.1120192Z remote: Compressing objects:  25% (42/165)        
+2023-09-15T23:26:26.1120817Z remote: Compressing objects:  26% (43/165)        
+2023-09-15T23:26:26.1121323Z remote: Compressing objects:  27% (45/165)        
+2023-09-15T23:26:26.1121826Z remote: Compressing objects:  28% (47/165)        
+2023-09-15T23:26:26.1123031Z remote: Compressing objects:  29% (48/165)        
+2023-09-15T23:26:26.1123653Z remote: Compressing objects:  30% (50/165)        
+2023-09-15T23:26:26.1124136Z remote: Compressing objects:  31% (52/165)        
+2023-09-15T23:26:26.1124850Z remote: Compressing objects:  32% (53/165)        
+2023-09-15T23:26:26.1125392Z remote: Compressing objects:  33% (55/165)        
+2023-09-15T23:26:26.1125943Z remote: Compressing objects:  34% (57/165)        
+2023-09-15T23:26:26.1126487Z remote: Compressing objects:  35% (58/165)        
+2023-09-15T23:26:26.1127374Z remote: Compressing objects:  36% (60/165)        
+2023-09-15T23:26:26.1135261Z remote: Compressing objects:  37% (62/165)        
+2023-09-15T23:26:26.1137372Z remote: Compressing objects:  38% (63/165)        
+2023-09-15T23:26:26.1143806Z remote: Compressing objects:  39% (65/165)        
+2023-09-15T23:26:26.1157515Z remote: Compressing objects:  40% (66/165)        
+2023-09-15T23:26:26.1199232Z remote: Compressing objects:  41% (68/165)        
+2023-09-15T23:26:26.1200190Z remote: Compressing objects:  42% (70/165)        
+2023-09-15T23:26:26.1200687Z remote: Compressing objects:  43% (71/165)        
+2023-09-15T23:26:26.1201243Z remote: Compressing objects:  44% (73/165)        
+2023-09-15T23:26:26.1202885Z remote: Compressing objects:  45% (75/165)        
+2023-09-15T23:26:26.1203490Z remote: Compressing objects:  46% (76/165)        
+2023-09-15T23:26:26.1204311Z remote: Compressing objects:  47% (78/165)        
+2023-09-15T23:26:26.1205309Z remote: Compressing objects:  48% (80/165)        
+2023-09-15T23:26:26.1206762Z remote: Compressing objects:  49% (81/165)        
+2023-09-15T23:26:26.1208670Z remote: Compressing objects:  50% (83/165)        
+2023-09-15T23:26:26.1209444Z remote: Compressing objects:  51% (85/165)        
+2023-09-15T23:26:26.1211280Z remote: Compressing objects:  52% (86/165)        
+2023-09-15T23:26:26.1213674Z remote: Compressing objects:  53% (88/165)        
+2023-09-15T23:26:26.1214367Z remote: Compressing objects:  54% (90/165)        
+2023-09-15T23:26:26.1220768Z remote: Compressing objects:  55% (91/165)        
+2023-09-15T23:26:26.1225980Z remote: Compressing objects:  56% (93/165)        
+2023-09-15T23:26:26.1232738Z remote: Compressing objects:  57% (95/165)        
+2023-09-15T23:26:26.1241285Z remote: Compressing objects:  58% (96/165)        
+2023-09-15T23:26:26.1242058Z remote: Compressing objects:  59% (98/165)        
+2023-09-15T23:26:26.1249199Z remote: Compressing objects:  60% (99/165)        
+2023-09-15T23:26:26.1257175Z remote: Compressing objects:  61% (101/165)        
+2023-09-15T23:26:26.1260130Z remote: Compressing objects:  62% (103/165)        
+2023-09-15T23:26:26.1263746Z remote: Compressing objects:  63% (104/165)        
+2023-09-15T23:26:26.1265678Z remote: Compressing objects:  64% (106/165)        
+2023-09-15T23:26:26.1271458Z remote: Compressing objects:  65% (108/165)        
+2023-09-15T23:26:26.1275164Z remote: Compressing objects:  66% (109/165)        
+2023-09-15T23:26:26.1278414Z remote: Compressing objects:  67% (111/165)        
+2023-09-15T23:26:26.1280928Z remote: Compressing objects:  68% (113/165)        
+2023-09-15T23:26:26.1359416Z remote: Compressing objects:  69% (114/165)        
+2023-09-15T23:26:26.1361608Z remote: Compressing objects:  70% (116/165)        
+2023-09-15T23:26:26.1369050Z remote: Compressing objects:  71% (118/165)        
+2023-09-15T23:26:26.1370143Z remote: Compressing objects:  72% (119/165)        
+2023-09-15T23:26:26.1370743Z remote: Compressing objects:  73% (121/165)        
+2023-09-15T23:26:26.1371646Z remote: Compressing objects:  74% (123/165)        
+2023-09-15T23:26:26.1372780Z remote: Compressing objects:  75% (124/165)        
+2023-09-15T23:26:26.1373360Z remote: Compressing objects:  76% (126/165)        
+2023-09-15T23:26:26.1373790Z remote: Compressing objects:  77% (128/165)        
+2023-09-15T23:26:26.1374197Z remote: Compressing objects:  78% (129/165)        
+2023-09-15T23:26:26.1374619Z remote: Compressing objects:  79% (131/165)        
+2023-09-15T23:26:26.1375041Z remote: Compressing objects:  80% (132/165)        
+2023-09-15T23:26:26.1375470Z remote: Compressing objects:  81% (134/165)        
+2023-09-15T23:26:26.1375890Z remote: Compressing objects:  82% (136/165)        
+2023-09-15T23:26:26.1376312Z remote: Compressing objects:  83% (137/165)        
+2023-09-15T23:26:26.1376715Z remote: Compressing objects:  84% (139/165)        
+2023-09-15T23:26:26.1377131Z remote: Compressing objects:  85% (141/165)        
+2023-09-15T23:26:26.1377559Z remote: Compressing objects:  86% (142/165)        
+2023-09-15T23:26:26.1377975Z remote: Compressing objects:  87% (144/165)        
+2023-09-15T23:26:26.1378394Z remote: Compressing objects:  88% (146/165)        
+2023-09-15T23:26:26.1378796Z remote: Compressing objects:  89% (147/165)        
+2023-09-15T23:26:26.1379245Z remote: Compressing objects:  90% (149/165)        
+2023-09-15T23:26:26.1379657Z remote: Compressing objects:  91% (151/165)        
+2023-09-15T23:26:26.1380059Z remote: Compressing objects:  92% (152/165)        
+2023-09-15T23:26:26.1380468Z remote: Compressing objects:  93% (154/165)        
+2023-09-15T23:26:26.1380889Z remote: Compressing objects:  94% (156/165)        
+2023-09-15T23:26:26.1381310Z remote: Compressing objects:  95% (157/165)        
+2023-09-15T23:26:26.1381725Z remote: Compressing objects:  96% (159/165)        
+2023-09-15T23:26:26.1382419Z remote: Compressing objects:  97% (161/165)        
+2023-09-15T23:26:26.1382907Z remote: Compressing objects:  98% (162/165)        
+2023-09-15T23:26:26.1383480Z remote: Compressing objects:  99% (164/165)        
+2023-09-15T23:26:26.1383891Z remote: Compressing objects: 100% (165/165)        
+2023-09-15T23:26:26.1384492Z remote: Compressing objects: 100% (165/165), done.        
+2023-09-15T23:26:26.1404031Z Receiving objects:   0% (1/217)
+2023-09-15T23:26:26.1404880Z Receiving objects:   1% (3/217)
+2023-09-15T23:26:26.1406755Z Receiving objects:   2% (5/217)
+2023-09-15T23:26:26.1407543Z Receiving objects:   3% (7/217)
+2023-09-15T23:26:26.1410581Z Receiving objects:   4% (9/217)
+2023-09-15T23:26:26.1415562Z Receiving objects:   5% (11/217)
+2023-09-15T23:26:26.1421701Z Receiving objects:   6% (14/217)
+2023-09-15T23:26:26.1425208Z Receiving objects:   7% (16/217)
+2023-09-15T23:26:26.1428910Z Receiving objects:   8% (18/217)
+2023-09-15T23:26:26.1429735Z Receiving objects:   9% (20/217)
+2023-09-15T23:26:26.1478372Z Receiving objects:  10% (22/217)
+2023-09-15T23:26:26.1482009Z Receiving objects:  11% (24/217)
+2023-09-15T23:26:26.1482792Z Receiving objects:  12% (27/217)
+2023-09-15T23:26:26.1484809Z Receiving objects:  13% (29/217)
+2023-09-15T23:26:26.1485462Z Receiving objects:  14% (31/217)
+2023-09-15T23:26:26.1487068Z Receiving objects:  15% (33/217)
+2023-09-15T23:26:26.1489492Z Receiving objects:  16% (35/217)
+2023-09-15T23:26:26.1529935Z Receiving objects:  17% (37/217)
+2023-09-15T23:26:26.1533432Z Receiving objects:  18% (40/217)
+2023-09-15T23:26:26.1538669Z Receiving objects:  19% (42/217)
+2023-09-15T23:26:26.1541961Z Receiving objects:  20% (44/217)
+2023-09-15T23:26:26.1546144Z Receiving objects:  21% (46/217)
+2023-09-15T23:26:26.1549372Z Receiving objects:  22% (48/217)
+2023-09-15T23:26:26.1552333Z Receiving objects:  23% (50/217)
+2023-09-15T23:26:26.1555109Z Receiving objects:  24% (53/217)
+2023-09-15T23:26:26.1557875Z Receiving objects:  25% (55/217)
+2023-09-15T23:26:26.1560678Z Receiving objects:  26% (57/217)
+2023-09-15T23:26:26.1563405Z Receiving objects:  27% (59/217)
+2023-09-15T23:26:26.1564240Z Receiving objects:  28% (61/217)
+2023-09-15T23:26:26.1566213Z Receiving objects:  29% (63/217)
+2023-09-15T23:26:26.1567205Z Receiving objects:  30% (66/217)
+2023-09-15T23:26:26.1569451Z Receiving objects:  31% (68/217)
+2023-09-15T23:26:26.1570456Z Receiving objects:  32% (70/217)
+2023-09-15T23:26:26.1579920Z Receiving objects:  33% (72/217)
+2023-09-15T23:26:26.1582035Z Receiving objects:  34% (74/217)
+2023-09-15T23:26:26.1587343Z Receiving objects:  35% (76/217)
+2023-09-15T23:26:26.1588431Z Receiving objects:  36% (79/217)
+2023-09-15T23:26:26.1590872Z Receiving objects:  37% (81/217)
+2023-09-15T23:26:26.1592165Z Receiving objects:  38% (83/217)
+2023-09-15T23:26:26.1596286Z Receiving objects:  39% (85/217)
+2023-09-15T23:26:26.1600905Z Receiving objects:  40% (87/217)
+2023-09-15T23:26:26.1605797Z Receiving objects:  41% (89/217)
+2023-09-15T23:26:26.1610523Z Receiving objects:  42% (92/217)
+2023-09-15T23:26:26.1611711Z Receiving objects:  43% (94/217)
+2023-09-15T23:26:26.1613353Z Receiving objects:  44% (96/217)
+2023-09-15T23:26:26.1617005Z Receiving objects:  45% (98/217)
+2023-09-15T23:26:26.1617969Z Receiving objects:  46% (100/217)
+2023-09-15T23:26:26.1623196Z Receiving objects:  47% (102/217)
+2023-09-15T23:26:26.1650076Z Receiving objects:  48% (105/217)
+2023-09-15T23:26:26.1650538Z Receiving objects:  49% (107/217)
+2023-09-15T23:26:26.1671903Z Receiving objects:  50% (109/217)
+2023-09-15T23:26:26.1672769Z Receiving objects:  51% (111/217)
+2023-09-15T23:26:26.1673163Z Receiving objects:  52% (113/217)
+2023-09-15T23:26:26.1673553Z Receiving objects:  53% (116/217)
+2023-09-15T23:26:26.1673938Z Receiving objects:  54% (118/217)
+2023-09-15T23:26:26.1674305Z Receiving objects:  55% (120/217)
+2023-09-15T23:26:26.1674684Z Receiving objects:  56% (122/217)
+2023-09-15T23:26:26.1688983Z Receiving objects:  57% (124/217)
+2023-09-15T23:26:26.1689834Z Receiving objects:  58% (126/217)
+2023-09-15T23:26:26.1702362Z Receiving objects:  59% (129/217)
+2023-09-15T23:26:26.1711584Z Receiving objects:  60% (131/217)
+2023-09-15T23:26:26.1712672Z Receiving objects:  61% (133/217)
+2023-09-15T23:26:26.1713653Z Receiving objects:  62% (135/217)
+2023-09-15T23:26:26.1719517Z Receiving objects:  63% (137/217)
+2023-09-15T23:26:26.1757680Z Receiving objects:  64% (139/217)
+2023-09-15T23:26:26.1758502Z Receiving objects:  65% (142/217)
+2023-09-15T23:26:26.1759146Z Receiving objects:  66% (144/217)
+2023-09-15T23:26:26.1759896Z Receiving objects:  67% (146/217)
+2023-09-15T23:26:26.1760657Z Receiving objects:  68% (148/217)
+2023-09-15T23:26:26.1761397Z Receiving objects:  69% (150/217)
+2023-09-15T23:26:26.1763462Z Receiving objects:  70% (152/217)
+2023-09-15T23:26:26.1765498Z Receiving objects:  71% (155/217)
+2023-09-15T23:26:26.1767124Z Receiving objects:  72% (157/217)
+2023-09-15T23:26:26.1767704Z Receiving objects:  73% (159/217)
+2023-09-15T23:26:26.1769823Z Receiving objects:  74% (161/217)
+2023-09-15T23:26:26.1770836Z Receiving objects:  75% (163/217)
+2023-09-15T23:26:26.1771716Z Receiving objects:  76% (165/217)
+2023-09-15T23:26:26.1772477Z Receiving objects:  77% (168/217)
+2023-09-15T23:26:26.1773761Z Receiving objects:  78% (170/217)
+2023-09-15T23:26:26.1775044Z Receiving objects:  79% (172/217)
+2023-09-15T23:26:26.1776276Z Receiving objects:  80% (174/217)
+2023-09-15T23:26:26.1777837Z Receiving objects:  81% (176/217)
+2023-09-15T23:26:26.1956977Z Receiving objects:  82% (178/217)
+2023-09-15T23:26:26.1958129Z remote: Total 217 (delta 32), reused 89 (delta 3), pack-reused 0        
+2023-09-15T23:26:26.2103215Z Receiving objects:  83% (181/217)
+2023-09-15T23:26:26.2117605Z Receiving objects:  84% (183/217)
+2023-09-15T23:26:26.2118007Z Receiving objects:  85% (185/217)
+2023-09-15T23:26:26.2118378Z Receiving objects:  86% (187/217)
+2023-09-15T23:26:26.2118746Z Receiving objects:  87% (189/217)
+2023-09-15T23:26:26.2119098Z Receiving objects:  88% (191/217)
+2023-09-15T23:26:26.2119458Z Receiving objects:  89% (194/217)
+2023-09-15T23:26:26.2119820Z Receiving objects:  90% (196/217)
+2023-09-15T23:26:26.2120182Z Receiving objects:  91% (198/217)
+2023-09-15T23:26:26.2120546Z Receiving objects:  92% (200/217)
+2023-09-15T23:26:26.2121168Z Receiving objects:  93% (202/217)
+2023-09-15T23:26:26.2121531Z Receiving objects:  94% (204/217)
+2023-09-15T23:26:26.2121906Z Receiving objects:  95% (207/217)
+2023-09-15T23:26:26.2122271Z Receiving objects:  96% (209/217)
+2023-09-15T23:26:26.2122633Z Receiving objects:  97% (211/217)
+2023-09-15T23:26:26.2123165Z Receiving objects:  98% (213/217)
+2023-09-15T23:26:26.2123491Z Receiving objects:  99% (215/217)
+2023-09-15T23:26:26.2123823Z Receiving objects: 100% (217/217)
+2023-09-15T23:26:26.2124222Z Receiving objects: 100% (217/217), 375.81 KiB | 5.15 MiB/s, done.
+2023-09-15T23:26:26.2152263Z Resolving deltas:   0% (0/32)
+2023-09-15T23:26:26.2152936Z Resolving deltas:   3% (1/32)
+2023-09-15T23:26:26.2154038Z Resolving deltas:   6% (2/32)
+2023-09-15T23:26:26.2155399Z Resolving deltas:   9% (3/32)
+2023-09-15T23:26:26.2156494Z Resolving deltas:  12% (4/32)
+2023-09-15T23:26:26.2157748Z Resolving deltas:  15% (5/32)
+2023-09-15T23:26:26.2181951Z Resolving deltas:  18% (6/32)
+2023-09-15T23:26:26.2183971Z Resolving deltas:  21% (7/32)
+2023-09-15T23:26:26.2186368Z Resolving deltas:  25% (8/32)
+2023-09-15T23:26:26.2188323Z Resolving deltas:  28% (9/32)
+2023-09-15T23:26:26.2190028Z Resolving deltas:  31% (10/32)
+2023-09-15T23:26:26.2191582Z Resolving deltas:  34% (11/32)
+2023-09-15T23:26:26.2192721Z Resolving deltas:  37% (12/32)
+2023-09-15T23:26:26.2195492Z Resolving deltas:  40% (13/32)
+2023-09-15T23:26:26.2198135Z Resolving deltas:  43% (14/32)
+2023-09-15T23:26:26.2199786Z Resolving deltas:  46% (15/32)
+2023-09-15T23:26:26.2203886Z Resolving deltas:  50% (16/32)
+2023-09-15T23:26:26.2239045Z Resolving deltas:  53% (17/32)
+2023-09-15T23:26:26.2241105Z Resolving deltas:  56% (18/32)
+2023-09-15T23:26:26.2242694Z Resolving deltas:  59% (19/32)
+2023-09-15T23:26:26.2244292Z Resolving deltas:  62% (20/32)
+2023-09-15T23:26:26.2245596Z Resolving deltas:  65% (21/32)
+2023-09-15T23:26:26.2248449Z Resolving deltas:  68% (22/32)
+2023-09-15T23:26:26.2250348Z Resolving deltas:  71% (23/32)
+2023-09-15T23:26:26.2251546Z Resolving deltas:  75% (24/32)
+2023-09-15T23:26:26.2253303Z Resolving deltas:  78% (25/32)
+2023-09-15T23:26:26.2254843Z Resolving deltas:  81% (26/32)
+2023-09-15T23:26:26.2256381Z Resolving deltas:  84% (27/32)
+2023-09-15T23:26:26.2257440Z Resolving deltas:  87% (28/32)
+2023-09-15T23:26:26.2258643Z Resolving deltas:  90% (29/32)
+2023-09-15T23:26:26.2259874Z Resolving deltas:  93% (30/32)
+2023-09-15T23:26:26.2261739Z Resolving deltas:  96% (31/32)
+2023-09-15T23:26:26.2268875Z Resolving deltas: 100% (32/32)
+2023-09-15T23:26:26.2269811Z Resolving deltas: 100% (32/32), done.
+2023-09-15T23:26:26.2475501Z From https://github.com/adamint/spotify-web-api-kotlin
+2023-09-15T23:26:26.2476705Z  * [new ref]         7f9ad31378738b8439834b3e25aa45af9b2b5707 -> pull/328/merge
+2023-09-15T23:26:26.2524890Z ##[endgroup]
+2023-09-15T23:26:26.2526587Z ##[group]Determining the checkout info
+2023-09-15T23:26:26.2527526Z ##[endgroup]
+2023-09-15T23:26:26.2529179Z ##[group]Checking out the ref
+2023-09-15T23:26:26.2530155Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/328/merge
+2023-09-15T23:26:26.2762826Z Note: switching to 'refs/remotes/pull/328/merge'.
+2023-09-15T23:26:26.2763555Z 
+2023-09-15T23:26:26.2764022Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-09-15T23:26:26.2764733Z changes and commit them, and you can discard any commits you make in this
+2023-09-15T23:26:26.2765419Z state without impacting any branches by switching back to a branch.
+2023-09-15T23:26:26.2765736Z 
+2023-09-15T23:26:26.2766046Z If you want to create a new branch to retain commits you create, you may
+2023-09-15T23:26:26.2766891Z do so (now or later) by using -c with the switch command. Example:
+2023-09-15T23:26:26.2767250Z 
+2023-09-15T23:26:26.2767527Z   git switch -c <new-branch-name>
+2023-09-15T23:26:26.2767818Z 
+2023-09-15T23:26:26.2768016Z Or undo this operation with:
+2023-09-15T23:26:26.2768761Z 
+2023-09-15T23:26:26.2768925Z   git switch -
+2023-09-15T23:26:26.2769183Z 
+2023-09-15T23:26:26.2769998Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-09-15T23:26:26.2770409Z 
+2023-09-15T23:26:26.2770809Z HEAD is now at 7f9ad31 Merge 4132ddad31c50aa56495174d7610d03cd9d8a528 into 825224f82d894103a1409ee4ed298f81850e4bb0
+2023-09-15T23:26:26.2772246Z ##[endgroup]
+2023-09-15T23:26:26.2827890Z [command]/usr/bin/git log -1 --format='%H'
+2023-09-15T23:26:26.2912269Z '7f9ad31378738b8439834b3e25aa45af9b2b5707'
+2023-09-15T23:26:26.3310747Z ##[group]Run actions/setup-java@v2
+2023-09-15T23:26:26.3311335Z with:
+2023-09-15T23:26:26.3311658Z   distribution: adopt
+2023-09-15T23:26:26.3312057Z   java-version: 17
+2023-09-15T23:26:26.3312461Z   java-package: jdk
+2023-09-15T23:26:26.3312845Z   architecture: x64
+2023-09-15T23:26:26.3313296Z   check-latest: false
+2023-09-15T23:26:26.3313630Z   server-id: github
+2023-09-15T23:26:26.3314056Z   server-username: GITHUB_ACTOR
+2023-09-15T23:26:26.3314501Z   server-password: GITHUB_TOKEN
+2023-09-15T23:26:26.3315025Z   overwrite-settings: true
+2023-09-15T23:26:26.3315454Z   job-status: success
+2023-09-15T23:26:26.3315766Z env:
+2023-09-15T23:26:26.3316434Z   SPOTIFY_CLIENT_ID: ***
+2023-09-15T23:26:26.3316937Z   SPOTIFY_CLIENT_SECRET: ***
+2023-09-15T23:26:26.3317404Z ##[endgroup]
+2023-09-15T23:26:26.5612126Z Trying to resolve the latest version from remote
+2023-09-15T23:26:27.1676596Z Resolved latest version as 17.0.8+101
+2023-09-15T23:26:27.1677319Z Trying to download...
+2023-09-15T23:26:27.1678818Z Downloading Java 17.0.8+101 (Adopt-Hotspot) from https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.8.1%2B1/OpenJDK17U-jdk_x64_linux_hotspot_17.0.8.1_1.tar.gz ...
+2023-09-15T23:26:28.5201581Z Extracting Java archive...
+2023-09-15T23:26:28.5415888Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/5974c89f-0cb6-41f4-986e-f79cb5cbccd0 -f /home/runner/work/_temp/70b2ef50-5514-492a-b88e-2fbce10c075f
+2023-09-15T23:26:33.0588338Z Java 17.0.8+101 was downloaded
+2023-09-15T23:26:33.0589275Z Setting Java 17.0.8+101 as the default
+2023-09-15T23:26:33.0607150Z 
+2023-09-15T23:26:33.0607842Z Java configuration:
+2023-09-15T23:26:33.0608689Z   Distribution: adopt
+2023-09-15T23:26:33.0608999Z   Version: 17.0.8+101
+2023-09-15T23:26:33.0609693Z   Path: /opt/hostedtoolcache/Java_Adopt_jdk/17.0.8-101/x64
+2023-09-15T23:26:33.0609952Z 
+2023-09-15T23:26:33.0638835Z Creating settings.xml with server-id: github
+2023-09-15T23:26:33.0756313Z Writing to /home/runner/.m2/settings.xml
+2023-09-15T23:26:33.0951141Z ##[group]Run sudo apt-get install -y curl libcurl4-openssl-dev
+2023-09-15T23:26:33.0951701Z [36;1msudo apt-get install -y curl libcurl4-openssl-dev[0m
+2023-09-15T23:26:33.1026146Z shell: /usr/bin/bash -e {0}
+2023-09-15T23:26:33.1026443Z env:
+2023-09-15T23:26:33.1027080Z   SPOTIFY_CLIENT_ID: ***
+2023-09-15T23:26:33.1027483Z   SPOTIFY_CLIENT_SECRET: ***
+2023-09-15T23:26:33.1027880Z   JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/17.0.8-101/x64
+2023-09-15T23:26:33.1028239Z ##[endgroup]
+2023-09-15T23:26:34.8307127Z Reading package lists...
+2023-09-15T23:26:35.0517892Z Building dependency tree...
+2023-09-15T23:26:35.0545720Z Reading state information...
+2023-09-15T23:26:35.2110132Z curl is already the newest version (7.81.0-1ubuntu1.13).
+2023-09-15T23:26:35.2113335Z Suggested packages:
+2023-09-15T23:26:35.2116528Z   libcurl4-doc libidn11-dev libkrb5-dev libldap2-dev librtmp-dev libssh2-1-dev
+2023-09-15T23:26:35.2353342Z The following NEW packages will be installed:
+2023-09-15T23:26:35.2358830Z   libcurl4-openssl-dev
+2023-09-15T23:26:35.2584172Z 0 upgraded, 1 newly installed, 0 to remove and 28 not upgraded.
+2023-09-15T23:26:35.2585222Z Need to get 386 kB of archives.
+2023-09-15T23:26:35.2585748Z After this operation, 1697 kB of additional disk space will be used.
+2023-09-15T23:26:35.2586604Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [142 B]
+2023-09-15T23:26:35.3218213Z Get:2 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4-openssl-dev amd64 7.81.0-1ubuntu1.13 [386 kB]
+2023-09-15T23:26:35.8395121Z Fetched 386 kB in 0s (2310 kB/s)
+2023-09-15T23:26:35.8789842Z Selecting previously unselected package libcurl4-openssl-dev:amd64.
+2023-09-15T23:26:35.9056617Z (Reading database ... 
+2023-09-15T23:26:35.9057524Z (Reading database ... 5%
+2023-09-15T23:26:35.9058471Z (Reading database ... 10%
+2023-09-15T23:26:35.9059161Z (Reading database ... 15%
+2023-09-15T23:26:35.9059828Z (Reading database ... 20%
+2023-09-15T23:26:35.9060503Z (Reading database ... 25%
+2023-09-15T23:26:35.9061202Z (Reading database ... 30%
+2023-09-15T23:26:35.9061872Z (Reading database ... 35%
+2023-09-15T23:26:35.9062514Z (Reading database ... 40%
+2023-09-15T23:26:35.9063184Z (Reading database ... 45%
+2023-09-15T23:26:35.9063846Z (Reading database ... 50%
+2023-09-15T23:26:35.9500437Z (Reading database ... 55%
+2023-09-15T23:26:35.9927062Z (Reading database ... 60%
+2023-09-15T23:26:36.0313518Z (Reading database ... 65%
+2023-09-15T23:26:36.1176592Z (Reading database ... 70%
+2023-09-15T23:26:36.1607143Z (Reading database ... 75%
+2023-09-15T23:26:36.2535605Z (Reading database ... 80%
+2023-09-15T23:26:36.3637367Z (Reading database ... 85%
+2023-09-15T23:26:36.4059251Z (Reading database ... 90%
+2023-09-15T23:26:36.4818472Z (Reading database ... 95%
+2023-09-15T23:26:36.4819412Z (Reading database ... 100%
+2023-09-15T23:26:36.4820338Z (Reading database ... 228594 files and directories currently installed.)
+2023-09-15T23:26:36.4936311Z Preparing to unpack .../libcurl4-openssl-dev_7.81.0-1ubuntu1.13_amd64.deb ...
+2023-09-15T23:26:36.5018348Z Unpacking libcurl4-openssl-dev:amd64 (7.81.0-1ubuntu1.13) ...
+2023-09-15T23:26:36.5835330Z Setting up libcurl4-openssl-dev:amd64 (7.81.0-1ubuntu1.13) ...
+2023-09-15T23:26:36.5879221Z Processing triggers for man-db (2.10.2-1) ...
+2023-09-15T23:26:39.1516292Z NEEDRESTART-VER: 3.5
+2023-09-15T23:26:39.5703216Z NEEDRESTART-KCUR: 6.2.0-1011-azure
+2023-09-15T23:26:39.5704339Z NEEDRESTART-KEXP: 6.2.0-1011-azure
+2023-09-15T23:26:39.5705220Z NEEDRESTART-KSTA: 1
+2023-09-15T23:26:41.6402094Z ##[group]Run ./gradlew testDebugUnitTest
+2023-09-15T23:26:41.6402521Z [36;1m./gradlew testDebugUnitTest[0m
+2023-09-15T23:26:41.6477550Z shell: /usr/bin/bash -e {0}
+2023-09-15T23:26:41.6477857Z env:
+2023-09-15T23:26:41.6478276Z   SPOTIFY_CLIENT_ID: ***
+2023-09-15T23:26:41.6478660Z   SPOTIFY_CLIENT_SECRET: ***
+2023-09-15T23:26:41.6479034Z   JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/17.0.8-101/x64
+2023-09-15T23:26:41.6479402Z ##[endgroup]
+2023-09-15T23:26:41.7767589Z Downloading https://services.gradle.org/distributions/gradle-8.3-bin.zip
+2023-09-15T23:26:44.3068961Z ............10%............20%.............30%............40%.............50%............60%.............70%............80%.............90%............100%
+2023-09-15T23:26:45.9032574Z 
+2023-09-15T23:26:45.9033530Z Welcome to Gradle 8.3!
+2023-09-15T23:26:45.9033892Z 
+2023-09-15T23:26:45.9034882Z Here are the highlights of this release:
+2023-09-15T23:26:45.9036059Z  - Faster Java compilation
+2023-09-15T23:26:45.9036721Z  - Reduced memory usage
+2023-09-15T23:26:45.9037799Z  - Support for running on Java 20
+2023-09-15T23:26:45.9038134Z 
+2023-09-15T23:26:45.9040581Z For more details see https://docs.gradle.org/8.3/release-notes.html
+2023-09-15T23:26:45.9041025Z 
+2023-09-15T23:26:46.1023559Z Starting a Gradle Daemon (subsequent builds will be faster)
+2023-09-15T23:28:21.7072786Z 
+2023-09-15T23:28:21.7076023Z > Configure project :
+2023-09-15T23:28:21.7091132Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/build.gradle.kts:59:9: 'targetSdk: Int?' is deprecated. Will be removed from library DSL in v9.0
+2023-09-15T23:28:21.7113613Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/build.gradle.kts:113:13: 'webpackTask(KotlinWebpack.() -> Unit): Unit' is deprecated. Please use webpackTask(Action)
+2023-09-15T23:28:21.7165993Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/build.gradle.kts:118:13: 'testTask(KotlinJsTest.() -> Unit): Unit' is deprecated. Please use testTask(Action)
+2023-09-15T23:28:21.7167351Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/build.gradle.kts:355:30: 'getter for buildDir: File!' is deprecated. Deprecated in Java
+2023-09-15T23:28:24.5022814Z 
+2023-09-15T23:28:24.5049716Z Please wait while Kotlin/Native compiler 1.9.10 is being installed.
+2023-09-15T23:28:25.0024711Z Download https://download.jetbrains.com/kotlin/native/builds/releases/1.9.10/linux-x86_64/kotlin-native-prebuilt-linux-x86_64-1.9.10.tar.gz (192.68 MB)
+2023-09-15T23:28:27.7024787Z Download kotlin-native-prebuilt-linux-x86_64-1.9.10.tar.gz finished, took 2 s 789 ms
+2023-09-15T23:28:27.7026013Z Unpack Kotlin/Native compiler to /home/runner/.konan/kotlin-native-prebuilt-linux-x86_64-1.9.10
+2023-09-15T23:28:31.3024641Z Unpack Kotlin/Native compiler to /home/runner/.konan/kotlin-native-prebuilt-linux-x86_64-1.9.10 finished, took 3 s 503 ms
+2023-09-15T23:28:42.7025602Z 
+2023-09-15T23:28:42.7032516Z Some Kotlin/Native targets cannot be built on this linux_x64 machine and are disabled:
+2023-09-15T23:28:42.7033297Z     * In project ':':
+2023-09-15T23:28:42.7033918Z         * targets 'macosX64', 'iosArm64', 'iosX64' (can be built with one of the hosts: macos_x64, macos_arm64)
+2023-09-15T23:28:42.7034680Z To hide this message, add 'kotlin.native.ignoreDisabledTargets=true' to the Gradle properties.
+2023-09-15T23:28:42.7035052Z 
+2023-09-15T23:28:42.8025964Z 
+2023-09-15T23:28:42.8032688Z > Task :preBuild UP-TO-DATE
+2023-09-15T23:28:42.8033173Z > Task :preDebugBuild UP-TO-DATE
+2023-09-15T23:28:42.9024378Z > Task :generateDebugResValues
+2023-09-15T23:28:42.9024793Z > Task :generateDebugResources
+2023-09-15T23:28:43.2025376Z > Task :packageDebugResources
+2023-09-15T23:28:45.9023275Z > Task :parseDebugLocalResources
+2023-09-15T23:28:45.9024096Z > Task :javaPreCompileDebug
+2023-09-15T23:28:45.9101895Z > Task :preDebugUnitTestBuild UP-TO-DATE
+2023-09-15T23:28:45.9102390Z > Task :javaPreCompileDebugUnitTest
+2023-09-15T23:28:45.9102633Z 
+2023-09-15T23:28:45.9103541Z > Task :processDebugManifest
+2023-09-15T23:28:45.9104463Z package="com.adamratzman.spotify" found in source AndroidManifest.xml: /home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/src/androidMain/AndroidManifest.xml.
+2023-09-15T23:28:45.9105351Z Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+2023-09-15T23:28:45.9106469Z Recommendation: remove package="com.adamratzman.spotify" from the source AndroidManifest.xml: /home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/src/androidMain/AndroidManifest.xml.
+2023-09-15T23:28:46.0024693Z 
+2023-09-15T23:28:46.0025320Z > Task :generateDebugRFile
+2023-09-15T23:29:09.6025152Z > Task :generateDebugUnitTestStubRFile
+2023-09-15T23:29:16.0023442Z > Task :compileDebugKotlinAndroid
+2023-09-15T23:29:58.2024440Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/src/commonMain/kotlin/com.adamratzman.spotify/utils/Utils.kt:20:39 Parameter 'catchInternalServerError' is never used
+2023-09-15T23:29:58.5023264Z 
+2023-09-15T23:29:58.5024391Z > Task :compileDebugJavaWithJavac NO-SOURCE
+2023-09-15T23:29:58.7031287Z > Task :bundleLibRuntimeToJarDebug
+2023-09-15T23:29:58.7032134Z > Task :bundleLibCompileToJarDebug
+2023-09-15T23:29:58.8023491Z > Task :processDebugJavaRes
+2023-09-15T23:30:09.9027722Z 
+2023-09-15T23:30:09.9028648Z > Task :compileDebugUnitTestKotlinAndroid
+2023-09-15T23:30:09.9030200Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/src/commonJvmLikeTest/kotlin/com/adamratzman/spotify/CommonImpl.kt:75:38 Type mismatch: inferred type is String? but String was expected
+2023-09-15T23:30:09.9118921Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/src/commonTest/kotlin/com.adamratzman/spotify/priv/ClientPlayerApiTest.kt:196:13 Variable 'trackId' is never used
+2023-09-15T23:30:09.9122482Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/src/commonTest/kotlin/com.adamratzman/spotify/priv/ClientPlaylistApiTest.kt:83:13 Variable 'tracks' is never used
+2023-09-15T23:30:09.9130214Z 
+2023-09-15T23:30:09.9130745Z > Task :compileDebugUnitTestJavaWithJavac NO-SOURCE
+2023-09-15T23:30:10.0024384Z > Task :processDebugUnitTestJavaRes
+2023-09-15T23:30:15.6053877Z 
+2023-09-15T23:30:15.6054671Z > Task :testDebugUnitTest
+2023-09-15T23:30:15.6055202Z 
+2023-09-15T23:30:15.6055753Z com.adamratzman.spotify.priv.ClientEpisodeApiTest > testGetEpisode STANDARD_ERROR
+2023-09-15T23:30:15.6056655Z     SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-09-15T23:30:15.6058212Z     SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-09-15T23:30:15.6058824Z     SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-09-15T23:30:16.9024447Z 
+2023-09-15T23:30:16.9025444Z com.adamratzman.spotify.priv.ClientEpisodeApiTest > testGetEpisode STANDARD_OUT
+2023-09-15T23:30:16.9026436Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:16.9027039Z 
+2023-09-15T23:30:16.9028711Z com.adamratzman.spotify.priv.ClientEpisodeApiTest > testGetEpisodes STANDARD_OUT
+2023-09-15T23:30:16.9029602Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.0074567Z 
+2023-09-15T23:30:17.0075666Z com.adamratzman.spotify.priv.ClientLibraryApiTest > testLibraryShows STANDARD_OUT
+2023-09-15T23:30:17.0076683Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.0077302Z 
+2023-09-15T23:30:17.0078974Z com.adamratzman.spotify.priv.ClientLibraryApiTest > testLibraryAlbums STANDARD_OUT
+2023-09-15T23:30:17.0079817Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.0080316Z 
+2023-09-15T23:30:17.0080734Z com.adamratzman.spotify.priv.ClientLibraryApiTest > testLibraryTracks STANDARD_OUT
+2023-09-15T23:30:17.0081995Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.0082493Z 
+2023-09-15T23:30:17.0082912Z com.adamratzman.spotify.priv.ClientLibraryApiTest > testInvalidInputs STANDARD_OUT
+2023-09-15T23:30:17.0083692Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.0084142Z 
+2023-09-15T23:30:17.0084557Z com.adamratzman.spotify.priv.ClientLibraryApiTest > testLibraryEpisodes STANDARD_OUT
+2023-09-15T23:30:17.0085337Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.0085784Z 
+2023-09-15T23:30:17.0086236Z com.adamratzman.spotify.priv.ClientPersonalizationApiTest > testGetTopArtists STANDARD_OUT
+2023-09-15T23:30:17.0087050Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.0087492Z 
+2023-09-15T23:30:17.0087945Z com.adamratzman.spotify.priv.ClientPersonalizationApiTest > testGetTopTracks STANDARD_OUT
+2023-09-15T23:30:17.0090603Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.0090985Z 
+2023-09-15T23:30:17.0091359Z com.adamratzman.spotify.priv.ClientPlaylistApiTest > testRemovePlaylistPlayables STANDARD_OUT
+2023-09-15T23:30:17.0092093Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.1027671Z 
+2023-09-15T23:30:17.1040075Z com.adamratzman.spotify.priv.ClientPlaylistApiTest > testGetClientPlaylists STANDARD_OUT
+2023-09-15T23:30:17.1049786Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.1050418Z 
+2023-09-15T23:30:17.1051497Z com.adamratzman.spotify.priv.ClientPlaylistApiTest > testAddAndRemoveChunkedTracks STANDARD_OUT
+2023-09-15T23:30:17.1052449Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.1053225Z 
+2023-09-15T23:30:17.1053791Z com.adamratzman.spotify.priv.ClientPlaylistApiTest > testEditPlaylists STANDARD_OUT
+2023-09-15T23:30:17.1055415Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.1055963Z 
+2023-09-15T23:30:17.1056657Z com.adamratzman.spotify.priv.ClientShowApiTest > testGetShows STANDARD_OUT
+2023-09-15T23:30:17.1057494Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.1058252Z 
+2023-09-15T23:30:17.1058723Z com.adamratzman.spotify.priv.ClientShowApiTest > testGetShow STANDARD_OUT
+2023-09-15T23:30:17.1059779Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.1060317Z 
+2023-09-15T23:30:17.1061022Z com.adamratzman.spotify.priv.ClientUserApiTest > testClientProfile STANDARD_OUT
+2023-09-15T23:30:17.1061890Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.1062639Z 
+2023-09-15T23:30:17.1063093Z com.adamratzman.spotify.priv.ShowApiTest > testGetShows STANDARD_OUT
+2023-09-15T23:30:17.1064128Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.1064661Z 
+2023-09-15T23:30:17.1065328Z com.adamratzman.spotify.priv.ShowApiTest > testGetShow STANDARD_OUT
+2023-09-15T23:30:17.1066144Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:17.1066893Z 
+2023-09-15T23:30:17.1067356Z com.adamratzman.spotify.priv.ShowApiTest > testGetShowEpisodes STANDARD_OUT
+2023-09-15T23:30:17.1068403Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@31abfae9
+2023-09-15T23:30:44.7895668Z 
+2023-09-15T23:30:44.7910638Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2023-09-15T23:30:44.7946857Z 
+2023-09-15T23:30:44.7949086Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2023-09-15T23:30:44.7949577Z 
+2023-09-15T23:30:44.7953256Z For more on this, please refer to https://docs.gradle.org/8.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2023-09-15T23:30:44.7955155Z 
+2023-09-15T23:30:44.7957041Z BUILD SUCCESSFUL in 4m 3s
+2023-09-15T23:30:44.7958731Z 15 actionable tasks: 15 executed
+2023-09-15T23:30:45.1233438Z ##[group]Run ./gradlew jvmTest
+2023-09-15T23:30:45.1233892Z [36;1m./gradlew jvmTest[0m
+2023-09-15T23:30:45.1324810Z shell: /usr/bin/bash -e {0}
+2023-09-15T23:30:45.1325127Z env:
+2023-09-15T23:30:45.1325571Z   SPOTIFY_CLIENT_ID: ***
+2023-09-15T23:30:45.1325954Z   SPOTIFY_CLIENT_SECRET: ***
+2023-09-15T23:30:45.1326349Z   JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/17.0.8-101/x64
+2023-09-15T23:30:45.1326708Z ##[endgroup]
+2023-09-15T23:30:46.8982633Z 
+2023-09-15T23:30:46.8986539Z Some Kotlin/Native targets cannot be built on this linux_x64 machine and are disabled:
+2023-09-15T23:30:46.8987574Z     * In project ':':
+2023-09-15T23:30:46.9011122Z         * targets 'macosX64', 'iosArm64', 'iosX64' (can be built with one of the hosts: macos_x64, macos_arm64)
+2023-09-15T23:30:46.9012297Z To hide this message, add 'kotlin.native.ignoreDisabledTargets=true' to the Gradle properties.
+2023-09-15T23:30:46.9013015Z 
+2023-09-15T23:30:50.0992533Z > Task :jvmProcessResources NO-SOURCE
+2023-09-15T23:30:50.1988634Z > Task :jvmTestProcessResources
+2023-09-15T23:31:13.9977485Z 
+2023-09-15T23:31:14.0068269Z > Task :compileKotlinJvm
+2023-09-15T23:31:14.0069502Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/src/commonMain/kotlin/com.adamratzman.spotify/utils/Utils.kt:20:39 Parameter 'catchInternalServerError' is never used
+2023-09-15T23:31:14.1999222Z 
+2023-09-15T23:31:14.1999973Z > Task :jvmMainClasses
+2023-09-15T23:31:22.9973445Z 
+2023-09-15T23:31:22.9974123Z > Task :compileTestKotlinJvm
+2023-09-15T23:31:22.9975502Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/src/commonTest/kotlin/com.adamratzman/spotify/priv/ClientPlayerApiTest.kt:196:13 Variable 'trackId' is never used
+2023-09-15T23:31:22.9977207Z w: file:///home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin/src/commonTest/kotlin/com.adamratzman/spotify/priv/ClientPlaylistApiTest.kt:83:13 Variable 'tracks' is never used
+2023-09-15T23:31:23.0972292Z 
+2023-09-15T23:31:23.0972968Z > Task :jvmTestClasses
+2023-09-15T23:31:25.0976921Z 
+2023-09-15T23:31:25.0977574Z > Task :jvmTest
+2023-09-15T23:31:25.0977917Z 
+2023-09-15T23:31:25.0978409Z com.adamratzman.spotify.priv.ClientEpisodeApiTest[jvm] > testGetEpisode[jvm] STANDARD_ERROR
+2023-09-15T23:31:25.0979167Z     SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-09-15T23:31:25.0980150Z     SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-09-15T23:31:25.0980811Z     SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-09-15T23:31:25.5976483Z 
+2023-09-15T23:31:25.5977625Z com.adamratzman.spotify.priv.ClientEpisodeApiTest[jvm] > testGetEpisode[jvm] STANDARD_OUT
+2023-09-15T23:31:25.5981156Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.5981709Z 
+2023-09-15T23:31:25.6032187Z com.adamratzman.spotify.priv.ClientEpisodeApiTest[jvm] > testGetEpisodes[jvm] STANDARD_OUT
+2023-09-15T23:31:25.6032997Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.6989669Z 
+2023-09-15T23:31:25.6994530Z com.adamratzman.spotify.priv.ClientLibraryApiTest[jvm] > testLibraryShows[jvm] STANDARD_OUT
+2023-09-15T23:31:25.6995636Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7103759Z 
+2023-09-15T23:31:25.7104350Z com.adamratzman.spotify.priv.ClientLibraryApiTest[jvm] > testLibraryAlbums[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7105131Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7105551Z 
+2023-09-15T23:31:25.7105903Z com.adamratzman.spotify.priv.ClientLibraryApiTest[jvm] > testLibraryTracks[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7106632Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7107008Z 
+2023-09-15T23:31:25.7107799Z com.adamratzman.spotify.priv.ClientLibraryApiTest[jvm] > testInvalidInputs[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7108540Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7108922Z 
+2023-09-15T23:31:25.7109258Z com.adamratzman.spotify.priv.ClientLibraryApiTest[jvm] > testLibraryEpisodes[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7109976Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7110352Z 
+2023-09-15T23:31:25.7110744Z com.adamratzman.spotify.priv.ClientPersonalizationApiTest[jvm] > testGetTopArtists[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7111511Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7111887Z 
+2023-09-15T23:31:25.7112275Z com.adamratzman.spotify.priv.ClientPersonalizationApiTest[jvm] > testGetTopTracks[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7113038Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7113409Z 
+2023-09-15T23:31:25.7113797Z com.adamratzman.spotify.priv.ClientPlaylistApiTest[jvm] > testRemovePlaylistPlayables[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7114550Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7114923Z 
+2023-09-15T23:31:25.7115272Z com.adamratzman.spotify.priv.ClientPlaylistApiTest[jvm] > testGetClientPlaylists[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7116007Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7116373Z 
+2023-09-15T23:31:25.7116946Z com.adamratzman.spotify.priv.ClientPlaylistApiTest[jvm] > testAddAndRemoveChunkedTracks[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7117711Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7118079Z 
+2023-09-15T23:31:25.7118436Z com.adamratzman.spotify.priv.ClientPlaylistApiTest[jvm] > testEditPlaylists[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7119164Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7119538Z 
+2023-09-15T23:31:25.7119861Z com.adamratzman.spotify.priv.ClientShowApiTest[jvm] > testGetShows[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7120549Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7120919Z 
+2023-09-15T23:31:25.7121236Z com.adamratzman.spotify.priv.ClientShowApiTest[jvm] > testGetShow[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7121903Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7122277Z 
+2023-09-15T23:31:25.7122608Z com.adamratzman.spotify.priv.ClientUserApiTest[jvm] > testClientProfile[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7123307Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7123670Z 
+2023-09-15T23:31:25.7123969Z com.adamratzman.spotify.priv.ShowApiTest[jvm] > testGetShows[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7124634Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7125001Z 
+2023-09-15T23:31:25.7125289Z com.adamratzman.spotify.priv.ShowApiTest[jvm] > testGetShow[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7125953Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:25.7126329Z 
+2023-09-15T23:31:25.7126647Z com.adamratzman.spotify.priv.ShowApiTest[jvm] > testGetShowEpisodes[jvm] STANDARD_OUT
+2023-09-15T23:31:25.7127308Z     Api is not initialized. buildSpotifyApi returns com.adamratzman.spotify.SpotifyAppApi@4261ca80
+2023-09-15T23:31:57.6909518Z 
+2023-09-15T23:31:57.6910773Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2023-09-15T23:31:57.6911372Z 
+2023-09-15T23:31:57.6912726Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2023-09-15T23:31:57.6913670Z 
+2023-09-15T23:31:57.7020461Z For more on this, please refer to https://docs.gradle.org/8.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2023-09-15T23:31:57.7023258Z 
+2023-09-15T23:31:57.7023536Z BUILD SUCCESSFUL in 1m 12s
+2023-09-15T23:31:57.7023873Z 4 actionable tasks: 4 executed
+2023-09-15T23:31:57.7151675Z ##[group]Run actions/upload-artifact@v2
+2023-09-15T23:31:57.7152011Z with:
+2023-09-15T23:31:57.7152314Z   name: code-coverage-report
+2023-09-15T23:31:57.7152646Z   path: build/reports
+2023-09-15T23:31:57.7152979Z   if-no-files-found: warn
+2023-09-15T23:31:57.7153264Z env:
+2023-09-15T23:31:57.7153675Z   SPOTIFY_CLIENT_ID: ***
+2023-09-15T23:31:57.7154042Z   SPOTIFY_CLIENT_SECRET: ***
+2023-09-15T23:31:57.7154448Z   JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/17.0.8-101/x64
+2023-09-15T23:31:57.7154816Z ##[endgroup]
+2023-09-15T23:31:57.8445457Z With the provided path, there will be 64 files uploaded
+2023-09-15T23:31:57.8446744Z Starting artifact upload
+2023-09-15T23:31:57.8447785Z For more detailed logs during the artifact upload process, enable step-debugging: https://docs.github.com/actions/monitoring-and-troubleshooting-workflows/enabling-debug-logging#enabling-step-debug-logging
+2023-09-15T23:31:57.8448689Z Artifact name is valid!
+2023-09-15T23:31:57.8988028Z Container for artifact "code-coverage-report" successfully created. Starting upload of file(s)
+2023-09-15T23:32:00.1463022Z Total size of all the files uploaded is 56101 bytes
+2023-09-15T23:32:00.1463572Z File upload process has finished. Finalizing the artifact upload
+2023-09-15T23:32:00.2140420Z Artifact has been finalized. All files have been successfully uploaded!
+2023-09-15T23:32:00.2143992Z 
+2023-09-15T23:32:00.2144709Z The raw size of all the files that were specified for upload is 186577 bytes
+2023-09-15T23:32:00.2146837Z The size of all the files that were uploaded is 56101 bytes. This takes into account any gzip compression used to reduce the upload size, time and storage
+2023-09-15T23:32:00.2149148Z 
+2023-09-15T23:32:00.2150993Z Note: The size of downloaded zips can differ significantly from the reported size. For more information see: https://github.com/actions/upload-artifact#zipped-artifact-downloads 
+2023-09-15T23:32:00.2152187Z 
+2023-09-15T23:32:00.2153161Z Artifact code-coverage-report has been successfully uploaded!
+2023-09-15T23:32:00.2300039Z Post job cleanup.
+2023-09-15T23:32:00.4409710Z Post job cleanup.
+2023-09-15T23:32:00.6244836Z [command]/usr/bin/git version
+2023-09-15T23:32:00.6318090Z git version 2.42.0
+2023-09-15T23:32:00.6382467Z Temporarily overriding HOME='/home/runner/work/_temp/a2230ee7-ec95-4f96-b030-4ffbbfc8cc72' before making global git config changes
+2023-09-15T23:32:00.6384022Z Adding repository directory to the temporary git global config as a safe directory
+2023-09-15T23:32:00.6391120Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/spotify-web-api-kotlin/spotify-web-api-kotlin
+2023-09-15T23:32:00.6457498Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-09-15T23:32:00.6511522Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-09-15T23:32:00.6885561Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-09-15T23:32:00.6931901Z http.https://github.com/.extraheader
+2023-09-15T23:32:00.6947431Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-09-15T23:32:00.7003164Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-09-15T23:32:00.7783863Z Cleaning up orphan processes
+2023-09-15T23:32:00.8161326Z Terminate orphan process: pid (1903) (java)
+2023-09-15T23:32:00.8194075Z Terminate orphan process: pid (2084) (java)

@@ -1,0 +1,1292 @@
+2023-11-10T07:51:51.3819587Z Requested labels: ubuntu-latest
+2023-11-10T07:51:51.3819827Z Job defined at: basdijkstra/rest-assured-net/.github/workflows/ci.yml@refs/heads/main
+2023-11-10T07:51:51.3819903Z Waiting for a runner to pick up this job...
+2023-11-10T07:51:52.4500288Z Job is waiting for a hosted runner to come online.
+2023-11-10T07:51:54.2072613Z Job is about to start running on the hosted runner: GitHub Actions 3 (hosted)
+2023-11-10T07:51:56.1351033Z Current runner version: '2.311.0'
+2023-11-10T07:51:56.1374633Z ##[group]Operating System
+2023-11-10T07:51:56.1375266Z Ubuntu
+2023-11-10T07:51:56.1375756Z 22.04.3
+2023-11-10T07:51:56.1376058Z LTS
+2023-11-10T07:51:56.1376411Z ##[endgroup]
+2023-11-10T07:51:56.1376874Z ##[group]Runner Image
+2023-11-10T07:51:56.1377281Z Image: ubuntu-22.04
+2023-11-10T07:51:56.1377735Z Version: 20231030.2.0
+2023-11-10T07:51:56.1378779Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20231030.2/images/linux/Ubuntu2204-Readme.md
+2023-11-10T07:51:56.1380186Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20231030.2
+2023-11-10T07:51:56.1381062Z ##[endgroup]
+2023-11-10T07:51:56.1381521Z ##[group]Runner Image Provisioner
+2023-11-10T07:51:56.1381970Z 2.0.312.1
+2023-11-10T07:51:56.1382331Z ##[endgroup]
+2023-11-10T07:51:56.1384525Z ##[group]GITHUB_TOKEN Permissions
+2023-11-10T07:51:56.1386127Z Actions: write
+2023-11-10T07:51:56.1386678Z Checks: write
+2023-11-10T07:51:56.1387243Z Contents: write
+2023-11-10T07:51:56.1387803Z Deployments: write
+2023-11-10T07:51:56.1388517Z Discussions: write
+2023-11-10T07:51:56.1388894Z Issues: write
+2023-11-10T07:51:56.1389350Z Metadata: read
+2023-11-10T07:51:56.1389753Z Packages: write
+2023-11-10T07:51:56.1390103Z Pages: write
+2023-11-10T07:51:56.1390551Z PullRequests: write
+2023-11-10T07:51:56.1390966Z RepositoryProjects: write
+2023-11-10T07:51:56.1391423Z SecurityEvents: write
+2023-11-10T07:51:56.1391901Z Statuses: write
+2023-11-10T07:51:56.1392301Z ##[endgroup]
+2023-11-10T07:51:56.1395211Z Secret source: Actions
+2023-11-10T07:51:56.1395955Z Prepare workflow directory
+2023-11-10T07:51:56.2011216Z Prepare all required actions
+2023-11-10T07:51:56.2165753Z Getting action download info
+2023-11-10T07:51:56.4482824Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2023-11-10T07:51:56.5588913Z Download action repository 'actions/setup-dotnet@v3' (SHA:3447fd6a9f9e57506b15f895c5b76d3b197dc7c2)
+2023-11-10T07:51:56.9830935Z Complete job name: build (7.0.x)
+2023-11-10T07:51:57.0623359Z ##[group]Run actions/checkout@v3
+2023-11-10T07:51:57.0623964Z with:
+2023-11-10T07:51:57.0624410Z   repository: basdijkstra/rest-assured-net
+2023-11-10T07:51:57.0625236Z   token: ***
+2023-11-10T07:51:57.0625702Z   ssh-strict: true
+2023-11-10T07:51:57.0626133Z   persist-credentials: true
+2023-11-10T07:51:57.0626644Z   clean: true
+2023-11-10T07:51:57.0627077Z   sparse-checkout-cone-mode: true
+2023-11-10T07:51:57.0627577Z   fetch-depth: 1
+2023-11-10T07:51:57.0628251Z   fetch-tags: false
+2023-11-10T07:51:57.0628733Z   lfs: false
+2023-11-10T07:51:57.0629117Z   submodules: false
+2023-11-10T07:51:57.0629575Z   set-safe-directory: true
+2023-11-10T07:51:57.0630050Z ##[endgroup]
+2023-11-10T07:51:57.2243621Z Syncing repository: basdijkstra/rest-assured-net
+2023-11-10T07:51:57.2245753Z ##[group]Getting Git version info
+2023-11-10T07:51:57.2246862Z Working directory is '/home/runner/work/rest-assured-net/rest-assured-net'
+2023-11-10T07:51:57.2248030Z [command]/usr/bin/git version
+2023-11-10T07:51:57.2268392Z git version 2.42.0
+2023-11-10T07:51:57.2290954Z ##[endgroup]
+2023-11-10T07:51:57.2306130Z Temporarily overriding HOME='/home/runner/work/_temp/554ddc92-2c43-4173-820c-9f50e880ab09' before making global git config changes
+2023-11-10T07:51:57.2307716Z Adding repository directory to the temporary git global config as a safe directory
+2023-11-10T07:51:57.2309868Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rest-assured-net/rest-assured-net
+2023-11-10T07:51:57.2353185Z Deleting the contents of '/home/runner/work/rest-assured-net/rest-assured-net'
+2023-11-10T07:51:57.2356558Z ##[group]Initializing the repository
+2023-11-10T07:51:57.2359848Z [command]/usr/bin/git init /home/runner/work/rest-assured-net/rest-assured-net
+2023-11-10T07:51:57.2536547Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-11-10T07:51:57.2538003Z hint: is subject to change. To configure the initial branch name to use in all
+2023-11-10T07:51:57.2539648Z hint: of your new repositories, which will suppress this warning, call:
+2023-11-10T07:51:57.2540819Z hint: 
+2023-11-10T07:51:57.2541663Z hint: 	git config --global init.defaultBranch <name>
+2023-11-10T07:51:57.2542414Z hint: 
+2023-11-10T07:51:57.2543309Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-11-10T07:51:57.2544641Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-11-10T07:51:57.2545748Z hint: 
+2023-11-10T07:51:57.2546664Z hint: 	git branch -m <name>
+2023-11-10T07:51:57.2548648Z Initialized empty Git repository in /home/runner/work/rest-assured-net/rest-assured-net/.git/
+2023-11-10T07:51:57.2555798Z [command]/usr/bin/git remote add origin https://github.com/basdijkstra/rest-assured-net
+2023-11-10T07:51:57.2599066Z ##[endgroup]
+2023-11-10T07:51:57.2600433Z ##[group]Disabling automatic garbage collection
+2023-11-10T07:51:57.2603236Z [command]/usr/bin/git config --local gc.auto 0
+2023-11-10T07:51:57.2639742Z ##[endgroup]
+2023-11-10T07:51:57.2641014Z ##[group]Setting up auth
+2023-11-10T07:51:57.2646317Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-11-10T07:51:57.2684667Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-11-10T07:51:57.3016348Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-11-10T07:51:57.3053606Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-11-10T07:51:57.3289460Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-11-10T07:51:57.3331041Z ##[endgroup]
+2023-11-10T07:51:57.3332473Z ##[group]Fetching the repository
+2023-11-10T07:51:57.3341720Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +295418080bf31f93d772e530087cf7340db586b7:refs/remotes/origin/main
+2023-11-10T07:51:57.5408628Z remote: Enumerating objects: 103, done.        
+2023-11-10T07:51:57.5409939Z remote: Counting objects:   0% (1/103)        
+2023-11-10T07:51:57.5411200Z remote: Counting objects:   1% (2/103)        
+2023-11-10T07:51:57.5412330Z remote: Counting objects:   2% (3/103)        
+2023-11-10T07:51:57.5413270Z remote: Counting objects:   3% (4/103)        
+2023-11-10T07:51:57.5414042Z remote: Counting objects:   4% (5/103)        
+2023-11-10T07:51:57.5414681Z remote: Counting objects:   5% (6/103)        
+2023-11-10T07:51:57.5415299Z remote: Counting objects:   6% (7/103)        
+2023-11-10T07:51:57.5416097Z remote: Counting objects:   7% (8/103)        
+2023-11-10T07:51:57.5416694Z remote: Counting objects:   8% (9/103)        
+2023-11-10T07:51:57.5417397Z remote: Counting objects:   9% (10/103)        
+2023-11-10T07:51:57.5418188Z remote: Counting objects:  10% (11/103)        
+2023-11-10T07:51:57.5418915Z remote: Counting objects:  11% (12/103)        
+2023-11-10T07:51:57.5420028Z remote: Counting objects:  12% (13/103)        
+2023-11-10T07:51:57.5421440Z remote: Counting objects:  13% (14/103)        
+2023-11-10T07:51:57.5422602Z remote: Counting objects:  14% (15/103)        
+2023-11-10T07:51:57.5423788Z remote: Counting objects:  15% (16/103)        
+2023-11-10T07:51:57.5425156Z remote: Counting objects:  16% (17/103)        
+2023-11-10T07:51:57.5426266Z remote: Counting objects:  17% (18/103)        
+2023-11-10T07:51:57.5427522Z remote: Counting objects:  18% (19/103)        
+2023-11-10T07:51:57.5429032Z remote: Counting objects:  19% (20/103)        
+2023-11-10T07:51:57.5430170Z remote: Counting objects:  20% (21/103)        
+2023-11-10T07:51:57.5431527Z remote: Counting objects:  21% (22/103)        
+2023-11-10T07:51:57.5432860Z remote: Counting objects:  22% (23/103)        
+2023-11-10T07:51:57.5434037Z remote: Counting objects:  23% (24/103)        
+2023-11-10T07:51:57.5435029Z remote: Counting objects:  24% (25/103)        
+2023-11-10T07:51:57.5435706Z remote: Counting objects:  25% (26/103)        
+2023-11-10T07:51:57.5436305Z remote: Counting objects:  26% (27/103)        
+2023-11-10T07:51:57.5437011Z remote: Counting objects:  27% (28/103)        
+2023-11-10T07:51:57.5437673Z remote: Counting objects:  28% (29/103)        
+2023-11-10T07:51:57.5438378Z remote: Counting objects:  29% (30/103)        
+2023-11-10T07:51:57.5439020Z remote: Counting objects:  30% (31/103)        
+2023-11-10T07:51:57.5439608Z remote: Counting objects:  31% (32/103)        
+2023-11-10T07:51:57.5440165Z remote: Counting objects:  32% (33/103)        
+2023-11-10T07:51:57.5440813Z remote: Counting objects:  33% (34/103)        
+2023-11-10T07:51:57.5441351Z remote: Counting objects:  34% (36/103)        
+2023-11-10T07:51:57.5441909Z remote: Counting objects:  35% (37/103)        
+2023-11-10T07:51:57.5442538Z remote: Counting objects:  36% (38/103)        
+2023-11-10T07:51:57.5443081Z remote: Counting objects:  37% (39/103)        
+2023-11-10T07:51:57.5443635Z remote: Counting objects:  38% (40/103)        
+2023-11-10T07:51:57.5444256Z remote: Counting objects:  39% (41/103)        
+2023-11-10T07:51:57.5444803Z remote: Counting objects:  40% (42/103)        
+2023-11-10T07:51:57.5445354Z remote: Counting objects:  41% (43/103)        
+2023-11-10T07:51:57.5445982Z remote: Counting objects:  42% (44/103)        
+2023-11-10T07:51:57.5446499Z remote: Counting objects:  43% (45/103)        
+2023-11-10T07:51:57.5447044Z remote: Counting objects:  44% (46/103)        
+2023-11-10T07:51:57.5447700Z remote: Counting objects:  45% (47/103)        
+2023-11-10T07:51:57.5448213Z remote: Counting objects:  46% (48/103)        
+2023-11-10T07:51:57.5448758Z remote: Counting objects:  47% (49/103)        
+2023-11-10T07:51:57.5449383Z remote: Counting objects:  48% (50/103)        
+2023-11-10T07:51:57.5449905Z remote: Counting objects:  49% (51/103)        
+2023-11-10T07:51:57.5450648Z remote: Counting objects:  50% (52/103)        
+2023-11-10T07:51:57.5451310Z remote: Counting objects:  51% (53/103)        
+2023-11-10T07:51:57.5451825Z remote: Counting objects:  52% (54/103)        
+2023-11-10T07:51:57.5452389Z remote: Counting objects:  53% (55/103)        
+2023-11-10T07:51:57.5453013Z remote: Counting objects:  54% (56/103)        
+2023-11-10T07:51:57.5453531Z remote: Counting objects:  55% (57/103)        
+2023-11-10T07:51:57.5454093Z remote: Counting objects:  56% (58/103)        
+2023-11-10T07:51:57.5455287Z remote: Counting objects:  57% (59/103)        
+2023-11-10T07:51:57.5456432Z remote: Counting objects:  58% (60/103)        
+2023-11-10T07:51:57.5457041Z remote: Counting objects:  59% (61/103)        
+2023-11-10T07:51:57.5457825Z remote: Counting objects:  60% (62/103)        
+2023-11-10T07:51:57.5458703Z remote: Counting objects:  61% (63/103)        
+2023-11-10T07:51:57.5459917Z remote: Counting objects:  62% (64/103)        
+2023-11-10T07:51:57.5461173Z remote: Counting objects:  63% (65/103)        
+2023-11-10T07:51:57.5462331Z remote: Counting objects:  64% (66/103)        
+2023-11-10T07:51:57.5463417Z remote: Counting objects:  65% (67/103)        
+2023-11-10T07:51:57.5464466Z remote: Counting objects:  66% (68/103)        
+2023-11-10T07:51:57.5465155Z remote: Counting objects:  67% (70/103)        
+2023-11-10T07:51:57.5465753Z remote: Counting objects:  68% (71/103)        
+2023-11-10T07:51:57.5466376Z remote: Counting objects:  69% (72/103)        
+2023-11-10T07:51:57.5466955Z remote: Counting objects:  70% (73/103)        
+2023-11-10T07:51:57.5467512Z remote: Counting objects:  71% (74/103)        
+2023-11-10T07:51:57.5468368Z remote: Counting objects:  72% (75/103)        
+2023-11-10T07:51:57.5468979Z remote: Counting objects:  73% (76/103)        
+2023-11-10T07:51:57.5469540Z remote: Counting objects:  74% (77/103)        
+2023-11-10T07:51:57.5470305Z remote: Counting objects:  75% (78/103)        
+2023-11-10T07:51:57.5471119Z remote: Counting objects:  76% (79/103)        
+2023-11-10T07:51:57.5471666Z remote: Counting objects:  77% (80/103)        
+2023-11-10T07:51:57.5472272Z remote: Counting objects:  78% (81/103)        
+2023-11-10T07:51:57.5472804Z remote: Counting objects:  79% (82/103)        
+2023-11-10T07:51:57.5473353Z remote: Counting objects:  80% (83/103)        
+2023-11-10T07:51:57.5473925Z remote: Counting objects:  81% (84/103)        
+2023-11-10T07:51:57.5474446Z remote: Counting objects:  82% (85/103)        
+2023-11-10T07:51:57.5474968Z remote: Counting objects:  83% (86/103)        
+2023-11-10T07:51:57.5475572Z remote: Counting objects:  84% (87/103)        
+2023-11-10T07:51:57.5476056Z remote: Counting objects:  85% (88/103)        
+2023-11-10T07:51:57.5476592Z remote: Counting objects:  86% (89/103)        
+2023-11-10T07:51:57.5477320Z remote: Counting objects:  87% (90/103)        
+2023-11-10T07:51:57.5477818Z remote: Counting objects:  88% (91/103)        
+2023-11-10T07:51:57.5478355Z remote: Counting objects:  89% (92/103)        
+2023-11-10T07:51:57.5479110Z remote: Counting objects:  90% (93/103)        
+2023-11-10T07:51:57.5480218Z remote: Counting objects:  91% (94/103)        
+2023-11-10T07:51:57.5481156Z remote: Counting objects:  92% (95/103)        
+2023-11-10T07:51:57.5481837Z remote: Counting objects:  93% (96/103)        
+2023-11-10T07:51:57.5482357Z remote: Counting objects:  94% (97/103)        
+2023-11-10T07:51:57.5482914Z remote: Counting objects:  95% (98/103)        
+2023-11-10T07:51:57.5483512Z remote: Counting objects:  96% (99/103)        
+2023-11-10T07:51:57.5484012Z remote: Counting objects:  97% (100/103)        
+2023-11-10T07:51:57.5484615Z remote: Counting objects:  98% (101/103)        
+2023-11-10T07:51:57.5485801Z remote: Counting objects:  99% (102/103)        
+2023-11-10T07:51:57.5486771Z remote: Counting objects: 100% (103/103)        
+2023-11-10T07:51:57.5487408Z remote: Counting objects: 100% (103/103), done.        
+2023-11-10T07:51:57.5488113Z remote: Compressing objects:   1% (1/95)        
+2023-11-10T07:51:57.5488919Z remote: Compressing objects:   2% (2/95)        
+2023-11-10T07:51:57.5489511Z remote: Compressing objects:   3% (3/95)        
+2023-11-10T07:51:57.5490148Z remote: Compressing objects:   4% (4/95)        
+2023-11-10T07:51:57.5490691Z remote: Compressing objects:   5% (5/95)        
+2023-11-10T07:51:57.5491235Z remote: Compressing objects:   6% (6/95)        
+2023-11-10T07:51:57.5491886Z remote: Compressing objects:   7% (7/95)        
+2023-11-10T07:51:57.5492479Z remote: Compressing objects:   8% (8/95)        
+2023-11-10T07:51:57.5493535Z remote: Compressing objects:   9% (9/95)        
+2023-11-10T07:51:57.5494643Z remote: Compressing objects:  10% (10/95)        
+2023-11-10T07:51:57.5495241Z remote: Compressing objects:  11% (11/95)        
+2023-11-10T07:51:57.5495764Z remote: Compressing objects:  12% (12/95)        
+2023-11-10T07:51:57.5496456Z remote: Compressing objects:  13% (13/95)        
+2023-11-10T07:51:57.5497014Z remote: Compressing objects:  14% (14/95)        
+2023-11-10T07:51:57.5497669Z remote: Compressing objects:  15% (15/95)        
+2023-11-10T07:51:57.5498393Z remote: Compressing objects:  16% (16/95)        
+2023-11-10T07:51:57.5499572Z remote: Compressing objects:  17% (17/95)        
+2023-11-10T07:51:57.5500444Z remote: Compressing objects:  18% (18/95)        
+2023-11-10T07:51:57.5501164Z remote: Compressing objects:  20% (19/95)        
+2023-11-10T07:51:57.5501729Z remote: Compressing objects:  21% (20/95)        
+2023-11-10T07:51:57.5502259Z remote: Compressing objects:  22% (21/95)        
+2023-11-10T07:51:57.5503446Z remote: Compressing objects:  23% (22/95)        
+2023-11-10T07:51:57.5504556Z remote: Compressing objects:  24% (23/95)        
+2023-11-10T07:51:57.5505269Z remote: Compressing objects:  25% (24/95)        
+2023-11-10T07:51:57.5505843Z remote: Compressing objects:  26% (25/95)        
+2023-11-10T07:51:57.5506406Z remote: Compressing objects:  27% (26/95)        
+2023-11-10T07:51:57.5510866Z remote: Compressing objects:  28% (27/95)        
+2023-11-10T07:51:57.5517572Z remote: Compressing objects:  29% (28/95)        
+2023-11-10T07:51:57.5524562Z remote: Compressing objects:  30% (29/95)        
+2023-11-10T07:51:57.5543560Z remote: Compressing objects:  31% (30/95)        
+2023-11-10T07:51:57.5544591Z remote: Compressing objects:  32% (31/95)        
+2023-11-10T07:51:57.5545261Z remote: Compressing objects:  33% (32/95)        
+2023-11-10T07:51:57.5550134Z remote: Compressing objects:  34% (33/95)        
+2023-11-10T07:51:57.5551511Z remote: Compressing objects:  35% (34/95)        
+2023-11-10T07:51:57.5552668Z remote: Compressing objects:  36% (35/95)        
+2023-11-10T07:51:57.5559585Z remote: Compressing objects:  37% (36/95)        
+2023-11-10T07:51:57.5568739Z remote: Compressing objects:  38% (37/95)        
+2023-11-10T07:51:57.5569889Z remote: Compressing objects:  40% (38/95)        
+2023-11-10T07:51:57.5571052Z remote: Compressing objects:  41% (39/95)        
+2023-11-10T07:51:57.5579541Z remote: Compressing objects:  42% (40/95)        
+2023-11-10T07:51:57.5585352Z remote: Compressing objects:  43% (41/95)        
+2023-11-10T07:51:57.5586056Z remote: Compressing objects:  44% (42/95)        
+2023-11-10T07:51:57.5595651Z remote: Compressing objects:  45% (43/95)        
+2023-11-10T07:51:57.5596302Z remote: Compressing objects:  46% (44/95)        
+2023-11-10T07:51:57.5599804Z remote: Compressing objects:  47% (45/95)        
+2023-11-10T07:51:57.5606408Z remote: Compressing objects:  48% (46/95)        
+2023-11-10T07:51:57.5614115Z remote: Compressing objects:  49% (47/95)        
+2023-11-10T07:51:57.5615081Z remote: Compressing objects:  50% (48/95)        
+2023-11-10T07:51:57.5619646Z remote: Compressing objects:  51% (49/95)        
+2023-11-10T07:51:57.5624033Z remote: Compressing objects:  52% (50/95)        
+2023-11-10T07:51:57.5627876Z remote: Compressing objects:  53% (51/95)        
+2023-11-10T07:51:57.5632601Z remote: Compressing objects:  54% (52/95)        
+2023-11-10T07:51:57.5635591Z remote: Compressing objects:  55% (53/95)        
+2023-11-10T07:51:57.5638417Z remote: Compressing objects:  56% (54/95)        
+2023-11-10T07:51:57.5642141Z remote: Compressing objects:  57% (55/95)        
+2023-11-10T07:51:57.5643842Z remote: Compressing objects:  58% (56/95)        
+2023-11-10T07:51:57.5647266Z remote: Compressing objects:  60% (57/95)        
+2023-11-10T07:51:57.5648304Z remote: Compressing objects:  61% (58/95)        
+2023-11-10T07:51:57.5659207Z remote: Compressing objects:  62% (59/95)        
+2023-11-10T07:51:57.5663952Z remote: Compressing objects:  63% (60/95)        
+2023-11-10T07:51:57.5666742Z remote: Compressing objects:  64% (61/95)        
+2023-11-10T07:51:57.5669766Z remote: Compressing objects:  65% (62/95)        
+2023-11-10T07:51:57.5670837Z remote: Compressing objects:  66% (63/95)        
+2023-11-10T07:51:57.5671590Z remote: Compressing objects:  67% (64/95)        
+2023-11-10T07:51:57.5672602Z remote: Compressing objects:  68% (65/95)        
+2023-11-10T07:51:57.5673429Z remote: Compressing objects:  69% (66/95)        
+2023-11-10T07:51:57.5674291Z remote: Compressing objects:  70% (67/95)        
+2023-11-10T07:51:57.5675320Z remote: Compressing objects:  71% (68/95)        
+2023-11-10T07:51:57.5676172Z remote: Compressing objects:  72% (69/95)        
+2023-11-10T07:51:57.5677042Z remote: Compressing objects:  73% (70/95)        
+2023-11-10T07:51:57.5678046Z remote: Compressing objects:  74% (71/95)        
+2023-11-10T07:51:57.5678776Z remote: Compressing objects:  75% (72/95)        
+2023-11-10T07:51:57.5679585Z remote: Compressing objects:  76% (73/95)        
+2023-11-10T07:51:57.5680416Z remote: Compressing objects:  77% (74/95)        
+2023-11-10T07:51:57.5681313Z remote: Compressing objects:  78% (75/95)        
+2023-11-10T07:51:57.5682277Z remote: Compressing objects:  80% (76/95)        
+2023-11-10T07:51:57.5683317Z remote: Compressing objects:  81% (77/95)        
+2023-11-10T07:51:57.5684240Z remote: Compressing objects:  82% (78/95)        
+2023-11-10T07:51:57.5684833Z remote: Compressing objects:  83% (79/95)        
+2023-11-10T07:51:57.5685672Z remote: Compressing objects:  84% (80/95)        
+2023-11-10T07:51:57.5686206Z remote: Compressing objects:  85% (81/95)        
+2023-11-10T07:51:57.5686751Z remote: Compressing objects:  86% (82/95)        
+2023-11-10T07:51:57.5687314Z remote: Compressing objects:  87% (83/95)        
+2023-11-10T07:51:57.5687837Z remote: Compressing objects:  88% (84/95)        
+2023-11-10T07:51:57.5688390Z remote: Compressing objects:  89% (85/95)        
+2023-11-10T07:51:57.5688938Z remote: Compressing objects:  90% (86/95)        
+2023-11-10T07:51:57.5689508Z remote: Compressing objects:  91% (87/95)        
+2023-11-10T07:51:57.5690030Z remote: Compressing objects:  92% (88/95)        
+2023-11-10T07:51:57.5690647Z remote: Compressing objects:  93% (89/95)        
+2023-11-10T07:51:57.5691377Z remote: Compressing objects:  94% (90/95)        
+2023-11-10T07:51:57.5692347Z remote: Compressing objects:  95% (91/95)        
+2023-11-10T07:51:57.5693010Z remote: Compressing objects:  96% (92/95)        
+2023-11-10T07:51:57.5693571Z remote: Compressing objects:  97% (93/95)        
+2023-11-10T07:51:57.5694053Z remote: Compressing objects:  98% (94/95)        
+2023-11-10T07:51:57.5694649Z remote: Compressing objects: 100% (95/95)        
+2023-11-10T07:51:57.5695250Z remote: Compressing objects: 100% (95/95), done.        
+2023-11-10T07:51:57.5714296Z Receiving objects:   0% (1/103)
+2023-11-10T07:51:57.5715191Z Receiving objects:   1% (2/103)
+2023-11-10T07:51:57.5715912Z Receiving objects:   2% (3/103)
+2023-11-10T07:51:57.5716748Z Receiving objects:   3% (4/103)
+2023-11-10T07:51:57.5717418Z Receiving objects:   4% (5/103)
+2023-11-10T07:51:57.5718182Z Receiving objects:   5% (6/103)
+2023-11-10T07:51:57.5718998Z Receiving objects:   6% (7/103)
+2023-11-10T07:51:57.5719630Z Receiving objects:   7% (8/103)
+2023-11-10T07:51:57.5720328Z Receiving objects:   8% (9/103)
+2023-11-10T07:51:57.5721178Z Receiving objects:   9% (10/103)
+2023-11-10T07:51:57.5722015Z Receiving objects:  10% (11/103)
+2023-11-10T07:51:57.5722920Z Receiving objects:  11% (12/103)
+2023-11-10T07:51:57.5723771Z Receiving objects:  12% (13/103)
+2023-11-10T07:51:57.5724327Z Receiving objects:  13% (14/103)
+2023-11-10T07:51:57.5724922Z Receiving objects:  14% (15/103)
+2023-11-10T07:51:57.5725816Z Receiving objects:  15% (16/103)
+2023-11-10T07:51:57.5726501Z Receiving objects:  16% (17/103)
+2023-11-10T07:51:57.5727210Z Receiving objects:  17% (18/103)
+2023-11-10T07:51:57.5728016Z Receiving objects:  18% (19/103)
+2023-11-10T07:51:57.5728663Z Receiving objects:  19% (20/103)
+2023-11-10T07:51:57.5729328Z Receiving objects:  20% (21/103)
+2023-11-10T07:51:57.5729896Z Receiving objects:  21% (22/103)
+2023-11-10T07:51:57.5730304Z Receiving objects:  22% (23/103)
+2023-11-10T07:51:57.5730755Z Receiving objects:  23% (24/103)
+2023-11-10T07:51:57.5744504Z Receiving objects:  24% (25/103)
+2023-11-10T07:51:57.5745188Z Receiving objects:  25% (26/103)
+2023-11-10T07:51:57.5745856Z Receiving objects:  26% (27/103)
+2023-11-10T07:51:57.5746716Z Receiving objects:  27% (28/103)
+2023-11-10T07:51:57.5747401Z Receiving objects:  28% (29/103)
+2023-11-10T07:51:57.5747860Z Receiving objects:  29% (30/103)
+2023-11-10T07:51:57.5748633Z Receiving objects:  30% (31/103)
+2023-11-10T07:51:57.5749073Z Receiving objects:  31% (32/103)
+2023-11-10T07:51:57.5749489Z Receiving objects:  32% (33/103)
+2023-11-10T07:51:57.5753045Z Receiving objects:  33% (34/103)
+2023-11-10T07:51:57.5753832Z Receiving objects:  34% (36/103)
+2023-11-10T07:51:57.5754534Z Receiving objects:  35% (37/103)
+2023-11-10T07:51:57.5755407Z Receiving objects:  36% (38/103)
+2023-11-10T07:51:57.5755885Z Receiving objects:  37% (39/103)
+2023-11-10T07:51:57.5756315Z Receiving objects:  38% (40/103)
+2023-11-10T07:51:57.5756821Z Receiving objects:  39% (41/103)
+2023-11-10T07:51:57.5787682Z Receiving objects:  40% (42/103)
+2023-11-10T07:51:57.5789399Z Receiving objects:  41% (43/103)
+2023-11-10T07:51:57.5790562Z Receiving objects:  42% (44/103)
+2023-11-10T07:51:57.5791475Z Receiving objects:  43% (45/103)
+2023-11-10T07:51:57.5792394Z Receiving objects:  44% (46/103)
+2023-11-10T07:51:57.5793268Z Receiving objects:  45% (47/103)
+2023-11-10T07:51:57.5794099Z Receiving objects:  46% (48/103)
+2023-11-10T07:51:57.5794737Z Receiving objects:  47% (49/103)
+2023-11-10T07:51:57.5795293Z Receiving objects:  48% (50/103)
+2023-11-10T07:51:57.5795751Z Receiving objects:  49% (51/103)
+2023-11-10T07:51:57.5796139Z Receiving objects:  50% (52/103)
+2023-11-10T07:51:57.5796630Z Receiving objects:  51% (53/103)
+2023-11-10T07:51:57.5797077Z Receiving objects:  52% (54/103)
+2023-11-10T07:51:57.5797521Z Receiving objects:  53% (55/103)
+2023-11-10T07:51:57.5798451Z Receiving objects:  54% (56/103)
+2023-11-10T07:51:57.5798919Z Receiving objects:  55% (57/103)
+2023-11-10T07:51:57.5799309Z Receiving objects:  56% (58/103)
+2023-11-10T07:51:57.5800176Z Receiving objects:  57% (59/103)
+2023-11-10T07:51:57.5800765Z Receiving objects:  58% (60/103)
+2023-11-10T07:51:57.5801345Z Receiving objects:  59% (61/103)
+2023-11-10T07:51:57.5801949Z Receiving objects:  60% (62/103)
+2023-11-10T07:51:57.5802822Z Receiving objects:  61% (63/103)
+2023-11-10T07:51:57.5803422Z Receiving objects:  62% (64/103)
+2023-11-10T07:51:57.5803813Z Receiving objects:  63% (65/103)
+2023-11-10T07:51:57.5804237Z Receiving objects:  64% (66/103)
+2023-11-10T07:51:57.5804741Z Receiving objects:  65% (67/103)
+2023-11-10T07:51:57.5805162Z Receiving objects:  66% (68/103)
+2023-11-10T07:51:57.5805652Z Receiving objects:  67% (70/103)
+2023-11-10T07:51:57.5808953Z Receiving objects:  68% (71/103)
+2023-11-10T07:51:57.5809791Z Receiving objects:  69% (72/103)
+2023-11-10T07:51:57.5810649Z Receiving objects:  70% (73/103)
+2023-11-10T07:51:57.5811288Z Receiving objects:  71% (74/103)
+2023-11-10T07:51:57.5811741Z Receiving objects:  72% (75/103)
+2023-11-10T07:51:57.5812270Z Receiving objects:  73% (76/103)
+2023-11-10T07:51:57.5812680Z Receiving objects:  74% (77/103)
+2023-11-10T07:51:57.5813107Z Receiving objects:  75% (78/103)
+2023-11-10T07:51:57.5813612Z Receiving objects:  76% (79/103)
+2023-11-10T07:51:57.5814186Z Receiving objects:  77% (80/103)
+2023-11-10T07:51:57.5814661Z Receiving objects:  78% (81/103)
+2023-11-10T07:51:57.5815155Z Receiving objects:  79% (82/103)
+2023-11-10T07:51:57.5815548Z Receiving objects:  80% (83/103)
+2023-11-10T07:51:57.5815991Z Receiving objects:  81% (84/103)
+2023-11-10T07:51:57.5816476Z Receiving objects:  82% (85/103)
+2023-11-10T07:51:57.5816863Z Receiving objects:  83% (86/103)
+2023-11-10T07:51:57.5817290Z Receiving objects:  84% (87/103)
+2023-11-10T07:51:57.5817770Z Receiving objects:  85% (88/103)
+2023-11-10T07:51:57.5818150Z Receiving objects:  86% (89/103)
+2023-11-10T07:51:57.5818576Z Receiving objects:  87% (90/103)
+2023-11-10T07:51:57.5819057Z Receiving objects:  88% (91/103)
+2023-11-10T07:51:57.5836119Z Receiving objects:  89% (92/103)
+2023-11-10T07:51:57.5836864Z Receiving objects:  90% (93/103)
+2023-11-10T07:51:57.5837732Z Receiving objects:  91% (94/103)
+2023-11-10T07:51:57.5839056Z Receiving objects:  92% (95/103)
+2023-11-10T07:51:57.5839852Z Receiving objects:  93% (96/103)
+2023-11-10T07:51:57.5840528Z Receiving objects:  94% (97/103)
+2023-11-10T07:51:57.5840953Z Receiving objects:  95% (98/103)
+2023-11-10T07:51:57.5841719Z Receiving objects:  96% (99/103)
+2023-11-10T07:51:57.5842557Z Receiving objects:  97% (100/103)
+2023-11-10T07:51:57.5846759Z Receiving objects:  98% (101/103)
+2023-11-10T07:51:57.5848089Z remote: Total 103 (delta 54), reused 24 (delta 7), pack-reused 0        
+2023-11-10T07:51:57.5849283Z Receiving objects:  99% (102/103)
+2023-11-10T07:51:57.5850025Z Receiving objects: 100% (103/103)
+2023-11-10T07:51:57.5850956Z Receiving objects: 100% (103/103), 84.42 KiB | 6.49 MiB/s, done.
+2023-11-10T07:51:57.5852209Z Resolving deltas:   0% (0/54)
+2023-11-10T07:51:57.5852920Z Resolving deltas:   1% (1/54)
+2023-11-10T07:51:57.5853561Z Resolving deltas:   3% (2/54)
+2023-11-10T07:51:57.5854601Z Resolving deltas:   5% (3/54)
+2023-11-10T07:51:57.5856003Z Resolving deltas:   7% (4/54)
+2023-11-10T07:51:57.5858826Z Resolving deltas:   9% (5/54)
+2023-11-10T07:51:57.5861303Z Resolving deltas:  11% (6/54)
+2023-11-10T07:51:57.5864646Z Resolving deltas:  12% (7/54)
+2023-11-10T07:51:57.5865424Z Resolving deltas:  14% (8/54)
+2023-11-10T07:51:57.5866378Z Resolving deltas:  16% (9/54)
+2023-11-10T07:51:57.5867225Z Resolving deltas:  18% (10/54)
+2023-11-10T07:51:57.5868430Z Resolving deltas:  20% (11/54)
+2023-11-10T07:51:57.5869439Z Resolving deltas:  22% (12/54)
+2023-11-10T07:51:57.5870248Z Resolving deltas:  24% (13/54)
+2023-11-10T07:51:57.5871026Z Resolving deltas:  25% (14/54)
+2023-11-10T07:51:57.5871945Z Resolving deltas:  27% (15/54)
+2023-11-10T07:51:57.5872698Z Resolving deltas:  29% (16/54)
+2023-11-10T07:51:57.5873355Z Resolving deltas:  31% (17/54)
+2023-11-10T07:51:57.5874072Z Resolving deltas:  33% (18/54)
+2023-11-10T07:51:57.5874638Z Resolving deltas:  35% (19/54)
+2023-11-10T07:51:57.5875392Z Resolving deltas:  37% (20/54)
+2023-11-10T07:51:57.5876296Z Resolving deltas:  38% (21/54)
+2023-11-10T07:51:57.5877043Z Resolving deltas:  40% (22/54)
+2023-11-10T07:51:57.5877914Z Resolving deltas:  42% (23/54)
+2023-11-10T07:51:57.5878631Z Resolving deltas:  44% (24/54)
+2023-11-10T07:51:57.5879351Z Resolving deltas:  46% (25/54)
+2023-11-10T07:51:57.5880208Z Resolving deltas:  48% (26/54)
+2023-11-10T07:51:57.5880904Z Resolving deltas:  50% (27/54)
+2023-11-10T07:51:57.5881670Z Resolving deltas:  51% (28/54)
+2023-11-10T07:51:57.5882494Z Resolving deltas:  53% (29/54)
+2023-11-10T07:51:57.5883225Z Resolving deltas:  55% (30/54)
+2023-11-10T07:51:57.5883832Z Resolving deltas:  57% (31/54)
+2023-11-10T07:51:57.5884593Z Resolving deltas:  61% (33/54)
+2023-11-10T07:51:57.5885327Z Resolving deltas:  62% (34/54)
+2023-11-10T07:51:57.5886009Z Resolving deltas:  64% (35/54)
+2023-11-10T07:51:57.5886851Z Resolving deltas:  66% (36/54)
+2023-11-10T07:51:57.5887545Z Resolving deltas:  68% (37/54)
+2023-11-10T07:51:57.5888254Z Resolving deltas:  70% (38/54)
+2023-11-10T07:51:57.5889103Z Resolving deltas:  72% (39/54)
+2023-11-10T07:51:57.5889830Z Resolving deltas:  74% (40/54)
+2023-11-10T07:51:57.5890815Z Resolving deltas:  75% (41/54)
+2023-11-10T07:51:57.5891659Z Resolving deltas:  77% (42/54)
+2023-11-10T07:51:57.5892285Z Resolving deltas:  79% (43/54)
+2023-11-10T07:51:57.5892832Z Resolving deltas:  81% (44/54)
+2023-11-10T07:51:57.5893673Z Resolving deltas:  83% (45/54)
+2023-11-10T07:51:57.5894377Z Resolving deltas:  85% (46/54)
+2023-11-10T07:51:57.5895117Z Resolving deltas:  88% (48/54)
+2023-11-10T07:51:57.5895805Z Resolving deltas:  90% (49/54)
+2023-11-10T07:51:57.5896243Z Resolving deltas:  92% (50/54)
+2023-11-10T07:51:57.5896684Z Resolving deltas:  94% (51/54)
+2023-11-10T07:51:57.5897167Z Resolving deltas:  96% (52/54)
+2023-11-10T07:51:57.5897678Z Resolving deltas:  98% (53/54)
+2023-11-10T07:51:57.5898216Z Resolving deltas: 100% (54/54)
+2023-11-10T07:51:57.5898729Z Resolving deltas: 100% (54/54), done.
+2023-11-10T07:51:57.5979807Z From https://github.com/basdijkstra/rest-assured-net
+2023-11-10T07:51:57.5981197Z  * [new ref]         295418080bf31f93d772e530087cf7340db586b7 -> origin/main
+2023-11-10T07:51:57.6004294Z ##[endgroup]
+2023-11-10T07:51:57.6005068Z ##[group]Determining the checkout info
+2023-11-10T07:51:57.6006595Z ##[endgroup]
+2023-11-10T07:51:57.6007345Z ##[group]Checking out the ref
+2023-11-10T07:51:57.6011238Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2023-11-10T07:51:57.6106997Z Switched to a new branch 'main'
+2023-11-10T07:51:57.6108338Z branch 'main' set up to track 'origin/main'.
+2023-11-10T07:51:57.6114357Z ##[endgroup]
+2023-11-10T07:51:57.6155589Z [command]/usr/bin/git log -1 --format='%H'
+2023-11-10T07:51:57.6187016Z '295418080bf31f93d772e530087cf7340db586b7'
+2023-11-10T07:51:57.6482068Z ##[group]Run actions/setup-dotnet@v3
+2023-11-10T07:51:57.6482543Z with:
+2023-11-10T07:51:57.6482903Z   dotnet-version: 7.0.x
+2023-11-10T07:51:57.6483349Z   cache: false
+2023-11-10T07:51:57.6483639Z ##[endgroup]
+2023-11-10T07:51:57.8041684Z [command]/home/runner/work/_actions/actions/setup-dotnet/v3/externals/install-dotnet.sh --channel 7.0
+2023-11-10T07:51:58.4191663Z dotnet-install: .NET Core SDK with version '7.0.403' is already installed.
+2023-11-10T07:51:58.4379590Z ##[group]Run dotnet --list-sdks
+2023-11-10T07:51:58.4380213Z [36;1mdotnet --list-sdks[0m
+2023-11-10T07:51:58.4440010Z shell: /usr/bin/bash -e {0}
+2023-11-10T07:51:58.4440581Z env:
+2023-11-10T07:51:58.4440919Z   DOTNET_ROOT: /usr/share/dotnet
+2023-11-10T07:51:58.4441295Z ##[endgroup]
+2023-11-10T07:51:58.5137221Z 6.0.416 [/usr/share/dotnet/sdk]
+2023-11-10T07:51:58.5138039Z 7.0.113 [/usr/share/dotnet/sdk]
+2023-11-10T07:51:58.5138734Z 7.0.203 [/usr/share/dotnet/sdk]
+2023-11-10T07:51:58.5139573Z 7.0.310 [/usr/share/dotnet/sdk]
+2023-11-10T07:51:58.5140183Z 7.0.403 [/usr/share/dotnet/sdk]
+2023-11-10T07:51:58.5173269Z ##[group]Run dotnet restore
+2023-11-10T07:51:58.5173699Z [36;1mdotnet restore[0m
+2023-11-10T07:51:58.5213289Z shell: /usr/bin/bash -e {0}
+2023-11-10T07:51:58.5213767Z env:
+2023-11-10T07:51:58.5214045Z   DOTNET_ROOT: /usr/share/dotnet
+2023-11-10T07:51:58.5214456Z ##[endgroup]
+2023-11-10T07:52:03.8925089Z   Determining projects to restore...
+2023-11-10T07:52:06.3895854Z   Restored /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/RestAssured.Net.DemoService.csproj (in 913 ms).
+2023-11-10T07:52:07.9014958Z   Restored /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj (in 2.4 sec).
+2023-11-10T07:52:08.1967729Z   Restored /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj (in 2.73 sec).
+2023-11-10T07:52:08.2832671Z ##[group]Run dotnet build --framework net7.0 --no-restore
+2023-11-10T07:52:08.2833352Z [36;1mdotnet build --framework net7.0 --no-restore[0m
+2023-11-10T07:52:08.2878348Z shell: /usr/bin/bash -e {0}
+2023-11-10T07:52:08.2878791Z env:
+2023-11-10T07:52:08.2879254Z   DOTNET_ROOT: /usr/share/dotnet
+2023-11-10T07:52:08.2879653Z ##[endgroup]
+2023-11-10T07:52:08.4922060Z MSBuild version 17.7.3+4fca21998 for .NET
+2023-11-10T07:52:16.0298857Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,146): warning CS8604: Possible null reference argument for parameter 'proxy' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:16.0327465Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,172): warning CS8604: Possible null reference argument for parameter 'authenticationHeader' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:16.0347212Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,199): warning CS8604: Possible null reference argument for parameter 'contentType' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:16.0368328Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,223): warning CS8604: Possible null reference argument for parameter 'contentEncoding' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:16.0381182Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(41,53): warning CS0649: Field 'RequestSpecBuilder.authenticationHeader' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:16.0389881Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(37,36): warning CS0649: Field 'RequestSpecBuilder.timeout' is never assigned to, and will always have its default value [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:16.0398076Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(39,37): warning CS0649: Field 'RequestSpecBuilder.proxy' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:16.0406631Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(38,50): warning CS0649: Field 'RequestSpecBuilder.userAgent' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:16.0888509Z   RestAssured.Net -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/bin/Debug/net7.0/RestAssured.Net.dll
+2023-11-10T07:52:16.4241403Z   RestAssured.Net.DemoService -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/bin/Debug/net7.0/RestAssured.Net.DemoService.dll
+2023-11-10T07:52:17.9909353Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/QueryParameterTests.cs(119,13): warning CS0618: 'ExecutableRequest.QueryParams(Dictionary<string, object>)' is obsolete: 'Please use QueryParams(IEnumerable<KeyValuePair<string, object>>) instead. This method will be removed in version 5.0.0' [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:18.1409572Z   RestAssured.Net.Tests -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/bin/Debug/net7.0/RestAssured.Net.Tests.dll
+2023-11-10T07:52:18.2188642Z 
+2023-11-10T07:52:18.2189462Z Build succeeded.
+2023-11-10T07:52:18.2190073Z 
+2023-11-10T07:52:18.2203457Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,146): warning CS8604: Possible null reference argument for parameter 'proxy' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:18.2224026Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,172): warning CS8604: Possible null reference argument for parameter 'authenticationHeader' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:18.2252749Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,199): warning CS8604: Possible null reference argument for parameter 'contentType' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:18.2292313Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,223): warning CS8604: Possible null reference argument for parameter 'contentEncoding' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:18.2305138Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(41,53): warning CS0649: Field 'RequestSpecBuilder.authenticationHeader' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:18.2431501Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(37,36): warning CS0649: Field 'RequestSpecBuilder.timeout' is never assigned to, and will always have its default value [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:18.2440395Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(39,37): warning CS0649: Field 'RequestSpecBuilder.proxy' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:18.2449091Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(38,50): warning CS0649: Field 'RequestSpecBuilder.userAgent' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:18.2459034Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/QueryParameterTests.cs(119,13): warning CS0618: 'ExecutableRequest.QueryParams(Dictionary<string, object>)' is obsolete: 'Please use QueryParams(IEnumerable<KeyValuePair<string, object>>) instead. This method will be removed in version 5.0.0' [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj::TargetFramework=net7.0]
+2023-11-10T07:52:18.2463727Z     9 Warning(s)
+2023-11-10T07:52:18.2464221Z     0 Error(s)
+2023-11-10T07:52:18.2464482Z 
+2023-11-10T07:52:18.2464706Z Time Elapsed 00:00:09.58
+2023-11-10T07:52:18.2789982Z ##[group]Run dotnet test --framework net7.0 --no-restore --no-build --verbosity normal
+2023-11-10T07:52:18.2791466Z [36;1mdotnet test --framework net7.0 --no-restore --no-build --verbosity normal[0m
+2023-11-10T07:52:18.2844302Z shell: /usr/bin/bash -e {0}
+2023-11-10T07:52:18.2844687Z env:
+2023-11-10T07:52:18.2845111Z   DOTNET_ROOT: /usr/share/dotnet
+2023-11-10T07:52:18.2845514Z ##[endgroup]
+2023-11-10T07:52:18.6781119Z Build started 11/10/2023 07:52:18.
+2023-11-10T07:52:18.9864919Z      1>Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.sln" on node 1 (VSTest target(s)).
+2023-11-10T07:52:18.9866903Z      1>ValidateSolutionConfiguration:
+2023-11-10T07:52:18.9867631Z          Building solution configuration "Debug|Any CPU".
+2023-11-10T07:52:19.8375165Z Test run for /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/bin/Debug/net7.0/RestAssured.Net.Tests.dll (.NETCoreApp,Version=v7.0)
+2023-11-10T07:52:20.2192262Z Microsoft (R) Test Execution Command Line Tool Version 17.7.2 (x64)
+2023-11-10T07:52:20.2193815Z Copyright (c) Microsoft Corporation.  All rights reserved.
+2023-11-10T07:52:20.2272821Z 
+2023-11-10T07:52:21.0209909Z Starting test execution, please wait...
+2023-11-10T07:52:21.1493511Z A total of 1 test files matched the specified pattern.
+2023-11-10T07:52:21.6233294Z NUnit Adapter 4.5.0.0: Test execution started
+2023-11-10T07:52:21.6448523Z Running all tests in /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/bin/Debug/net7.0/RestAssured.Net.Tests.dll
+2023-11-10T07:52:21.7721636Z    NUnit3TestExecutor discovered 191 of 191 NUnit test cases using Current Discovery mode, Non-Explicit run
+2023-11-10T07:52:24.0103541Z   Passed BasicAuthenticationDetailsCanBeSupplied [1 s]
+2023-11-10T07:52:24.0106895Z   Passed OAuth2AuthenticationTokenCanBeSupplied [22 ms]
+2023-11-10T07:52:24.0108515Z   Passed CookieAsStringWithASingleValueCanBeSupplied [8 ms]
+2023-11-10T07:52:24.0109813Z   Passed CookieCollectionWithASingleCookieCanBeSupplied [6 ms]
+2023-11-10T07:52:24.0110994Z   Passed CookieObjectWithASingleValueCanBeSupplied [5 ms]
+2023-11-10T07:52:24.0112103Z   Passed HttpGetCanBeUsed [736 ms]
+2023-11-10T07:52:24.0113367Z   Passed CustomJsonSerializerSettingsCanBeSuppliedInRequestSpecification [29 ms]
+2023-11-10T07:52:24.0114896Z   Passed CustomJsonSerializerSettingsCanBeSuppliedInTestBody [5 ms]
+2023-11-10T07:52:24.0116391Z   Passed CustomJsonSerializerSettingsCanBeSuppliedWhenDeserializing [21 ms]
+2023-11-10T07:52:24.6303451Z   Passed FormDataCanBeSupplied [15 ms]
+2023-11-10T07:52:24.6304604Z   Passed ParameterizedGraphQLQueryCanBeSupplied [27 ms]
+2023-11-10T07:52:24.6305592Z   Passed SimpleGraphQLQueryCanBeSupplied [9 ms]
+2023-11-10T07:52:24.6306464Z   Passed HttpsEndpointsCanBeInvokedWithoutExplicitlyDisablingSslVerification [351 ms]
+2023-11-10T07:52:24.6307372Z   Passed SslVerificationCanBeDisabledPerRequest [69 ms]
+2023-11-10T07:52:24.6308713Z   Passed SslVerificationCanBeDisabledPerRequestUsingDeprecatedMethod [65 ms]
+2023-11-10T07:52:24.6309598Z   Passed SslVerificationCanBeDisabledThroughRequestSpecification [63 ms]
+2023-11-10T07:52:24.6310335Z   Passed HTTP GET is allowed [14 ms]
+2023-11-10T07:52:24.6315106Z   Passed HTTP POST is not allowed [16 ms]
+2023-11-10T07:52:24.7050813Z   Passed HTTP PUT is not allowed [12 ms]
+2023-11-10T07:52:24.7051446Z   Passed HTTP PATCH is not allowed [11 ms]
+2023-11-10T07:52:24.7051967Z   Passed HTTP DELETE is not allowed [11 ms]
+2023-11-10T07:52:24.7052523Z   Passed HTTP HEAD is allowed [11 ms]
+2023-11-10T07:52:24.7052937Z   Passed HTTP OPTIONS is allowed [11 ms]
+2023-11-10T07:52:24.7053401Z   Passed HttpDeleteCanBeUsed [4 ms]
+2023-11-10T07:52:24.7053890Z   Passed HttpGetCanBeUsed [4 ms]
+2023-11-10T07:52:24.7054289Z   Passed HttpHeadCanBeUsed [3 ms]
+2023-11-10T07:52:24.7054718Z   Passed HttpOptionsCanBeUsed [4 ms]
+2023-11-10T07:52:25.0509854Z   Passed HttpPatchCanBeUsed [4 ms]
+2023-11-10T07:52:25.0510678Z   Passed HttpPostCanBeUsed [3 ms]
+2023-11-10T07:52:25.0512051Z   Passed HttpPutCanBeUsed [3 ms]
+2023-11-10T07:52:25.0512700Z   Passed AnonymousObjectCanBeSerializedToJson [5 ms]
+2023-11-10T07:52:25.0513313Z   Passed DictionaryCanBeSerializedToJson [4 ms]
+2023-11-10T07:52:25.0513923Z   Passed ObjectCanBeSerializedToJson [7 ms]
+2023-11-10T07:52:25.0514406Z   Passed ObjectCanBeSerializedToXml [214 ms]
+2023-11-10T07:52:25.0515010Z   Passed UnableToSerializeThrowsTheExpectedException [6 ms]
+2023-11-10T07:52:25.0515785Z   Passed JsonSchemaCanBeSuppliedAndVerifiedAsJsonSchema [91 ms]
+2023-11-10T07:52:25.0938210Z GET http://localhost:9876/log-no-response-body
+2023-11-10T07:52:25.0939276Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:25.0940297Z Content-Length: 0
+2023-11-10T07:52:25.0940657Z 
+2023-11-10T07:52:25.0941700Z HTTP 200 (OK)
+2023-11-10T07:52:25.0942456Z Content-Type: 
+2023-11-10T07:52:25.0943165Z Content-Length: 0
+2023-11-10T07:52:25.0943841Z Date: Fri, 10 Nov 2023 07:52:25 GMT
+2023-11-10T07:52:25.0944500Z Server: Kestrel
+2023-11-10T07:52:25.0945030Z Response time: 2.0575 ms
+2023-11-10T07:52:25.0945422Z 
+2023-11-10T07:52:25.0948916Z GET http://localhost:9876/log-json-response
+2023-11-10T07:52:25.0950187Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:25.0951037Z Content-Length: 29
+2023-11-10T07:52:25.0951683Z Accept: application/json
+2023-11-10T07:52:25.0952601Z CustomHeader: custom header value
+2023-11-10T07:52:25.0953244Z {
+2023-11-10T07:52:25.0953734Z   "id": 1,
+2023-11-10T07:52:25.0954422Z   "user": "John Doe"
+2023-11-10T07:52:25.0954914Z }
+2023-11-10T07:52:25.0955203Z 
+2023-11-10T07:52:25.0990338Z GET http://localhost:9876/log-xml-response
+2023-11-10T07:52:25.0991447Z Content-Type: application/xml; charset=utf-8
+2023-11-10T07:52:25.0991996Z Content-Length: 456
+2023-11-10T07:52:25.0992840Z <Location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+2023-11-10T07:52:25.0993694Z   <Country>United States</Country>
+2023-11-10T07:52:25.0994125Z   <State>California</State>
+2023-11-10T07:52:25.0994586Z   <ZipCode>90210</ZipCode>
+2023-11-10T07:52:25.0995263Z   <Places>
+2023-11-10T07:52:25.0995615Z     <Place>
+2023-11-10T07:52:25.0995901Z       <Name>Sun City</Name>
+2023-11-10T07:52:25.0996385Z       <Inhabitants>100000</Inhabitants>
+2023-11-10T07:52:25.0996811Z       <IsCapital>true</IsCapital>
+2023-11-10T07:52:25.0997156Z     </Place>
+2023-11-10T07:52:25.0997534Z     <Place>
+2023-11-10T07:52:25.0997981Z       <Name>Pleasure Meadow</Name>
+2023-11-10T07:52:25.0998637Z       <Inhabitants>50000</Inhabitants>
+2023-11-10T07:52:25.0999191Z       <IsCapital>false</IsCapital>
+2023-11-10T07:52:25.0999576Z     </Place>
+2023-11-10T07:52:25.0999852Z   </Places>
+2023-11-10T07:52:25.1000237Z </Location>
+2023-11-10T07:52:25.1000394Z 
+2023-11-10T07:52:25.1053657Z   Passed JsonSchemaCanBeSuppliedAndVerifiedAsString [6 ms]
+2023-11-10T07:52:25.1054721Z   Passed MismatchWithJsonSchemaThrowsTheExpectedException [8 ms]
+2023-11-10T07:52:25.1055954Z   Passed SupplyingInvalidJsonSchemaThrowsTheExpectedException [5 ms]
+2023-11-10T07:52:25.1056778Z   Passed UnexpectedResponseContentTypeThrowsTheExpectedException [5 ms]
+2023-11-10T07:52:25.1057496Z   Passed NoRequestBodyDoesntThrowNullReferenceException [5 ms]
+2023-11-10T07:52:25.1058273Z   Passed NoResponseBodyDoesntThrowNullReferenceException [6 ms]
+2023-11-10T07:52:25.1059016Z   Passed RequestDetailsCanBeWrittenToStandardOutputForJson [6 ms]
+2023-11-10T07:52:25.1059692Z   Passed RequestDetailsCanBeWrittenToStandardOutputForXml [5 ms]
+2023-11-10T07:52:25.1060475Z   Passed ResponseBodyDetailsAreLoggedIfVerificationFails [4 ms]
+2023-11-10T07:52:25.1074897Z HTTP 404 (NotFound)
+2023-11-10T07:52:25.1075902Z Content-Type: text/plain
+2023-11-10T07:52:25.1076538Z Content-Length: 56
+2023-11-10T07:52:25.1076946Z Date: Fri, 10 Nov 2023 07:52:25 GMT
+2023-11-10T07:52:25.1077434Z Server: Kestrel
+2023-11-10T07:52:25.1077826Z Transfer-Encoding: chunked
+2023-11-10T07:52:25.1078339Z The resource you requested was not found on this server.
+2023-11-10T07:52:25.1078928Z Response time: 2.1621 ms
+2023-11-10T07:52:25.1079391Z 
+2023-11-10T07:52:25.1167962Z HTTP 200 (OK)
+2023-11-10T07:52:25.1168690Z Content-Type: text/plain
+2023-11-10T07:52:25.1169385Z Content-Length: 17
+2023-11-10T07:52:25.1169799Z Date: Fri, 10 Nov 2023 07:52:25 GMT
+2023-11-10T07:52:25.1170168Z Server: Kestrel
+2023-11-10T07:52:25.1170680Z Set-Cookie: Auth=123; httponly; secure
+2023-11-10T07:52:25.1171180Z Transfer-Encoding: chunked
+2023-11-10T07:52:25.1171716Z Cookie: Auth=123, Domain: localhost, HTTP-only: True, Secure: True
+2023-11-10T07:52:25.1172307Z Cookies are nice!
+2023-11-10T07:52:25.1172674Z Response time: 2.6447 ms
+2023-11-10T07:52:25.1172882Z 
+2023-11-10T07:52:25.1216222Z HTTP 200 (OK)
+2023-11-10T07:52:25.1217168Z Content-Type: application/json
+2023-11-10T07:52:25.1217981Z Content-Length: 198
+2023-11-10T07:52:25.1218575Z Date: Fri, 10 Nov 2023 07:52:25 GMT
+2023-11-10T07:52:25.1219386Z Server: Kestrel
+2023-11-10T07:52:25.1220141Z Transfer-Encoding: chunked
+2023-11-10T07:52:25.1220733Z {
+2023-11-10T07:52:25.1221458Z   "Country": "United States",
+2023-11-10T07:52:25.1222174Z   "State": "California",
+2023-11-10T07:52:25.1222747Z   "ZipCode": 90210,
+2023-11-10T07:52:25.1223406Z   "Places": [
+2023-11-10T07:52:25.1223970Z     {
+2023-11-10T07:52:25.1224443Z       "Name": "Sun City",
+2023-11-10T07:52:25.1225228Z       "Inhabitants": 100000,
+2023-11-10T07:52:25.1225965Z       "IsCapital": true
+2023-11-10T07:52:25.1226506Z     },
+2023-11-10T07:52:25.1227166Z     {
+2023-11-10T07:52:25.1227728Z       "Name": "Pleasure Meadow",
+2023-11-10T07:52:25.1228638Z       "Inhabitants": 50000,
+2023-11-10T07:52:25.1229460Z       "IsCapital": false
+2023-11-10T07:52:25.1229830Z     }
+2023-11-10T07:52:25.1230079Z   ]
+2023-11-10T07:52:25.1230457Z }
+2023-11-10T07:52:25.1230888Z Response time: 2.0454 ms
+2023-11-10T07:52:25.1231120Z 
+2023-11-10T07:52:25.1259752Z HTTP 200 (OK)
+2023-11-10T07:52:25.1260712Z Content-Type: application/xml
+2023-11-10T07:52:25.1261506Z Content-Length: 456
+2023-11-10T07:52:25.1262115Z Date: Fri, 10 Nov 2023 07:52:25 GMT
+2023-11-10T07:52:25.1263002Z Server: Kestrel
+2023-11-10T07:52:25.1263686Z Transfer-Encoding: chunked
+2023-11-10T07:52:25.1265166Z <Location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+2023-11-10T07:52:25.1266709Z   <Country>United States</Country>
+2023-11-10T07:52:25.1267320Z   <State>California</State>
+2023-11-10T07:52:25.1268431Z   <ZipCode>90210</ZipCode>
+2023-11-10T07:52:25.1269292Z   <Places>
+2023-11-10T07:52:25.1269842Z     <Place>
+2023-11-10T07:52:25.1270367Z       <Name>Sun City</Name>
+2023-11-10T07:52:25.1271225Z       <Inhabitants>100000</Inhabitants>
+2023-11-10T07:52:25.1272028Z       <IsCapital>true</IsCapital>
+2023-11-10T07:52:25.1272714Z     </Place>
+2023-11-10T07:52:25.1273422Z     <Place>
+2023-11-10T07:52:25.1273973Z       <Name>Pleasure Meadow</Name>
+2023-11-10T07:52:25.1274697Z       <Inhabitants>50000</Inhabitants>
+2023-11-10T07:52:25.1275879Z       <IsCapital>false</IsCapital>
+2023-11-10T07:52:25.1276563Z     </Place>
+2023-11-10T07:52:25.1277014Z   </Places>
+2023-11-10T07:52:25.1277674Z </Location>
+2023-11-10T07:52:25.1278300Z Response time: 2.1187 ms
+2023-11-10T07:52:25.1278686Z 
+2023-11-10T07:52:25.1314625Z GET http://localhost:9876/masking-sensitive-data
+2023-11-10T07:52:25.1315499Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:25.1316026Z Content-Length: 0
+2023-11-10T07:52:25.1316432Z NonsensitiveRequestHeader: This one is printed
+2023-11-10T07:52:25.1317034Z SensitiveRequestHeader: *****
+2023-11-10T07:52:25.1317488Z AnotherSensitiveRequestHeader: *****
+2023-11-10T07:52:25.1317767Z 
+2023-11-10T07:52:25.1360507Z GET http://localhost:9876/masking-sensitive-data
+2023-11-10T07:52:25.1361844Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:25.1362840Z Content-Length: 0
+2023-11-10T07:52:25.1363623Z NonsensitiveRequestHeader: This one is printed
+2023-11-10T07:52:25.1364553Z SensitiveRequestHeader: *****
+2023-11-10T07:52:25.1364958Z 
+2023-11-10T07:52:25.1401868Z HTTP 200 (OK)
+2023-11-10T07:52:25.1402708Z Content-Type: text/plain
+2023-11-10T07:52:25.1403874Z Content-Length: 13
+2023-11-10T07:52:25.1404602Z Date: Fri, 10 Nov 2023 07:52:25 GMT
+2023-11-10T07:52:25.1405263Z Server: Kestrel
+2023-11-10T07:52:25.1406548Z Set-Cookie: SensitiveResponseCookie=some_secret_value, NonSensitiveResponseCookie=123
+2023-11-10T07:52:25.1407649Z Transfer-Encoding: chunked
+2023-11-10T07:52:25.1408339Z NonSensitiveResponseHeader: This one is printed
+2023-11-10T07:52:25.1409322Z SensitiveResponseHeader: *****
+2023-11-10T07:52:25.1410507Z Cookie: SensitiveResponseCookie=*****, Domain: localhost, HTTP-only: False, Secure: False
+2023-11-10T07:52:25.1411489Z Cookie: NonSensitiveResponseCookie=123, Domain: localhost, HTTP-only: False, Secure: False
+2023-11-10T07:52:25.1412254Z Response data
+2023-11-10T07:52:25.1412677Z Response time: 2.0202 ms
+2023-11-10T07:52:25.1413058Z 
+2023-11-10T07:52:25.1442508Z GET http://localhost:9876/masking-sensitive-data
+2023-11-10T07:52:25.1443718Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:25.1444462Z Content-Length: 0
+2023-11-10T07:52:25.1445718Z Cookie: NonsensitiveRequestCookie=This one is printed, Domain: , HTTP-only: False, Secure: False
+2023-11-10T07:52:25.1447607Z Cookie: SensitiveRequestCookie=*****, Domain: , HTTP-only: False, Secure: False
+2023-11-10T07:52:25.1448415Z 
+2023-11-10T07:52:25.1460436Z   Passed ResponseBodyDetailsAreLoggedOnlyOnErrorResponseCode [4 ms]
+2023-11-10T07:52:25.1461828Z   Passed ResponseBodyDetailsAreNotLoggedOnOkResponseCode [4 ms]
+2023-11-10T07:52:25.1462849Z   Passed ResponseCookieDetailsAreLogged [4 ms]
+2023-11-10T07:52:25.1463934Z   Passed ResponseDetailsCanBeWrittenToStandardOutputForJson [4 ms]
+2023-11-10T07:52:25.1464763Z   Passed ResponseDetailsCanBeWrittenToStandardOutputForXml [4 ms]
+2023-11-10T07:52:25.1465485Z   Passed MultipleSensitiveRequestHeadersAreMasked [5 ms]
+2023-11-10T07:52:25.1466251Z   Passed SensitiveHeaderAndCookieNamesCanBeDefinedInRequestSpecification [4 ms]
+2023-11-10T07:52:25.1467060Z   Passed SensitiveResponseHeadersAndCookiesAreMasked [4 ms]
+2023-11-10T07:52:25.1467698Z   Passed SingleSensitiveRequestCookieIsMasked [4 ms]
+2023-11-10T07:52:25.1484469Z GET http://localhost:9876/masking-sensitive-data
+2023-11-10T07:52:25.1485398Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:25.1485886Z Content-Length: 0
+2023-11-10T07:52:25.1486315Z NonsensitiveRequestHeader: This one is printed
+2023-11-10T07:52:25.1486872Z SensitiveRequestHeader: *****
+2023-11-10T07:52:25.1487133Z 
+2023-11-10T07:52:25.5621167Z   Passed SingleSensitiveRequestHeaderIsMasked [4 ms]
+2023-11-10T07:52:25.5622587Z   Passed MultiPartFormDataWithCustomControlNameAndCustomContentTypeCanBeSupplied [76 ms]
+2023-11-10T07:52:25.5624092Z   Passed MultiPartFormDataWithDefaultControlNameAndAutoDetectedContentTypeCanBeSupplied [74 ms]
+2023-11-10T07:52:25.5624933Z   Passed MultipleFilesCanBeSupplied [22 ms]
+2023-11-10T07:52:25.5626024Z   Passed UploadingNonExistentFileThrowsTheExpectedException [9 ms]
+2023-11-10T07:52:25.5627884Z   Passed MultiplePathParameterCanBeSpecifiedSequentially [205 ms]
+2023-11-10T07:52:25.5629314Z   Passed MultiplePathParameterCanBeSpecifiedUsingADictionary [5 ms]
+2023-11-10T07:52:25.5630468Z   Passed SinglePathParameterCanBeSpecified [3 ms]
+2023-11-10T07:52:25.5631754Z   Passed MultipleQueryParametersCanBeSpecifiedInSeparateCalls [13 ms]
+2023-11-10T07:52:25.6036133Z   Passed MultipleQueryParametersCanBeSpecifiedUsingADictionary [4 ms]
+2023-11-10T07:52:25.6037636Z   Passed MultipleQueryParametersCanBeSpecifiedUsingAListOfKeyValuePairs [3 ms]
+2023-11-10T07:52:25.6038567Z   Passed MultipleQueryParameterValuesCanBeSpecified [4 ms]
+2023-11-10T07:52:25.6039376Z   Passed QueryParametersAreAddedToRelativePathCorrectly [4 ms]
+2023-11-10T07:52:25.6040026Z   Passed SingleQueryParameterCanBeSpecified [3 ms]
+2023-11-10T07:52:25.6040701Z   Passed SingleQueryParameterWithCommaSeparatedValuesCanBeSpecified [3 ms]
+2023-11-10T07:52:25.6041456Z   Passed JsonStringRequestBodyCanBeSupplied [3 ms]
+2023-11-10T07:52:25.6042030Z   Passed Sending small plaintext request body [4 ms]
+2023-11-10T07:52:25.6042803Z   Passed Sending medium plaintext request body [7 ms]
+2023-11-10T07:52:25.6643096Z GET http://localhost:9876/api/request-specification
+2023-11-10T07:52:25.6643997Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:25.6644775Z Content-Length: 0
+2023-11-10T07:52:25.6645152Z 
+2023-11-10T07:52:25.6660479Z   Passed Sending large plaintext request body [26 ms]
+2023-11-10T07:52:25.6661710Z   Passed AcceptHeaderCanBeSuppliedAsString [3 ms]
+2023-11-10T07:52:25.6662976Z   Passed ContentTypeHeaderCanBeSuppliedAsString [4 ms]
+2023-11-10T07:52:25.6663684Z   Passed EncodingCanBeSupplied [4 ms]
+2023-11-10T07:52:25.6664220Z   Passed HeaderWithASingleValueCanBeSupplied [5 ms]
+2023-11-10T07:52:25.6664920Z   Passed HeaderWithMultipleValuesCanBeSupplied [5 ms]
+2023-11-10T07:52:25.6665466Z   Passed Works with a leading / in the endpoint [4 ms]
+2023-11-10T07:52:25.6666055Z   Passed Works without a leading / in the endpoint [4 ms]
+2023-11-10T07:52:25.6666837Z   Passed With base path in request specification, works with a leading / [3 ms]
+2023-11-10T07:52:25.6689078Z GET http://localhost:9876/api/request-specification
+2023-11-10T07:52:25.6690323Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:25.6692264Z Content-Length: 0
+2023-11-10T07:52:25.6692854Z 
+2023-11-10T07:52:25.7349066Z   Passed With base path in request specification, works without a leading / [4 ms]
+2023-11-10T07:52:25.7350449Z   Passed RequestSpecificationWithHeadersCanBeUsed [7 ms]
+2023-11-10T07:52:25.7351694Z   Passed RequestSpecificationWithOAuth2CanBeUsed [4 ms]
+2023-11-10T07:52:25.7352924Z   Passed UsingSchemeInHostNameThrowsTheExpectedException [2 ms]
+2023-11-10T07:52:25.7354097Z   Passed ObjectCanBeDeserializedFromJson [12 ms]
+2023-11-10T07:52:25.7355404Z   Passed ObjectCanBeDeserializedFromJsonAfterVerifications [5 ms]
+2023-11-10T07:52:25.7356974Z   Passed ObjectCanBeDeserializedFromJsonUsingDeserializeToOverridingContentTypeHeader [4 ms]
+2023-11-10T07:52:25.7358025Z   Passed ObjectCanBeDeserializedFromXml [22 ms]
+2023-11-10T07:52:25.7359543Z   Passed ObjectCanBeDeserializedFromXmlUsingDeserializeToOverridingContentTypeHeader [4 ms]
+2023-11-10T07:52:25.7959477Z   Passed UnableToDeserializeThrowsTheExpectedException [5 ms]
+2023-11-10T07:52:25.7960911Z   Passed ElementValueNotMatchingMatcherTypeThrowsTheExpectedException [19 ms]
+2023-11-10T07:52:25.7962531Z   Passed HtmlResponseBodyCanBeVerifiedUsingNHamcrestMatcher [4 ms]
+2023-11-10T07:52:25.7963882Z   Passed HtmlResponseBodyElementCanBeVerifiedUsingNHamcrestMatcher [3 ms]
+2023-11-10T07:52:25.7965631Z   Passed HtmlResponseBodyElementCanBeVerifiedUsingNHamcrestMatcherOverridingResponseContentTypeHeader [4 ms]
+2023-11-10T07:52:25.7966759Z   Passed NoXPathResultsThrowsTheExpectedException [4 ms]
+2023-11-10T07:52:25.7967540Z   Passed BooleanElementNHamcrestMatcherMismatchThrowsTheExpectedException [8 ms]
+2023-11-10T07:52:25.7968403Z   Passed IntegerElementNHamcrestMatcherMismatchThrowsTheExpectedException [5 ms]
+2023-11-10T07:52:25.7969784Z   Passed JsonResponseBodyElementBooleanValueCanBeVerifiedUsingNHamcrestMatcher [4 ms]
+2023-11-10T07:52:25.8425995Z   Passed JsonResponseBodyElementCollectionCanBeVerifiedUsingNHamcrestMatcher [7 ms]
+2023-11-10T07:52:25.8428966Z   Passed JsonResponseBodyElementCollectionCanBeVerifiedUsingNHamcrestMatcherOverridingResponseContentTypeHeader [4 ms]
+2023-11-10T07:52:25.8430832Z   Passed JsonResponseBodyElementCollectionNHamcrestMatcherMisMatchThrowsTheExpectedException [5 ms]
+2023-11-10T07:52:25.8433012Z   Passed JsonResponseBodyElementIntegerValueCanBeVerifiedUsingNHamcrestMatcher [4 ms]
+2023-11-10T07:52:25.8434220Z   Passed JsonResponseBodyElementStringValueCanBeVerifiedOverridingContentTypeHeaderValue [4 ms]
+2023-11-10T07:52:25.8435246Z   Passed JsonResponseBodyElementStringValueCanBeVerifiedUsingNHamcrestMatcher [4 ms]
+2023-11-10T07:52:25.8436165Z   Passed NoJsonPathResultsThrowsTheExpectedException [4 ms]
+2023-11-10T07:52:25.8437023Z   Passed StringElementNHamcrestMatcherMismatchThrowsTheExpectedException [5 ms]
+2023-11-10T07:52:25.8438790Z   Passed FailingResponseBodyLengthVerificationThrowsTheExpectedException [5 ms]
+2023-11-10T07:52:25.8538868Z HTTP 200 (OK)
+2023-11-10T07:52:25.8540029Z Content-Type: application/json
+2023-11-10T07:52:25.8541041Z Content-Length: 197
+2023-11-10T07:52:25.8541934Z Date: Fri, 10 Nov 2023 07:52:25 GMT
+2023-11-10T07:52:25.8542550Z Server: Kestrel
+2023-11-10T07:52:25.8543184Z Transfer-Encoding: chunked
+2023-11-10T07:52:25.8543891Z {
+2023-11-10T07:52:25.8544306Z   "Country": "Pakistan",
+2023-11-10T07:52:25.8544881Z   "State": "New Hampshire",
+2023-11-10T07:52:25.8545659Z   "ZipCode": 20700,
+2023-11-10T07:52:25.8546155Z   "Places": [
+2023-11-10T07:52:25.8546654Z     {
+2023-11-10T07:52:25.8547348Z       "Name": "Norrisfort",
+2023-11-10T07:52:25.8548164Z       "Inhabitants": 118321,
+2023-11-10T07:52:25.8548828Z       "IsCapital": true
+2023-11-10T07:52:25.8549611Z     },
+2023-11-10T07:52:25.8550091Z     {
+2023-11-10T07:52:25.8550651Z       "Name": "Bartellburgh",
+2023-11-10T07:52:25.8551415Z       "Inhabitants": 54060136,
+2023-11-10T07:52:25.8551982Z       "IsCapital": true
+2023-11-10T07:52:25.8552536Z     }
+2023-11-10T07:52:25.8553053Z   ]
+2023-11-10T07:52:25.8553423Z }
+2023-11-10T07:52:25.8553953Z Response time: 2.0778 ms
+2023-11-10T07:52:25.8554454Z 
+2023-11-10T07:52:25.8888070Z   Passed ResponseBodyCanBeExtracted [7 ms]
+2023-11-10T07:52:25.8888867Z   Passed ResponseBodyLengthCanBeVerified [4 ms]
+2023-11-10T07:52:25.8889866Z   Passed ActualBodyNotEqualToExpectedThrowsTheExpectedException [5 ms]
+2023-11-10T07:52:25.8891274Z   Passed ActualBodyNotMatchingNHamcrestMatcherThrowsTheExpectedException [5 ms]
+2023-11-10T07:52:25.8892558Z   Passed CannotHandleResponseContentTypeThrowsTheExpectedException [4 ms]
+2023-11-10T07:52:25.8893597Z   Passed JsonStringResponseBodyCanBeVerified [3 ms]
+2023-11-10T07:52:25.8894713Z   Passed JsonStringResponseBodyCanBeVerifiedUsingNHamcrestMatcher [4 ms]
+2023-11-10T07:52:25.8895836Z   Passed PlaintextResponseBodyCanBeVerified("small") [4 ms]
+2023-11-10T07:52:25.8896746Z   Passed PlaintextResponseBodyCanBeVerified("medium") [4 ms]
+2023-11-10T07:52:25.9401010Z   Passed PlaintextResponseBodyCanBeVerified("large") [6 ms]
+2023-11-10T07:52:25.9402247Z   Passed PlaintextResponseBodyCanBeVerified("xlarge") [12 ms]
+2023-11-10T07:52:25.9403777Z   Passed ElementValueNotMatchingMatcherTypeThrowsTheExpectedException [6 ms]
+2023-11-10T07:52:25.9405416Z   Passed NoXPathResultsThrowsTheExpectedException [4 ms]
+2023-11-10T07:52:25.9406772Z   Passed XmlResponseBodyElementBooleanValueCanBeVerifiedUsingNHamcrestMatcher [4 ms]
+2023-11-10T07:52:25.9408595Z   Passed XmlResponseBodyElementCollectionCanBeVerifiedUsingNHamcrestMatcher [4 ms]
+2023-11-10T07:52:25.9410484Z   Passed XmlResponseBodyElementCollectionCanBeVerifiedUsingNHamcrestMatcherOverridingResponseContentTypeHeader [4 ms]
+2023-11-10T07:52:25.9412592Z   Passed XmlResponseBodyElementCollectionNHamcrestMatcherMisMatchThrowsTheExpectedException [4 ms]
+2023-11-10T07:52:25.9414932Z   Passed XmlResponseBodyElementIntegerValueCanBeVerifiedUsingNHamcrestMatcher [4 ms]
+2023-11-10T07:52:25.9939874Z   Passed XmlResponseBodyElementStringValueCanBeVerifiedOverridingResponseContentTypeHeader [4 ms]
+2023-11-10T07:52:25.9941875Z   Passed XmlResponseBodyElementStringValueCanBeVerifiedUsingNHamcrestMatcher [4 ms]
+2023-11-10T07:52:25.9943763Z   Passed CookieNotFoundThrowsTheExpectedExceptionWhenExtracting [4 ms]
+2023-11-10T07:52:25.9944905Z   Passed CookieNotFoundThrowsTheExpectedExceptionWhenVerifying [4 ms]
+2023-11-10T07:52:25.9945703Z   Passed CookieValueMismatchThrowsTheExpectedExceptionWhenVerifying [4 ms]
+2023-11-10T07:52:25.9946899Z   Passed GenericCookieValueCanBeExtracted [20 ms]
+2023-11-10T07:52:25.9947913Z   Passed GenericCookieValueCanBeVerified [3 ms]
+2023-11-10T07:52:25.9948963Z   Passed HttpOnlySecureCookieValueCanBeExtracted [3 ms]
+2023-11-10T07:52:25.9949733Z   Passed HttpOnlySecureCookieValueCanBeVerified [3 ms]
+2023-11-10T07:52:26.0340534Z   Passed ContentTypeHeaderValueNotMatchingNHamcrestMatcherThrowsTheExpectedException [5 ms]
+2023-11-10T07:52:26.0342991Z   Passed HeaderValueNotMatchingTheSpecifiedNHamcrestMatcherThrowsTheExpectedException [4 ms]
+2023-11-10T07:52:26.0345105Z   Passed HeaderWithIncorrectValueThrowsTheExpectedException [4 ms]
+2023-11-10T07:52:26.0346517Z   Passed IncorrectContentTypeHeaderValueThrowsTheExpectedException [4 ms]
+2023-11-10T07:52:26.0347833Z   Passed MultipleResponseHeadersCanBeVerified [3 ms]
+2023-11-10T07:52:26.0349565Z   Passed NotFoundHeaderThrowsTheExpectedException [4 ms]
+2023-11-10T07:52:26.0350229Z   Passed ResponseContentTypeHeaderCanBeVerified [4 ms]
+2023-11-10T07:52:26.0350984Z   Passed ResponseContentTypeHeaderCanBeVerifiedUsingNHamcrestMatcher [4 ms]
+2023-11-10T07:52:26.0351740Z   Passed SingleResponseHeaderCanBeVerified [4 ms]
+2023-11-10T07:52:26.0837433Z   Passed SingleResponseHeaderCanBeVerifiedUsingNHamcrestMatcher [5 ms]
+2023-11-10T07:52:26.0838257Z   Passed HtmlResponseBodyElementValueCanBeExtracted [5 ms]
+2023-11-10T07:52:26.0840040Z   Passed HtmlResponseBodyElementValueCanBeExtractedOverridingResponseContentType [4 ms]
+2023-11-10T07:52:26.0841579Z   Passed HtmlResponseBodyMultipleElementsCanBeExtracted [4 ms]
+2023-11-10T07:52:26.0842753Z   Passed NoXPathResultsThrowsTheExpectedException [6 ms]
+2023-11-10T07:52:26.0844289Z   Passed EntireResponseCanBeExtracted [6 ms]
+2023-11-10T07:52:26.0845477Z   Passed HeaderNotFoundInResponseThrowsTheExpectedException [5 ms]
+2023-11-10T07:52:26.0846786Z   Passed JsonResponseBodyElementBooleanValueCanBeExtracted [5 ms]
+2023-11-10T07:52:26.0848597Z   Passed JsonResponseBodyElementIntegerValueCanBeExtracted [4 ms]
+2023-11-10T07:52:26.1260957Z   Passed JsonResponseBodyElementStringValueCanBeExtracted [5 ms]
+2023-11-10T07:52:26.1262686Z   Passed JsonResponseBodyElementStringValueCanBeExtractedOverridingResponseContentType [5 ms]
+2023-11-10T07:52:26.1265989Z   Passed JsonResponseBodyElementValueCanBeExtractedAsListWithSingleItem [4 ms]
+2023-11-10T07:52:26.1267427Z   Passed JsonResponseBodyMultipleElementsCanBeExtracted [4 ms]
+2023-11-10T07:52:26.1268889Z   Passed NoJsonPathResultsThrowsTheExpectedException [4 ms]
+2023-11-10T07:52:26.1269988Z   Passed ResponseHeaderCanBeExtracted [4 ms]
+2023-11-10T07:52:26.1274239Z   Passed StatusCodeIndicatingClientSideErrorCanBeVerifiedAsInteger [4 ms]
+2023-11-10T07:52:26.1275652Z   Passed StatusCodeIndicatingServerSideErrorCanBeVerifiedAsInteger [4 ms]
+2023-11-10T07:52:26.1277217Z   Passed StatusCodeIndicatingSuccessCanBeVerifiedAsHttpStatusCode [4 ms]
+2023-11-10T07:52:26.7638021Z   Passed StatusCodeIndicatingSuccessCanBeVerifiedAsInteger [4 ms]
+2023-11-10T07:52:26.7639560Z   Passed StatusCodeIndicatingSuccessCanBeVerifiedUsingNHamcrestEqualToMatcher [4 ms]
+2023-11-10T07:52:26.7641104Z   Passed StatusCodeVerificationWithMismatchingNHamcrestMatcherThrowsTheExpectedException [4 ms]
+2023-11-10T07:52:26.7642518Z   Passed FailingResponseTimeVerificationThrowsTheExpectedException [203 ms]
+2023-11-10T07:52:26.7643588Z   Passed ResponseTimeCanBeExtracted [204 ms]
+2023-11-10T07:52:26.7644958Z   Passed ResponseTimeCanBeVerified [202 ms]
+2023-11-10T07:52:26.7645971Z   Passed NoXPathResultsThrowsTheExpectedException [4 ms]
+2023-11-10T07:52:26.7647282Z   Passed XmlResponseBodyElementValueCanBeExtracted [4 ms]
+2023-11-10T07:52:26.7648697Z   Passed XmlResponseBodyElementValueCanBeExtractedAsListWithSingleItem [3 ms]
+2023-11-10T07:52:26.9633821Z GET https://localhost:8443/ssl-endpoint
+2023-11-10T07:52:26.9634835Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:26.9636085Z Content-Length: 0
+2023-11-10T07:52:26.9637171Z HTTP 200 (OK)
+2023-11-10T07:52:26.9638066Z Content-Type: 
+2023-11-10T07:52:26.9638657Z Content-Length: 0
+2023-11-10T07:52:26.9639438Z Date: Fri, 10 Nov 2023 07:52:26 GMT
+2023-11-10T07:52:26.9640122Z Server: Kestrel
+2023-11-10T07:52:26.9640825Z Response time: 6.2396 ms
+2023-11-10T07:52:26.9641608Z GET https://localhost:8443/ssl-endpoint
+2023-11-10T07:52:26.9642553Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:26.9643501Z Content-Length: 0
+2023-11-10T07:52:26.9644020Z HTTP 200 (OK)
+2023-11-10T07:52:26.9644574Z Content-Type: 
+2023-11-10T07:52:26.9645562Z Content-Length: 0
+2023-11-10T07:52:26.9646142Z Date: Fri, 10 Nov 2023 07:52:26 GMT
+2023-11-10T07:52:26.9646825Z Server: Kestrel
+2023-11-10T07:52:26.9647520Z Response time: 6.1958 ms
+2023-11-10T07:52:26.9648269Z GET https://localhost:8443/ssl-endpoint
+2023-11-10T07:52:26.9649204Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:26.9650174Z Content-Length: 0
+2023-11-10T07:52:26.9650517Z HTTP 200 (OK)
+2023-11-10T07:52:26.9650870Z Content-Type: 
+2023-11-10T07:52:26.9651311Z Content-Length: 0
+2023-11-10T07:52:26.9651845Z Date: Fri, 10 Nov 2023 07:52:26 GMT
+2023-11-10T07:52:26.9652565Z Server: Kestrel
+2023-11-10T07:52:26.9653385Z Response time: 7.1355 ms
+2023-11-10T07:52:26.9653810Z 
+2023-11-10T07:52:26.9675704Z HTTP 200 (OK)
+2023-11-10T07:52:26.9676356Z Content-Type: 
+2023-11-10T07:52:26.9677107Z Content-Length: 0
+2023-11-10T07:52:26.9677648Z Date: Fri, 10 Nov 2023 07:52:26 GMT
+2023-11-10T07:52:26.9678332Z Server: Kestrel
+2023-11-10T07:52:26.9678961Z Response time: 2.0643 ms
+2023-11-10T07:52:26.9679304Z 
+2023-11-10T07:52:26.9713871Z GET http://localhost:9876/timeout-ok
+2023-11-10T07:52:26.9714800Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:26.9715697Z Content-Length: 0
+2023-11-10T07:52:26.9716209Z HTTP 200 (OK)
+2023-11-10T07:52:26.9716735Z Content-Type: 
+2023-11-10T07:52:26.9717453Z Content-Length: 0
+2023-11-10T07:52:26.9718049Z Date: Fri, 10 Nov 2023 07:52:26 GMT
+2023-11-10T07:52:26.9718680Z Server: Kestrel
+2023-11-10T07:52:26.9719310Z Response time: 1.8712 ms
+2023-11-10T07:52:26.9719694Z 
+2023-11-10T07:52:28.2662187Z   Passed XmlResponseBodyElementValueCanBeExtractedOverridingResponseContentType [4 ms]
+2023-11-10T07:52:28.2663234Z   Passed XmlResponseBodyMultipleElementsCanBeExtracted [3 ms]
+2023-11-10T07:52:28.2663955Z   Passed SslVerificationCanBeDisabledUsingStaticConfiguration [190 ms]
+2023-11-10T07:52:28.2664724Z   Passed CustomTimeoutCanBeSuppliedInRequestSpecification [4 ms]
+2023-11-10T07:52:28.2665448Z   Passed CustomTimeoutCanBeSuppliedInTest [3 ms]
+2023-11-10T07:52:29.9692668Z   Passed TimeoutInRequestSpecificationExceededThrowsTheExpectedException [2 s]
+2023-11-10T07:52:32.9696952Z GET http://localhost:9876/timeout-nok
+2023-11-10T07:52:32.9698381Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:32.9699403Z Content-Length: 0
+2023-11-10T07:52:32.9699919Z 
+2023-11-10T07:52:32.9700673Z   Passed TimeoutInTestExceededThrowsTheExpectedException [3 s]
+2023-11-10T07:52:32.9746418Z HTTP 200 (OK)
+2023-11-10T07:52:32.9748179Z Content-Type: 
+2023-11-10T07:52:32.9748901Z Content-Length: 0
+2023-11-10T07:52:32.9749500Z Date: Fri, 10 Nov 2023 07:52:32 GMT
+2023-11-10T07:52:32.9750066Z Server: Kestrel
+2023-11-10T07:52:32.9750804Z Response time: 3.127 ms
+2023-11-10T07:52:32.9751158Z 
+2023-11-10T07:52:32.9797164Z GET http://localhost:9876/user-agent
+2023-11-10T07:52:32.9798402Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:32.9800141Z Content-Length: 0
+2023-11-10T07:52:32.9801179Z User-Agent: MyUserAgent/1.0
+2023-11-10T07:52:32.9801827Z HTTP 200 (OK)
+2023-11-10T07:52:32.9802668Z Content-Type: 
+2023-11-10T07:52:32.9803261Z Content-Length: 0
+2023-11-10T07:52:32.9803790Z Date: Fri, 10 Nov 2023 07:52:32 GMT
+2023-11-10T07:52:32.9804561Z Server: Kestrel
+2023-11-10T07:52:32.9805083Z Response time: 3.0764 ms
+2023-11-10T07:52:32.9805416Z 
+2023-11-10T07:52:32.9846625Z GET http://localhost:9876/user-agent
+2023-11-10T07:52:32.9847446Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:32.9848173Z Content-Length: 0
+2023-11-10T07:52:32.9848839Z User-Agent: MyUserAgent/1.0
+2023-11-10T07:52:32.9849313Z HTTP 200 (OK)
+2023-11-10T07:52:32.9849832Z Content-Type: 
+2023-11-10T07:52:32.9850260Z Content-Length: 0
+2023-11-10T07:52:32.9850575Z Date: Fri, 10 Nov 2023 07:52:32 GMT
+2023-11-10T07:52:32.9850971Z Server: Kestrel
+2023-11-10T07:52:32.9851355Z Response time: 2.8208 ms
+2023-11-10T07:52:32.9851549Z 
+2023-11-10T07:52:32.9892603Z POST http://localhost:9876/xml-serialization
+2023-11-10T07:52:32.9893772Z Content-Type: application/xml; charset=utf-8
+2023-11-10T07:52:32.9895193Z Content-Length: 535
+2023-11-10T07:52:32.9896778Z <Location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+2023-11-10T07:52:32.9898025Z   <Country>United States</Country>
+2023-11-10T07:52:32.9898739Z   <State>California</State>
+2023-11-10T07:52:32.9899348Z   <ZipCode>90210</ZipCode>
+2023-11-10T07:52:32.9899885Z   <Places>
+2023-11-10T07:52:32.9900388Z     <Place>
+2023-11-10T07:52:32.9900772Z       <Name>Sun City</Name>
+2023-11-10T07:52:32.9901158Z       <Inhabitants>100000</Inhabitants>
+2023-11-10T07:52:32.9901635Z       <IsCapital>true</IsCapital>
+2023-11-10T07:52:32.9902030Z     </Place>
+2023-11-10T07:52:32.9902323Z     <Place>
+2023-11-10T07:52:32.9902678Z       <Name>Pleasure Meadow</Name>
+2023-11-10T07:52:32.9903100Z       <Inhabitants>50000</Inhabitants>
+2023-11-10T07:52:32.9903521Z       <IsCapital>false</IsCapital>
+2023-11-10T07:52:32.9904115Z     </Place>
+2023-11-10T07:52:32.9904674Z   </Places>
+2023-11-10T07:52:32.9905160Z </Location>
+2023-11-10T07:52:32.9905773Z HTTP 201 (Created)
+2023-11-10T07:52:32.9906376Z Content-Type: 
+2023-11-10T07:52:32.9906912Z Content-Length: 0
+2023-11-10T07:52:32.9907574Z Date: Fri, 10 Nov 2023 07:52:32 GMT
+2023-11-10T07:52:32.9908359Z Server: Kestrel
+2023-11-10T07:52:32.9908715Z Response time: 2.3446 ms
+2023-11-10T07:52:32.9909049Z 
+2023-11-10T07:52:33.0582795Z GET http://localhost:9876/xml-schema-validation
+2023-11-10T07:52:33.0583784Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:33.0584896Z Content-Length: 0
+2023-11-10T07:52:33.0585379Z HTTP 200 (OK)
+2023-11-10T07:52:33.0585986Z Content-Type: application/xml
+2023-11-10T07:52:33.0586775Z Content-Length: 456
+2023-11-10T07:52:33.0587324Z Date: Fri, 10 Nov 2023 07:52:32 GMT
+2023-11-10T07:52:33.0588506Z Server: Kestrel
+2023-11-10T07:52:33.0589354Z Transfer-Encoding: chunked
+2023-11-10T07:52:33.0590400Z <Location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+2023-11-10T07:52:33.0591170Z   <Country>United States</Country>
+2023-11-10T07:52:33.0592025Z   <State>California</State>
+2023-11-10T07:52:33.0592862Z   <ZipCode>90210</ZipCode>
+2023-11-10T07:52:33.0593423Z   <Places>
+2023-11-10T07:52:33.0595730Z     <Place>
+2023-11-10T07:52:33.0596401Z       <Name>Sun City</Name>
+2023-11-10T07:52:33.0597086Z       <Inhabitants>100000</Inhabitants>
+2023-11-10T07:52:33.0597871Z       <IsCapital>true</IsCapital>
+2023-11-10T07:52:33.0598232Z     </Place>
+2023-11-10T07:52:33.0598556Z     <Place>
+2023-11-10T07:52:33.0598961Z       <Name>Pleasure Meadow</Name>
+2023-11-10T07:52:33.0599344Z       <Inhabitants>50000</Inhabitants>
+2023-11-10T07:52:33.0599784Z       <IsCapital>false</IsCapital>
+2023-11-10T07:52:33.0600244Z     </Place>
+2023-11-10T07:52:33.0600511Z   </Places>
+2023-11-10T07:52:33.0600832Z </Location>
+2023-11-10T07:52:33.0601233Z Response time: 1.8727 ms
+2023-11-10T07:52:33.0601444Z 
+2023-11-10T07:52:33.0936665Z GET http://localhost:9876/non-matching-dtd-validation
+2023-11-10T07:52:33.0937869Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:33.0938472Z Content-Length: 0
+2023-11-10T07:52:33.0938820Z HTTP 200 (OK)
+2023-11-10T07:52:33.0939301Z Content-Type: application/xml
+2023-11-10T07:52:33.0939718Z Content-Length: 575
+2023-11-10T07:52:33.0940096Z Date: Fri, 10 Nov 2023 07:52:33 GMT
+2023-11-10T07:52:33.0940563Z Server: Kestrel
+2023-11-10T07:52:33.0940923Z Transfer-Encoding: chunked
+2023-11-10T07:52:33.0941288Z <!DOCTYPE store [
+2023-11-10T07:52:33.0941696Z               <!ELEMENT store (item)*> 
+2023-11-10T07:52:33.0942136Z               <!ELEMENT item (name,dept,price)>
+2023-11-10T07:52:33.0942620Z               <!ATTLIST item type CDATA #REQUIRED>
+2023-11-10T07:52:33.0943173Z               <!ATTLIST item ISBN CDATA #REQUIRED>
+2023-11-10T07:52:33.0943601Z               <!ELEMENT name (#PCDATA)>
+2023-11-10T07:52:33.0944036Z               <!ELEMENT price (#PCDATA)>]>
+2023-11-10T07:52:33.0944518Z <store>
+2023-11-10T07:52:33.0944978Z   <item type="supplies" ISBN="2-3631-4">
+2023-11-10T07:52:33.0945627Z     <name>paint</name>
+2023-11-10T07:52:33.0946373Z     <dept>interior design</dept>
+2023-11-10T07:52:33.0946759Z     <price>16.95</price>
+2023-11-10T07:52:33.0947218Z   </item>
+2023-11-10T07:52:33.0947804Z </store>
+2023-11-10T07:52:33.0948504Z Response time: 1.7447 ms
+2023-11-10T07:52:33.0948769Z 
+2023-11-10T07:52:33.1002923Z GET http://localhost:9876/xml-schema-validation
+2023-11-10T07:52:33.1004101Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:33.1004844Z Content-Length: 0
+2023-11-10T07:52:33.1005147Z HTTP 200 (OK)
+2023-11-10T07:52:33.1005617Z Content-Type: application/xml
+2023-11-10T07:52:33.1006083Z Content-Length: 456
+2023-11-10T07:52:33.1006416Z Date: Fri, 10 Nov 2023 07:52:33 GMT
+2023-11-10T07:52:33.1006883Z Server: Kestrel
+2023-11-10T07:52:33.1007282Z Transfer-Encoding: chunked
+2023-11-10T07:52:33.1008065Z <Location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+2023-11-10T07:52:33.1009156Z   <Country>United States</Country>
+2023-11-10T07:52:33.1009845Z   <State>California</State>
+2023-11-10T07:52:33.1010387Z   <ZipCode>90210</ZipCode>
+2023-11-10T07:52:33.1011035Z   <Places>
+2023-11-10T07:52:33.1011518Z     <Place>
+2023-11-10T07:52:33.1011957Z       <Name>Sun City</Name>
+2023-11-10T07:52:33.1012598Z       <Inhabitants>100000</Inhabitants>
+2023-11-10T07:52:33.1013358Z       <IsCapital>true</IsCapital>
+2023-11-10T07:52:33.1013831Z     </Place>
+2023-11-10T07:52:33.1014240Z     <Place>
+2023-11-10T07:52:33.1014570Z       <Name>Pleasure Meadow</Name>
+2023-11-10T07:52:33.1014953Z       <Inhabitants>50000</Inhabitants>
+2023-11-10T07:52:33.1015450Z       <IsCapital>false</IsCapital>
+2023-11-10T07:52:33.1015832Z     </Place>
+2023-11-10T07:52:33.1016095Z   </Places>
+2023-11-10T07:52:33.1016461Z </Location>
+2023-11-10T07:52:33.1016783Z Response time: 1.7335 ms
+2023-11-10T07:52:33.1016989Z 
+2023-11-10T07:52:33.1046201Z GET http://localhost:9876/xml-schema-unexpected-content-type
+2023-11-10T07:52:33.1052243Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:33.1053026Z Content-Length: 0
+2023-11-10T07:52:33.1053513Z HTTP 200 (OK)
+2023-11-10T07:52:33.1054265Z Content-Type: application/something
+2023-11-10T07:52:33.1060292Z Content-Length: 9
+2023-11-10T07:52:33.1060887Z Date: Fri, 10 Nov 2023 07:52:33 GMT
+2023-11-10T07:52:33.1061530Z Server: Kestrel
+2023-11-10T07:52:33.1062264Z Transfer-Encoding: chunked
+2023-11-10T07:52:33.1062875Z Something
+2023-11-10T07:52:33.1063673Z Response time: 1.8883 ms
+2023-11-10T07:52:33.1064125Z 
+2023-11-10T07:52:33.1064733Z   Passed CustomUserAgentCanBeSuppliedThroughRequestSpecification [5 ms]
+2023-11-10T07:52:33.1066292Z   Passed CustomUserAgentCanBeSuppliedUsingProductInfoHeaderValueInTest [4 ms]
+2023-11-10T07:52:33.1068264Z   Passed CustomUserAgentCanBeSuppliedUsingProductNameAndProductVersionInTest [4 ms]
+2023-11-10T07:52:33.1069617Z   Passed ObjectCanBeSerializedToXml [4 ms]
+2023-11-10T07:52:33.1070992Z   Passed UnableToSerializeThrowsTheExpectedException [1 ms]
+2023-11-10T07:52:33.1072403Z   Passed IncorrectlyFormattedXmlSchemaThrowsTheExpectedException [67 ms]
+2023-11-10T07:52:33.1073783Z   Passed MismatchWithInlineDtdThrowsTheExpectedException [35 ms]
+2023-11-10T07:52:33.1075103Z   Passed MismatchWithXmlSchemaThrowsTheExpectedException [6 ms]
+2023-11-10T07:52:33.1076794Z   Passed UnexpectedResponseContentTypeThrowsTheExpectedExceptionWhenValidatingDtd [4 ms]
+2023-11-10T07:52:33.1092748Z GET http://localhost:9876/xml-schema-unexpected-content-type
+2023-11-10T07:52:33.1093491Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:33.1094112Z Content-Length: 0
+2023-11-10T07:52:33.1094432Z HTTP 200 (OK)
+2023-11-10T07:52:33.1094828Z Content-Type: application/something
+2023-11-10T07:52:33.1095368Z Content-Length: 9
+2023-11-10T07:52:33.1095861Z Date: Fri, 10 Nov 2023 07:52:33 GMT
+2023-11-10T07:52:33.1096543Z Server: Kestrel
+2023-11-10T07:52:33.1097196Z Transfer-Encoding: chunked
+2023-11-10T07:52:33.1097552Z Something
+2023-11-10T07:52:33.1097876Z Response time: 2.3984 ms
+2023-11-10T07:52:33.1098170Z 
+2023-11-10T07:52:33.1129830Z GET http://localhost:9876/matching-dtd-validation
+2023-11-10T07:52:33.1130844Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:33.1131839Z Content-Length: 0
+2023-11-10T07:52:33.1132392Z HTTP 200 (OK)
+2023-11-10T07:52:33.1132966Z Content-Type: application/xml
+2023-11-10T07:52:33.1133774Z Content-Length: 615
+2023-11-10T07:52:33.1134362Z Date: Fri, 10 Nov 2023 07:52:33 GMT
+2023-11-10T07:52:33.1134966Z Server: Kestrel
+2023-11-10T07:52:33.1135889Z Transfer-Encoding: chunked
+2023-11-10T07:52:33.1136536Z <!DOCTYPE store [
+2023-11-10T07:52:33.1137141Z               <!ELEMENT store (item)*> 
+2023-11-10T07:52:33.1138073Z               <!ELEMENT item (name,dept,price)>
+2023-11-10T07:52:33.1138938Z               <!ATTLIST item type CDATA #REQUIRED>
+2023-11-10T07:52:33.1139905Z               <!ATTLIST item ISBN CDATA #REQUIRED>
+2023-11-10T07:52:33.1140795Z               <!ELEMENT name (#PCDATA)>
+2023-11-10T07:52:33.1141623Z               <!ELEMENT dept (#PCDATA)>
+2023-11-10T07:52:33.1142447Z               <!ELEMENT price (#PCDATA)>]>
+2023-11-10T07:52:33.1143302Z <store>
+2023-11-10T07:52:33.1144061Z   <item type="supplies" ISBN="2-3631-4">
+2023-11-10T07:52:33.1144817Z     <name>paint</name>
+2023-11-10T07:52:33.1145329Z     <dept>interior design</dept>
+2023-11-10T07:52:33.1145752Z     <price>16.95</price>
+2023-11-10T07:52:33.1146098Z   </item>
+2023-11-10T07:52:33.1146424Z </store>
+2023-11-10T07:52:33.1146890Z Response time: 1.7717 ms
+2023-11-10T07:52:33.1147164Z 
+2023-11-10T07:52:33.1184196Z GET http://localhost:9876/xml-schema-validation
+2023-11-10T07:52:33.1185326Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:33.1186250Z Content-Length: 0
+2023-11-10T07:52:33.1186863Z HTTP 200 (OK)
+2023-11-10T07:52:33.1187689Z Content-Type: application/xml
+2023-11-10T07:52:33.1188814Z Content-Length: 456
+2023-11-10T07:52:33.1189490Z Date: Fri, 10 Nov 2023 07:52:33 GMT
+2023-11-10T07:52:33.1190332Z Server: Kestrel
+2023-11-10T07:52:33.1191104Z Transfer-Encoding: chunked
+2023-11-10T07:52:33.1192666Z <Location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+2023-11-10T07:52:33.1194124Z   <Country>United States</Country>
+2023-11-10T07:52:33.1194897Z   <State>California</State>
+2023-11-10T07:52:33.1195565Z   <ZipCode>90210</ZipCode>
+2023-11-10T07:52:33.1196301Z   <Places>
+2023-11-10T07:52:33.1196874Z     <Place>
+2023-11-10T07:52:33.1197424Z       <Name>Sun City</Name>
+2023-11-10T07:52:33.1198188Z       <Inhabitants>100000</Inhabitants>
+2023-11-10T07:52:33.1198955Z       <IsCapital>true</IsCapital>
+2023-11-10T07:52:33.1199599Z     </Place>
+2023-11-10T07:52:33.1200176Z     <Place>
+2023-11-10T07:52:33.1200751Z       <Name>Pleasure Meadow</Name>
+2023-11-10T07:52:33.1201452Z       <Inhabitants>50000</Inhabitants>
+2023-11-10T07:52:33.1202249Z       <IsCapital>false</IsCapital>
+2023-11-10T07:52:33.1202881Z     </Place>
+2023-11-10T07:52:33.1203627Z   </Places>
+2023-11-10T07:52:33.1204181Z </Location>
+2023-11-10T07:52:33.1204699Z Response time: 2.3477 ms
+2023-11-10T07:52:33.1205052Z 
+2023-11-10T07:52:33.1229345Z GET http://localhost:9876/xml-schema-validation
+2023-11-10T07:52:33.1230501Z Content-Type: application/json; charset=utf-8
+2023-11-10T07:52:33.1231226Z Content-Length: 0
+2023-11-10T07:52:33.1231738Z HTTP 200 (OK)
+2023-11-10T07:52:33.1232491Z Content-Type: application/xml
+2023-11-10T07:52:33.1233113Z Content-Length: 456
+2023-11-10T07:52:33.1233499Z Date: Fri, 10 Nov 2023 07:52:33 GMT
+2023-11-10T07:52:33.1234006Z Server: Kestrel
+2023-11-10T07:52:33.1234358Z Transfer-Encoding: chunked
+2023-11-10T07:52:33.1235174Z <Location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+2023-11-10T07:52:33.1236130Z   <Country>United States</Country>
+2023-11-10T07:52:33.1236818Z   <State>California</State>
+2023-11-10T07:52:33.1237464Z   <ZipCode>90210</ZipCode>
+2023-11-10T07:52:33.1238211Z   <Places>
+2023-11-10T07:52:33.1238723Z     <Place>
+2023-11-10T07:52:33.1239305Z       <Name>Sun City</Name>
+2023-11-10T07:52:33.1240388Z       <Inhabitants>100000</Inhabitants>
+2023-11-10T07:52:33.1241154Z       <IsCapital>true</IsCapital>
+2023-11-10T07:52:33.1241840Z     </Place>
+2023-11-10T07:52:33.1242491Z     <Place>
+2023-11-10T07:52:33.1242977Z       <Name>Pleasure Meadow</Name>
+2023-11-10T07:52:33.1243688Z       <Inhabitants>50000</Inhabitants>
+2023-11-10T07:52:33.1244513Z       <IsCapital>false</IsCapital>
+2023-11-10T07:52:33.1245153Z     </Place>
+2023-11-10T07:52:33.1245645Z   </Places>
+2023-11-10T07:52:33.1246241Z </Location>
+2023-11-10T07:52:33.1246749Z Response time: 1.9601 ms
+2023-11-10T07:52:33.1247148Z 
+2023-11-10T07:52:33.1357334Z NUnit Adapter 4.5.0.0: Test execution complete
+2023-11-10T07:52:33.2174485Z   Passed UnexpectedResponseContentTypeThrowsTheExpectedExceptionWhenValidatingXsd [4 ms]
+2023-11-10T07:52:33.2176102Z   Passed XmlResponseCanBeVerifiedAgainstInlineDtd [3 ms]
+2023-11-10T07:52:33.2177209Z   Passed XmlSchemaCanBeSuppliedAndVerifiedAsString [5 ms]
+2023-11-10T07:52:33.2178429Z   Passed XmlSchemaCanBeSuppliedAndVerifiedAsXmlSchemaSet [3 ms]
+2023-11-10T07:52:33.2229120Z 
+2023-11-10T07:52:33.2277004Z Test Run Successful.
+2023-11-10T07:52:33.2277729Z Total tests: 191
+2023-11-10T07:52:33.2278157Z      Passed: 191
+2023-11-10T07:52:33.2279565Z  Total time: 12.0737 Seconds
+2023-11-10T07:52:33.2557261Z      1>Done Building Project "/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.sln" (VSTest target(s)).
+2023-11-10T07:52:33.2712018Z 
+2023-11-10T07:52:33.2712315Z Build succeeded.
+2023-11-10T07:52:33.2713078Z     0 Warning(s)
+2023-11-10T07:52:33.2713686Z     0 Error(s)
+2023-11-10T07:52:33.2713992Z 
+2023-11-10T07:52:33.2714247Z Time Elapsed 00:00:14.59
+2023-11-10T07:52:33.3344900Z ##[group]Run dotnet build --no-restore
+2023-11-10T07:52:33.3345414Z [36;1mdotnet build --no-restore[0m
+2023-11-10T07:52:33.3390598Z shell: /usr/bin/bash -e {0}
+2023-11-10T07:52:33.3390980Z env:
+2023-11-10T07:52:33.3391411Z   DOTNET_ROOT: /usr/share/dotnet
+2023-11-10T07:52:33.3391790Z ##[endgroup]
+2023-11-10T07:52:33.5193797Z MSBuild version 17.7.3+4fca21998 for .NET
+2023-11-10T07:52:34.2193181Z   RestAssured.Net -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/bin/Debug/net7.0/RestAssured.Net.dll
+2023-11-10T07:52:34.4381903Z   RestAssured.Net.DemoService -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/bin/Debug/net7.0/RestAssured.Net.DemoService.dll
+2023-11-10T07:52:35.3918923Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,146): warning CS8604: Possible null reference argument for parameter 'proxy' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:35.3938778Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,172): warning CS8604: Possible null reference argument for parameter 'authenticationHeader' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:35.3959562Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,199): warning CS8604: Possible null reference argument for parameter 'contentType' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:35.3980329Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,223): warning CS8604: Possible null reference argument for parameter 'contentEncoding' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:35.3993321Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(37,36): warning CS0649: Field 'RequestSpecBuilder.timeout' is never assigned to, and will always have its default value [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:35.4001806Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(39,37): warning CS0649: Field 'RequestSpecBuilder.proxy' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:35.4011246Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(41,53): warning CS0649: Field 'RequestSpecBuilder.authenticationHeader' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:35.4020312Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(38,50): warning CS0649: Field 'RequestSpecBuilder.userAgent' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:35.4484148Z   RestAssured.Net -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/bin/Debug/net6.0/RestAssured.Net.dll
+2023-11-10T07:52:36.2188565Z   RestAssured.Net.DemoService -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.DemoService/bin/Debug/net6.0/RestAssured.Net.DemoService.dll
+2023-11-10T07:52:36.4550348Z   RestAssured.Net.Tests -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/bin/Debug/net7.0/RestAssured.Net.Tests.dll
+2023-11-10T07:52:36.5830444Z   Successfully created package '/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/bin/Debug/RestAssured.Net.4.2.0-beta.1.nupkg'.
+2023-11-10T07:52:37.3448461Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/QueryParameterTests.cs(119,13): warning CS0618: 'ExecutableRequest.QueryParams(Dictionary<string, object>)' is obsolete: 'Please use QueryParams(IEnumerable<KeyValuePair<string, object>>) instead. This method will be removed in version 5.0.0' [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:37.4039185Z   RestAssured.Net.Tests -> /home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/bin/Debug/net6.0/RestAssured.Net.Tests.dll
+2023-11-10T07:52:37.4523376Z 
+2023-11-10T07:52:37.4524220Z Build succeeded.
+2023-11-10T07:52:37.4524825Z 
+2023-11-10T07:52:37.4537843Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,146): warning CS8604: Possible null reference argument for parameter 'proxy' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:37.4561797Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,172): warning CS8604: Possible null reference argument for parameter 'authenticationHeader' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:37.4581607Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,199): warning CS8604: Possible null reference argument for parameter 'contentType' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:37.4602091Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(54,223): warning CS8604: Possible null reference argument for parameter 'contentEncoding' in 'RequestSpecification.RequestSpecification(string scheme, string host, int port, string basePath, TimeSpan? timeout, ProductInfoHeaderValue? userAgent, IWebProxy proxy, Dictionary<string, object> headers, AuthenticationHeaderValue authenticationHeader, string contentType, Encoding contentEncoding, bool disableSslCertificateValidation, RequestLogLevel requestLogLevel, JsonSerializerSettings jsonSerializerSettings, List<string> sensitiveRequestHeadersAndCookies)'. [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:37.4614245Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(37,36): warning CS0649: Field 'RequestSpecBuilder.timeout' is never assigned to, and will always have its default value [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:37.4622629Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(39,37): warning CS0649: Field 'RequestSpecBuilder.proxy' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:37.4631522Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(41,53): warning CS0649: Field 'RequestSpecBuilder.authenticationHeader' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:37.4640245Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/Request/Builders/RequestSpecBuilder.cs(38,50): warning CS0649: Field 'RequestSpecBuilder.userAgent' is never assigned to, and will always have its default value null [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net/RestAssured.Net.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:37.4650749Z ##[warning]/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/QueryParameterTests.cs(119,13): warning CS0618: 'ExecutableRequest.QueryParams(Dictionary<string, object>)' is obsolete: 'Please use QueryParams(IEnumerable<KeyValuePair<string, object>>) instead. This method will be removed in version 5.0.0' [/home/runner/work/rest-assured-net/rest-assured-net/RestAssured.Net.Tests/RestAssured.Net.Tests.csproj::TargetFramework=net6.0]
+2023-11-10T07:52:37.4655528Z     9 Warning(s)
+2023-11-10T07:52:37.4656083Z     0 Error(s)
+2023-11-10T07:52:37.4656385Z 
+2023-11-10T07:52:37.4656619Z Time Elapsed 00:00:03.80
+2023-11-10T07:52:37.5162565Z ##[group]Run FILE=./RestAssured.Net/bin/Debug/RestAssured.Net.*.nupkg
+2023-11-10T07:52:37.5163343Z [36;1mFILE=./RestAssured.Net/bin/Debug/RestAssured.Net.*.nupkg[0m
+2023-11-10T07:52:37.5163914Z [36;1mif compgen -G $FILE > /dev/null; then[0m
+2023-11-10T07:52:37.5164468Z [36;1m  echo "$FILE exists."[0m
+2023-11-10T07:52:37.5164851Z [36;1melse[0m
+2023-11-10T07:52:37.5165128Z [36;1m  exit 1;[0m
+2023-11-10T07:52:37.5165597Z [36;1mfi[0m
+2023-11-10T07:52:37.5209601Z shell: /usr/bin/bash -e {0}
+2023-11-10T07:52:37.5209954Z env:
+2023-11-10T07:52:37.5210265Z   DOTNET_ROOT: /usr/share/dotnet
+2023-11-10T07:52:37.5210749Z ##[endgroup]
+2023-11-10T07:52:37.5277990Z ./RestAssured.Net/bin/Debug/RestAssured.Net.*.nupkg exists.
+2023-11-10T07:52:37.5329938Z Post job cleanup.
+2023-11-10T07:52:37.6660288Z Post job cleanup.
+2023-11-10T07:52:37.7491963Z [command]/usr/bin/git version
+2023-11-10T07:52:37.7535256Z git version 2.42.0
+2023-11-10T07:52:37.7573283Z Temporarily overriding HOME='/home/runner/work/_temp/ceec97e0-bf94-4d2e-bec2-04ab502d8a93' before making global git config changes
+2023-11-10T07:52:37.7574845Z Adding repository directory to the temporary git global config as a safe directory
+2023-11-10T07:52:37.7579078Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rest-assured-net/rest-assured-net
+2023-11-10T07:52:37.7620180Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-11-10T07:52:37.7659288Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-11-10T07:52:37.7905178Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-11-10T07:52:37.7934401Z http.https://github.com/.extraheader
+2023-11-10T07:52:37.7945228Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-11-10T07:52:37.7983473Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-11-10T07:52:37.8454149Z Cleaning up orphan processes
+2023-11-10T07:52:37.9051640Z Terminate orphan process: pid (1964) (dotnet)
+2023-11-10T07:52:37.9091819Z Terminate orphan process: pid (1965) (dotnet)
+2023-11-10T07:52:37.9127367Z Terminate orphan process: pid (2054) (dotnet)
+2023-11-10T07:52:37.9162954Z Terminate orphan process: pid (2073) (dotnet)
